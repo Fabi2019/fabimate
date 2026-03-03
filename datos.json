@@ -1,12 +1,21 @@
 {
     "programas": [
-        { "nombre": "Cálculo Diferencial e Integral", "url": "https://enlace1.com" },
-        { "nombre": "Álgebra Superior", "url": "https://enlace2.com" },
-        { "nombre": "Geometría Analítica", "url": "https://enlace3.com" }
+        { "nombre": "Contenido 7 (descargar)", "https://dgec.mep.go.cr/wp-content/uploads/2026/02/Tabla-III-Ciclo.pdf" },
+        { "nombre": "Contenido 8 (descargar)", "url": "https://dgec.mep.go.cr/wp-content/uploads/2026/02/Tabla-III-Ciclo.pdf" },
+        { "nombre": "Contenido 9 (descargar)", "url": "https://dgec.mep.go.cr/wp-content/uploads/2026/02/Tabla-III-Ciclo.pdf" },
+        { "nombre": "Contenido BXM (descargar)", "url": "https://dgec.mep.go.cr/wp-content/uploads/2026/02/Tabla-de-BxM-1.pdf" },
+  
     ],
     "practicas": [
-        { "nombre": "Guía 1: Límites y Continuidad", "url": "https://pdf-enlace.com" },
-        { "nombre": "Taller: Matrices y Determinantes", "url": "https://pdf-enlace2.com" },
-        { "nombre": "Práctica de Vectores R3", "url": "https://pdf-enlace3.com" }
+        { "nombre": "Práctica Examen 7mo (descargar)", "url": "url": "https://dgec.mep.go.cr/wp-content/uploads/2026/02/PRACTICA-SETIMO-MATEMATICAS.pdf" },
+        { "nombre": "Práctica Examen 8vo (descargar)", "url": "url": "https://dgec.mep.go.cr/wp-content/uploads/2026/02/PRACTICA-OCTAVO-MATEMATICAS.pdf },
+        { "nombre": "Práctica Examen 9no (descargar)", "url": "https://dgec.mep.go.cr/wp-content/uploads/2026/02/PRACTICA-NOVENO-MATEMATICAS.pdf" },       
+        { "nombre": "Práctica Examen BXM (descargar)", "url": "https://dgec.mep.go.cr/wp-content/uploads/2026/02/BXM-PRACTICA.pdf" }
+    ],
+    "Avisos MEP":[
+        { "nombre": "Tercer Ciclo:", "url": "https://dgec.mep.go.cr/iii-ciclo/#Avisos" },
+        { "nombre": "BXM:", "url": "https://dgec.mep.go.cr/bachillerato-por-madurez-suficiente/#Avisos" },
+     
+
     ]
 }
