@@ -3,7 +3,7 @@
         { "nombre": "Contenido 7 (descargar)", "https://dgec.mep.go.cr/wp-content/uploads/2026/02/Tabla-III-Ciclo.pdf" },
         { "nombre": "Contenido 8 (descargar)", "url": "https://dgec.mep.go.cr/wp-content/uploads/2026/02/Tabla-III-Ciclo.pdf" },
         { "nombre": "Contenido 9 (descargar)", "url": "https://dgec.mep.go.cr/wp-content/uploads/2026/02/Tabla-III-Ciclo.pdf" },
-        { "nombre": "Contenido BXM (descargar)", "url": "https://dgec.mep.go.cr/wp-content/uploads/2026/02/Tabla-de-BxM-1.pdf" },
+        { "nombre": "Contenido BXM (descargar)", "url": "https://dgec.mep.go.cr/wp-content/uploads/2026/02/Tabla-de-BxM-1.pdf" }
   
     ],
     "practicas": [
@@ -12,10 +12,10 @@
         { "nombre": "Práctica Examen 9no (descargar)", "url": "https://dgec.mep.go.cr/wp-content/uploads/2026/02/PRACTICA-NOVENO-MATEMATICAS.pdf" },       
         { "nombre": "Práctica Examen BXM (descargar)", "url": "https://dgec.mep.go.cr/wp-content/uploads/2026/02/BXM-PRACTICA.pdf" }
     ],
-    "Avisos MEP":[
+    "avisosmep":[
         { "nombre": "Tercer Ciclo:", "url": "https://dgec.mep.go.cr/iii-ciclo/#Avisos" },
-        { "nombre": "BXM:", "url": "https://dgec.mep.go.cr/bachillerato-por-madurez-suficiente/#Avisos" },
-     
+        { "nombre": "BXM:", "url": "https://dgec.mep.go.cr/bachillerato-por-madurez-suficiente/#Avisos" }
+    
 
     ]
 }
