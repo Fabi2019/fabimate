@@ -1,0 +1,12 @@
+{
+    "programas": [
+        { "nombre": "Cálculo Diferencial e Integral", "url": "https://enlace1.com" },
+        { "nombre": "Álgebra Superior", "url": "https://enlace2.com" },
+        { "nombre": "Geometría Analítica", "url": "https://enlace3.com" }
+    ],
+    "practicas": [
+        { "nombre": "Guía 1: Límites y Continuidad", "url": "https://pdf-enlace.com" },
+        { "nombre": "Taller: Matrices y Determinantes", "url": "https://pdf-enlace2.com" },
+        { "nombre": "Práctica de Vectores R3", "url": "https://pdf-enlace3.com" }
+    ]
+}
