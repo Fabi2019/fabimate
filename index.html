@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fabián Matemática</title>
+    <style>
+        /* (El CSS se mantiene igual al anterior para no alargar el código) */
+        :root { --primary: #2c3e50; --accent: #3498db; --bg: #f4f7f6; }
+        body { font-family: sans-serif; margin: 0; display: flex; height: 100vh; background: var(--bg); }
+        nav { width: 250px; background: var(--primary); color: white; padding: 20px; display: flex; flex-direction: column; }
+        nav button { background: none; border: none; color: white; text-align: left; padding: 15px; cursor: pointer; }
+        nav button:hover { background: var(--accent); border-radius: 5px; }
+        main { flex-grow: 1; padding: 40px; }
+        .link-card { display: block; background: white; padding: 15px; margin-bottom: 10px; border-radius: 8px; text-decoration: none; color: var(--primary); font-weight: bold; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <h1>Fabián Matemática</h1>
+        <button onclick="cargarYRenderizar('programas')">📂 Programas</button>
+        <button onclick="cargarYRenderizar('practicas')">📝 Prácticas</button>
+    </nav>
+
+    <main id="contenido-principal">
+        <h2>Bienvenido</h2>
+        <p>Selecciona una opción para cargar los datos desde el JSON.</p>
+    </main>
+
+    <script>
+        // https://github.com/Fabi2019/fabimate.git
+        // Función principal que usa FETCH
+        async function cargarYRenderizar(categoria) {
+            const contenedor = document.getElementById('contenido-principal');
+            
+            try {
+                // 1. Buscamos el archivo externo
+                const respuesta = await fetch('datos.json');
+                
+                // 2. Convertimos la respuesta a un objeto JS
+                const datos = await respuesta.json();
+                
+                // 3. Obtenemos la lista específica (programas o practicas)
+                const lista = datos[categoria];
+
+                // 4. Construimos el HTML
+                let html = `<h2>${categoria.toUpperCase()}</h2>`;
+                lista.forEach(item => {
+                    html += `
+                        <a href="${item.url}" class="link-card" target="_blank">
+                            ${item.nombre} 
+                        </a>
+                    `;
+                });
+                
+                contenedor.innerHTML = html;
+
+            } catch (error) {
+                console.error("Error cargando el JSON:", error);
+                contenedor.innerHTML = "<p>Error al cargar los datos. Asegúrate de que datos.json exista.</p>";
+            }
+        }
+    </script>
+</body>
+</html>
