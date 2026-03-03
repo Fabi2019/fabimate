@@ -1,6 +1,6 @@
 {
     "programas": [
-        { "nombre": "Contenido 7 (descargar)", "https://dgec.mep.go.cr/wp-content/uploads/2026/02/Tabla-III-Ciclo.pdf" },
+        { "nombre": "Contenido 7 (descargar)","url": "https://dgec.mep.go.cr/wp-content/uploads/2026/02/Tabla-III-Ciclo.pdf" },
         { "nombre": "Contenido 8 (descargar)", "url": "https://dgec.mep.go.cr/wp-content/uploads/2026/02/Tabla-III-Ciclo.pdf" },
         { "nombre": "Contenido 9 (descargar)", "url": "https://dgec.mep.go.cr/wp-content/uploads/2026/02/Tabla-III-Ciclo.pdf" },
         { "nombre": "Contenido BXM (descargar)", "url": "https://dgec.mep.go.cr/wp-content/uploads/2026/02/Tabla-de-BxM-1.pdf" }
