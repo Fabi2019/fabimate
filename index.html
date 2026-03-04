@@ -2,68 +2,76 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fabián Matemática</title>
+    <title id="tag-titulo">Cargando...</title>
     <style>
-        /* (El CSS se mantiene igual al anterior para no alargar el código) */
+        /* (El CSS sigue siendo el mismo) */
         :root { --primary: #2c3e50; --accent: #3498db; --bg: #f4f7f6; }
-        body { font-family: sans-serif; margin: 0; display: flex; height: 100vh; background: var(--bg); }
-        nav { width: 250px; background: var(--primary); color: white; padding: 20px; display: flex; flex-direction: column; }
-        nav button { background: none; border: none; color: white; text-align: left; padding: 15px; cursor: pointer; }
-        nav button:hover { background: var(--accent); border-radius: 5px; }
-        main { flex-grow: 1; padding: 40px; }
+        body { font-family: sans-serif; margin: 0; display: flex; height: 100vh; }
+        nav { width: 250px; background: var(--primary); color: white; padding: 20px; }
+        #menu-dinamico { display: flex; flex-direction: column; gap: 10px; margin-top: 20px; }
+        .btn-menu { background: none; border: 1px solid transparent; color: white; text-align: left; padding: 12px; cursor: pointer; transition: 0.3s; }
+        .btn-menu:hover { background: var(--accent); border-radius: 5px; }
+        main { flex-grow: 1; padding: 40px; background: var(--bg); }
         .link-card { display: block; background: white; padding: 15px; margin-bottom: 10px; border-radius: 8px; text-decoration: none; color: var(--primary); font-weight: bold; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
     </style>
 </head>
 <body>
 
     <nav>
-        <h1>Fabián Matemática</h1>
-        <button onclick="cargarYRenderizar('Programas')">📂 Programas</button>
-        <button onclick="cargarYRenderizar('Prácticas')">📝 Prácticas</button>
-        <button onclick="cargarYRenderizar('Avisos MEP')">📝 Avisos MEP</button>
-
+        <h1 id="titulo-web">...</h1>
+        <div id="menu-dinamico">
+            </div>
     </nav>
-    
 
     <main id="contenido-principal">
         <h2>Bienvenido</h2>
-        <p>Selecciona una opción para cargar los datos desde los enlaces de interés.</p>
+        <p>Selecciona una opción del menú.</p>
     </main>
 
     <script>
-        // https://github.com/Fabi2019/fabimate.git
-        // Función principal que usa FETCH
-        async function cargarYRenderizar(categoria) {
-            const contenedor = document.getElementById('contenido-principal');
-            
+        let datosGlobales = null;
+
+        async function inicializarPagina() {
             try {
-                // 1. Buscamos el archivo externo
                 const respuesta = await fetch('datos.json');
-                
-                // 2. Convertimos la respuesta a un objeto JS
-                const datos = await respuesta.json();
-                
-                // 3. Obtenemos la lista específica (programas o practicas)
-                const lista = datos[categoria];
+                datosGlobales = await respuesta.json();
 
-                // 4. Construimos el HTML
-                let html = `<h2>${categoria.toUpperCase()}</h2>`;
-                lista.forEach(item => {
-                    html += `
-                        <a href="${item.url}" class="link-card" target="_blank">
-                            ${item.nombre} 
-                        </a>
-                    `;
+                // 1. Poner el título desde el JSON
+                document.getElementById('titulo-web').innerText = datosGlobales.configuracion.titulo_pagina;
+                document.getElementById('tag-titulo').innerText = datosGlobales.configuracion.titulo_pagina;
+
+                // 2. Crear los botones del menú dinámicamente
+                const contenedorMenu = document.getElementById('menu-dinamico');
+                datosGlobales.configuracion.menu.forEach(item => {
+                    const boton = document.createElement('button');
+                    boton.className = 'btn-menu';
+                    boton.innerText = item.texto;
+                    // Al hacer clic, carga la categoría correspondiente
+                    boton.onclick = () => mostrarContenido(item.clave, item.texto);
+                    contenedorMenu.appendChild(boton);
                 });
-                
-                contenedor.innerHTML = html;
 
-            } catch (error) {
-                console.error("Error cargando el listas:", error);
-                contenedor.innerHTML = "<p>Error al cargar los datos. Asegúrate de que datos exista.</p>";
+            } catch (e) {
+                console.error("Error inicializando:", e);
             }
         }
+
+        function mostrarContenido(clave, nombreVisible) {
+            const contenedor = document.getElementById('contenido-principal');
+            const lista = datosGlobales[clave];
+            
+            let html = `<h2>${nombreVisible}</h2>`;
+            html += `<div class="card-container">`;
+            lista.forEach(item => {
+                html += `<a href="${item.url}" class="link-card" target="_blank">${item.nombre}</a>`;
+            });
+            html += `</div>`;
+            
+            contenedor.innerHTML = html;
+        }
+
+        // Arrancamos la carga al abrir la página
+        inicializarPagina();
     </script>
 </body>
 </html>
