@@ -1,8 +1,8 @@
 {
     "Programas": [
-        { "nombre": "Contenido 7, Página 3 (descargar)","url": "https://dgec.mep.go.cr/wp-content/uploads/2026/02/Tabla-III-Ciclo.pdf" },
-        { "nombre": "Contenido 8, Página 9 (descargar)", "url": "https://dgec.mep.go.cr/wp-content/uploads/2026/02/OCTAVO-PRACTICA.pdf" },
-        { "nombre": "Contenido 9, Página 14 (descargar)", "url": "https://dgec.mep.go.cr/wp-content/uploads/2026/02/Tabla-III-Ciclo.pdf" },
+        { "nombre": "Contenido 7 (descargar)","url": "https://dgec.mep.go.cr/wp-content/uploads/2026/02/Tabla-III-Ciclo.pdf" },
+        { "nombre": "Contenido 8 (descargar)", "url": "https://dgec.mep.go.cr/wp-content/uploads/2026/02/OCTAVO-PRACTICA.pdf" },
+        { "nombre": "Contenido 9 (descargar)", "url": "https://dgec.mep.go.cr/wp-content/uploads/2026/02/Tabla-III-Ciclo.pdf" },
         { "nombre": "Contenido BXM (descargar)", "url": "https://dgec.mep.go.cr/wp-content/uploads/2026/02/Tabla-de-BxM-1.pdf" }  
     ],
     "Prácticas": [
