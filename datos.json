@@ -67,10 +67,10 @@
         "nombre": "Operaciones con Enteros:",
         "url": "https://fabi2019.github.io/OperEntero/"
         },
-        {
-        "nombre": "Raices:",
-        "url": "https://fabi2019.github.io/PotYRaiz/"
-        }
+        {"nombre": "Raices:",
+        "url": "https://fabi2019.github.io/PotYRaiz/"},
+        {"nombre": "Enteros 2:",
+        "url": "https://fabi2019.github.io/pagesNum/"}
         ]
     
     
