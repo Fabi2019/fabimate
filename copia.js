@@ -70,7 +70,9 @@
         {"nombre": "Raices:",
         "url": "https://fabi2019.github.io/PotYRaiz/"},
         {"nombre": "Enteros 2:",
-        "url": "https://fabi2019.github.io/pagesNum/"}
+        "url": "https://fabi2019.github.io/pagesNum/"},
+        {"nombre": "Puntos en el Plano Cartesiano:",
+        "url": "https://fabi2019.github.io/juegoRadar/"}
         ]
     
     
