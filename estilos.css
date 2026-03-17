@@ -77,3 +77,9 @@ main { flex-grow: 1; padding: 20px; }
 }
 
 .link-card:hover { border-left: 5px solid var(--accent); padding-left: 23px; }
+
+.contenedor-imagen img {
+    max-width: 90%;
+    max-height: 90vh; /* Evita que la imagen desborde verticalmente */
+    object-fit: contain; /* Mantiene las proporciones de la imagen */
+}
