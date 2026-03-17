@@ -1,82 +1,181 @@
 <!DOCTYPE html>
-<html lang="es">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title id="tag-titulo">Cargando...</title>
-    <link rel="stylesheet" href="estilos.css">
-    <!-- <style>
-        /* (El CSS sigue siendo el mismo) */
-        :root { --primary: #2c3e50; --accent: #3498db; --bg: #f4f7f6; }
-        body { font-family: sans-serif; margin: 0; display: flex; height: 100vh; }
-        nav { width: 250px; background: var(--primary); color: white; padding: 20px; }
-        #menu-dinamico { display: flex; flex-direction: column; gap: 10px; margin-top: 20px; }
-        .btn-menu { background: none; border: 1px solid transparent; color: white; text-align: left; padding: 12px; cursor: pointer; transition: 0.3s; }
-        .btn-menu:hover { background: var(--accent); border-radius: 5px; }
-        main { flex-grow: 1; padding: 40px; background: var(--bg); }
-        .link-card { display: block; background: white; padding: 15px; margin-bottom: 10px; border-radius: 8px; text-decoration: none; color: var(--primary); font-weight: bold; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
-    </style> -->
+  <base target="_top">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <style>
+    body { background-color: #f0f2f5; padding: 15px; font-family: sans-serif; }
+    .container { max-width: 550px; margin: auto; }
+    .form-box { background: white; padding: 20px; border-radius: 12px; border: 1px solid #ddd; margin-bottom: 20px; }
+    .card-tarea { border-left: 6px solid #0d6efd; margin-bottom: 12px; background: white; border-radius: 8px; padding: 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.05); }
+    .tarea-completada { border-left-color: #adb5bd !important; opacity: 0.8; background-color: #f8f9fa; }
+    .nota-cuadro { margin-top: 10px; padding: 10px; background-color: #f1f3f5; border-left: 3px solid #6c757d; font-size: 0.85rem; border-radius: 4px; }
+    
+    #tablaImpresion { display: none; width: 100%; border-collapse: collapse; margin-top: 20px; }
+    @media print {
+      body { background-color: white; padding: 0; }
+      .d-print-none, #listaTareasCards, .form-box { display: none !important; }
+      .container { max-width: 100%; width: 100%; margin: 0; }
+      #tablaImpresion { display: table !important; }
+      #tablaImpresion th, #tablaImpresion td { border: 1px solid #000 !important; padding: 8px; font-size: 11pt; }
+      #tablaImpresion th { background-color: #f2f2f2 !important; -webkit-print-color-adjust: exact; }
+      .col-fecha { width: 15%; } .col-dia { width: 12%; } .col-res { width: 20%; } .col-act { width: 40%; } .col-est { width: 13%; text-align: center; }
+    }
+      .contenedor-imagen img {
+        max-width: 90%;
+        max-height: 90vh; /* Evita que la imagen desborde verticalmente */
+        object-fit: contain; /* Mantiene las proporciones de la imagen */
+      }
+  </style>
 </head>
 <body>
-
-    <nav>
-        <h1 id="titulo-web">...</h1>
-        <div id="menu-dinamico">
-            </div>
-    </nav>
-
-    <main id="contenido-principal">
-        <h2>Bienvenido</h2>
-        <p>Selecciona una opción del menú.</p>
-        <div class="contenedor-imagen">
-        <img src="horario.jpeg" alt="Descripción de la imagen">
+  <div class="container">
+    <div class="d-flex justify-content-between align-items-center mb-3 d-print-none">
+      <h4 class="m-0 text-primary fw-bold">Panel Cementerio</h4>
+      <div class="d-flex gap-2">
+        <button onclick="abrirExcel()" class="btn btn-sm btn-outline-success">📊 Datos</button>
+        <button onclick="window.print()" class="btn btn-sm btn-outline-secondary">🖨️ Imprimir</button>
+      </div>
     </div>
-    </main>
 
-    <script>
-        let datosGlobales = null;
+    <div class="form-box shadow-sm d-print-none">
+      <form id="formCem" onsubmit="enviarDatos(event)">
+        <input type="hidden" id="editandoId">
+        <label class="fw-bold small">Fecha:</label>
+        <input type="date" id="fecha" class="form-control mb-2" required>
+        <label class="fw-bold small">Responsable:</label>
+        <select id="resSelect" class="form-select mb-2" onchange="checkOtroRes(this)" required></select>
+        <div id="otroResDiv" style="display:none;" class="mb-2">
+          <input type="text" id="resManual" class="form-control mb-1" placeholder="Nombre nuevo">
+        </div>
+        <label class="fw-bold small">Actividad:</label>
+        <select id="actSelect" class="form-select mb-2" onchange="checkOtraAct(this)" required></select>
+        <div id="otraActDiv" style="display:none;" class="mb-2">
+          <input type="text" id="actManual" class="form-control" placeholder="Actividad nueva">
+        </div>
+        <textarea id="detalles" class="form-control mb-3" rows="2" placeholder="Detalles..."></textarea>
+        <button type="submit" id="btnG" class="btn btn-primary w-100 fw-bold py-2">Asignar Tarea</button>
+      </form>
+    </div>
 
-        async function inicializarPagina() {
-            try {
-                const respuesta = await fetch('datos.json');
-                datosGlobales = await respuesta.json();
+    <div id="listaTareasCards" class="d-print-none"></div>
 
-                // 1. Poner el título desde el JSON
-                document.getElementById('titulo-web').innerText = datosGlobales.configuracion.titulo_pagina;
-                document.getElementById('tag-titulo').innerText = datosGlobales.configuracion.titulo_pagina;
+    <div class="d-none d-print-block">
+      <h4 class="text-center">PROGRAMACIÓN DE ACTIVIDADES</h4>
+      <table id="tablaImpresion">
+        <thead>
+          <tr><th class="col-fecha">Fecha</th><th class="col-dia">Día</th><th class="col-res">Encargado</th><th class="col-act">Actividad</th><th class="col-est">Estado</th></tr>
+        </thead>
+        <tbody id="cuerpoTabla"></tbody>
+      </table>
+    </div>
+  </div>
 
-                // 2. Crear los botones del menú dinámicamente
-                const contenedorMenu = document.getElementById('menu-dinamico');
-                datosGlobales.configuracion.menu.forEach(item => {
-                    const boton = document.createElement('button');
-                    boton.className = 'btn-menu';
-                    boton.innerText = item.texto;
-                    // Al hacer clic, carga la categoría correspondiente
-                    boton.onclick = () => mostrarContenido(item.clave, item.texto);
-                    contenedorMenu.appendChild(boton);
-                });
+  <script>
+    var tareasLocales = [];
 
-            } catch (e) {
-                console.error("Error inicializando:", e);
-            }
+    window.onload = function() { cargarCombos(); cargarLista(); };
+
+    function abrirExcel() {
+      google.script.run.withSuccessHandler(url => window.open(url, '_blank')).getUrlExcel();
+    }
+
+    function cargarCombos() {
+      google.script.run.withSuccessHandler(p => {
+        var s = document.getElementById('resSelect');
+        s.innerHTML = '<option value="">Responsable...</option>';
+        p.forEach(i => s.add(new Option(i.nombre, i.nombre)));
+        s.add(new Option("➕ OTRO...", "OTRO"));
+      }).getPersonal();
+      google.script.run.withSuccessHandler(t => {
+        var s = document.getElementById('actSelect');
+        s.innerHTML = '<option value="">Actividad...</option>';
+        t.forEach(i => s.add(new Option(i, i)));
+        s.add(new Option("➕ OTRA...", "OTRA"));
+      }).getTareasOficiales();
+    }
+
+    function checkOtroRes(s) { document.getElementById('otroResDiv').style.display = (s.value === "OTRO") ? "block" : "none"; }
+    function checkOtraAct(s) { document.getElementById('otraActDiv').style.display = (s.value === "OTRA") ? "block" : "none"; }
+
+    function prepararEdicion(id) {
+      var t = tareasLocales.find(x => x.id == id);
+      if (!t) return;
+      document.getElementById('editandoId').value = t.id;
+      var p = t.fecha.split("/");
+      document.getElementById('fecha').value = p[2] + "-" + p[1].padStart(2,'0') + "-" + p[0].padStart(2,'0');
+      document.getElementById('resSelect').value = t.responsable;
+      document.getElementById('actSelect').value = t.actividad;
+      document.getElementById('detalles').value = t.detalles || "";
+      var b = document.getElementById('btnG');
+      b.innerText = "💾 Guardar Cambios"; b.className = "btn btn-warning w-100 fw-bold py-2";
+      window.scrollTo({top: 0, behavior: 'smooth'});
+    }
+
+    function enviarDatos(e) {
+      e.preventDefault();
+      var b = document.getElementById("btnG"); b.disabled = true; b.innerText = "⌛ Guardando...";
+      var res = (document.getElementById('resSelect').value === "OTRO") ? document.getElementById('resManual').value : document.getElementById('resSelect').value;
+      var act = (document.getElementById('actSelect').value === "OTRA") ? document.getElementById('actManual').value : document.getElementById('actSelect').value;
+      var d = {
+        id: document.getElementById('editandoId').value,
+        fecha: document.getElementById('fecha').value,
+        responsable: res, actividad: act, detalles: document.getElementById('detalles').value
+      };
+      var h = () => { alert("✅ Guardado"); finalizar(); };
+      if (d.id) google.script.run.withSuccessHandler(h).actualizarTarea(d);
+      else google.script.run.withSuccessHandler(h).guardarTarea(d);
+    }
+
+    function finalizar() {
+      document.getElementById('editandoId').value = "";
+      document.getElementById('formCem').reset();
+      document.getElementById('btnG').innerText = "Asignar Tarea"; document.getElementById('btnG').className = "btn btn-primary w-100 fw-bold py-2";
+      document.getElementById('btnG').disabled = false;
+      cargarLista();
+    }
+
+    function cargarLista() { google.script.run.withSuccessHandler(ts => { tareasLocales = ts; dibujar(ts); }).getTareas(); }
+
+    function cambiarEstado(id) {
+      if(confirm("¿Terminar tarea?")) google.script.run.withSuccessHandler(cargarLista).actualizarEstado(id, 'Completada');
+    }
+
+    function dibujar(ts) {
+      var cont = document.getElementById('listaTareasCards');
+      var tabla = document.getElementById('cuerpoTabla');
+      cont.innerHTML = ""; tabla.innerHTML = "";
+
+      [...ts].reverse().forEach(t => {
+        var hecha = (t.estado === "Completada");
+        var card = document.createElement('div');
+        card.className = "card-tarea " + (hecha ? "tarea-completada" : "");
+        
+        // Lógica de WhatsApp
+        var btnWa = "";
+        if (!hecha && t.telefono) {
+          var texto = encodeURIComponent("*PANEL CEMENTERIO*\n📅 " + t.diaSemana + " " + t.fecha + "\n👤 " + t.responsable + "\n🛠️ " + t.actividad + (t.detalles ? "\n📝 " + t.detalles : ""));
+          btnWa = `<a href="https://wa.me/${t.telefono}?text=${texto}" target="_blank" class="btn btn-sm btn-success flex-grow-1">WhatsApp</a>`;
         }
 
-        function mostrarContenido(clave, nombreVisible) {
-            const contenedor = document.getElementById('contenido-principal');
-            const lista = datosGlobales[clave];
-            
-            let html = `<h2>${nombreVisible}</h2>`;
-            html += `<div class="card-container">`;
-            lista.forEach(item => {
-                html += `<a href="${item.url}" class="link-card" target="_blank">${item.nombre}</a>`;
-            });
-            html += `</div>`;
-            
-            contenedor.innerHTML = html;
-        }
+        card.innerHTML = `
+          <div class="small fw-bold text-primary">${t.diaSemana} ${t.fecha}</div>
+          <h6 class="mb-1"><b>${t.responsable}</b></h6>
+          <p class="mb-0 fw-bold">${t.actividad}</p>
+          ${t.detalles ? `<div class="nota-cuadro">${t.detalles}</div>` : ""}
+          <div class="d-flex gap-2 mt-3 d-print-none">
+            ${btnWa}
+            ${!hecha ? `<button onclick="prepararEdicion('${t.id}')" class="btn btn-sm btn-outline-dark flex-grow-1">✏️ Editar</button>` : ""}
+            ${!hecha ? `<button onclick="cambiarEstado('${t.id}')" class="btn btn-sm btn-primary flex-grow-1">✅ Terminar</button>` : `<span class="badge bg-secondary w-100 p-2">HECHO</span>`}
+          </div>`;
+        cont.appendChild(card);
+      });
 
-        // Arrancamos la carga al abrir la página
-        inicializarPagina();
-    </script>
+      ts.forEach(t => {
+        var hecha = (t.estado === "Completada");
+        tabla.innerHTML += `<tr><td>${t.fecha}</td><td>${t.diaSemana}</td><td>${t.responsable}</td><td><b>${t.actividad}</b><br><small>${t.detalles||""}</small></td><td class="col-est">${hecha?'✓':'P'}</td></tr>`;
+      });
+    }
+  </script>
 </body>
 </html>
