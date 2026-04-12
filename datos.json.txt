@@ -6,13 +6,13 @@
     "texto": "Programas",
     "clave": "programas"
     },
- {
-    "texto": "Bitácora",
-    "clave": "bita"
-    },
     {
     "texto": "Prácticas",
     "clave": "practicas"
+    },
+   {
+    "texto": "Bitácora",
+    "clave": "bita"
     },
     { "texto": "Avisos MEP",
     "clave": "avisomep"},
