@@ -34,7 +34,7 @@
         <thead>
             <tr>
                 <th>Fecha</th>
-                <th>Nivel</th>
+                <!-- <th>Nivel</th> -->
                 <th>Labor</th>
                 <th>Recursos (Links)</th>
             </tr>
@@ -81,12 +81,12 @@
 
                 const fila = `<tr>
                     <td>${item.fecha}</td>
-                    <td><strong>${item.nivel}</strong></td>
+                    
                     <td>${item.labor}</td>
                     <td>${notasHtml}</td>
                 </tr>`;
                 body.innerHTML += fila;
-            });
+            });  //  <td<strong>${item.nivel}</strong></td>
         }
 
         obtenerDatos();
