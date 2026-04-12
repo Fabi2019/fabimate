@@ -49,17 +49,31 @@
 
 
         async function obtenerDatos() {
-            try {
-                // Llamamos a la API con el parámetro json=true
-                const res = await fetch(WEB_APP_URL + "?json=true");
-                datosOriginales = await res.json();
-                document.getElementById("mensaje").style.display = "none";
-                document.getElementById("tablaDatos").style.display = "table";
-                actualizarTabla();
-            } catch (err) {
-                document.getElementById("mensaje").textContent = "Error al conectar con la base de datos.";
-            }
+    try {
+        // 1. Detectar si hay un nivel en la URL (ej: bitacora.html?nivel=Setimo)
+        const urlParams = new URLSearchParams(window.location.search);
+        const nivelDesdeUrl = urlParams.get('nivel');
+
+        // 2. Si hay un nivel en la URL, actualizar el selector visualmente
+        if (nivelDesdeUrl) {
+            const selector = document.getElementById("selectNivel");
+            selector.value = nivelDesdeUrl; 
         }
+
+        // 3. Llamada normal a la API
+        const res = await fetch(WEB_APP_URL);
+        datosOriginales = await res.json();
+        
+        document.getElementById("mensaje").style.display = "none";
+        document.getElementById("tablaDatos").style.display = "table";
+        
+        // Ejecutar el filtrado inicial
+        actualizarTabla();
+    } catch (err) {
+        document.getElementById("mensaje").textContent = "Error al conectar con la base de datos.";
+    }
+}
+
 
         function actualizarTabla() {
             const nivel = document.getElementById("selectNivel").value;
