@@ -6,6 +6,10 @@
     "texto": "Programas",
     "clave": "programas"
     },
+ {
+    "texto": "Bitácora",
+    "clave": "bita"
+    },
     {
     "texto": "Prácticas",
     "clave": "practicas"
@@ -73,6 +77,18 @@
         "url": "https://fabi2019.github.io/pagesNum/"},
         {"nombre": "Puntos en el Plano Cartesiano:",
         "url": "https://fabi2019.github.io/Radar3/"}
+        ],
+        "bita": [
+        {
+        "nombre": "Anotaciones para Setimo:",
+        "url": "https://script.google.com/macros/s/AKfycbwMRUBGACKdZ-b84FZkyjR-ooK4PeXUwp-zZQCHXx-SCTKOIykU_i_VE81LT_eqJCPUJQ/exec?nivel=Setimo"
+        },
+        {"nombre": "Anotaciones para Octavo:",
+        "url": "https://script.google.com/macros/s/AKfycbwMRUBGACKdZ-b84FZkyjR-ooK4PeXUwp-zZQCHXx-SCTKOIykU_i_VE81LT_eqJCPUJQ/exec?nivel=Octavo"},
+        {"nombre": "Anotaciones para noveno",
+        "url": "https://script.google.com/macros/s/AKfycbwMRUBGACKdZ-b84FZkyjR-ooK4PeXUwp-zZQCHXx-SCTKOIykU_i_VE81LT_eqJCPUJQ/exec?nivel=Noveno"},
+        {"nombre": "Anotaciones para Bachillerato:",
+        "url": "https://script.google.com/macros/s/AKfycbwMRUBGACKdZ-b84FZkyjR-ooK4PeXUwp-zZQCHXx-SCTKOIykU_i_VE81LT_eqJCPUJQ/exec?nivel=Bachillerato"}
         ]
     
     
