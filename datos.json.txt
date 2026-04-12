@@ -81,14 +81,14 @@
         "bita": [
         {
         "nombre": "Anotaciones para Setimo:",
-        "url": "https://fabi2019.github.io/fabimate/bitacora.html?nivel=Setimo"
+        "url": "bitacora.html?nivel=Setimo"
         },
         {"nombre": "Anotaciones para Octavo:",
-        "url": "https://fabi2019.github.io/fabimate/bitacora.html?nivel=Octavo"},
+        "url": "bitacora.html?nivel=Octavo"},
         {"nombre": "Anotaciones para noveno",
-        "url": "https://fabi2019.github.io/fabimate/bitacora.html?nivel=Noveno"},
+        "url": "bitacora.html?nivel=Noveno"},
         {"nombre": "Anotaciones para Bachillerato:",
-        "url": "https://fabi2019.github.io/fabimate/bitacora.html?nivel=Bachillerato"}
+        "url": "bitacora.html?nivel=Bachillerato"}
         ]
     
     
