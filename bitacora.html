@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consulta de Labores</title>
+    <style>
+        body { font-family: sans-serif; padding: 20px; background: #f4f7f6; }
+        .filtro-container { margin-bottom: 20px; background: white; padding: 15px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+        select { padding: 8px; border-radius: 4px; border: 1px solid #ccc; width: 200px; }
+        table { width: 100%; border-collapse: collapse; background: white; }
+        th, td { padding: 12px; border-bottom: 1px solid #eee; text-align: left; }
+        th { background-color: #2b6cb0; color: white; }
+        .btn-url { display: inline-block; margin: 2px; padding: 4px 8px; background: #ebf4ff; color: #2b6cb0; border-radius: 4px; text-decoration: none; font-size: 12px; border: 1px solid #bee3f8; }
+        .loading { color: #666; font-style: italic; }
+    </style>
+</head>
+<body>
+
+    <div class="filtro-container">
+        <label><strong>Filtrar por Nivel:</strong></label>
+        <select id="selectNivel" onchange="actualizarTabla()">
+            <option value="Todos">Todos</option>
+            <option value="Setimo">7° Sétimo</option>
+            <option value="Octavo">8° Octavo</option>
+            <option value="Noveno">9° Noveno</option>
+            <option value="Bachillerato">Bachillerato</option>
+        </select>
+    </div>
+
+    <div id="mensaje" class="loading">Cargando datos...</div>
+
+    <table id="tablaDatos" style="display:none;">
+        <thead>
+            <tr>
+                <th>Fecha</th>
+                <th>Nivel</th>
+                <th>Labor</th>
+                <th>Recursos (Links)</th>
+            </tr>
+        </thead>
+        <tbody id="tablaBody"></tbody>
+    </table>
+
+    <script>
+        const WEB_APP_URL = "TU_URL_DE_GOOGLE_APPS_SCRIPT_AQUI"; // Pega tu URL aquí
+        let datosOriginales = [];
+
+        async function obtenerDatos() {
+            try {
+                // Llamamos a la API con el parámetro json=true
+                const res = await fetch(WEB_APP_URL + "?json=true");
+                datosOriginales = await res.json();
+                document.getElementById("mensaje").style.display = "none";
+                document.getElementById("tablaDatos").style.display = "table";
+                actualizarTabla();
+            } catch (err) {
+                document.getElementById("mensaje").textContent = "Error al conectar con la base de datos.";
+            }
+        }
+
+        function actualizarTabla() {
+            const nivel = document.getElementById("selectNivel").value;
+            const body = document.getElementById("tablaBody");
+            body.innerHTML = "";
+
+            const filtrados = (nivel === "Todos") 
+                ? datosOriginales 
+                : datosOriginales.filter(d => d.nivel === nivel);
+
+            filtrados.forEach(item => {
+                let notasHtml = item.notas || "";
+                if (notasHtml.includes("http")) {
+                    const links = notasHtml.split(/[\s,]+/);
+                    notasHtml = links.map((url, i) => url.startsWith("http") 
+                        ? `<a href="${url}" target="_blank" class="btn-url">🔗 Ver Recurso ${i+1}</a>` 
+                        : url).join(" ");
+                }
+
+                const fila = `<tr>
+                    <td>${item.fecha}</td>
+                    <td><strong>${item.nivel}</strong></td>
+                    <td>${item.labor}</td>
+                    <td>${notasHtml}</td>
+                </tr>`;
+                body.innerHTML += fila;
+            });
+        }
+
+        obtenerDatos();
+    </script>
+</body>
+</html>
