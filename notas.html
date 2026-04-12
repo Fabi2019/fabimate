@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bitácora de Labores - Presentación</title>
+    <style>
+        body { font-family: 'Segoe UI', sans-serif; background: #f8fafc; padding: 20px; }
+        .container { max-width: 900px; margin: auto; }
+        .filters { margin-bottom: 20px; display: flex; gap: 10px; }
+        select { padding: 10px; border-radius: 8px; border: 1px solid #cbd5e1; }
+        table { width: 100%; border-collapse: collapse; background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); }
+        th, td { padding: 12px 15px; text-align: left; border-bottom: 1px solid #e2e8f0; }
+        th { background: #1e293b; color: white; }
+        .loading { text-align: center; padding: 20px; font-style: italic; color: #64748b; }
+        .btn-link { padding: 4px 8px; background: #eff6ff; color: #2563eb; border-radius: 4px; text-decoration: none; font-size: 0.8rem; border: 1px solid #bfdbfe; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>📊 Visor de Bitácora</h1>
+    
+    <div class="filters">
+        <select id="filtroNivel" onchange="renderizarTabla()">
+            <option value="Todos">Todos los Niveles</option>
+            <option value="Setimo">7° Séptimo</option>
+            <option value="Octavo">8° Octavo</option>
+            <option value="Noveno">9° Noveno</option>
+            <option value="Bachillerato">Bachillerato</option>
+        </select>
+    </div>
+
+    <div id="status" class="loading">Cargando datos desde Google Sheets...</div>
+    
+    <table id="tablaLabores" style="display: none;">
+        <thead>
+            <tr>
+                <th>Fecha</th>
+                <th>Nivel</th>
+                <th>Labor</th>
+                <th>Notas / Recursos</th>
+            </tr>
+        </thead>
+        <tbody id="cuerpoTabla"></tbody>
+    </table>
+</div>
+
+<script>
+    // PEGA AQUÍ LA URL DE TU IMPLEMENTACIÓN DE GOOGLE APPS SCRIPT
+    const API_URL = "TU_URL_DE_APPS_SCRIPT_AQUI";
+    let DATOS_TOTALES = [];
+
+    async function cargarDatos() {
+        try {
+            const respuesta = await fetch(API_URL);
+            DATOS_TOTALES = await respuesta.json();
+            document.getElementById("status").style.display = "none";
+            document.getElementById("tablaLabores").style.display = "table";
+            renderizarTabla();
+        } catch (error) {
+            document.getElementById("status").textContent = "Error al cargar datos. Verifica la URL de la API.";
+            console.error(error);
+        }
+    }
+
+    function renderizarTabla() {
+        const nivel = document.getElementById("filtroNivel").value;
+        const cuerpo = document.getElementById("cuerpoTabla");
+        cuerpo.innerHTML = "";
+
+        const filtrados = nivel === "Todos" 
+            ? DATOS_TOTALES 
+            : DATOS_TOTALES.filter(d => d.nivel === nivel);
+
+        filtrados.forEach(reg => {
+            const fila = document.createElement("tr");
+            
+            // Procesar Notas para buscar links (como hicimos antes)
+            let notasHtml = reg.notas || "—";
+            if (reg.notas && reg.notas.includes("http")) {
+                const links = reg.notas.split(/[\s,]+/);
+                notasHtml = links.map((l, i) => l.startsWith("http") 
+                    ? `<a href="${l}" target="_blank" class="btn-link">🔗 Link ${i+1}</a>` 
+                    : l).join(" ");
+            }
+
+            fila.innerHTML = `
+                <td>${reg.fecha}</td>
+                <td><strong>${reg.nivel}</strong></td>
+                <td>${reg.labor}</td>
+                <td>${notasHtml}</td>
+            `;
+            cuerpo.appendChild(fila);
+        });
+    }
+
+    cargarDatos();
+</script>
+</body>
+</html>
