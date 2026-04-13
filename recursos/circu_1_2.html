@@ -1,0 +1,217 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tema 1.2: Representación Algebraica de la Circunferencia</title>
+    <style>
+        :root {
+            --primary: #2c3e50;
+            --secondary: #e67e22; /* Naranja para resaltar álgebra */
+            --accent: #27ae60;
+            --bg: #f4f7f6;
+            --white: #ffffff;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #444;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 40px 0;
+        }
+
+        .slide {
+            width: 900px;
+            height: 600px;
+            background: var(--bg);
+            margin-bottom: 50px;
+            padding: 60px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+            border-radius: 15px;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            border-left: 10px solid var(--secondary);
+        }
+
+        h1 { color: var(--primary); font-size: 3rem; text-align: center; margin-top: 60px; }
+        h2 { color: var(--secondary); font-size: 2.2rem; margin-top: 0; border-bottom: 2px solid #ddd; padding-bottom: 10px; }
+        
+        .content { display: flex; gap: 40px; align-items: center; flex: 1; }
+        .text { flex: 1.2; font-size: 1.2rem; line-height: 1.6; }
+        .visual { flex: 0.8; display: flex; flex-direction: column; align-items: center; }
+
+        .formula-highlight {
+            background: var(--primary);
+            color: white;
+            padding: 25px;
+            border-radius: 12px;
+            text-align: center;
+            font-size: 2rem;
+            margin: 20px 0;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        .step-box {
+            background: #fff;
+            border: 1px solid #dcdde1;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            box-shadow: 2px 2px 5px rgba(0,0,0,0.05);
+        }
+
+        .math-variable {
+            color: var(--secondary);
+            font-weight: bold;
+            font-style: italic;
+        }
+
+        svg {
+            background: white;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+        }
+
+        .footer {
+            position: absolute;
+            bottom: 20px;
+            right: 40px;
+            font-size: 0.9rem;
+            color: #7f8c8d;
+        }
+
+        @media print {
+            body { background: white; padding: 0; }
+            .slide { box-shadow: none; margin: 0; page-break-after: always; border: 1px solid #eee; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- DIAPOSITIVA 1: PORTADA TEMA 1.2 -->
+    <div class="slide">
+        <p style="color: var(--secondary); font-weight: bold; font-size: 1.2rem;">Unidad 1: Geometría Analítica</p>
+        <h1>1.2 Representación Algebraica</h1>
+        <p style="text-align: center; font-size: 1.5rem; color: #555;">Dado el centro C(h, k) y el radio (r)</p>
+        <div style="text-align: center; margin-top: 40px; font-size: 100px;">📝</div>
+        <div class="footer">Matemáticas Bachillerato</div>
+    </div>
+
+    <!-- DIAPOSITIVA 2: LA ESTRUCTURA ALGEBRAICA -->
+    <div class="slide">
+        <h2>La Forma Estándar</h2>
+        <div class="content">
+            <div class="text">
+                <p>Para representar algebraicamente una circunferencia, sustituimos los valores conocidos en la <strong>Ecuación Canónica</strong>:</p>
+                <div class="formula-highlight">
+                    (x - <span style="color: #ff7979;">h</span>)² + (y - <span style="color: #7ed6df;">k</span>)² = <span style="color: #f9ca24;">r</span>²
+                </div>
+                <p>Donde:</p>
+                <ul>
+                    <li><span class="math-variable">h</span> y <span class="math-variable">k</span> son las coordenadas del centro.</li>
+                    <li><span class="math-variable">r</span> es la medida del radio.</li>
+                </ul>
+            </div>
+            <div class="visual">
+                <p><strong>Estructura Visual</strong></p>
+                <svg width="250" height="250" viewBox="0 0 100 100">
+                    <circle cx="50" cy="50" r="35" fill="none" stroke="#e67e22" stroke-width="2" />
+                    <circle cx="50" cy="50" r="2" fill="#2c3e50" />
+                    <line x1="50" y1="50" x2="85" y2="50" stroke="#2c3e50" stroke-width="1" stroke-dasharray="2" />
+                    <text x="45" y="45" font-size="6">C(h, k)</text>
+                    <text x="60" y="48" font-size="6">r</text>
+                </svg>
+            </div>
+        </div>
+    </div>
+
+    <!-- DIAPOSITIVA 3: REGLA DE LOS SIGNOS -->
+    <div class="slide">
+        <h2>¡Cuidado con los Signos!</h2>
+        <div class="text">
+            <p>Al introducir <span class="math-variable">h</span> y <span class="math-variable">k</span> en la fórmula, el signo negativo de la ecuación <strong>cambia</strong> el signo original de la coordenada:</p>
+            
+            <div style="display: flex; gap: 20px; margin-top: 20px;">
+                <div class="step-box" style="flex: 1; border-top: 4px solid #e74c3c;">
+                    <p><strong>Si el centro es POSITIVO:</strong></p>
+                    <p>C(5, 2) <br> → (x <strong>- 5</strong>)² + (y <strong>- 2</strong>)²</p>
+                </div>
+                <div class="step-box" style="flex: 1; border-top: 4px solid #3498db;">
+                    <p><strong>Si el centro es NEGATIVO:</strong></p>
+                    <p>C(-3, -4) <br> → (x <strong>+ 3</strong>)² + (y <strong>+ 4</strong>)²</p>
+                </div>
+            </div>
+            <p style="margin-top: 20px; background: #fff3cd; padding: 10px; border-radius: 5px; font-size: 1rem;">
+                💡 <strong>Truco:</strong> En la ecuación siempre verás el signo "al revés" de la ubicación real en el plano.
+            </p>
+        </div>
+    </div>
+
+    <!-- DIAPOSITIVA 4: EJEMPLO PASO A PASO -->
+    <div class="slide">
+        <h2>Ejemplo Guiado</h2>
+        <div class="content">
+            <div class="text">
+                <p><strong>Problema:</strong> Hallar la ecuación con <br>Centro <span class="math-variable">C(-2, 5)</span> y Radio <span class="math-variable">r = 4</span>.</p>
+                <div class="step-box">
+                    <strong>Paso 1:</strong> Identificar h = -2, k = 5, r = 4.
+                </div>
+                <div class="step-box">
+                    <strong>Paso 2:</strong> Elevar el radio al cuadrado → 4² = <strong>16</strong>.
+                </div>
+                <div class="step-box">
+                    <strong>Paso 3:</strong> Sustituir y cambiar signos.<br>
+                    (x - (-2))² + (y - 5)² = 16
+                </div>
+                <p><strong>Resultado:</strong> (x + 2)² + (y - 5)² = 16</p>
+            </div>
+            <div class="visual">
+                <svg width="300" height="300" viewBox="0 0 200 200">
+                    <line x1="0" y1="100" x2="200" y2="100" stroke="#ccc" />
+                    <line x1="100" y1="0" x2="100" y2="200" stroke="#ccc" />
+                    <!-- Centro (-2, 5) -> escala (100-20, 100-50) -->
+                    <circle cx="80" cy="50" r="40" fill="rgba(39, 174, 96, 0.1)" stroke="#27ae60" stroke-width="2" />
+                    <circle cx="80" cy="50" r="3" fill="red" />
+                    <text x="85" y="45" font-size="10">C(-2, 5)</text>
+                </svg>
+            </div>
+        </div>
+    </div>
+
+    <!-- DIAPOSITIVA 5: PRÁCTICA INDEPENDIENTE -->
+    <div class="slide">
+        <h2>Práctica: Representación Algebraica</h2>
+        <div class="text">
+            <p>Escribe la ecuación de la circunferencia para cada caso:</p>
+            <table style="width: 100%; border-collapse: collapse; margin-top: 20px;">
+                <tr style="background: var(--primary); color: white;">
+                    <th style="padding: 15px; border: 1px solid #ddd;">Datos</th>
+                    <th style="padding: 15px; border: 1px solid #ddd;">Tu Respuesta</th>
+                </tr>
+                <tr>
+                    <td style="padding: 15px; border: 1px solid #ddd;">C(0, 0) ; r = 6</td>
+                    <td style="padding: 15px; border: 1px solid #ddd; color: #999;">x² + y² = 36</td>
+                </tr>
+                <tr>
+                    <td style="padding: 15px; border: 1px solid #ddd;">C(4, -7) ; r = 1</td>
+                    <td style="padding: 15px; border: 1px solid #ddd; color: #999;">(x - 4)² + (y + 7)² = 1</td>
+                </tr>
+                <tr>
+                    <td style="padding: 15px; border: 1px solid #ddd;">C(-1, -1) ; r = √5</td>
+                    <td style="padding: 15px; border: 1px solid #ddd; color: #999;">(x + 1)² + (y + 1)² = 5</td>
+                </tr>
+            </table>
+            <p style="margin-top: 30px; font-style: italic;">Recuerda: Si el radio tiene raíz, al elevarlo al cuadrado la raíz se elimina.</p>
+        </div>
+        <div class="footer">Referencia: Programas MEP de Bachillerato</div>
+    </div>
+
+</body>
+</html>
+
+
