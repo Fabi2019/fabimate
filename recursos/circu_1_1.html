@@ -1,0 +1,207 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Circunferencia - Guía de Bachillerato</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { background-color: #f8fafc; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        .canvas-container { position: relative; background: white; border-radius: 8px; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1); }
+        canvas { display: block; max-width: 100%; height: auto; }
+        .math-card { border-left: 4px solid #3b82f6; }
+    </style>
+</head>
+<body class="p-4 md:p-8">
+    <div class="max-w-4xl mx-auto space-y-8">
+        <!-- Encabezado -->
+        <header class="text-center">
+            <h1 class="text-4xl font-bold text-slate-800">La Circunferencia</h1>
+            <p class="text-slate-600 mt-2 text-lg">Geometría Analítica - Nivel Bachillerato</p>
+        </header>
+
+        <!-- Teoría -->
+        <section class="bg-white p-6 rounded-xl shadow-sm space-y-4">
+            <h2 class="text-2xl font-semibold text-blue-700">1. Definición y Ecuación</h2>
+            <p class="text-slate-700 leading-relaxed">
+                Una <strong>circunferencia</strong> es el conjunto de puntos en un plano que están a una distancia fija (<strong>radio</strong>) de un punto central (<strong>centro</strong>).
+            </p>
+            <div class="math-card bg-blue-50 p-4 rounded-r-lg">
+                <p class="text-lg font-mono text-center">
+                    (x - h)² + (y - k)² = r²
+                </p>
+                <p class="text-sm text-center text-blue-600 mt-2">Donde C(h, k) es el centro y r es el radio.</p>
+            </div>
+        </section>
+
+        <!-- Ejemplo Interactivo -->
+        <section class="bg-white p-6 rounded-xl shadow-sm space-y-6">
+            <h2 class="text-2xl font-semibold text-blue-700">2. Ejemplo Gráfico e Interactivo</h2>
+            <p class="text-slate-700 italic">Mueve los controles para ver cómo cambia la circunferencia:</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="space-y-4">
+                    <div>
+                        <label class="block text-sm font-medium text-slate-700">Centro h (X): <span id="valH">2</span></label>
+                        <input type="range" id="inputH" min="-10" max="10" value="2" class="w-full">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-slate-700">Centro k (Y): <span id="valK">-1</span></label>
+                        <input type="range" id="inputK" min="-10" max="10" value="-1" class="w-full">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-slate-700">Radio r: <span id="valR">3</span></label>
+                        <input type="range" id="inputR" min="1" max="10" value="3" class="w-full">
+                    </div>
+                    <div class="p-4 bg-slate-100 rounded text-center">
+                        <span class="font-bold text-blue-600" id="eqnDisplay">(x - 2)² + (y + 1)² = 9</span>
+                    </div>
+                </div>
+                
+                <div class="md:col-span-2 canvas-container flex justify-center p-4">
+                    <canvas id="cartesianPlane" width="400" height="400"></canvas>
+                </div>
+            </div>
+        </section>
+
+        <!-- Ejercicios -->
+        <section class="bg-white p-6 rounded-xl shadow-sm space-y-6">
+            <h2 class="text-2xl font-semibold text-blue-700">3. Ejercicios de Práctica</h2>
+            <p class="text-slate-700">Determina la ecuación y dibuja mentalmente el bosquejo de:</p>
+            
+            <div class="space-y-3">
+                <div class="flex items-center justify-between p-3 bg-slate-50 rounded">
+                    <span>1. C(0, 0), r = 5</span>
+                    <button onclick="showAnswer(1)" class="text-sm text-blue-500 hover:underline">Ver Respuesta</button>
+                </div>
+                <div class="flex items-center justify-between p-3 bg-slate-50 rounded">
+                    <span>2. C(3, 4), r = 2</span>
+                    <button onclick="showAnswer(2)" class="text-sm text-blue-500 hover:underline">Ver Respuesta</button>
+                </div>
+                <div class="flex items-center justify-between p-3 bg-slate-50 rounded">
+                    <span>3. C(-2, 1), r = 4</span>
+                    <button onclick="showAnswer(3)" class="text-sm text-blue-500 hover:underline">Ver Respuesta</button>
+                </div>
+                <div class="flex items-center justify-between p-3 bg-slate-50 rounded">
+                    <span>4. C(0, -3), r = 1</span>
+                    <button onclick="showAnswer(4)" class="text-sm text-blue-500 hover:underline">Ver Respuesta</button>
+                </div>
+                <div class="flex items-center justify-between p-3 bg-slate-50 rounded">
+                    <span>5. C(-4, -2), r = 3</span>
+                    <button onclick="showAnswer(5)" class="text-sm text-blue-500 hover:underline">Ver Respuesta</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Modal de Respuesta -->
+        <div id="modal" class="fixed inset-0 bg-black/50 hidden flex items-center justify-center p-4">
+            <div class="bg-white p-6 rounded-lg max-w-sm w-full text-center">
+                <h3 class="font-bold text-lg mb-4">Respuesta</h3>
+                <p id="modalText" class="text-slate-700 mb-6 font-mono"></p>
+                <button onclick="closeModal()" class="bg-blue-600 text-white px-4 py-2 rounded">Cerrar</button>
+            </div>
+        </div>
+
+        <footer class="text-center text-slate-500 text-sm pb-8">
+            <p>Fuentes: Sullivan (2013) Álgebra y Trigonometría | Lehmann (2008) Geometría Analítica</p>
+        </footer>
+    </div>
+
+    <script>
+        const canvas = document.getElementById('cartesianPlane');
+        const ctx = canvas.getContext('2d');
+        const hIn = document.getElementById('inputH');
+        const kIn = document.getElementById('inputK');
+        const rIn = document.getElementById('inputR');
+
+        const valH = document.getElementById('valH');
+        const valK = document.getElementById('valK');
+        const valR = document.getElementById('valR');
+        const eqnDisplay = document.getElementById('eqnDisplay');
+
+        const scale = 15; // píxeles por unidad
+
+        function draw() {
+            const h = parseFloat(hIn.value);
+            const k = parseFloat(kIn.value);
+            const r = parseFloat(rIn.value);
+
+            // Actualizar textos
+            valH.innerText = h;
+            valK.innerText = k;
+            valR.innerText = r;
+
+            // Mostrar ecuación
+            let hPart = h === 0 ? "x²" : `(x ${h < 0 ? '+' : '-'} ${Math.abs(h)})²`;
+            let kPart = k === 0 ? "y²" : `(y ${k < 0 ? '+' : '-'} ${Math.abs(k)})²`;
+            eqnDisplay.innerText = `${hPart} + ${kPart} = ${r * r}`;
+
+            // Limpiar
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            
+            const originX = canvas.width / 2;
+            const originY = canvas.height / 2;
+
+            // Dibujar Ejes
+            ctx.beginPath();
+            ctx.strokeStyle = '#cbd5e1';
+            ctx.lineWidth = 1;
+            // Eje X
+            ctx.moveTo(0, originY); ctx.lineTo(canvas.width, originY);
+            // Eje Y
+            ctx.moveTo(originX, 0); ctx.lineTo(originX, canvas.height);
+            ctx.stroke();
+
+            // Dibujar Cuadrícula
+            ctx.beginPath();
+            ctx.setLineDash([2, 4]);
+            for(let i = -10; i <= 10; i++) {
+                ctx.moveTo(0, originY - i * scale);
+                ctx.lineTo(canvas.width, originY - i * scale);
+                ctx.moveTo(originX + i * scale, 0);
+                ctx.lineTo(originX + i * scale, canvas.height);
+            }
+            ctx.stroke();
+            ctx.setLineDash([]);
+
+            // Dibujar Circunferencia
+            ctx.beginPath();
+            ctx.strokeStyle = '#2563eb';
+            ctx.lineWidth = 3;
+            ctx.arc(originX + h * scale, originY - k * scale, r * scale, 0, Math.PI * 2);
+            ctx.stroke();
+
+            // Dibujar Centro
+            ctx.fillStyle = '#ef4444';
+            ctx.beginPath();
+            ctx.arc(originX + h * scale, originY - k * scale, 4, 0, Math.PI * 2);
+            ctx.fill();
+        }
+
+        const answers = {
+            1: "x² + y² = 25",
+            2: "(x - 3)² + (y - 4)² = 4",
+            3: "(x + 2)² + (y - 1)² = 16",
+            4: "x² + (y + 3)² = 1",
+            5: "(x + 4)² + (y + 2)² = 9"
+        };
+
+        function showAnswer(id) {
+            document.getElementById('modalText').innerText = answers[id];
+            document.getElementById('modal').classList.remove('hidden');
+        }
+
+        function closeModal() {
+            document.getElementById('modal').classList.add('hidden');
+        }
+
+        [hIn, kIn, rIn].forEach(el => el.addEventListener('input', draw));
+        
+        // Cargar dibujo inicial
+        window.onload = draw;
+    </script>
+</body>
+</html>
+
+
