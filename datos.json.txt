@@ -17,7 +17,9 @@
     { "texto": "Avisos MEP",
     "clave": "avisomep"},
     { "texto": "Juegos",
-    "clave": "juego"}
+    "clave": "juego"},
+    { "texto": "Administrativo",
+    "clave": "Admin"}
 ]
 },
     "programas": [
@@ -89,6 +91,15 @@
         "url": "bitacora.html?nivel=Noveno"},
         {"nombre": "Anotaciones para Bachillerato:",
         "url": "bitacora.html?nivel=Bachillerato"}
+        ],
+        "Admin": [
+        {
+        "nombre": "RegistrosB",
+        "url": "https://script.google.com/macros/s/AKfycbwMRUBGACKdZ-b84FZkyjR-ooK4PeXUwp-zZQCHXx-SCTKOIykU_i_VE81LT_eqJCPUJQ/exec"
+        },
+         "nombre": "ArchivoB",
+        "url": "https://docs.google.com/spreadsheets/d/16fOO72AH2Y-mGNPE2XROaBGQzsQpyGMTn0gXwCjlKPU/edit?usp=drivesdk"
+        }
         ]
     
     
