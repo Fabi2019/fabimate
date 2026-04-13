@@ -19,7 +19,7 @@
     { "texto": "Juegos",
     "clave": "juego"},
     { "texto": "Administrativo",
-    "clave": "Admin"}
+    "clave": "admin"}
 ]
 },
     "programas": [
@@ -92,7 +92,7 @@
         {"nombre": "Anotaciones para Bachillerato:",
         "url": "bitacora.html?nivel=Bachillerato"}
         ],
-    "Admin": [
+    "admin": [
         {
         "nombre": "RegistrosB",
         "url": "https://script.google.com/macros/s/AKfycbwMRUBGACKdZ-b84FZkyjR-ooK4PeXUwp-zZQCHXx-SCTKOIykU_i_VE81LT_eqJCPUJQ/exec"
