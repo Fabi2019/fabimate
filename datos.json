@@ -80,7 +80,7 @@
         {"nombre": "Puntos en el Plano Cartesiano:",
         "url": "https://fabi2019.github.io/Radar3/"}
         ],
-        "bita": [
+    "bita": [
         {
         "nombre": "Anotaciones para Setimo:",
         "url": "bitacora.html?nivel=Setimo"
@@ -92,7 +92,7 @@
         {"nombre": "Anotaciones para Bachillerato:",
         "url": "bitacora.html?nivel=Bachillerato"}
         ],
-        "Admin": [
+    "Admin": [
         {
         "nombre": "RegistrosB",
         "url": "https://script.google.com/macros/s/AKfycbwMRUBGACKdZ-b84FZkyjR-ooK4PeXUwp-zZQCHXx-SCTKOIykU_i_VE81LT_eqJCPUJQ/exec"
@@ -103,5 +103,5 @@
         }
         ]
     
-    
-        }
+   } 
+  }
