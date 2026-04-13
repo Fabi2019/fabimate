@@ -21,7 +21,7 @@
     { "texto": "Administrativo",
     "clave": "Admin"}
 ]
-},
+,
     "programas": [
         {
         "nombre": "Contenido 7, Página 3 (descargar)",
@@ -102,6 +102,6 @@
         "url": "https://docs.google.com/spreadsheets/d/16fOO72AH2Y-mGNPE2XROaBGQzsQpyGMTn0gXwCjlKPU/edit?usp=drivesdk"
         }
         ]
-    
-   } 
+}
+   
   }
