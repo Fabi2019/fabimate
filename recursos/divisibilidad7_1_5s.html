@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Material de Matemáticas - 7mo Año: Divisibilidad</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f4f4f9;
+        }
+        .container {
+            background: #fff;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h1, h2, h3 {
+            color: #2c3e50;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 5px;
+        }
+        .example, .exercises, .answers {
+            background-color: #e8f4f8;
+            padding: 15px;
+            border-left: 5px solid #3498db;
+            margin: 20px 0;
+        }
+        .answers {
+            background-color: #f9f9f9;
+            border-left: 5px solid #27ae60;
+            display: none; /* Oculto por defecto para estudio */
+        }
+        .no-print {
+            margin-bottom: 20px;
+        }
+        button {
+            background-color: #3498db;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #2980b9;
+        }
+        @media print {
+            .no-print { display: none; }
+            .answers { display: block; }
+            body { background-color: white; }
+            .container { box-shadow: none; width: 100%; padding: 0; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="no-print">
+        <button onclick="window.print()">Imprimir o Guardar como PDF</button>
+        <button onclick="document.getElementById('respuestas').style.display='block'">Mostrar Respuestas</button>
+    </div>
+
+    <div class="container">
+        <h1>1.3 Conceptos de Divisibilidad</h1>
+        <p><strong>Nivel:</strong> Sétimo Año</p>
+
+        <h2>Explicación Teórica</h2>
+        <p>Para resolver problemas matemáticos, es fundamental entender la relación entre los números:</p>
+        <ul>
+            <li><strong>Divisibilidad:</strong> Un número es divisible por otro si al dividirlos el residuo es cero.</li>
+            <li><strong>Divisor:</strong> Es el número que divide a otro exactamente (ej: 3 es divisor de 12).</li>
+            <li><strong>Factor:</strong> Son los números que se multiplican para obtener un producto. En la práctica, divisor y factor se usan como sinónimos.</li>
+            <li><strong>Múltiplo:</strong> Es el resultado de multiplicar un número por cualquier número natural (ej: 15 es múltiplo de 5 porque 5 &times; 3 = 15).</li>
+        </ul>
+
+        <div class="example">
+            <h3>Ejemplo Resuelto</h3>
+            <p><strong>Problema:</strong> María tiene 24 flores y quiere hacer ramos con la misma cantidad de flores sin que sobre ninguna. ¿De cuántas formas puede agruparlas?</p>
+            <p><strong>Solución:</strong> Debemos buscar los <strong>divisores</strong> de 24.</p>
+            <ul>
+                <li>1 ramo de 24</li>
+                <li>2 ramos de 12</li>
+                <li>3 ramos de 8</li>
+                <li>4 ramos de 6</li>
+                <li>6 ramos de 4</li>
+                <li>8 ramos de 3</li>
+                <li>12 ramos de 2</li>
+                <li>24 ramos de 1</li>
+            </ul>
+        </div>
+
+        <div class="exercises">
+            <h3>Ejercicios de Práctica</h3>
+            <ol>
+                <li>Juan tiene 30 caramelos y quiere repartirlos en bolsas iguales. Si cada bolsa debe tener más de 2 caramelos y menos de 10, ¿cuántos caramelos puede poner en cada bolsa?</li>
+                <li>¿Es 144 un múltiplo de 12? Justifica tu respuesta realizando la división.</li>
+                <li>Escribe todos los factores del número 45.</li>
+                <li>Un autobús pasa cada 15 minutos por una parada. Si pasó a las 8:00 a.m., menciona los próximos 4 momentos (múltiplos) en los que pasará el autobús.</li>
+                <li>En un salón de clase hay 36 estudiantes. El profesor quiere formar grupos iguales para un proyecto. ¿Cuáles son todas las combinaciones posibles de tamaño de grupo que puede formar?</li>
+            </ol>
+        </div>
+
+        <div id="respuestas" class="answers">
+            <h3>Respuestas</h3>
+            <ol>
+                <li>Los divisores de 30 entre 2 y 10 son: 3, 5 y 6. Puede poner 3, 5 o 6 caramelos.</li>
+                <li>Sí, porque 144 &divide; 12 = 12 (residuo 0).</li>
+                <li>Factores de 45: {1, 3, 5, 9, 15, 45}.</li>
+                <li>8:15 a.m., 8:30 a.m., 8:45 a.m., 9:00 a.m.</li>
+                <li>Grupos de: 1, 2, 3, 4, 6, 9, 12, 18, 36 estudiantes.</li>
+            </ol>
+        </div>
+
+        <h2>Referencias Bibliográficas</h2>
+        <ul>
+            <li>Ministerio de Educación Pública (MEP). <i>Programas de Estudio de Matemáticas: Tercer Ciclo y Educación Diversificada</i>. San José, Costa Rica.</li>
+            <li>Baldor, A. (2017). <i>Aritmética</i>. Grupo Editorial Patria.</li>
+            <li>Stewart, J., Redlin, L., & Watson, S. (2012). <i>Precálculo: Matemáticas para el cálculo</i>. Cengage Learning.</li>
+        </ul>
+    </div>
+
+</body>
+</html>
