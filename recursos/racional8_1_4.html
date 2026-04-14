@@ -1,0 +1,149 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Material Matemáticas 8vo - 1.4</title>
+    <style>
+        @page {
+            size: A4;
+            margin: 20mm;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f7f6;
+        }
+        /* Barra de herramientas para pantalla */
+        .toolbar {
+            background-color: #2c3e50;
+            padding: 15px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+        .btn {
+            background-color: #18bc9c;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background 0.3s;
+            font-weight: bold;
+        }
+        .btn:hover {
+            background-color: #128f76;
+        }
+        
+        /* Contenedor del documento */
+        .paper {
+            background-color: white;
+            width: 210mm;
+            margin: 20px auto;
+            padding: 20mm;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            box-sizing: border-box;
+        }
+        
+        .header {
+            border-bottom: 3px solid #18bc9c;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+        }
+        h1 { color: #2c3e50; font-size: 22px; margin: 0; }
+        h2 { color: #2c3e50; border-left: 5px solid #18bc9c; padding-left: 10px; font-size: 18px; margin-top: 25px; }
+        
+        .example-box {
+            background-color: #e8f4f8;
+            border: 1px solid #3498db;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        .answers {
+            margin-top: 40px;
+            padding: 15px;
+            border-top: 2px dashed #bbb;
+            background-color: #fafafa;
+        }
+        
+        /* Ajustes para impresión */
+        @media print {
+            .toolbar { display: none; }
+            body { background-color: white; }
+            .paper { 
+                box-shadow: none; 
+                margin: 0; 
+                width: 100%; 
+                padding: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="toolbar">
+        <button class="btn" onclick="window.print()">🖨️ Imprimir o Guardar como PDF</button>
+    </div>
+
+    <div class="paper">
+        <div class="header">
+            <h1>Matemáticas - 8vo Grado</h1>
+            <p><strong>Tema:</strong> 1.4 Identificar representaciones distintas de un mismo número racional</p>
+        </div>
+
+        <section>
+            <h2>Explicación</h2>
+            <p>Un número racional es cualquier número que puede expresarse como el cociente de dos enteros. Lo fascinante es que este "mismo valor" puede verse de varias formas:</p>
+            <ul>
+                <li><strong>Fracción:</strong> 1/2</li>
+                <li><strong>Fracciones equivalentes:</strong> 2/4, 5/10, 50/100...</li>
+                <li><strong>Decimal:</strong> 0.5</li>
+                <li><strong>Porcentaje:</strong> 50%</li>
+            </ul>
+        </section>
+
+        <div class="example-box">
+            <h2>Ejemplo</h2>
+            <p>Representemos el número <strong>2/5</strong> de diferentes maneras:</p>
+            <ul>
+                <li><strong>Equivalente:</strong> 4/10 (multiplicando por 2).</li>
+                <li><strong>Decimal:</strong> 0.4 (dividiendo 2 entre 5).</li>
+                <li><strong>Porcentaje:</strong> 40% (0.4 × 100).</li>
+            </ul>
+        </div>
+
+        <section>
+            <h2>Ejercicios</h2>
+            <ol>
+                <li>Escribe una fracción equivalente a <strong>3/7</strong>.</li>
+                <li>Convierte <strong>4/5</strong> a su forma decimal.</li>
+                <li>¿Qué porcentaje representa el número <strong>0.12</strong>?</li>
+                <li>Expresa <strong>0.75</strong> como una fracción irreducible.</li>
+                <li>Une con una línea los valores iguales (mentalmente): <strong>1/4, 0.8, 80%, 0.25</strong>.</li>
+            </ol>
+        </section>
+
+        <div class="answers">
+            <h2>Respuestas para el profesor</h2>
+            <p>1. 6/14 (o similar) | 2. 0.8 | 3. 12% | 4. 3/4 | 5. (1/4 = 0.25) y (0.8 = 80%).</p>
+        </div>
+
+        <footer>
+            <p><small><strong>Bibliografía:</strong> <br> 
+            - Ministerio de Educación Pública (MEP), Programa de Estudios de Matemáticas.<br>
+            - Sullivan, M. (2013). Álgebra y Trigonometría.</small></p>
+        </footer>
+    </div>
+
+</body>
+</html>

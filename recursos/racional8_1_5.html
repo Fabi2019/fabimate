@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Comparación de Racionales - 8vo Grado</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    
+    <style>
+        body { font-family: 'Segoe UI', Arial, sans-serif; color: #333; line-height: 1.6; background-color: #e9ecef; padding: 40px; }
+        .container { max-width: 800px; background: white; margin: auto; padding: 50px; box-shadow: 0 10px 25px rgba(0,0,0,0.1); border-radius: 4px; position: relative; }
+        
+        /* Botón de impresión */
+        .no-print { position: absolute; top: 20px; right: 20px; }
+        .btn-print { background-color: #27ae60; color: white; padding: 10px 20px; border: none; border-radius: 4px; cursor: pointer; font-weight: bold; }
+        .btn-print:hover { background-color: #219150; }
+
+        .header { text-align: center; border-bottom: 3px solid #2c3e50; margin-bottom: 30px; }
+        h1 { color: #2c3e50; margin-bottom: 5px; }
+        h2 { color: #2980b9; border-bottom: 1px solid #eee; padding-bottom: 10px; margin-top: 40px; }
+        
+        .example-box { background-color: #f8f9fa; border-left: 6px solid #2980b9; padding: 20px; margin: 20px 0; font-style: normal; }
+        .exercise-list li { margin-bottom: 20px; font-size: 1.1em; }
+        
+        .answers { margin-top: 50px; padding: 20px; border: 1px dashed #bbb; border-radius: 8px; background: #fffdf0; }
+        .footer { margin-top: 40px; font-size: 11px; color: #7f8c8d; text-align: center; border-top: 1px solid #eee; padding-top: 20px; }
+
+        @media print {
+            .no-print { display: none; }
+            body { background-color: white; padding: 0; }
+            .container { box-shadow: none; border: none; width: 100%; max-width: 100%; padding: 20px; }
+            .answers { page-break-before: always; } /* Las respuestas salen en hoja aparte si deseas */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="no-print">
+        <button class="btn-print" onclick="window.print()">🖨️ IMPRIMIR / GUARDAR PDF</button>
+    </div>
+
+    <div class="container">
+        <div class="header">
+            <h1>Matemáticas: Números Racionales</h1>
+            <p><strong>Nivel:</strong> Octavo Grado | <strong>Tema 1.5:</strong> Comparar y Ordenar</p>
+        </div>
+
+        <h2>1. Explicación</h2>
+        <p>Para comparar números en distintas presentaciones (decimales, fracciones y números mixtos), aplicamos el siguiente proceso:</p>
+        <ul>
+            <li><strong>Paso 1:</strong> Convertir todas las expresiones a decimales.</li>
+            <li><strong>Paso 2:</strong> Alinear los puntos decimales y comparar cifra por cifra (décimos, centésimos, etc.).</li>
+            <li><strong>Paso 3:</strong> En la recta numérica, recuerda que si un número está a la izquierda de otro, es <strong>menor</strong>.</li>
+        </ul>
+
+        <h2>2. Ejemplo</h2>
+        <div class="example-box">
+            <strong>Comparar:</strong> \( \frac{3}{4} \), \( 0.72 \) y \( 1 \frac{1}{5} \)<br><br>
+            1. \( \frac{3}{4} = 3 \div 4 = 0.75 \)<br>
+            2. \( 1 \frac{1}{5} = \frac{6}{5} = 1.2 \)<br>
+            3. Comparando: \( 0.72 < 0.75 < 1.2 \)<br>
+            <strong>Orden ascendente:</strong> \( 0.72 < \frac{3}{4} < 1 \frac{1}{5} \)
+        </div>
+
+        <h2>3. Ejercicios de Práctica</h2>
+        <ol class="exercise-list">
+            <li>Escribe \( > \), \( < \) o \( = \) según corresponda: <br> \( 0.85 \) ________ \( \frac{7}{8} \)</li>
+            <li>Ordena de menor a mayor los siguientes valores: <br> \( 1.45 \); &nbsp; \( \frac{3}{2} \); &nbsp; \( 1 \frac{2}{5} \)</li>
+            <li>Determina cuál número es menor: <br> \( -0.6 \) &nbsp; o &nbsp; \( -\frac{2}{3} \)</li>
+            <li>¿Es verdadera la siguiente expresión? Justifica:<br> \( 2 \frac{1}{4} = 2.25 \)</li>
+            <li>Ordena de forma descendente (mayor a menor): <br> \( \frac{11}{10} \); &nbsp; \( 1.09 \); &nbsp; \( 1 \frac{1}{8} \)</li>
+        </ol>
+
+        <div class="answers">
+            <h3>Respuestas (Clave para el docente)</h3>
+            <p>
+                1. \( 0.85 < 0.875 \) (\( \frac{7}{8} \))<br>
+                2. \( 1 \frac{2}{5} (1.4) < 1.45 < \frac{3}{2} (1.5) \)<br>
+                3. \( -\frac{2}{3} \) (es aproximadamente \( -0.66 \), está más a la izquierda que \( -0.6 \))<br>
+                4. Verdadera. \( 1 \div 4 = 0.25 \), sumado al entero es \( 2.25 \).<br>
+                5. \( 1 \frac{1}{8} (1.125) > \frac{11}{10} (1.1) > 1.09 \)
+            </p>
+        </div>
+
+        <div class="footer">
+            <p><strong>Referencias Bibliográficas:</strong><br>
+            Baldor, A. (2017). <em>Aritmética</em>. México: Editorial Patria.<br>
+            Sullivan, M. (2013). <em>Álgebra y Trigonometría</em>. Pearson Educación.</p>
+        </div>
+    </div>
+
+</body>
+</html>
