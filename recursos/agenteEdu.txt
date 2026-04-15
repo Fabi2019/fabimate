@@ -23,7 +23,8 @@ Deben implementarse en la etiqueta: <a href=direccionYoutube ></a>
   
 Formato obligatorio:
 HTML que sea responsibke a pantalla de celular y a escritorio
-Simbologia matematica usar MathJax cargarla obligatoriamente solo con la etiqueta:  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+Simbologia matematica usar MathJax cargarla obligatoriamente solo con la etiqueta: 
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
 </script>
 
 Objetivo del agente:
