@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>1.7 Estimar el valor de la raíz de un número entero</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+ <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      margin: 20px;
+      line-height: 1.6;
+    }
+    .contenedor {
+      max-width: 900px;
+      margin: auto;
+    }
+    h1, h2 {
+      color: #1a1a1a;
+    }
+    .boton {
+      margin-bottom: 20px;
+    }
+    button {
+      padding: 10px 18px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    @media print {
+      .boton {
+        display: none;
+      }
+    }
+  </style>
+</head>
+
+<body>
+<div class="contenedor">
+
+  <!-- Botón imprimir o PDF -->
+  <div class="boton">
+    <button onclick="window.print()">Imprimir o guardar en PDF (tamaño carta)</button>
+  </div>
+
+  <h1>1.7 Estimar el valor de la raíz de un número entero</h1>
+
+  <!-- Explicación -->
+  <h2>Explicación</h2>
+  <p>
+    Estimar la raíz cuadrada de un número entero significa encontrar un valor
+    aproximado cuando dicha raíz no es exacta.
+  </p>
+  <p>
+    Para realizar una estimación adecuada, se siguen estos pasos:
+  </p>
+  <ol>
+    <li>Buscar dos números enteros consecutivos cuyos cuadrados encierren al número dado.</li>
+    <li>Comparar qué tan cerca está el número del cuadrado menor y del mayor.</li>
+    <li>Asignar un valor decimal aproximado entre esos enteros.</li>
+  </ol>
+  <p>
+    Si buscamos estimar $$ \sqrt{20} $$, sabemos que:
+  </p>
+  <p>
+    $$ 4^2 = 16 \quad \text{y} \quad 5^2 = 25 $$
+  </p>
+  <p>
+    Como $$ 16 < 20 < 25 $$, entonces:
+  </p>
+  <p>
+    $$ 4 < \sqrt{20} < 5 $$
+  </p>
+
+  <!-- Ejemplo -->
+  <h2>Ejemplo</h2>
+  <p>
+    Estimar el valor de $$ \sqrt{45} $$.
+  </p>
+  <p>
+    Buscamos los cuadrados más cercanos:
+  </p>
+  <ul>
+    <li>$$6^2 = 36$$</li>
+    <li>$$7^2 = 49$$</li>
+  </ul>
+  <p>
+    Entonces:
+  </p>
+  <p>
+    $$ 36 < 45 < 49 $$
+  </p>
+  <p>
+    Como 45 está más cerca de 49, una buena estimación es:
+  </p>
+  <p>
+    $$ \sqrt{45} \approx 6.7 $$
+  </p>
+
+  <!-- Ejercicios -->
+  <h2>Ejercicios</h2>
+  <ol>
+    <li>Estima el valor de $$ \sqrt{10} $$.</li>
+    <li>Estima el valor de $$ \sqrt{30} $$.</li>
+    <li>Estima el valor de $$ \sqrt{50} $$.</li>
+    <li>Estima el valor de $$ \sqrt{70} $$.</li>
+    <li>Estima el valor de $$ \sqrt{90} $$.</li>
+  </ol>
+
+  <!-- Respuestas -->
+  <h2>Respuestas</h2>
+  <ol>
+    <li>$$ \sqrt{10} \approx 3.2 $$</li>
+    <li>$$ \sqrt{30} \approx 5.5 $$</li>
+    <li>$$ \sqrt{50} \approx 7.1 $$</li>
+    <li>$$ \sqrt{70} \approx 8.4 $$</li>
+    <li>$$ \sqrt{90} \approx 9.5 $$</li>
+  </ol>
+
+  <!-- Referencias -->
+  <h2>Referencias (APA)</h2>
+  <ul>
+    <li>Baldor, A. (2009). <em>Álgebra</em>. Grupo Editorial Patria.</li>
+    <li>Ministerio de Educación. (2016). <em>Matemática – Noveno grado</em>.</li>
+    <li>Larson, R., & Hostetler, R. (2014). <em>Precalculus with Limits</em>. Cengage Learning.</li>
+  </ul>
+
+  <!-- Videos -->
+  <h2>Videos recomendados en YouTube</h2>
+  <ul>
+    <li>
+      <a href="https://www.youtube.com/watch?v=kcmlZujnl-g" target="_blank" rel="noopener">
+        Estimación de raíces cuadradas – Julioprofe
+      </a>
+    </li>
+    <li>
+      <a href="https://es.khanacademy.org/v/approximating-square-roots-2" target="_blank" rel="noopener">
+        Aproximar raíces cuadradas – Khan Academy en Español
+      </a>
+    </li>
+  </ul>
+
+</div>
+</body>
+</html>
