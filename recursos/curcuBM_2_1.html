@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>2.1 Recta secante, tangente o exterior por intersección (Bachillerato por Madurez)</title>
+
+ <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+<style>
+body{
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 20px;
+}
+.container{
+    max-width: 900px;
+    margin: auto;
+}
+.print-btn{
+    margin-bottom: 20px;
+}
+@media print{
+    .print-btn{
+        display: none;
+    }
+}
+button{
+    padding:10px 16px;
+    font-size:16px;
+    cursor:pointer;
+}
+h1,h2{
+    color:#2c3e50;
+}
+</style>
+</head>
+
+<body>
+<div class="container">
+
+<!-- Botón imprimir o PDF -->
+<div class="print-btn">
+    <button onclick="window.print()">Imprimir / Guardar en PDF (tamaño carta)</button>
+</div>
+
+<h1>2.1 Determinar si una recta es secante, tangente o exterior a una circunferencia</h1>
+
+<h2>Explicación</h2>
+<p>
+En <strong>Bachillerato por Madurez</strong>, la relación entre una recta y una circunferencia
+se estudia utilizando <strong>ecuaciones canónicas</strong> y el
+<strong>método de intersección</strong>.
+</p>
+
+<p>
+La circunferencia se expresa únicamente en forma canónica:
+</p>
+
+<p style="text-align:center;">
+$$
+(x-h)^2 + (y-k)^2 = r^2
+$$
+</p>
+
+<p>
+La recta se utiliza despejada o en forma sencilla, por ejemplo:
+</p>
+
+<ul>
+<li>$$ y = mx + b $$</li>
+<li>$$ x = a $$</li>
+<li>$$ y = c $$</li>
+</ul>
+
+<p>
+El procedimiento consiste en <strong>sustituir la ecuación de la recta</strong>
+dentro de la ecuación de la circunferencia.
+Esto produce una <strong>ecuación cuadrática</strong>.
+Según la cantidad de soluciones de dicha ecuación, se clasifica la recta.
+</p>
+
+<ul>
+<li><strong>Recta secante:</strong> dos soluciones reales.</li>
+<li><strong>Recta tangente:</strong> una única solución real.</li>
+<li><strong>Recta exterior:</strong> no tiene soluciones reales.</li>
+</ul>
+
+<hr>
+
+<h2>Ejemplo</h2>
+<p>
+Determinar la posición de la recta $$ y = 2 $$ respecto a la circunferencia:
+</p>
+
+<p style="text-align:center;">
+$$
+(x-1)^2 + (y-1)^2 = 4
+$$
+</p>
+
+<p>
+Sustituimos $$ y = 2 $$ en la ecuación de la circunferencia:
+</p>
+
+<p style="text-align:center;">
+$$
+(x-1)^2 + (2-1)^2 = 4
+$$
+</p>
+
+<p style="text-align:center;">
+$$
+(x-1)^2 + 1 = 4
+$$
+</p>
+
+<p style="text-align:center;">
+$$
+(x-1)^2 = 3
+$$
+</p>
+
+<p>
+Esta ecuación tiene <strong>dos soluciones reales</strong>, por lo tanto,
+la recta es <strong>secante</strong>.
+</p>
+
+<hr>
+
+<h2>Ejercicios</h2>
+<ol>
+<li>Determina si la recta $$ y = 0 $$ es secante, tangente o exterior a la circunferencia $$ x^2 + y^2 = 1 $$.</li>
+<li>Clasifica la recta $$ x = 3 $$ respecto a la circunferencia $$ (x-1)^2 + y^2 = 4 $$.</li>
+<li>Indica la posición de la recta $$ y = x $$ respecto a la circunferencia $$ x^2 + y^2 = 2 $$.</li>
+<li>Determina si la recta $$ y = -1 $$ es tangente a la circunferencia $$ (x-2)^2 + (y+1)^2 = 1 $$.</li>
+<li>Decide si la recta $$ x = 0 $$ es exterior a la circunferencia $$ (x-3)^2 + y^2 = 1 $$.</li>
+</ol>
+
+<hr>
+
+<h2>Respuestas</h2>
+<ol>
+<li>Secante</li>
+<li>Secante</li>
+<li>Tangente</li>
+<li>Tangente</li>
+<li>Exterior</li>
+</ol>
+
+<hr>
+
+<h2>Referencias</h2>
+<ul>
+<li>Baldor, A. (2009). <em>Geometría plana</em>. Editorial Patria.</li>
+<li>Ministerio de Educación Pública. (2023). <em>Programa de Matemáticas – Bachillerato por Madurez</em>.</li>
+</ul>
+
+<hr>
+
+<h2>Videos recomendados en YouTube</h2>
+<ul>
+<li>
+<a href="https://www.youtube.com/watch?v=BgXyGMPw_Xc" target="_blank">
+Rectas secantes, tangentes y exteriores (método de intersección) – ProfeSergioCM
+</a>
+</li>
+<li>
+<a href="https://www.youtube.com/watch?v=1Uu7TlVf7b4" target="_blank">
+Recta secante, tangente o exterior a una circunferencia – EduMate
+</a>
+</li>
+</ul>
+
+</div>
+</body>
+</html>
