@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Ubicación de puntos en el plano cartesiano</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 20px;
+    }
+
+    h1, h2 {
+      color: #2c3e50;
+    }
+
+    .print-btn {
+      margin-bottom: 20px;
+    }
+
+    svg {
+      width: 100%;
+      max-width: 500px;
+      height: auto;
+      border: 1px solid #ccc;
+      margin: 20px auto;
+      display: block;
+    }
+
+    @media print {
+      .print-btn {
+        display: none;
+      }
+    }
+  </style>
+
+ <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+
+<body>
+
+<div class="print-btn">
+  <button onclick="window.print()">Imprimir / Guardar PDF (tamaño carta)</button>
+</div>
+
+<h1>Ubicación de puntos en el plano cartesiano</h1>
+
+<h2>Explicación</h2>
+<p>
+El <strong>plano cartesiano</strong> es un sistema de referencia bidimensional formado por dos ejes
+perpendiculares:
+</p>
+
+<ul>
+  <li>Eje <strong>X</strong>: horizontal</li>
+  <li>Eje <strong>Y</strong>: vertical</li>
+</ul>
+
+<p>
+Ambos ejes se intersectan en el <strong>origen</strong>, cuyas coordenadas son:
+</p>
+
+<p>
+$$
+(0,0)
+$$
+</p>
+
+<p>
+Cada punto del plano se representa mediante un <strong>par ordenado</strong>:
+</p>
+
+<p>
+$$
+(x,y)
+$$
+</p>
+
+<p>
+Para ubicar un punto:
+</p>
+
+<ol>
+  <li>Se avanza $$x$$ unidades sobre el eje X.</li>
+  <li>Luego se avanza $$y$$ unidades sobre el eje Y.</li>
+</ol>
+
+<h2>Ejemplo</h2>
+<p>
+Ubicar el punto $$A(3,2)$$.
+</p>
+
+<p>
+Interpretación:
+</p>
+
+<ul>
+  <li>3 unidades a la derecha</li>
+  <li>2 unidades hacia arriba</li>
+</ul>
+
+<!-- DIBUJO SVG DEL PLANO CARTESIANO -->
+<svg viewBox="-110 -110 220 220" aria-label="Plano cartesiano con punto A">
+  <!-- Ejes -->
+  <line x1="-100" y1="0" x2="100" y2="0" stroke="black" stroke-width="1"/>
+  <line x1="0" y1="-100" x2="0" y2="100" stroke="black" stroke-width="1"/>
+
+  <!-- Marcos -->
+  <line x1="-100" y1="-100" x2="-100" y2="100" stroke="#ddd"/>
+  <line x1="100" y1="-100" x2="100" y2="100" stroke="#ddd"/>
+  <line x1="-100" y1="-100" x2="100" y2="-100" stroke="#ddd"/>
+  <line x1="-100" y1="100" x2="100" y2="100" stroke="#ddd"/>
+
+  <!-- Punto A(3,2) — escala 1 unidad = 20px -->
+  <circle cx="60" cy="-40" r="4" fill="red"/>
+  <text x="65" y="-45" font-size="10">A(3,2)</text>
+</svg>
+
+<p>
+El punto se localiza en el <strong>primer cuadrante</strong>.
+</p>
+
+<h2>Ejercicios</h2>
+<ol>
+  <li>Ubica el punto $$B(4,-1)$$.</li>
+  <li>Ubica el punto $$C(-2,3)$$.</li>
+  <li>Ubica el punto $$D(-3,-4)$$.</li>
+  <li>Ubica el punto $$E(0,5)$$ e indica el eje.</li>
+  <li>Ubica el punto $$F(6,0)$$ e indica el eje.</li>
+</ol>
+
+<h2>Respuestas</h2>
+<ol>
+  <li>Cuarto cuadrante.</li>
+  <li>Segundo cuadrante.</li>
+  <li>Tercer cuadrante.</li>
+  <li>Sobre el eje Y.</li>
+  <li>Sobre el eje X.</li>
+</ol>
+
+<h2>Referencias (APA)</h2>
+<ul>
+  <li>Khan Academy. (2025). <em>Introducción al plano coordenado</em>. https://es.khanacademy.org</li>
+  <li>Descartes, R. (1996). <em>La geometría</em>. Alianza Editorial.</li>
+</ul>
+
+<h2>Videos recomendados en YouTube</h2>
+<ul>
+  <li>
+    <a href="https://www.youtube.com/watch?v=QTrE4x5DPZ8" target="_blank">
+      Cómo ubicar puntos en el plano cartesiano – Matemáticas Profe Alex
+    </a>
+  </li>
+  <li>
+    <a href="https://www.youtube.com/watch?v=0cUkAd2o1yw" target="_blank">
+      Ubicar un punto en el plano cartesiano – Súper fácil
+    </a>
+  </li>
+</ul>
+
+</body>
+</html>

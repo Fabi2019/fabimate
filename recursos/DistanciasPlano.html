@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Distancias con el Teorema de Pitágoras</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    body{
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 20px;
+    }
+    h1,h2{ color:#2c3e50; }
+    .print-btn{ margin-bottom:20px; }
+    svg{
+      width:100%;
+      max-width:520px;
+      height:auto;
+      display:block;
+      margin:20px auto;
+      border:1px solid #ccc;
+    }
+    @media print{
+      .print-btn{ display:none; }
+    }
+  </style>
+
+   <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+
+<body>
+
+<!-- BOTÓN (NO SE VE EN IMPRESIÓN) -->
+<div class="print-btn">
+  <button onclick="window.print()">Imprimir / Guardar PDF (tamaño carta)</button>
+</div>
+
+<h1>Distancias con el Teorema de Pitágoras</h1>
+
+<h2>Explicación</h2>
+<p>
+Para calcular la <strong>distancia entre dos puntos</strong> en el plano cartesiano se utiliza el
+<strong>Teorema de Pitágoras</strong>.  
+Se forma un triángulo rectángulo donde:
+</p>
+
+<ul>
+  <li>Un cateto representa la distancia horizontal.</li>
+  <li>El otro cateto representa la distancia vertical.</li>
+  <li>La hipotenusa representa la <strong>distancia entre los puntos</strong>.</li>
+</ul>
+
+<p>
+El teorema establece:
+</p>
+
+<p>
+$$
+a^2 + b^2 = c^2
+$$
+</p>
+
+<p>
+Donde:
+</p>
+<ul>
+  <li>$$a$$ = distancia horizontal</li>
+  <li>$$b$$ = distancia vertical</li>
+  <li>$$c$$ = distancia entre los puntos</li>
+</ul>
+
+<h2>Ejemplo</h2>
+<p>
+Calcula la distancia entre los puntos $$A(1,2)$$ y $$B(5,6)$$.
+</p>
+
+<p>
+Distancia horizontal:
+$$
+|5-1| = 4
+$$
+</p>
+
+<p>
+Distancia vertical:
+$$
+|6-2| = 4
+$$
+</p>
+
+<p>
+Aplicando Pitágoras:
+</p>
+
+<p>
+$$
+d=\sqrt{4^2+4^2}=\sqrt{32}
+$$
+</p>
+
+<p>
+La distancia entre los puntos es $$\sqrt{32}$$ unidades.
+</p>
+
+<!-- DIBUJO CON PITÁGORAS -->
+<svg viewBox="-10 -110 220 220" aria-label="Distancia entre dos puntos usando Pitágoras">
+  <!-- Ejes -->
+  <line x1="0" y1="-100" x2="0" y2="100" stroke="black"/>
+  <line x1="0" y1="100" x2="200" y2="100" stroke="black"/>
+
+  <!-- Catetos -->
+  <line x1="40" y1="60" x2="160" y2="60" stroke="blue" stroke-dasharray="4"/>
+  <line x1="40" y1="60" x2="40" y2="-20" stroke="green" stroke-dasharray="4"/>
+
+  <!-- Hipotenusa -->
+  <line x1="40" y1="60" x2="160" y2="-20" stroke="red" stroke-width="2"/>
+
+  <!-- Puntos -->
+  <circle cx="40" cy="60" r="4" fill="black"/>
+  <text x="30" y="75" font-size="10">A(1,2)</text>
+
+  <circle cx="160" cy="-20" r="4" fill="black"/>
+  <text x="150" y="-25" font-size="10">B(5,6)</text>
+
+  <text x="85" y="85" font-size="10">a</text>
+  <text x="20" y="15" font-size="10">b</text>
+  <text x="95" y="10" font-size="10">c</text>
+</svg>
+
+<h2>Ejercicios</h2>
+<ol>
+  <li>Calcula la distancia entre $$A(0,0)$$ y $$B(3,4)$$.</li>
+  <li>Encuentra la distancia entre $$P(-2,1)$$ y $$Q(4,1)$$.</li>
+  <li>Halla la distancia entre $$M(2,-3)$$ y $$N(2,5)$$.</li>
+  <li>Calcula la distancia entre $$C(-1,-1)$$ y $$D(3,2)$$.</li>
+  <li>Determina la distancia entre $$X(1,4)$$ y $$Y(6,10)$$.</li>
+</ol>
+
+<h2>Respuestas</h2>
+<ol>
+  <li>$$5$$</li>
+  <li>$$6$$</li>
+  <li>$$8$$</li>
+  <li>$$5$$</li>
+  <li>$$\sqrt{61}$$</li>
+</ol>
+
+<h2>Referencias (APA)</h2>
+<ul>
+  <li>Baldor, A. (2018). <em>Geometría y Trigonometría</em>. Grupo Cultural.</li>
+  <li>Khan Academy. (2024). <em>Teorema de Pitágoras y fórmula de distancia</em>. https://es.khanacademy.org</li>
+</ul>
+
+<h2>Videos recomendados en YouTube</h2>
+<ul>
+  <li>
+    <a href="https://www.youtube.com/watch?v=I0Fl6fXrv3Y" target="_blank">
+      Distancia entre dos puntos usando el Teorema de Pitágoras – MateFacil
+    </a>
+  </li>
+  <li>
+    <a href="https://www.youtube.com/watch?v=cgo6dET49x0" target="_blank">
+      Distance between two points using Pythagorean Theorem – MateFacil
+    </a>
+  </li>
+</ul>
+
+</body>
+</html>
