@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operaciones con Números Racionales - 8vo Año</title>
+    
+    <script>
+      window.MathJax = {
+        tex: {
+          inlineMath: [['$', '$'], ['\\(', '\\)']]
+        }
+      };
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #222;
+            max-width: 21.59cm; /* Ancho tamaño carta */
+            margin: 0 auto;
+            padding: 2cm;
+            background-color: #ffffff;
+        }
+        .container {
+            width: 100%;
+        }
+        h1 { text-align: center; color: #1a1a1a; border-bottom: 2px solid #000; padding-bottom: 10px; }
+        h2 { color: #333; margin-top: 25px; border-left: 5px solid #444; padding-left: 10px; }
+        
+        .no-print { 
+            text-align: right; 
+            margin-bottom: 20px; 
+        }
+        .btn-imprimir {
+            background-color: #007bff;
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .ejemplo-box {
+            background-color: #f9f9f9;
+            border: 1px solid #ccc;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        
+        .footer-info {
+            margin-top: 30px;
+            font-size: 0.9em;
+            border-top: 1px solid #eee;
+            padding-top: 20px;
+        }
+
+        @media print {
+            .no-print { display: none; }
+            body { padding: 0; margin: 0; }
+            @page { size: letter; margin: 2cm; }
+        }
+
+        @media (max-width: 600px) {
+            body { padding: 15px; }
+            .btn-imprimir { width: 100%; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="no-print">
+        <button class="btn-imprimir" onclick="window.print()">Imprimir / Guardar PDF</button>
+    </div>
+
+    <div class="container">
+        <h1>Operaciones con Números Racionales ($\mathbb{Q}$)</h1>
+
+        <h2>Explicación</h2>
+        [span_2](start_span)<p>Para resolver operaciones con números racionales en octavo año, debemos considerar su forma de escritura[span_2](end_span):</p>
+        <ul>
+            <li><strong>Suma y Resta:</strong> Si tienen distinto denominador, se busca el mínimo común múltiplo (mcm) para homogenizar las fracciones.</li>
+            <li><strong>Multiplicación:</strong> Se multiplican numeradores entre sí y denominadores entre sí.</li>
+            <li><strong>División:</strong> Se multiplica la primera fracción por el inverso multiplicativo de la segunda.</li>
+            <li><strong>Decimales:</strong> Se pueden operar directamente o convirtiéndolos a fracción según la conveniencia del problema.</li>
+        </ul>
+
+        <div class="ejemplo-box">
+            <h2>1 Ejemplo</h2>
+            <p>Resuelva la siguiente operación: $\frac{2}{3} \div \frac{4}{5} + \frac{1}{6}$</p>
+            <p><strong>Paso 1 (División):</strong> $\frac{2}{3} \times \frac{5}{4} = \frac{10}{12} = \frac{5}{6}$</p>
+            <p><strong>Paso 2 (Suma):</strong> $\frac{5}{6} + \frac{1}{6} = \frac{6}{6} = 1$</p>
+        </div>
+
+        <h2>5 Ejercicios</h2>
+        <ol>
+            <li>Calcule la suma: $\frac{4}{7} + \frac{1}{2}$</li>
+            <li>Realice la resta: $\frac{9}{10} - 0,4$</li>
+            <li>Multiplique los siguientes racionales: $\left( -\frac{3}{5} \right) \times \frac{10}{9}$</li>
+            <li>Divida: $\frac{7}{8} \div \frac{14}{3}$</li>
+            <li>Resuelva: $-1,2 + \frac{3}{5}$</li>
+        </ol>
+
+        <div class="footer-info">
+            <h2>Respuestas al final</h2>
+            <p>1) $\frac{15}{14}$ | 2) $0,5$ o $\frac{1}{2}$ | 3) $-\frac{2}{3}$ | 4) $\frac{3}{16}$ | 5) $-0,6$ o $-\frac{3}{5}$</p>
+        </div>
+
+        <div class="footer-info">
+            <h2>Referencias tipo APA</h2>
+            <p>Ministerio de Educación Pública. (2024). <em>Programas de Estudio de Matemáticas: Educación General Básica</em>. San José, Costa Rica.</p>
+            <p>Baldor, A. (2023). <em>Aritmética</em>. Grupo Editorial Patria.</p>
+        </div>
+
+        <div class="footer-info">
+            <h2>Videos recomendados en YouTube</h2>
+            <ul>
+                <li><a href="https://www.youtube.com/watch?v=LgMptyzudXU">Suma y resta de fracciones</a></li>
+                <li><a href="https://youtu.be/OBMwV709QZ8?si=U44Qn7NLnH37ONsY">Opersciones con  racionales</a></li>
+            </ul>
+        </div>
+    </div>
+
+</body>
+</html>
