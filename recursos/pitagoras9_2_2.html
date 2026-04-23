@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Distancia entre dos puntos en el plano cartesiano</title>
+
+<style>
+    body{
+        font-family: Arial, Helvetica, sans-serif;
+        margin:20px;
+        line-height:1.6;
+    }
+    .container{
+        max-width:900px;
+        margin:auto;
+    }
+    h1,h2,h3{
+        color:#1a1a1a;
+    }
+    button{
+        padding:10px 16px;
+        font-size:16px;
+        cursor:pointer;
+    }
+    .print-button{
+        margin-bottom:20px;
+    }
+    @media print{
+        .print-button{
+            display:none;
+        }
+    }
+</style>
+
+ <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+
+<body>
+<div class="container">
+
+<!-- Botón imprimir / PDF -->
+<div class="print-button">
+    <button onclick="window.print()">Imprimir o guardar en PDF (tamaño carta)</button>
+</div>
+
+<h1>Distancia entre dos puntos en el plano cartesiano</h1>
+<h2>Nivel: Noveno año</h2>
+
+<h3>Explicación</h3>
+<p>
+Para encontrar la distancia entre dos puntos en el plano cartesiano se utiliza el
+<strong>teorema de Pitágoras</strong>.
+Esto es posible porque al unir dos puntos se forma un triángulo rectángulo, donde
+los catetos son los cambios horizontal y vertical entre los puntos.
+</p>
+
+<p>
+Si los puntos son:
+</p>
+
+<p>
+$$
+A(x_1,y_1) \quad \text{y} \quad B(x_2,y_2)
+$$
+</p>
+
+<p>
+La distancia $$d$$ entre ellos se calcula con la fórmula:
+</p>
+
+$$
+d = \sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2}
+$$
+
+<p>
+Esta expresión se obtiene aplicando el teorema de Pitágoras:
+el cambio horizontal es $$x_2 - x_1$$ y el cambio vertical es $$y_2 - y_1$$.
+</p>
+
+<h3>Ejemplo</h3>
+<p>
+Calcula la distancia entre los puntos $$A(1,2)$$ y $$B(5,5)$$.
+</p>
+
+<p>
+Paso 1: Calculamos los cambios horizontal y vertical:
+</p>
+
+$$
+x_2 - x_1 = 5 - 1 = 4
+$$
+$$
+y_2 - y_1 = 5 - 2 = 3
+$$
+
+<p>
+Paso 2: Aplicamos la fórmula:
+</p>
+
+$$
+d = \sqrt{4^2 + 3^2}
+$$
+$$
+d = \sqrt{16 + 9}
+$$
+$$
+d = \sqrt{25} = 5
+$$
+
+<p>
+La distancia entre los puntos es <strong>5 unidades</strong>.
+</p>
+
+<h3>Ejercicios</h3>
+<ol>
+    <li>Encuentra la distancia entre los puntos $$A(0,0)$$ y $$B(4,3)$$.</li>
+    <li>Calcula la distancia entre $$A(2,1)$$ y $$B(6,1)$$.</li>
+    <li>Halla la distancia entre los puntos $$A(-1,2)$$ y $$B(3,-2)$$.</li>
+    <li>Determina la distancia entre $$A(5,4)$$ y $$B(1,0)$$.</li>
+    <li>Un punto está en $$(−2,−3)$$ y otro en $$(4,3)$$. Calcula la distancia entre ellos.</li>
+</ol>
+
+<h3>Respuestas</h3>
+<ol>
+    <li>$$5$$ unidades</li>
+    <li>$$4$$ unidades</li>
+    <li>$$\sqrt{32} \approx 5.66$$</li>
+    <li>$$\sqrt{32} \approx 5.66$$</li>
+    <li>$$\sqrt{72} \approx 8.49$$</li>
+</ol>
+
+<h3>Referencias (formato APA)</h3>
+<ul>
+    <li>Baldor, A. (2011). <em>Álgebra</em>. Grupo Editorial Patria.</li>
+    <li>Wikipedia. (s.f.). <em>Distancia entre dos puntos</em>. Recuperado de https://es.wikipedia.org</li>
+</ul>
+
+<h3>Videos recomendados en YouTube</h3>
+<ul>
+    <li>
+        https://www.youtube.com/watch?v=694ofhzg1ZI
+            Teorema de Pitágoras: teoría y problemas resueltos – AntonioProfe
+        </a>
+    </li>
+    <li>
+        https://www.youtube.com/watch?v=WBQXVIOl6Kw
+            Teorema de Pitágoras explicado fácil – Matemáticas con Juan
+        </a>
+    </li>
+</ul>
+
+</div>
+</body>
+</html>
