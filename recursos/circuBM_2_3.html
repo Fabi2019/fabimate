@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Posición relativa entre rectas en el plano</title>
+
+<style>
+    body{
+        font-family: Arial, Helvetica, sans-serif;
+        margin:20px;
+        line-height:1.6;
+    }
+    .container{
+        max-width:900px;
+        margin:auto;
+    }
+    h1,h2,h3,h4{
+        color:#1a1a1a;
+    }
+    button{
+        padding:10px 16px;
+        font-size:16px;
+        cursor:pointer;
+    }
+    .print-button{
+        margin-bottom:20px;
+    }
+    @media print{
+        .print-button{
+            display:none;
+        }
+    }
+</style>
+
+ <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  </head>
+
+<body>
+<div class="container">
+
+<!-- Botón imprimir / PDF -->
+<div class="print-button">
+    <button onclick="window.print()">Imprimir o guardar en PDF (tamaño carta)</button>
+</div>
+
+<h1>Posición relativa entre rectas en el plano</h1>
+<h2>Nivel: Bachillerato por Madurez</h2>
+
+<h3>Explicación</h3>
+<p>
+En el plano cartesiano, la posición relativa entre dos rectas puede analizarse desde
+un punto de vista <strong>geométrico</strong> y <strong>algebraico</strong>. Los dos casos de mayor interés
+son el <strong>paralelismo</strong> y la <strong>perpendicularidad</strong>.
+</p>
+
+<p>
+Una recta en el plano puede representarse mediante la ecuación:
+</p>
+
+$$
+y = mx + b
+$$
+
+<p>
+donde $$m$$ es la <strong>pendiente</strong> de la recta y determina su inclinación, y $$b$$ es la intersección
+con el eje $$y$$.
+</p>
+
+<h4>Rectas paralelas</h4>
+<p>
+Dos rectas son <strong>paralelas</strong> cuando:
+</p>
+<ul>
+    <li>Tienen la misma pendiente.</li>
+    <li>No se intersectan en ningún punto.</li>
+</ul>
+
+$$
+m_1 = m_2
+$$
+
+<p>
+Geométricamente, las rectas paralelas mantienen siempre la misma distancia entre sí.
+</p>
+
+<h4>Rectas perpendiculares</h4>
+<p>
+Dos rectas son <strong>perpendiculares</strong> cuando se cortan formando un ángulo de $$90^\circ$$.
+Desde el punto de vista algebraico, se cumple que:
+</p>
+
+$$
+m_1 \cdot m_2 = -1
+$$
+
+<p>
+Esto indica que las pendientes son recíprocas y de signo contrario.
+</p>
+
+<h3>Ejemplo</h3>
+<p>
+Analizar la posición relativa entre las rectas:
+</p>
+
+$$
+r: y = 4x - 1
+$$
+$$
+s: y = -\frac{1}{4}x + 3
+$$
+
+<p>
+Calculamos las pendientes:
+</p>
+
+$$
+m_r = 4 \qquad m_s = -\frac{1}{4}
+$$
+
+<p>
+Multiplicamos las pendientes:
+</p>
+
+$$
+4 \cdot \left(-\frac{1}{4}\right) = -1
+$$
+
+<p>
+Como el producto es $$-1$$, las rectas son <strong>perpendiculares</strong>.
+</p>
+
+<h3>Ejercicios</h3>
+<ol>
+    <li>Determina si las rectas $$y = 3x + 2$$ y $$y = 3x - 6$$ son paralelas.</li>
+    <li>Analiza si las rectas $$y = -2x + 1$$ y $$y = \frac{1}{2}x - 4$$ son perpendiculares.</li>
+    <li>Convierte a forma pendiente–intersección y estudia la relación entre $$2x - y = 4$$ y $$2x - y = -3$$.</li>
+    <li>Identifica la posición relativa entre $$y = x + 5$$ y $$y = -x + 1$$.</li>
+    <li>¿Cuál debe ser la pendiente de una recta perpendicular a $$y = 6x - 2$$?</li>
+</ol>
+
+<h3>Respuestas</h3>
+<ol>
+    <li>Sí, son paralelas.</li>
+    <li>Sí, son perpendiculares.</li>
+    <li>Son paralelas.</li>
+    <li>Son perpendiculares.</li>
+    <li>$$-\frac{1}{6}$$</li>
+</ol>
+
+<h3>Referencias (formato APA)</h3>
+<ul>
+    <li>Baldor, A. (2011). <em>Álgebra</em>. Grupo Editorial Patria.</li>
+    <li>Larson, R., Hostetler, R., & Edwards, B. (2014). <em>Precálculo con aplicaciones</em>. Cengage Learning.</li>
+</ul>
+
+<h3>Videos recomendados en YouTube</h3>
+<ul>
+    <li>
+        https://www.youtube.com/watch?v=AYFz9z5M6RM
+            Rectas paralelas y perpendiculares – Explicación clara
+        </a>
+    </li>
+    <li>
+        https://www.youtube.com/watch?v=SkKTmT66R4g
+            Rectas paralelas y perpendiculares explicadas fácil
+        </a>
+    </li>
+</ul>
+
+</div>
+</body>
+</html>
