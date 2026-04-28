@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Problemas con MCM y MCD</title>
+
+<style>
+    body{
+        font-family: Arial, Helvetica, sans-serif;
+        margin:20px;
+        line-height:1.6;
+    }
+    .container{
+        max-width:900px;
+        margin:auto;
+    }
+    h1,h2,h3{
+        color:#1a1a1a;
+    }
+    .print-button{
+        margin-bottom:20px;
+    }
+    button{
+        padding:10px 16px;
+        font-size:16px;
+        cursor:pointer;
+    }
+    @media print{
+        .print-button{
+            display:none;
+        }
+    }
+</style>
+
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+
+<body>
+<div class="container">
+
+<!-- Botón imprimir o PDF -->
+<div class="print-button">
+    <button onclick="window.print()">Imprimir o guardar en PDF (tamaño carta)</button>
+</div>
+
+<h1>Resolución de problemas con MCM y MCD</h1>
+<h2>Nivel: Sétimo año</h2>
+
+<h3>Explicación</h3>
+<p>
+El <strong>Mínimo Común Múltiplo (MCM)</strong> y el <strong>Máximo Común Divisor (MCD)</strong>
+se utilizan para resolver problemas de la vida diaria relacionados con
+repeticiones, repartos y agrupaciones.
+</p>
+
+<p>
+Se utiliza el <strong>MCM</strong> cuando el problema involucra:
+</p>
+<ul>
+    <li>Eventos que se repiten.</li>
+    <li>Coincidencia de ciclos.</li>
+</ul>
+
+<p>
+Se utiliza el <strong>MCD</strong> cuando el problema involucra:
+</p>
+<ul>
+    <li>Repartos iguales.</li>
+    <li>Formación de grupos sin que sobren elementos.</li>
+</ul>
+
+<h3>Ejemplo</h3>
+<p>
+Dos luces parpadean. Una lo hace cada 6 segundos y la otra cada 8 segundos.
+¿Cada cuántos segundos parpadearán juntas nuevamente?
+</p>
+
+<p>
+Calculamos el MCM de $$6$$ y $$8$$:
+</p>
+
+$$
+6 = 2 \cdot 3
+$$
+$$
+8 = 2 \cdot 2 \cdot 2
+$$
+
+$$
+MCM = 2^3 \cdot 3 = 24
+$$
+
+<p>
+Las luces parpadearán juntas cada <strong>24 segundos</strong>.
+</p>
+
+<h3>Ejercicios</h3>
+<ol>
+    <li>
+        Dos campanas suenan cada $$4$$ y $$6$$ minutos respectivamente.
+        ¿Cada cuántos minutos sonarán juntas?  
+    </li>
+    <li>
+        Se tienen $$18$$ caramelos y $$24$$ chocolates.
+        ¿En cuántos grupos iguales se pueden repartir sin que sobren?
+    </li>
+    <li>
+        Un bus pasa cada $$12$$ minutos y otro cada $$15$$ minutos.
+        Si salen juntos, ¿después de cuántos minutos se encontrarán nuevamente?
+    </li>
+    <li>
+        Se desea dividir $$30$$ lápices y $$45$$ cuadernos en grupos iguales.
+        ¿Cuál es la mayor cantidad de grupos que se pueden formar?
+    </li>
+    <li>
+        Tres semáforos cambian cada $$10$$, $$15$$ y $$20$$ segundos.
+        ¿Cada cuántos segundos cambiarán al mismo tiempo?
+    </li>
+</ol>
+
+<h3>Respuestas</h3>
+<ol>
+    <li>$$12$$ minutos (MCM)</li>
+    <li>$$6$$ grupos (MCD)</li>
+    <li>$$60$$ minutos (MCM)</li>
+    <li>$$15$$ grupos (MCD)</li>
+    <li>$$60$$ segundos (MCM)</li>
+</ol>
+
+<h3>Referencias (formato APA)</h3>
+<ul>
+    <li>Baldor, A. (2011). <em>Aritmética</em>. Grupo Editorial Patria.</li>
+    <li>Ministerio de Educación Pública. (2016). <em>Programas de Estudio de Matemáticas</em>. Costa Rica.</li>
+</ul>
+
+<h3>Videos recomendados en YouTube</h3>
+<ul>
+    <li>
+        <a href="https://www.youtube.com/watch?v=WHUQSkaVXd4">
+            Problemas con MCM y MCD explicados paso a paso – math2me
+        </a>
+    </li>
+    <li>
+        <a href="https://www.youtube.com/watch?v=63lCHstB5Wk">
+            Cuándo usar MCM o MCD en problemas – Profe Alex
+        </a>
+    </li>
+</ul>
+
+</div>
+</body>
+</html>

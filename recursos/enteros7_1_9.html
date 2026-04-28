@@ -3,149 +3,131 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Problemas con MCM y MCD</title>
+<title>Identificar números enteros negativos en contextos reales</title>
+
+<!-- Carga obligatoria de MathJax -->
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
 <style>
-    body{
-        font-family: Arial, Helvetica, sans-serif;
-        margin:20px;
-        line-height:1.6;
-    }
-    .container{
-        max-width:900px;
-        margin:auto;
-    }
-    h1,h2,h3{
-        color:#1a1a1a;
-    }
-    .print-button{
-        margin-bottom:20px;
-    }
-    button{
-        padding:10px 16px;
-        font-size:16px;
-        cursor:pointer;
-    }
-    @media print{
-        .print-button{
-            display:none;
-        }
-    }
+body{
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 20px;
+  line-height: 1.6;
+}
+.container{
+  max-width: 900px;
+  margin: auto;
+}
+button{
+  padding: 10px 16px;
+  font-size: 16px;
+  cursor: pointer;
+}
+h1, h2{
+  color: #1a237e;
+}
+.exercise{
+  margin-bottom: 10px;
+}
+@media print{
+  button{
+    display: none;
+  }
+  @page{
+    size: letter;
+    margin: 2cm;
+  }
+}
 </style>
-
-<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
 
 <body>
 <div class="container">
 
 <!-- Botón imprimir o PDF -->
-<div class="print-button">
-    <button onclick="window.print()">Imprimir o guardar en PDF (tamaño carta)</button>
-</div>
+<button onclick="window.print()">Imprimir / Guardar en PDF (tamaño carta)</button>
 
-<h1>Resolución de problemas con MCM y MCD</h1>
-<h2>Nivel: Sétimo año</h2>
+<h1>1.9 Identificar números enteros negativos en contextos reales</h1>
 
-<h3>Explicación</h3>
+<h2>Explicación</h2>
 <p>
-El <strong>Mínimo Común Múltiplo (MCM)</strong> y el <strong>Máximo Común Divisor (MCD)</strong>
-se utilizan para resolver problemas de la vida diaria relacionados con
-repeticiones, repartos y agrupaciones.
+Los <b>números enteros negativos</b> son aquellos menores que cero y se representan con el signo menos $$(-)$$.
+Se utilizan para describir situaciones reales en las que existe una <b>disminución</b>, una <b>pérdida</b> o una
+posición <b>por debajo de un nivel de referencia</b>.
 </p>
 
 <p>
-Se utiliza el <strong>MCM</strong> cuando el problema involucra:
+En la recta numérica, los números enteros negativos se ubican a la izquierda del cero:
 </p>
+
+<p style="text-align:center;">
+$$
+\ldots -5,\,-4,\,-3,\,-2,\,-1,\,0,\,1,\,2,\ldots
+$$
+</p>
+
+<p>
+Algunos contextos reales donde aparecen números negativos son:
+</p>
+
 <ul>
-    <li>Eventos que se repiten.</li>
-    <li>Coincidencia de ciclos.</li>
+  <li><b>Temperatura:</b> Temperaturas bajo cero, por ejemplo $$-3^\circ C$$.</li>
+  <li><b>Economía:</b> Deudas o pérdidas, por ejemplo $$-200$$ pesos.</li>
+  <li><b>Altura:</b> Lugares bajo el nivel del mar, como $$-10$$ metros.</li>
+  <li><b>Tiempo:</b> Años antes del inicio de una era histórica (por ejemplo, $$-500$$).</li>
 </ul>
 
+<h2>Ejemplo</h2>
 <p>
-Se utiliza el <strong>MCD</strong> cuando el problema involucra:
+Un estudiante tiene un saldo inicial de $$0$$ pesos. Si gasta $$150$$ pesos sin tener dinero,
+su situación económica se puede representar como:
 </p>
-<ul>
-    <li>Repartos iguales.</li>
-    <li>Formación de grupos sin que sobren elementos.</li>
-</ul>
 
-<h3>Ejemplo</h3>
-<p>
-Dos luces parpadean. Una lo hace cada 6 segundos y la otra cada 8 segundos.
-¿Cada cuántos segundos parpadearán juntas nuevamente?
+<p style="text-align:center;">
+$$
+-150
+$$
 </p>
 
 <p>
-Calculamos el MCM de $$6$$ y $$8$$:
+El número $$-150$$ indica una <b>deuda</b> de ciento cincuenta pesos.
 </p>
 
-$$
-6 = 2 \cdot 3
-$$
-$$
-8 = 2 \cdot 2 \cdot 2
-$$
+<h2>Ejercicios</h2>
 
-$$
-MCM = 2^3 \cdot 3 = 24
-$$
+<div class="exercise">1. La temperatura en una ciudad es de $$-8^\circ C$$. ¿Qué tipo de número entero representa?</div>
+<div class="exercise">2. Un buzo se encuentra a 25 metros bajo el nivel del mar. Representa esta situación con un número entero.</div>
+<div class="exercise">3. Si una persona debe 300 pesos, ¿qué número entero representa su situación?</div>
+<div class="exercise">4. Un ascensor baja 4 pisos desde el nivel de la calle. Expresa este cambio con un número entero.</div>
+<div class="exercise">5. En una línea del tiempo, un acontecimiento ocurrió 200 años antes del año 0. ¿Cómo se representa?</div>
 
-<p>
-Las luces parpadearán juntas cada <strong>24 segundos</strong>.
-</p>
-
-<h3>Ejercicios</h3>
+<h2>Respuestas</h2>
 <ol>
-    <li>
-        Dos campanas suenan cada $$4$$ y $$6$$ minutos respectivamente.
-        ¿Cada cuántos minutos sonarán juntas?  
-    </li>
-    <li>
-        Se tienen $$18$$ caramelos y $$24$$ chocolates.
-        ¿En cuántos grupos iguales se pueden repartir sin que sobren?
-    </li>
-    <li>
-        Un bus pasa cada $$12$$ minutos y otro cada $$15$$ minutos.
-        Si salen juntos, ¿después de cuántos minutos se encontrarán nuevamente?
-    </li>
-    <li>
-        Se desea dividir $$30$$ lápices y $$45$$ cuadernos en grupos iguales.
-        ¿Cuál es la mayor cantidad de grupos que se pueden formar?
-    </li>
-    <li>
-        Tres semáforos cambian cada $$10$$, $$15$$ y $$20$$ segundos.
-        ¿Cada cuántos segundos cambiarán al mismo tiempo?
-    </li>
+  <li>Número entero negativo.</li>
+  <li>$$-25$$.</li>
+  <li>$$-300$$.</li>
+  <li>$$-4$$.</li>
+  <li>$$-200$$.</li>
 </ol>
 
-<h3>Respuestas</h3>
-<ol>
-    <li>$$12$$ minutos (MCM)</li>
-    <li>$$6$$ grupos (MCD)</li>
-    <li>$$60$$ minutos (MCM)</li>
-    <li>$$15$$ grupos (MCD)</li>
-    <li>$$60$$ segundos (MCM)</li>
-</ol>
-
-<h3>Referencias (formato APA)</h3>
+<h2>Referencias</h2>
 <ul>
-    <li>Baldor, A. (2011). <em>Aritmética</em>. Grupo Editorial Patria.</li>
-    <li>Ministerio de Educación Pública. (2016). <em>Programas de Estudio de Matemáticas</em>. Costa Rica.</li>
+  <li>Baldor, A. (2011). <i>Aritmética</i>. Grupo Editorial Patria.</li>
+  <li>SEP. (2022). <i>Matemáticas. Educación básica</i>. Secretaría de Educación Pública.</li>
 </ul>
 
-<h3>Videos recomendados en YouTube</h3>
+<h2>Videos recomendados en YouTube</h2>
 <ul>
-    <li>
-        <a href="https://www.youtube.com/watch?v=WHUQSkaVXd4">
-            Problemas con MCM y MCD explicados paso a paso – math2me
-        </a>
-    </li>
-    <li>
-        <a href="https://www.youtube.com/watch?v=63lCHstB5Wk">
-            Cuándo usar MCM o MCD en problemas – Profe Alex
-        </a>
-    </li>
+  <li>
+    <a href="https://www.youtube.com/watch?v=Wq_iLKanzqg" target="_blank">
+      Números negativos explicados fácilmente – Daniel Carreón
+    </a>
+  </li>
+  <li>
+    <a href="https://www.youtube.com/watch?v=qbVWqhaNLkI" target="_blank">
+      Los números positivos y negativos en la vida cotidiana – Profe Wilmer
+    </a>
+  </li>
 </ul>
 
 </div>

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>1.10 Calcular raíces n-ésimas de un número racional</title>
+
+<!-- Carga obligatoria de MathJax (etiqueta EXACTA solicitada) -->
+ <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+<style>
+body{
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 20px;
+  line-height: 1.6;
+}
+.container{
+  max-width: 900px;
+  margin: auto;
+}
+button{
+  padding: 10px 16px;
+  font-size: 16px;
+  cursor: pointer;
+}
+h1, h2{
+  color:#1a237e;
+}
+.exercise{
+  margin-bottom: 10px;
+}
+@media print{
+  button{
+    display:none;
+  }
+  @page{
+    size: letter;
+    margin: 2cm;
+  }
+}
+</style>
+</head>
+
+<body>
+<div class="container">
+
+<!-- Botón imprimir o PDF -->
+<button onclick="window.print()">Imprimir / Guardar en PDF (tamaño carta)</button>
+
+<h1>1.10 Calcular raíces n-ésimas de un número racional</h1>
+
+<h2>Explicación</h2>
+<p>
+La <b>raíz n-ésima</b> de un número racional es el número que, elevado a la potencia $$n$$,
+produce como resultado dicho número.
+</p>
+
+<p>
+Se representa de la siguiente forma:
+</p>
+
+<p style="text-align:center;">
+$$
+\sqrt[n]{a}
+$$
+</p>
+
+<p>
+donde:
+</p>
+<ul>
+  <li>$$a$$ es un <b>número racional</b>.</li>
+  <li>$$n$$ es un <b>número natural</b> mayor que 1.</li>
+</ul>
+
+<p>
+La raíz es la operación inversa de la potenciación:
+</p>
+
+<p style="text-align:center;">
+$$
+\sqrt[n]{a} = b \quad \text{si y solo si} \quad b^n = a
+$$
+</p>
+
+<p>
+Ejemplos comunes:
+</p>
+<ul>
+  <li>$$\sqrt{9} = 3$$, porque $$3^2 = 9$$.</li>
+  <li>$$\sqrt[3]{8} = 2$$, porque $$2^3 = 8$$.</li>
+</ul>
+
+<h2>Ejemplo</h2>
+<p>
+Calcular:
+</p>
+
+<p style="text-align:center;">
+$$
+\sqrt[2]{\frac{1}{4}}
+$$
+</p>
+
+<p>
+Buscamos un número que elevado al cuadrado sea $$\frac{1}{4}$$:
+</p>
+
+<p style="text-align:center;">
+$$
+\left(\frac{1}{2}\right)^2 = \frac{1}{4}
+$$
+</p>
+
+<p>
+Por lo tanto:
+</p>
+
+<p style="text-align:center;">
+$$
+\sqrt{\frac{1}{4}} = \frac{1}{2}
+$$
+</p>
+
+<h2>Ejercicios</h2>
+
+<div class="exercise">1. Calcula: $$\sqrt{16}$$.</div>
+<div class="exercise">2. Halla: $$\sqrt[3]{27}$$.</div>
+<div class="exercise">3. Calcula: $$\sqrt{\frac{1}{9}}$$.</div>
+<div class="exercise">4. Determina: $$\sqrt[3]{\frac{8}{125}}$$.</div>
+<div class="exercise">5. Calcula: $$\sqrt{0.25}$$.</div>
+
+<h2>Respuestas</h2>
+<ol>
+  <li>$$4$$.</li>
+  <li>$$3$$.</li>
+  <li>$$\frac{1}{3}$$.</li>
+  <li>$$\frac{2}{5}$$.</li>
+  <li>$$0.5$$.</li>
+</ol>
+
+<h2>Referencias</h2>
+<ul>
+  <li>Baldor, A. (2011). <i>Álgebra</i>. Grupo Editorial Patria.</li>
+  <li>SEP. (2022). <i>Matemáticas. Educación secundaria</i>. Secretaría de Educación Pública.</li>
+</ul>
+<h2>Videos recomendados en YouTube</h2>
+<ul>
+  <li>
+    <a href="https://www.youtube.com/watch?v=YhbUjaLcBIQ" target="_blank">
+      Raíz cuadrada ✅ Concepto (operación inversa de la potencia) – Academia JAF
+    </a>
+  </li>
+  <li>
+    <a href="https://www.youtube.com/watch?v=gPV5VqQ3Ajg" target="_blank">
+      Raíz cuadrada: concepto y ejemplos explicados fácilmente – Daniel Carreón
+    </a>
+  </li>
+</ul>
+
+</div>
+</body>
+</html>
