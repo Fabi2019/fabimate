@@ -24,11 +24,10 @@ Deben implementarse en la etiqueta: <a href=direccionYoutube ></a>
   
 Formato obligatorio:
 HTML que sea responsibke a pantalla de celular y a escritorio
-Simbologia matematica usar MathJax
-NO USAR:   <!-- MathJax -->
-  https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.jsscript>
-Oara cargar la libreria usar  obligatoriamente solo con la sigueiente etiqueta: 
+Simbologia matematica usar MathJax, para cargar la libreria solo usa la etiqueta que yo doy.
+Deberá cargar la libreria MathJax, usando obligatoriamente solo con la siguiente etiqueta: 
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+si hay multiplicaciones en expresiones matemáticas, usar punto no exis.
 
 Objetivo del agente:
 Explicar el tema que de le da y con bsse al nivel del estudiante.

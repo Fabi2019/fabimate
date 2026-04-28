@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Máximo Común Divisor</title>
+
+<style>
+    body{
+        font-family: Arial, Helvetica, sans-serif;
+        margin:20px;
+        line-height:1.6;
+    }
+    .container{
+        max-width:900px;
+        margin:auto;
+    }
+    h1,h2,h3{
+        color:#1a1a1a;
+    }
+    .print-button{
+        margin-bottom:20px;
+    }
+    button{
+        padding:10px 16px;
+        font-size:16px;
+        cursor:pointer;
+    }
+    @media print{
+        .print-button{
+            display:none;
+        }
+    }
+</style>
+
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+
+<body>
+<div class="container">
+
+<!-- Botón imprimir o PDF -->
+<div class="print-button">
+    <button onclick="window.print()">Imprimir o guardar en PDF (tamaño carta)</button>
+</div>
+
+<h1>Máximo Común Divisor (MCD)</h1>
+<h2>Nivel: Sétimo año</h2>
+
+<h3>Explicación</h3>
+<p>
+El <strong>Máximo Común Divisor (MCD)</strong> de dos números es el mayor número natural
+que divide exactamente a ambos.
+</p>
+
+<p>
+Para obtener el MCD se utiliza el <strong>algoritmo de descomposición en factores primos</strong>.
+Se descomponen los números en factores primos y se toman únicamente los factores comunes
+con el menor exponente.
+</p>
+
+<h3>Ejemplo</h3>
+<p>
+Calcular el MCD de $$24$$ y $$36$$.
+</p>
+
+$$
+24 = 2 \cdot 2 \cdot 2 \cdot 3
+$$
+
+$$
+36 = 2 \cdot 2 \cdot 3 \cdot 3
+$$
+
+<p>
+Factores comunes con menor exponente:
+</p>
+
+$$
+MCD = 2^2 \cdot 3
+$$
+
+$$
+MCD = 12
+$$
+
+<h3>Ejercicios</h3>
+<ol>
+    <li>Calcula el MCD de $$8$$ y $$12$$.</li>
+    <li>Determina el MCD de $$18$$ y $$24$$.</li>
+    <li>Halla el MCD de $$20$$ y $$30$$.</li>
+    <li>Encuentra el MCD de $$16$$ y $$40$$.</li>
+    <li>Obtén el MCD de $$27$$ y $$36$$.</li>
+</ol>
+
+<h3>Respuestas</h3>
+<ol>
+    <li>$$4$$</li>
+    <li>$$6$$</li>
+    <li>$$10$$</li>
+    <li>$$8$$</li>
+    <li>$$9$$</li>
+</ol>
+
+<h3>Referencias (formato APA)</h3>
+<ul>
+    <li>Baldor, A. (2011). <em>Aritmética</em>. Grupo Editorial Patria.</li>
+    <li>Ministerio de Educación Pública. (2016). <em>Programas de Estudio de Matemáticas</em>. Costa Rica.</li>
+</ul>
+
+<h3>Videos recomendados en YouTube</h3>
+<ul>
+    <li>
+        <a href="https://www.youtube.com/watch?v=63lCHstB5Wk">
+            Máximo Común Divisor explicado paso a paso – Profe Alex
+        </a>
+    </li>
+    <li>
+        <a href="https://www.youtube.com/watch?v=WHUQSkaVXd4">
+            ¿Qué es el Máximo Común Divisor? – math2me
+        </a>
+    </li>
+</ul>
+
+</div>
+</body>
+</html>

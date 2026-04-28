@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mínimo Común Múltiplo</title>
+
+<style>
+    body{
+        font-family: Arial, Helvetica, sans-serif;
+        margin:20px;
+        line-height:1.6;
+    }
+    .container{
+        max-width:900px;
+        margin:auto;
+    }
+    h1,h2,h3{
+        color:#1a1a1a;
+    }
+    .print-button{
+        margin-bottom:20px;
+    }
+    button{
+        padding:10px 16px;
+        font-size:16px;
+        cursor:pointer;
+    }
+    @media print{
+        .print-button{
+            display:none;
+        }
+    }
+</style>
+
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+
+<body>
+<div class="container">
+
+<!-- Botón imprimir o PDF -->
+<div class="print-button">
+    <button onclick="window.print()">Imprimir o guardar en PDF (tamaño carta)</button>
+</div>
+
+<h1>Mínimo Común Múltiplo (MCM)</h1>
+<h2>Nivel: Sétimo año</h2>
+
+<h3>Explicación</h3>
+<p>
+El <strong>Mínimo Común Múltiplo (MCM)</strong> de dos números es el menor número natural distinto de cero
+que es múltiplo de ambos.
+</p>
+
+<p>
+Para obtener el MCM se utiliza el <strong>algoritmo de descomposición en factores primos</strong>,
+que consiste en expresar cada número como producto de números primos.
+</p>
+
+<p>
+El MCM se obtiene multiplicando los factores primos comunes y no comunes,
+tomando cada uno el mayor número de veces que aparezca.
+</p>
+
+<h3>Ejemplo</h3>
+<p>
+Obtener el MCM de $$12$$ y $$18$$.
+</p>
+
+<p>
+Descomposición en factores primos:
+</p>
+
+$$
+12 = 2 \cdot 2 \cdot 3
+$$
+
+$$
+18 = 2 \cdot 3 \cdot 3
+$$
+
+<p>
+Tomamos los factores primos con el mayor exponente:
+</p>
+
+$$
+MCM = 2^2 \cdot 3^2
+$$
+
+$$
+MCM = 36
+$$
+
+<p>
+El MCM de $$12$$ y $$18$$ es <strong>36</strong>.
+</p>
+
+<h3>Ejercicios</h3>
+<ol>
+    <li>Calcula el MCM de $$4$$ y $$6$$.</li>
+    <li>Halla el MCM de $$8$$ y $$12$$.</li>
+    <li>Determina el MCM de $$10$$ y $$15$$.</li>
+    <li>Obtén el MCM de $$6$$ y $$14$$.</li>
+    <li>Encuentra el MCM de $$9$$ y $$12$$.</li>
+</ol>
+
+<h3>Respuestas</h3>
+<ol>
+    <li>$$12$$</li>
+    <li>$$24$$</li>
+    <li>$$30$$</li>
+    <li>$$42$$</li>
+    <li>$$36$$</li>
+</ol>
+
+<h3>Referencias (formato APA)</h3>
+<ul>
+    <li>Baldor, A. (2011). <em>Aritmética</em>. Grupo Editorial Patria.</li>
+    <li>Ministerio de Educación Pública. (2016). <em>Programas de Estudio de Matemáticas</em>. Costa Rica.</li>
+</ul>
+
+<h3>Videos recomendados en YouTube</h3>
+<ul>
+    <li>
+        https://www.youtube.com/watch?v=Hxkb3i85qDw
+            Mínimo común múltiplo (MCM) explicación completa
+        </a>
+    </li>
+    <li>
+        https://www.youtube.com/watch?v=a42hGuWWYK8
+            Mínimo Común Múltiplo explicado paso a paso
+        </a>
+    </li>
+</ul>
+
+</div>
+</body>
+</html>
