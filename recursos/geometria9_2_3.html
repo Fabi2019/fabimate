@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Conversión de grados y radianes – Noveno</title>
+
+<style>
+body{
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  margin: 20px;
+}
+.container{
+  max-width: 900px;
+  margin: auto;
+}
+button{
+  padding: 10px 16px;
+  font-size: 16px;
+  cursor: pointer;
+}
+@media print{
+  #printBtn{
+    display: none;
+  }
+}
+h1,h2,h3{
+  color:#1a3d6d;
+}
+.respuestas{
+  background:#f5f5f5;
+  padding:15px;
+  border-radius:6px;
+}
+</style>
+
+ <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+
+<body>
+<div class="container">
+
+<button id="printBtn" onclick="window.print()">Imprimir o Guardar en PDF (tamaño carta)</button>
+
+<h1>2.3 Convertir medidas angulares de grados a radianes y viceversa</h1>
+
+<h2>Explicación</h2>
+<p>
+Los ángulos pueden medirse en <strong>grados</strong> o en <strong>radianes</strong>.  
+Un círculo completo equivale a:
+</p>
+
+<p style="text-align:center;">
+$$
+360^\circ = 2\pi \text{ rad}
+$$
+</p>
+
+<p>
+Esta equivalencia permite realizar conversiones entre ambas unidades.
+</p>
+
+<ul>
+<li>
+De grados a radianes:
+$$
+\text{rad} = \text{grados} \cdot \frac{\pi}{180}
+$$
+</li>
+<li>
+De radianes a grados:
+$$
+\text{grados} = \text{rad} \cdot \frac{180}{\pi}
+$$
+</li>
+</ul>
+
+<h2>Ejemplo</h2>
+<p>Convertir $$60^\circ$$ a radianes:</p>
+
+<p>
+$$
+60^\circ \cdot \frac{\pi}{180} = \frac{\pi}{3}
+$$
+</p>
+
+<p>
+✅ <strong>Respuesta:</strong>  
+$$
+60^\circ = \frac{\pi}{3} \text{ rad}
+$$
+</p>
+
+<h2>Ejercicios</h2>
+<ol>
+<li>Convierte $$45^\circ$$ a radianes.</li>
+<li>Convierte $$120^\circ$$ a radianes.</li>
+<li>Convierte $$\frac{\pi}{6}$$ radianes a grados.</li>
+<li>Convierte $$\frac{3\pi}{4}$$ radianes a grados.</li>
+<li>Convierte $$210^\circ$$ a radianes.</li>
+</ol>
+
+<h2>Respuestas</h2>
+<div class="respuestas">
+<ol>
+<li>$$\frac{\pi}{4}$$ rad</li>
+<li>$$\frac{2\pi}{3}$$ rad</li>
+<li>$$30^\circ$$</li>
+<li>$$135^\circ$$</li>
+<li>$$\frac{7\pi}{6}$$ rad</li>
+</ol>
+</div>
+
+<h2>Referencias (APA)</h2>
+<p>
+Baldor, A. (2018). <em>Geometría y trigonometría</em>. Grupo Editorial Patria.
+</p>
+<p>
+Stewart, J. (2016). <em>Precálculo</em>. Cengage Learning.
+</p>
+
+<h2>Videos recomendados en YouTube</h2>
+<ul>
+<li>
+<a href="https://www.youtube.com/watch?v=0O4Y_ngyYkA" target="_blank">
+Khan Academy en Español – Conversión de grados a radianes
+</a>
+</li>
+<li>
+<a href="https://www.youtube.com/watch?v=TmcZxH7WuC4" target="_blank">
+Khan Academy en Español – Conversión entre radianes y grados
+</a>
+</li>
+</ul>
+
+</div>
+</body>
+</html>
