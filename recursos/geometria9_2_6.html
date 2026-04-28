@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2.6 Aplicar seno, coseno y tangente de ángulos complementarios</title>
+
+<style>
+body{
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  margin: 20px;
+}
+.container{
+  max-width: 900px;
+  margin: auto;
+}
+button{
+  padding: 10px 16px;
+  font-size: 16px;
+  cursor: pointer;
+}
+@media print{
+  #printBtn{
+    display: none;
+  }
+}
+h1,h2{
+  color:#1a3d6d;
+}
+.respuestas{
+  background:#f4f4f4;
+  padding:15px;
+  border-radius:6px;
+}
+</style>
+
+<!-- Macro para que \sen se interprete y se vea como operador "sen" -->
+<script>
+  window.MathJax = {
+    tex: {
+      macros: {
+        sen: "\\operatorname{sen}"
+      }
+    }
+  };
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+
+<body>
+<div class="container">
+
+<button id="printBtn" onclick="window.print()">Imprimir o Guardar en PDF (tamaño carta)</button>
+
+<h1>2.6 Aplicar seno, coseno y tangente de ángulos complementarios</h1>
+
+<h2>Explicación</h2>
+<p>
+Dos ángulos son <strong>complementarios</strong> cuando la suma de sus medidas es $$90^\circ$$.
+Si un ángulo mide $$\theta$$, su ángulo complementario mide $$90^\circ-\theta$$.
+</p>
+
+<p>
+En un triángulo rectángulo, las razones trigonométricas de ángulos complementarios
+se relacionan de la siguiente manera:
+</p>
+
+<ul>
+<li>
+$$
+\sen(\theta) = \cos(90^\circ-\theta)
+$$
+</li>
+<li>
+$$
+\cos(\theta) = \sen(90^\circ-\theta)
+$$
+</li>
+<li>
+$$
+\tan(\theta) = \frac{1}{\tan(90^\circ-\theta)}
+$$
+</li>
+</ul>
+
+<p>
+Estas relaciones se cumplen porque, al considerar el ángulo complementario,
+los catetos opuesto y adyacente intercambian su función dentro del triángulo rectángulo.
+</p>
+
+<h2>Ejemplo</h2>
+<p>
+Si $$\sen(30^\circ)=\frac{1}{2}$$, hallar el valor de $$\cos(60^\circ)$$.
+</p>
+
+<p>
+Como $$30^\circ$$ y $$60^\circ$$ son ángulos complementarios:
+</p>
+
+<p>
+$$
+\cos(60^\circ)=\sen(30^\circ)
+$$
+</p>
+
+<p>
+Sustituyendo el valor conocido:
+</p>
+
+<p>
+$$
+\cos(60^\circ)=\frac{1}{2}
+$$
+</p>
+
+<p>
+✅ <strong>Respuesta:</strong>
+$$
+\cos(60^\circ)=\frac{1}{2}
+$$
+</p>
+
+<h2>Ejercicios</h2>
+<ol>
+<li>Si $$\cos(25^\circ)=0.91$$, calcula $$\sen(65^\circ)$$.</li>
+<li>Escribe la igualdad correcta entre $$\sen(40^\circ)$$ y $$\cos(50^\circ)$$.</li>
+<li>Si $$\tan(20^\circ)=0.36$$, expresa $$\tan(70^\circ)$$.</li>
+<li>Determina $$\cos(30^\circ)$$ sabiendo que $$\sen(60^\circ)=\frac{\sqrt{3}}{2}$$.</li>
+<li>Explica por qué la tangente de un ángulo y la de su complementario son inversas.</li>
+</ol>
+
+<h2>Respuestas</h2>
+<div class="respuestas">
+<ol>
+<li>$$
+\sen(65^\circ)=0.91
+$$</li>
+<li>$$
+\sen(40^\circ)=\cos(50^\circ)
+$$</li>
+<li>$$
+\tan(70^\circ)=\frac{1}{0.36}
+$$</li>
+<li>$$
+\cos(30^\circ)=\frac{\sqrt{3}}{2}
+$$</li>
+<li>Porque la tangente se define como la razón entre cateto opuesto y cateto adyacente, los cuales se intercambian en ángulos complementarios.</li>
+</ol>
+</div>
+
+<h2>Referencias (APA)</h2>
+<p>
+Baldor, A. (2018). <em>Geometría y trigonometría</em>. Grupo Editorial Patria.
+</p>
+<p>
+Stewart, J. (2016). <em>Precálculo</em>. Cengage Learning.
+</p>
+
+<h2>Videos recomendados en YouTube</h2>
+<ul>
+<li>
+<a href="https://www.youtube.com/watch?v=TmcZxH7WuC4" target="_blank">
+Ángulos complementarios y razones trigonométricas – Khan Academy en Español
+</a>
+</li>
+<li>
+<a href="https://www.youtube.com/watch?v=uB1OyBTIq8M" target="_blank">
+Razones trigonométricas: seno, coseno y tangente – Khan Academy en Español
+</a>
+</li>
+</ul>
+
+</div>
+</body>
+</html>

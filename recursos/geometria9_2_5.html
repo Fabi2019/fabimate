@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2.5 Aplicar las relaciones entre tangente, seno y coseno</title>
+
+<style>
+body{
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  margin: 20px;
+}
+.container{
+  max-width: 900px;
+  margin: auto;
+}
+button{
+  padding: 10px 16px;
+  font-size: 16px;
+  cursor: pointer;
+}
+@media print{
+  #printBtn{
+    display: none;
+  }
+}
+h1,h2{
+  color:#1a3d6d;
+}
+.respuestas{
+  background:#f4f4f4;
+  padding:15px;
+  border-radius:6px;
+}
+</style>
+
+<!-- Macro para que \sen se vea como operador "sen" -->
+<script>
+  window.MathJax = {
+    tex: {
+      macros: {
+        sen: "\\operatorname{sen}"
+      }
+    }
+  };
+</script>
+
+ <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+
+<body>
+<div class="container">
+
+<button id="printBtn" onclick="window.print()">Imprimir o Guardar en PDF (tamaño carta)</button>
+
+<h1>2.5 Aplicar las relaciones entre tangente, seno y coseno</h1>
+
+<h2>Explicación</h2>
+<p>
+En un triángulo rectángulo, las razones trigonométricas <strong>seno</strong>, <strong>coseno</strong> y <strong>tangente</strong>
+están relacionadas entre sí. Conocer estas relaciones permite pasar de una razón a otra sin necesidad
+de medir todos los lados del triángulo.
+</p>
+
+<p>
+Recordemos las definiciones básicas para un ángulo agudo $$\theta$$:
+</p>
+
+<ul>
+<li>
+$$
+\sen(\theta) = \frac{\text{cateto opuesto}}{\text{hipotenusa}}
+$$
+</li>
+<li>
+$$
+\cos(\theta) = \frac{\text{cateto adyacente}}{\text{hipotenusa}}
+$$
+</li>
+<li>
+$$
+\tan(\theta) = \frac{\text{cateto opuesto}}{\text{cateto adyacente}}
+$$
+</li>
+</ul>
+
+<p>
+A partir de estas definiciones se obtiene la relación principal:
+</p>
+
+<p style="text-align:center;">
+$$
+\tan(\theta) = \frac{\sen(\theta)}{\cos(\theta)}
+$$
+</p>
+
+<p>
+Esta relación se utiliza frecuentemente para resolver problemas cuando se conocen
+el seno y el coseno de un ángulo.
+</p>
+
+<h2>Ejemplo</h2>
+<p>
+Si $$\sen(\theta) = \frac{3}{5}$$ y $$\cos(\theta) = \frac{4}{5}$$, calcular $$\tan(\theta)$$.
+</p>
+
+<p>
+Usamos la relación:
+</p>
+
+<p>
+$$
+\tan(\theta) = \frac{\sen(\theta)}{\cos(\theta)}
+$$
+</p>
+
+<p>
+Sustituyendo:
+</p>
+
+<p>
+$$
+\tan(\theta) = \frac{\frac{3}{5}}{\frac{4}{5}} = \frac{3}{4}
+$$
+</p>
+
+<p>
+✅ <strong>Respuesta:</strong>
+$$
+\tan(\theta) = \frac{3}{4}
+$$
+</p>
+
+<h2>Ejercicios</h2>
+<ol>
+<li>Si $$\sen(\theta)=\frac{5}{13}$$ y $$\cos(\theta)=\frac{12}{13}$$, calcula $$\tan(\theta)$$.</li>
+<li>Un ángulo tiene $$\sen(\theta)=\frac{1}{2}$$ y $$\cos(\theta)=\frac{\sqrt{3}}{2}$$. Halla $$\tan(\theta)$$.</li>
+<li>Comprueba la relación $$\tan(\theta)=\frac{\sen(\theta)}{\cos(\theta)}$$ usando un triángulo rectángulo de tu elección.</li>
+<li>Si $$\tan(\theta)=\frac{2}{3}$$ y $$\cos(\theta)=\frac{3}{\sqrt{13}}$$, verifica el valor de $$\sen(\theta)$$.</li>
+<li>Explica con tus palabras por qué la tangente depende tanto del seno como del coseno.</li>
+</ol>
+
+<h2>Respuestas</h2>
+<div class="respuestas">
+<ol>
+<li>
+$$
+\tan(\theta)=\frac{\frac{5}{13}}{\frac{12}{13}}=\frac{5}{12}
+$$
+</li>
+<li>
+$$
+\tan(\theta)=\frac{\frac{1}{2}}{\frac{\sqrt{3}}{2}}=\frac{1}{\sqrt{3}}
+$$
+</li>
+<li>Al dividir cateto opuesto entre hipotenusa y cateto adyacente entre hipotenusa, se obtiene la razón entre seno y coseno.</li>
+<li>
+$$
+\sen(\theta)=\tan(\theta)\cdot\cos(\theta)=\frac{2}{3}\cdot\frac{3}{\sqrt{13}}=\frac{2}{\sqrt{13}}
+$$
+</li>
+<li>Porque la tangente se obtiene al dividir el seno entre el coseno.</li>
+</ol>
+</div>
+
+<h2>Referencias (APA)</h2>
+<p>
+Baldor, A. (2018). <em>Geometría y trigonometría</em>. Grupo Editorial Patria.
+</p>
+<p>
+Stewart, J. (2016). <em>Precálculo</em>. Cengage Learning.
+</p>
+
+<h2>Videos recomendados en YouTube</h2>
+<ul>
+<li>
+<a href="https://www.youtube.com/watch?v=uB1OyBTIq8M" target="_blank">
+Razones trigonométricas y sus relaciones – Khan Academy en Español
+</a>
+</li>
+<li>
+<a href="https://www.youtube.com/watch?v=0O4Y_ngyYkA" target="_blank">
+Relación entre seno, coseno y tangente – Khan Academy en Español
+</a>
+</li>
+</ul>
+
+</div>
+</body>
+</html>
