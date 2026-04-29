@@ -17,7 +17,17 @@ Explicación
 respuestas al final
 referencias tipo APA
 
-Si el tema esta relacionado con grometría usa dibujos para aclarar.
+Si el tema esta relacionado con geometría usa dibujos para aclarar.
+Si se habla re razones trigonométricas o ley de senos, usar:
+    <script>
+  window.MathJax = {
+    tex: {
+      macros: {
+        sen: "\\operatorname{sen}"
+      }
+    }
+  };
+</script>
 Si hay videos en Youtube del tema, disponibles al público, con mayores visitas,mostrar los enlaces obligatorio al final. Maximo 2.
 deben incluirse obligatoriamente al final del documento en una sección titulada “Videos recomendados en YouTube”.
 Los enlaces a videos NO deben mostrarse solo como texto, 
