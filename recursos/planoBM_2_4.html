@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Recta tangente y radio</title>
+
+<!-- MathJax obligatorio -->
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+<style>
+body{
+  font-family: Arial, Helvetica, sans-serif;
+  margin:20px;
+  line-height:1.6;
+}
+.container{
+  max-width:900px;
+  margin:auto;
+}
+button{
+  padding:10px 16px;
+  font-size:16px;
+  cursor:pointer;
+}
+h1,h2{
+  color:#1a237e;
+}
+.exercise{
+  margin-bottom:10px;
+}
+svg{
+  display:block;
+  margin:auto;
+}
+@media print{
+  button{
+    display:none;
+  }
+  @page{
+    size:letter;
+    margin:2cm;
+  }
+}
+</style>
+</head>
+
+<body>
+<div class="container">
+
+<button onclick="window.print()">Imprimir / Guardar en PDF</button>
+
+<h1>2.4 Recta tangente y radio en la circunferencia</h1>
+
+<h2>Explicación</h2>
+
+<p>
+Una <b>recta tangente</b> toca la circunferencia en un solo punto.  
+La propiedad fundamental establece que:
+</p>
+
+<p style="text-align:center;">
+$$
+\text{Tangente} \perp \text{Radio}
+$$
+</p>
+
+<p>
+Es decir, forman un ángulo de $$90^\circ$$ en el punto de contacto.
+</p>
+
+<!-- DIBUJO -->
+<h3>Representación gráfica</h3>
+
+<svg width="300" height="300">
+
+<!-- Circunferencia -->
+<circle cx="150" cy="150" r="100" stroke="black" stroke-width="2" fill="none"/>
+
+<!-- Radio -->
+<line x1="150" y1="150" x2="250" y2="150" stroke="blue" stroke-width="3"/>
+
+<!-- Tangente -->
+<line x1="250" y1="50" x2="250" y2="250" stroke="red" stroke-width="3"/>
+
+<!-- Punto de tangencia -->
+<circle cx="250" cy="150" r="5" fill="black"/>
+
+<!-- Centro -->
+<circle cx="150" cy="150" r="4" fill="black"/>
+
+<text x="140" y="140">O</text>
+<text x="255" y="145">T</text>
+
+</svg>
+
+<p style="text-align:center;">
+Radio (azul) ⟂ Tangente (rojo)
+</p>
+
+---
+
+<h2>Ejemplo</h2>
+
+<p>
+Si una tangente toca la circunferencia en un punto $$T$$,
+y el radio $$OT$$ mide 8 cm:
+</p>
+
+<p style="text-align:center;">
+$$
+\angle OT = 90^\circ
+$$
+</p>
+
+<p>
+Siempre se forma un ángulo recto.
+</p>
+
+---
+
+<h2>Ejercicios</h2>
+
+<div class="exercise">1. ¿Qué ángulo forma una tangente con el radio?</div>
+
+<div class="exercise">2. Si una recta es perpendicular al radio en el punto de contacto, ¿qué tipo de recta es?</div>
+
+<div class="exercise">3. ¿Puede una tangente cortar la circunferencia en dos puntos?</div>
+
+<div class="exercise">4. Si el radio mide 5 cm, ¿cuál es el ángulo con la tangente?</div>
+
+<div class="exercise">5. Explica por qué se forma un triángulo rectángulo en estos problemas.</div>
+
+---
+
+<h2>Respuestas</h2>
+<ol>
+  <li>$$90^\circ$$</li>
+  <li>Recta tangente</li>
+  <li>No</li>
+  <li>$$90^\circ$$</li>
+  <li>Porque el radio es perpendicular a la tangente</li>
+</ol>
+
+---
+
+<h2>Referencias</h2>
+<ul>
+  <li>Larson, R. (2017). <i>Geometría</i>. McGraw-Hill.</li>
+  <li>Ministerio de Educación. (2020). Matemática Bachillerato.</li>
+</ul>
+
+---
+
+<h2>Videos recomendados en YouTube</h2>
+<ul>
+  <li>
+    <a href="https://www.youtube.com/watch?v=OzW_oeVC1aY" target="_blank">
+      Propiedad de la recta tangente a la circunferencia
+    </a>
+  </li>
+  <li>
+    <a href="https://www.youtube.com/watch?v=QnEPYq7fT5Y" target="_blank">
+      Recta tangente a una circunferencia (explicación corta)
+    </a>
+  </li>
+</ul>
+
+</div>
+</body>
+</html>
