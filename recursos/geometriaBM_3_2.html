@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Traslación de una circunferencia</title>
+
+<style>
+    body{
+        font-family: Arial, Helvetica, sans-serif;
+        margin:20px;
+        line-height:1.6;
+    }
+    .container{
+        max-width:900px;
+        margin:auto;
+    }
+    h1,h2,h3{
+        color:#1a1a1a;
+    }
+    .print-button{
+        margin-bottom:20px;
+    }
+    button{
+        padding:10px 16px;
+        font-size:16px;
+        cursor:pointer;
+    }
+    @media print{
+        .print-button{
+            display:none;
+        }
+    }
+</style>
+
+ <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</head>
+
+<body>
+<div class="container">
+
+<!-- Botón imprimir o PDF -->
+<div class="print-button">
+    <button onclick="window.print()">Imprimir o guardar en PDF (tamaño carta)</button>
+</div>
+
+<h1>Traslación de una circunferencia</h1>
+<h2>Nivel: Bachillerato por Madurez</h2>
+
+<h3>Explicación</h3>
+<p>
+Una <strong>traslación</strong> es un movimiento en el plano que desplaza una figura
+sin cambiar su forma ni su tamaño.
+</p>
+
+<p>
+En una circunferencia, la traslación consiste en mover su centro a una nueva posición,
+manteniendo constante su radio.
+</p>
+
+<p>
+La ecuación general de una circunferencia es:
+</p>
+
+$$
+(x - h)^2 + (y - k)^2 = r^2
+$$
+
+<p>
+donde $$(h,k)$$ es el centro y $$r$$ es el radio.
+</p>
+
+<p>
+Si la circunferencia se traslada mediante un vector $$(a,b)$$, entonces el nuevo centro es:
+</p>
+
+$$
+(h + a,\; k + b)
+$$
+
+<p>
+y la nueva ecuación queda:
+</p>
+
+$$
+(x - (h+a))^2 + (y - (k+b))^2 = r^2
+$$
+
+<p>
+El radio no cambia, solo la posición del centro.
+</p>
+
+<h3>Ejemplo</h3>
+<p>
+Dada la circunferencia:
+</p>
+
+$$
+(x - 2)^2 + (y + 1)^2 = 9
+$$
+
+<p>
+Trasladarla mediante el vector $$(3, -2)$$.
+</p>
+
+<p>
+Centro original:
+</p>
+
+$$
+(2, -1)
+$$
+
+<p>
+Nuevo centro:
+</p>
+
+$$
+(2 + 3,\; -1 - 2) = (5, -3)
+$$
+
+<p>
+Nueva ecuación:
+</p>
+
+$$
+(x - 5)^2 + (y + 3)^2 = 9
+$$
+
+<h3>Ejercicios</h3>
+<ol>
+    <li>Traslada la circunferencia $$(x - 1)^2 + (y - 2)^2 = 4$$ con el vector $$(2,3)$$.</li>
+    <li>Traslada $$(x + 2)^2 + (y - 1)^2 = 16$$ con el vector $$(-3,2)$$.</li>
+    <li>Determina la nueva ecuación de $$(x - 4)^2 + (y - 5)^2 = 25$$ al moverla con $$(1,-2)$$.</li>
+    <li>Halla la nueva circunferencia de $$(x - 3)^2 + (y + 2)^2 = 9$$ con vector $$(4,1)$$.</li>
+    <li>Traslada $$(x + 1)^2 + (y + 3)^2 = 36$$ con el vector $$(2,2)$$.</li>
+</ol>
+
+<h3>Respuestas</h3>
+<ol>
+    <li>$$(x - 3)^2 + (y - 5)^2 = 4$$</li>
+    <li>$$(x + 5)^2 + (y - 3)^2 = 16$$</li>
+    <li>$$(x - 5)^2 + (y - 3)^2 = 25$$</li>
+    <li>$$(x - 7)^2 + (y + 1)^2 = 9$$</li>
+    <li>$$(x + 3)^2 + (y + 1)^2 = 36$$</li>
+</ol>
+
+<h3>Referencias (formato APA)</h3>
+<ul>
+    <li>Larson, R., Hostetler, R., & Edwards, B. (2014). <em>Precálculo con aplicaciones</em>. Cengage Learning.</li>
+    <li>Ministerio de Educación Pública. (2016). <em>Programas de Estudio de Matemáticas</em>. Costa Rica.</li>
+</ul>
+
+<h3>Videos recomendados en YouTube</h3>
+<ul>
+    <li>
+       https://youtu.be/NC225Rgya94?si=m_aZ-xFACc6pRlww
+            Traslaciones en el plano cartesiano
+        </a>
+    </li>
+    <li>
+        https://youtu.be/sj2GXmBkCqU?si=7GkPwSoLu_4Uq2ZE
+            Traslación de circunferencias
+        </a>
+    </li>
+</ul>
+
+</div>
+</body>
+</html>

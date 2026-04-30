@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clase de Matemáticas: Recta y Circunferencia</title>
+    <script>
+        window.MathJax = {
+            tex: {
+                macros: {
+                    sen: "\\operatorname{sen}"
+                }
+            }
+        };
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --accent-color: #e74c3c;
+            --bg-color: #f8f9fa;
+        }
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+        }
+        .sheet {
+            background: white;
+            width: 100%;
+            max-width: 8.5in; /* Tamaño carta aproximado */
+            min-height: 11in;
+            padding: 40px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.1);
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        .no-print-area {
+            text-align: right;
+            margin-bottom: 20px;
+        }
+        .btn-imprimir {
+            background-color: var(--secondary-color);
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+        .btn-imprimir:hover {
+            background-color: #2980b9;
+        }
+        h1 {
+            color: var(--primary-color);
+            text-align: center;
+            border-bottom: 3px solid var(--secondary-color);
+            padding-bottom: 10px;
+        }
+        h2 {
+            color: var(--secondary-color);
+            border-left: 5px solid var(--secondary-color);
+            padding-left: 10px;
+            margin-top: 30px;
+        }
+        p, li {
+            font-size: 1.1em;
+            color: #444;
+            text-align: justify;
+        }
+        .geometria-box {
+            text-align: center;
+            margin: 20px 0;
+            padding: 15px;
+            border: 1px dashed #ccc;
+        }
+        .ejemplo-card {
+            background-color: #f1f9ff;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 6px solid #2ecc71;
+        }
+        .ejercicios-container {
+            margin-top: 20px;
+        }
+        .video-box {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin: 20px 0;
+        }
+        .video-card {
+            background: #e74c3c;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: bold;
+            flex: 1;
+            text-align: center;
+            min-width: 200px;
+        }
+        .video-card:hover {
+            background: #c0392b;
+        }
+        .referencias {
+            font-size: 0.9em;
+            color: #777;
+            border-top: 1px solid #eee;
+            margin-top: 40px;
+            padding-top: 10px;
+        }
+        @media print {
+            .no-print-area { display: none; }
+            body { padding: 0; background: white; }
+            .sheet { box-shadow: none; width: 100%; padding: 0; }
+        }
+        @media (max-width: 600px) {
+            .sheet { padding: 15px; }
+            .video-card { width: 100%; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="sheet">
+    <div class="no-print-area">
+        <button class="btn-imprimir" onclick="window.print()">🖨️ Imprimir / Guardar PDF</button>
+    </div>
+
+    <h1>Posición Relativa de una Recta respecto a una Circunferencia</h1>
+
+    <h2>Explicación</h2>
+    <p>En el estudio de la geometría para Bachillerato, analizamos la relación entre una recta y una circunferencia basándonos en sus puntos de contacto o intersección. Existen tres casos posibles:</p>
+    
+    <ul>
+        <li><strong>Recta Secante:</strong> Interseca a la circunferencia en <b>dos puntos</b>. Algebraicamente, al resolver el sistema, el discriminante es positivo (\(\Delta > 0\)).</li>
+        <li><strong>Recta Tangente:</strong> Toca a la circunferencia en <b>exactamente un punto</b>. El discriminante es igual a cero (\(\Delta = 0\)).</li>
+        <li><strong>Recta Exterior:</strong> <b>No tiene puntos</b> en común con la circunferencia. El discriminante es negativo (\(\Delta < 0\)).</li>
+    </ul>
+
+    <div class="geometria-box">
+        <svg width="300" height="150" viewBox="0 0 300 150">
+            <circle cx="150" cy="75" r="40" stroke="black" stroke-width="2" fill="none" />
+            <line x1="100" y1="40" x2="200" y2="110" stroke="blue" stroke-width="2" />
+            <text x="210" y="115" fill="blue" font-size="12">Secante</text>
+            <line x1="100" y1="35" x2="200" y2="35" stroke="green" stroke-width="2" />
+            <text x="210" y="40" fill="green" font-size="12">Tangente</text>
+            <line x1="100" y1="10" x2="200" y2="10" stroke="red" stroke-width="2" />
+            <text x="210" y="15" fill="red" font-size="12">Exterior</text>
+        </svg>
+        <p><small>Representación visual de las posiciones relativas.</small></p>
+    </div>
+
+    <div class="ejemplo-card">
+        <h2>1 Ejemplo</h2>
+        <p>Determine la posición relativa de la recta \(y = x + 4\) respecto a la circunferencia \(x^2 + y^2 = 8\).</p>
+        <p><strong>Paso 1:</strong> Sustituir la recta en la circunferencia.<br>
+        \(x^2 + (x + 4)^2 = 8\)</p>
+        <p><strong>Paso 2:</strong> Desarrollar el binomio.<br>
+        \(x^2 + x^2 + 8x + 16 = 8\)</p>
+        <p><strong>Paso 3:</strong> Igualar a cero y simplificar.<br>
+        \(2x^2 + 8x + 8 = 0\)</p>
+        <p><strong>Paso 4:</strong> Calcular el Discriminante \(\Delta = b^2 - 4 \cdot a \cdot c\).<br>
+        \(\Delta = 8^2 - 4 \cdot 2 \cdot 8\)<br>
+        \(\Delta = 64 - 64 = 0\)</p>
+        <p><strong>Conclusión:</strong> Como \(\Delta = 0\), la recta es <b>Tangente</b>.</p>
+    </div>
+
+    <div class="ejercicios-container">
+        <h2>5 Ejercicios</h2>
+        <ol>
+            <li>Determine la posición de la recta \(y = 3\) respecto a la circunferencia \(x^2 + y^2 = 25\).</li>
+            <li>Dada la circunferencia \(x^2 + y^2 = 1\), analice la recta \(y = x + 2\).</li>
+            <li>¿Es la recta \(y = x\) secante, tangente o exterior a \(x^2 + y^2 = 4\)?</li>
+            <li>Analice la posición de la recta \(x = 5\) respecto a \((x-2)^2 + y^2 = 9\).</li>
+            <li>Determine la relación de la recta \(y = -x + 4\) con la circunferencia \(x^2 + y^2 = 16\).</li>
+        </ol>
+    </div>
+
+    <div class="ejemplo-card" style="border-left-color: #3498db; margin-top: 20px;">
+        <h2>Respuestas</h2>
+        <p>1. Secante | 2. Exterior | 3. Secante | 4. Tangente | 5. Secante</p>
+    </div>
+
+    <h2>Videos Disponibles</h2>
+    <div class="video-box">
+        <a class="video-card" href="https://www.youtube.com/watch?v=apZlAMrLM6o">📺 Clase: Rectas Tangentes, Secantes y Exteriores</a>
+        <a class="video-card" href="https://www.youtube.com/watch?v=Boi-z-1btt0">📺 Trucos con Calculadora para Bachillerato</a>
+    </div>
+
+    <div class="referencias">
+        <h2>Referencias</h2>
+        <p>Ministerio de Educación Pública de Costa Rica. (2025). <i>Programas de Estudio de Matemáticas: Educación Diversificada</i>. San José, C.R.: MEP.</p>
+        <p>Sibaja, J. (2025). <i>Matemáticas Bachillerato por Madurez: Geometría de la Circunferencia</i>. Recuperado de material de apoyo educativo.</p>
+    </div>
+</div>
+
+</body>
+</html>
