@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>4.2 Ángulos en polígonos</title>
+
+<style>
+body{font-family:Arial, sans-serif; margin:20px; line-height:1.6;}
+.container{max-width:900px; margin:auto;}
+h1,h2{color:#2c3e50;}
+button{padding:10px 15px; margin-bottom:15px; cursor:pointer;}
+@media print{button{display:none;}}
+.canvas{border:1px solid #ccc; padding:10px; margin:10px 0; text-align:center;}
+</style>
+
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</head>
+
+<body>
+<div class="container">
+
+<button onclick="window.print()">Imprimir / Guardar PDF</button>
+
+<h1>4.2 Determinar las medidas de los ángulos internos, externos y centrales de polígonos</h1>
+
+<h2>Explicación</h2>
+
+<p><b>Ángulo interno:</b> se forma dentro del polígono entre dos lados consecutivos.</p>
+
+<p><b>Ángulo externo:</b> se forma al prolongar uno de los lados del polígono.</p>
+
+<p><b>Ángulo central:</b> es el ángulo que se forma en el centro del polígono uniendo el centro con dos vértices consecutivos.</p>
+
+<ul>
+<li>Suma de ángulos internos:
+$$ S = (n - 2) \cdot 180 $$</li>
+
+<li>Ángulo interno:
+$$ A_i = \frac{(n - 2) \cdot 180}{n} $$</li>
+
+<li>Ángulo externo:
+$$ A_e = \frac{360}{n} $$</li>
+
+<li>Ángulo central:
+$$ A_c = \frac{360}{n} $$</li>
+</ul>
+
+<div class="canvas">
+<svg width="260" height="180">
+<polygon points="130,30 210,80 170,160 90,160 50,80" 
+fill="none" stroke="black" stroke-width="2"/>
+
+<circle cx="130" cy="100" r="3" fill="black"/>
+
+<line x1="130" y1="100" x2="130" y2="30" stroke="red"/>
+<line x1="130" y1="100" x2="210" y2="80" stroke="red"/>
+
+<text x="60" y="20">Ángulo central</text>
+</svg>
+</div>
+
+<h2>Ejemplo</h2>
+
+<p>Calcular los ángulos de un hexágono regular.</p>
+
+<p><b>Interno:</b></p>
+<p>$$ A_i = \frac{(6 - 2) \cdot 180}{6} = 120 $$</p>
+
+<p><b>Externo:</b></p>
+<p>$$ A_e = \frac{360}{6} = 60 $$</p>
+
+<p><b>Central:</b></p>
+<p>$$ A_c = \frac{360}{6} = 60 $$</p>
+
+<h2>Ejercicios</h2>
+
+<ol>
+<li>Calcular la suma de los ángulos internos de un pentágono.</li>
+<li>Hallar el ángulo interno de un octágono regular.</li>
+<li>Determinar el ángulo externo de un decágono regular.</li>
+<li>¿Cuántos lados tiene un polígono cuya suma de ángulos es 900°?</li>
+<li>Calcular el ángulo central de un polígono regular de 12 lados.</li>
+</ol>
+
+<h2>Respuestas</h2>
+
+<ol>
+<li>$$ 540 $$°</li>
+<li>$$ 135 $$°</li>
+<li>$$ 36 $$°</li>
+<li>$$ 7 $$ lados</li>
+<li>$$ 30 $$°</li>
+</ol>
+
+<h2>Videos</h2>
+
+<p>
+<a href="https://www.youtube.com/watch?v=3WypLLLbhnI">
+Ver video: ángulos interno, externo y central
+</a>
+</p>
+
+<p>
+<a href="https://www.youtube.com/">
+Ver video: suma y relación de ángulos en polígonos
+</a>
+</p>
+
+<h2>Referencias (APA)</h2>
+
+<p>Baldor, A. (2006). <i>Geometría y trigonometría</i>. Pearson Educación.</p>
+<p>Larson, R. (2018). <i>Matemáticas básicas</i>. Cengage Learning.</p>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>4.2.2 Diagonales de polígonos</title>
+
+<style>
+body{font-family:Arial, sans-serif; margin:20px; line-height:1.6;}
+.container{max-width:900px; margin:auto;}
+h1,h2{color:#2c3e50;}
+button{padding:10px 15px; margin-bottom:15px; cursor:pointer;}
+@media print{button{display:none;}}
+.canvas{border:1px solid #ccc; padding:10px; margin:10px 0; text-align:center;}
+</style>
+
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</head>
+
+<body>
+<div class="container">
+
+<button onclick="window.print()">Imprimir / Guardar PDF</button>
+
+<h1>4.3 Determinar el número de diagonales de un polígono</h1>
+
+<h2>Explicación</h2>
+
+<p>Una <b>diagonal</b> es un segmento que une dos vértices no consecutivos de un polígono.</p>
+
+<p>Para calcular el número de diagonales de un polígono de <b>n</b> lados se utiliza la fórmula:</p>
+
+<p>$$ D = \frac{n(n - 3)}{2} $$</p>
+
+<p>Esta fórmula permite determinar cuántas diagonales se pueden trazar sin repetirlas.</p>
+
+<div class="canvas">
+<svg width="220" height="160">
+<polygon points="110,20 200,80 160,150 60,150 20,80" 
+fill="none" stroke="black" stroke-width="2"/>
+
+<!-- diagonal -->
+<line x1="110" y1="20" x2="160" y2="150" stroke="red" stroke-width="2"/>
+
+<text x="40" y="15">Diagonal en un pentágono</text>
+</svg>
+</div>
+
+<h2>Ejemplo</h2>
+
+<p>Calcular el número de diagonales de un hexágono.</p>
+
+<p>$$ D = \frac{6(6 - 3)}{2} $$</p>
+<p>$$ D = \frac{6 \cdot 3}{2} $$</p>
+<p>$$ D = 9 $$</p>
+
+<h2>Ejercicios</h2>
+
+<ol>
+<li>Calcular las diagonales de un cuadrado.</li>
+<li>Determinar las diagonales de un pentágono.</li>
+<li>Hallar el número de diagonales de un decágono.</li>
+<li>¿Cuántos lados tiene un polígono con 14 diagonales?</li>
+<li>Calcular las diagonales de un polígono de 12 lados.</li>
+</ol>
+
+<h2>Respuestas</h2>
+
+<ol>
+<li>$$ 2 $$</li>
+<li>$$ 5 $$</li>
+<li>$$ 35 $$</li>
+<li>$$ 7 $$ lados</li>
+<li>$$ 54 $$</li>
+</ol>
+
+<h2>Videos</h2>
+
+<p>
+<a href="https://www.youtube.com/">
+Ver video: diagonales de polígonos
+</a>
+</p>
+
+<p>
+<a href="https://www.youtube.com/">
+Ver video: ejercicios de diagonales
+</a>
+</p>
+
+<h2>Referencias (APA)</h2>
+
+<p>Baldor, A. (2006). <i>Geometría y trigonometría</i>. Pearson Educación.</p>
+<p>Larson, R. (2018). <i>Matemáticas básicas</i>. Cengage Learning.</p>
+
+</div>
+</body>
+</html>

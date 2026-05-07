@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>4.3 Apotema y radio de polígonos</title>
+
+<style>
+body{font-family:Arial, sans-serif; margin:20px; line-height:1.6;}
+.container{max-width:900px; margin:auto;}
+h1,h2{color:#2c3e50;}
+button{padding:10px 15px; margin-bottom:15px; cursor:pointer;}
+@media print{button{display:none;}}
+.canvas{border:1px solid #ccc; padding:10px; margin:10px 0; text-align:center;}
+</style>
+
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</head>
+
+<body>
+<div class="container">
+
+<button onclick="window.print()">Imprimir / Guardar PDF</button>
+
+<h1>4.3 Determinar la medida de la apotema y el radio de polígonos regulares</h1>
+
+<h2>Explicación</h2>
+
+<p>En un polígono regular:</p>
+
+<p><b>Apotema (a):</b> es la distancia del centro del polígono al punto medio de uno de sus lados.</p>
+
+<p><b>Radio (r):</b> es la distancia del centro a cualquiera de sus vértices.</p>
+
+<p>Se puede formar un triángulo rectángulo usando el radio, la apotema y la mitad del lado.</p>
+
+<p>Relación importante:</p>
+
+<p>$$ r^2 = a^2 + \left(\frac{l}{2}\right)^2 $$</p>
+
+<p>También:</p>
+
+<ul>
+<li>$$ a = r \cdot \cos\left(\frac{180}{n}\right) $$</li>
+<li>$$ r = \frac{a}{\cos\left(\frac{180}{n}\right)} $$</li>
+</ul>
+
+<div class="canvas">
+<svg width="260" height="200">
+
+<!-- polígono -->
+<polygon points="130,30 210,80 180,160 80,160 50,80" 
+fill="none" stroke="black" stroke-width="2"/>
+
+<!-- centro -->
+<circle cx="130" cy="100" r="3" fill="black"/>
+
+<!-- radio -->
+<line x1="130" y1="100" x2="210" y2="80" stroke="blue" stroke-width="2"/>
+
+<!-- apotema -->
+<line x1="130" y1="100" x2="155" y2="120" stroke="red" stroke-width="2"/>
+
+<text x="140" y="60" fill="blue">Radio</text>
+<text x="150" y="140" fill="red">Apotema</text>
+
+</svg>
+</div>
+
+<h2>Ejemplo</h2>
+
+<p>Un hexágono regular tiene radio $$ r = 10 $$. Calcular la apotema.</p>
+
+<p>$$ a = r \cdot \cos\left(\frac{180}{6}\right) $$</p>
+<p>$$ a = 10 \cdot \cos(30) $$</p>
+<p>$$ a \approx 10 \cdot 0.866 $$</p>
+<p>$$ a \approx 8.66 $$</p>
+
+<h2>Ejercicios</h2>
+
+<ol>
+<li>Calcular la apotema de un hexágono de radio 12.</li>
+<li>Hallar el radio de un polígono con apotema 5 y $$ n=6 $$.</li>
+<li>Calcular la apotema de un octágono con radio 8.</li>
+<li>Determinar el radio de un polígono regular de 10 lados con apotema 6.</li>
+<li>Calcular la apotema de un pentágono regular de radio 10.</li>
+</ol>
+
+<h2>Respuestas</h2>
+
+<ol>
+<li>$$ \approx 10.39 $$</li>
+<li>$$ \approx 5.77 $$</li>
+<li>$$ \approx 7.39 $$</li>
+<li>$$ \approx 6.46 $$</li>
+<li>$$ \approx 8.09 $$</li>
+</ol>
+
+<h2>Videos</h2>
+
+<p>
+<a href="https://www.youtube.com/">
+Ver video: apotema y radio en polígonos
+</a>
+</p>
+
+<p>
+<a href="https://youtu.be/LAsqn1tBVCU?si=1eAPZ0bowVjLWulz">
+Polígonos regulares: Cálculo de la apotema y el radio
+</a>
+</p>
+
+<h2>Referencias (APA)</h2>
+
+<p>Baldor, A. (2006). <i>Geometría y trigonometría</i>. Pearson Educación.</p>
+<p>Larson, R. (2018). <i>Matemáticas básicas</i>. Cengage Learning.</p>
+
+</div>
+</body>
+</html>
