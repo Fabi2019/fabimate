@@ -94,6 +94,16 @@
         {"nombre": "Anotaciones para Bachillerato:",
         "url": "bitacora.html?nivel=Bachillerato"}
         ],
+    "herra": [
+        {
+        "nombre": "Geogebra",
+        "url": "https://www.geogebra.org/classic?lang=es"
+        }, {
+        "nombre": "Calculadora Científica",
+        "url": "https://scientificcalculator.site/"
+        }
+
+       ],
     "admin": [
         {
         "nombre": "RegistrosB",
@@ -107,15 +117,5 @@
          "nombre": "Planes pdf",
         "url": "https://script.google.com/macros/s/AKfycbwMRUBGACKdZ-b84FZkyjR-ooK4PeXUwp-zZQCHXx-SCTKOIykU_i_VE81LT_eqJCPUJQ/exec?pdf=true"
         }
-        ],
-    "herra": [
-        {
-        "nombre": "Geogebra",
-        "url": "https://www.geogebra.org/classic?lang=es"
-        }, {
-        "nombre": "Calculadora Científica",
-        "url": "https://scientificcalculator.site/"
-        }
-
-       ]
+        ]
   }
