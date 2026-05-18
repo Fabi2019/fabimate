@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Elementos básicos de la geometría</title>
+
+<script>
+window.MathJax = {
+  tex: { inlineMath: [['$', '$'], ['\$$', '\$$']] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+<style>
+body{font-family: Arial; margin:20px;}
+.container{max-width:900px; margin:auto;}
+h1,h2{text-align:center;}
+button{padding:10px; background:#333; color:white; border:none;}
+@media print {button{display:none;}}
+.dibujo{background:#f4f4f4; padding:10px; margin:15px 0; text-align:center;}
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<button onclick="window.print()">Imprimir o guardar en PDF</button>
+
+<h1>Elementos Básicos de la Geometría</h1>
+
+<h2>Explicación</h2>
+
+<p>En geometría usamos <b>nomenclatura</b> para nombrar correctamente las figuras.</p>
+
+<h3>Punto</h3>
+<div class="dibujo">
+<pre>
+   ● A
+</pre>
+</div>
+<p>
+Se representa con una letra mayúscula.<br>
+Ejemplo: punto $A$
+</p>
+
+<h3>Recta</h3>
+<div class="dibujo">
+<pre>
+←──────────────→
+      A   B
+</pre>
+</div>
+<p>
+Se nombra con dos puntos o una letra.<br>
+Ejemplo: recta $AB$ o recta $l$
+</p>
+
+<h3>Segmento</h3>
+<div class="dibujo">
+<pre>
+A ●────────● B
+</pre>
+</div>
+<p>
+Se escribe como:<br>
+$\overline{AB}$
+</p>
+
+<h3>Semirrecta (rayo)</h3>
+<div class="dibujo">
+<pre>
+A ●────────────→ B
+</pre>
+</div>
+<p>
+Se escribe como:<br>
+$\overrightarrow{AB}$<br>
+El punto A es el origen
+</p>
+
+<h3>Plano</h3>
+<div class="dibujo">
+<pre>
+ -----------------------
+|   A     B     C       |
+|        PLANO α        |
+|                       |
+ -----------------------
+</pre>
+</div>
+<p>
+Se nombra con tres puntos o una letra griega.<br>
+Ejemplo: plano $ABC$ o plano $\alpha$
+</p>
+
+<h3>Puntos colineales</h3>
+<div class="dibujo">
+<pre>
+A ●────●────● C
+     B
+</pre>
+</div>
+<p>
+Se escriben como:<br>
+Los puntos $A, B, C$ son colineales
+</p>
+
+<h3>Puntos no colineales</h3>
+<div class="dibujo">
+<pre>
+A ●
+      ● B
+
+   ● C
+</pre>
+</div>
+<p>
+$A, B, C$ no son colineales
+</p>
+
+<h3>Puntos coplanares</h3>
+<div class="dibujo">
+<pre>
+Plano α
+A ●     B ●
+
+   C ●
+</pre>
+</div>
+<p>
+$A, B, C$ pertenecen al plano $\alpha$
+</p>
+
+<h3>Puntos no coplanares</h3>
+<div class="dibujo">
+<pre>
+Plano α: A ●  B ●
+
+Plano β: C ●
+</pre>
+</div>
+<p>
+El punto $C$ no pertenece al plano $\alpha$
+</p>
+
+<h2>Ejemplo</h2>
+
+<div class="dibujo">
+<pre>
+A ●────● B ─────→
+
+      ● C
+</pre>
+</div>
+
+<p>
+$\overline{AB}$ es un segmento<br>
+$\overrightarrow{AB}$ representa una semirrecta<br>
+Los puntos $A$ y $B$ son colineales<br>
+El punto $C$ es no colineal
+</p>
+
+<h2>Ejercicios</h2>
+
+<p>1. Escribe la notación de un segmento entre A y B.</p>
+<p>2. Escribe la notación de una semirrecta desde A hacia B.</p>
+<p>3. Nombra una recta usando dos puntos.</p>
+<p>4. Escribe cómo se representa un plano.</p>
+<p>5. Indica si A, B, C son colineales o no en un dibujo.</p>
+
+<h2>Respuestas</h2>
+
+<p>
+1. $\overline{AB}$ <br>
+2. $\overrightarrow{AB}$ <br>
+3. $AB$ <br>
+4. Plano $ABC$ o $\alpha$ <br>
+5. Depende del dibujo
+</p>
+
+<h2>Videos de apoyo</h2>
+
+<div>
+<a href="https://www.youtube.com/watch?v=2cjRDgfGfRM" target="_blank">
+Ver video 1: Punto, recta, semirrecta y segmento
+</a>
+</div>
+
+<div>
+<a href="https://www.youtube.com/watch?v=LIrHcJAmplo" target="_blank">
+Ver video 2: Punto, recta y plano explicado fácil
+</a>
+</div>
+
+<h2>Referencias (APA)</h2>
+
+<p>
+Matematrix. (2024). Puntos, rectas y planos. [1](https://www.youtube.com/playlist?list=PLWMKqd4wVXO2uYFFaDXReNVm6NsWfYV2X)
+</p>
+
+</div>
+
+</body>
+</html>
