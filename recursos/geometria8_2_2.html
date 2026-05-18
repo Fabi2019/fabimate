@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Figuras Homotéticas en el Plano Cartesiano</title>
+
+<style>
+body{
+  font-family: Arial, sans-serif;
+  margin:20px;
+  line-height:1.6;
+}
+.container{
+  max-width:900px;
+  margin:auto;
+}
+h1,h2{
+  color:#1f618d;
+}
+.box{
+  background:#f2f4f4;
+  padding:15px;
+  border-radius:10px;
+  margin-bottom:20px;
+}
+button{
+  padding:10px 20px;
+  font-size:16px;
+  background:#2e86c1;
+  color:white;
+  border:none;
+  border-radius:8px;
+  cursor:pointer;
+}
+@media print{
+  button{
+    display:none;
+  }
+}
+svg{
+  width:100%;
+  max-width:400px;
+}
+</style>
+
+<script>
+function imprimir(){
+  window.print();
+}
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</head>
+
+<body>
+<div class="container">
+
+<button onclick="imprimir()">Imprimir / Guardar PDF</button>
+
+<h1>2.2 Reconocer pares de figuras homotéticas en el plano cartesiano</h1>
+
+<div class="box">
+<h2>Explicación</h2>
+
+<p>
+En el <b>plano cartesiano</b>, dos figuras son <b>homotéticas</b> si una se obtiene de la otra mediante una <b>homotecia</b>.
+</p>
+
+<p>
+Esto significa que:
+</p>
+
+<ul>
+<li>Existe un <b>factor de escala (k)</b>.</li>
+<li>Los puntos correspondientes están alineados con un mismo centro (generalmente el origen).</li>
+<li>Las coordenadas cambian multiplicándose por $$ k $$.</li>
+</ul>
+
+<p><b>Relación clave:</b></p>
+
+<p>
+Si un punto es $$ A(x,y) $$, su homólogo será:
+</p>
+
+<p>
+$$ A'(x',y') = (k \cdot x , k \cdot y) $$
+</p>
+
+<p><b>Cómo reconocer figuras homotéticas:</b></p>
+
+<ol>
+<li>Comparar coordenadas de los puntos.</li>
+<li>Verificar si todas se multiplican por el mismo número.</li>
+<li>Comprobar que mantienen la forma (ángulos iguales).</li>
+</ol>
+
+</div>
+
+<div class="box">
+<h2>Ejemplo</h2>
+
+<p>
+Dado el triángulo:
+</p>
+
+<p>
+$$ A(1,1), B(2,1), C(1,2) $$
+</p>
+
+<p>
+Y su posible imagen:
+</p>
+
+<p>
+$$ A'(2,2), B'(4,2), C'(2,4) $$
+</p>
+
+<p>
+Observamos que:
+</p>
+
+<p>
+$$ (2,2) = 2 \cdot (1,1) $$
+</p>
+
+<p>
+El factor es $$ k = 2 $$.
+</p>
+
+<p>
+Entonces, los triángulos son <b>homotéticos</b>.
+</p>
+
+<svg viewBox="0 0 200 200">
+
+<!-- original -->
+<polygon points="50,150 100,150 50,100" fill="none" stroke="blue"/>
+<text x="45" y="160">A</text>
+<text x="100" y="160">B</text>
+<text x="45" y="95">C</text>
+
+<!-- homotecia -->
+<polygon points="80,180 140,180 80,120" fill="none" stroke="red"/>
+<text x="75" y="190">A'</text>
+<text x="140" y="190">B'</text>
+<text x="75" y="115">C'</text>
+
+</svg>
+
+</div>
+
+<div class="box">
+<h2>Ejercicios</h2>
+
+<ol>
+<li>Verifica si los puntos $$ (1,2), (2,3) $$ y $$ (2,4), (4,6) $$ son homotéticos.</li>
+<li>Encuentra el factor k entre $$ (2,2) $$ y $$ (6,6) $$.</li>
+<li>¿Las figuras con coordenadas multiplicadas por -1 son homotéticas?</li>
+<li>Determina si $$ (3,1) $$ y $$ (9,3) $$ pertenecen a una homotecia.</li>
+<li>Construye una figura homotética con $$ k = 3 $$ desde un cuadrado dado.</li>
+</ol>
+
+</div>
+
+<div class="box">
+<h2>Respuestas</h2>
+
+<ol>
+<li>Sí, $$ k = 2 $$</li>
+<li>$$ k = 3 $$</li>
+<li>Sí, con inversión (cambio de orientación)</li>
+<li>Sí, $$ k = 3 $$</li>
+<li>Multiplicar todas las coordenadas por 3</li>
+</ol>
+
+</div>
+
+<div class="box">
+<h2>Videos recomendados</h2>
+
+<p>
+<a href="https://www.youtube.com/watch?v=t_F3wAqkumw" target="_blank">
+Ver video: Homotecias - explicación básica
+</a>
+</p>
+
+<p>
+<a href="https://www.youtube.com/watch?v=opxS5npSwH0" target="_blank">
+Ver video: Homotecia - Khan Academy en Español
+</a>
+</p>
+
+</div>
+
+<div class="box">
+<h2>Referencias (APA)</h2>
+
+<p>
+Ministerio de Educación. (2020). <i>Transformaciones en el plano cartesiano</i>.
+</p>
+
+<p>
+Larson, R. (2018). <i>Geometría analítica</i>. McGraw-Hill.
+</p>
+
+<p>
+Khan Academy. (2023). <i>Homotecias y transformaciones</i>.
+</p>
+
+</div>
+
+</div>
+</body>
+</html>

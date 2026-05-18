@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Congruencia de Triángulos</title>
+
+<style>
+body{
+  font-family: Arial, sans-serif;
+  margin:20px;
+  line-height:1.6;
+}
+.container{
+  max-width:900px;
+  margin:auto;
+}
+h1,h2{
+  color:#117864;
+}
+.box{
+  background:#e8f8f5;
+  padding:15px;
+  border-radius:10px;
+  margin-bottom:20px;
+}
+button{
+  padding:10px 20px;
+  font-size:16px;
+  background:#16a085;
+  color:white;
+  border:none;
+  border-radius:8px;
+  cursor:pointer;
+}
+@media print{
+  button{
+    display:none;
+  }
+}
+svg{
+  width:100%;
+  max-width:400px;
+}
+</style>
+
+<script>
+function imprimir(){
+  window.print();
+}
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</head>
+
+<body>
+<div class="container">
+
+<button onclick="imprimir()">Imprimir / Guardar PDF</button>
+
+<h1>2.4 Aplicar criterios de congruencia de triángulos</h1>
+
+<div class="box">
+<h2>Explicación</h2>
+
+<p>
+Dos triángulos son <b>congruentes</b> cuando tienen exactamente la misma forma y tamaño,
+es decir:
+</p>
+
+<ul>
+<li>Sus lados correspondientes son iguales.</li>
+<li>Sus ángulos correspondientes son iguales.</li>
+</ul>
+
+<p><b>Criterios de congruencia:</b></p>
+
+<ul>
+<li><b>Lado – Lado – Lado (LLL):</b><br>
+Si los tres lados correspondientes son iguales, los triángulos son congruentes.</li>
+
+<li><b>Lado – Ángulo – Lado (LAL):</b><br>
+Si dos lados y el ángulo comprendido entre ellos son iguales, los triángulos son congruentes.</li>
+
+<li><b>Ángulo – Lado – Ángulo (ALA):</b><br>
+Si dos ángulos y el lado entre ellos son iguales, los triángulos son congruentes.</li>
+</ul>
+
+<p>
+Estos criterios permiten demostrar congruencia sin medir todos los elementos del triángulo.
+</p>
+
+</div>
+
+<div class="box">
+<h2>Ejemplo</h2>
+
+<p>
+Se tienen dos triángulos:
+</p>
+
+<p>
+$$ AB = DE = 6 $$, $$ AC = DF = 8 $$ y el ángulo entre ellos es igual.
+</p>
+
+<p>
+Como cumplen dos lados y el ángulo comprendido:
+</p>
+
+<p>
+$$ \triangle ABC \cong \triangle DEF $$ (criterio LAL)
+</p>
+
+<svg viewBox="0 0 200 200">
+
+<!-- Triangulo 1 -->
+<polygon points="40,150 100,150 70,90" fill="none" stroke="blue"/>
+<text x="35" y="165">A</text>
+<text x="100" y="165">B</text>
+<text x="70" y="85">C</text>
+
+<!-- Triangulo 2 -->
+<polygon points="120,150 180,150 150,90" fill="none" stroke="red"/>
+<text x="115" y="165">D</text>
+<text x="180" y="165">E</text>
+<text x="150" y="85">F</text>
+
+</svg>
+
+</div>
+
+<div class="box">
+<h2>Ejercicios</h2>
+
+<ol>
+<li>¿Son congruentes los triángulos con lados 4, 5, 6 y 4, 5, 6?</li>
+<li>Identifica el criterio si se conocen dos lados y el ángulo comprendido.</li>
+<li>Dos triángulos tienen dos ángulos iguales y el lado entre ellos igual. ¿Cuál criterio es?</li>
+<li>Explica por qué AAA no es criterio de congruencia.</li>
+<li>Si todos los lados son iguales entre dos triángulos, ¿qué criterio se utiliza?</li>
+</ol>
+
+</div>
+
+<div class="box">
+<h2>Respuestas</h2>
+
+<ol>
+<li>Sí, por LLL</li>
+<li>LAL</li>
+<li>ALA</li>
+<li>Porque solo garantiza semejanza, no mismo tamaño</li>
+<li>LLL</li>
+</ol>
+
+</div>
+
+<div class="box">
+<h2>Videos recomendados</h2>
+
+<p>
+<a href="https://www.youtube.com/watch?v=U4MTmLvvKQ4" target="_blank">
+Ver video: Criterios de congruencia de triángulos (LLL, LAL, ALA)
+</a>
+</p>
+
+<p>
+<a href="https://www.youtube.com/watch?v=0pVk41VjkVc" target="_blank">
+Ver video: Congruencia de triángulos - ejercicios resueltos paso a paso
+</a>
+</p>
+
+</div>
+
+
+<div class="box">
+<h2>Referencias (APA)</h2>
+
+<p>
+Khan Academy. (2023). <i>Criterios de congruencia de triángulos</i>.
+</p>
+
+<p>
+CK-12 Foundation. (2026). <i>Congruencia de triángulos</i>.
+</p>
+
+<p>
+Larson, R. (2018). <i>Geometría</i>. McGraw-Hill.
+</p>
+
+</div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Semejanza de Triángulos</title>
+
+<style>
+body{
+  font-family: Arial, sans-serif;
+  margin:20px;
+  line-height:1.6;
+}
+.container{
+  max-width:900px;
+  margin:auto;
+}
+h1,h2{
+  color:#7d3c98;
+}
+.box{
+  background:#f4ecf7;
+  padding:15px;
+  border-radius:10px;
+  margin-bottom:20px;
+}
+button{
+  padding:10px 20px;
+  font-size:16px;
+  background:#8e44ad;
+  color:white;
+  border:none;
+  border-radius:8px;
+  cursor:pointer;
+}
+@media print{
+  button{
+    display:none;
+  }
+}
+svg{
+  width:100%;
+  max-width:400px;
+}
+</style>
+
+<script>
+function imprimir(){
+  window.print();
+}
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</head>
+
+<body>
+<div class="container">
+
+<button onclick="imprimir()">Imprimir / Guardar PDF</button>
+
+<h1>2.3 Criterios de Semejanza de Triángulos</h1>
+
+<div class="box">
+<h2>Explicación</h2>
+
+<p>
+Dos triángulos son <b>semejantes</b> cuando tienen la misma forma, aunque no necesariamente el mismo tamaño.
+</p>
+
+<p>
+Esto implica:
+</p>
+
+<ul>
+<li>Sus ángulos correspondientes son iguales.</li>
+<li>Sus lados correspondientes son proporcionales.</li>
+</ul>
+
+<p><b>Criterios de semejanza:</b></p>
+
+<ul>
+<li><b>Lado - Lado - Lado (LLL):</b> Los tres lados son proporcionales.
+<br>
+$$ \frac{AB}{A'B'} = \frac{BC}{B'C'} = \frac{AC}{A'C'} $$
+</li>
+
+<li><b>Lado - Ángulo - Lado (LAL):</b> Dos lados proporcionales y el ángulo comprendido igual.</li>
+
+<li><b>Ángulo - Ángulo - Ángulo (AAA):</b> Dos ángulos iguales son suficientes (el tercero también lo será).</li>
+</ul>
+
+</div>
+
+<div class="box">
+<h2>Ejemplo</h2>
+
+<p>
+Se tienen dos triángulos:
+</p>
+
+<p>
+$$ AB = 3, BC = 4, AC = 5 $$
+</p>
+
+<p>
+$$ A'B' = 6, B'C' = 8, A'C' = 10 $$
+</p>
+
+<p>
+Comprobamos:
+</p>
+
+<p>
+$$ \frac{6}{3} = \frac{8}{4} = \frac{10}{5} = 2 $$
+</p>
+
+<p>
+Entonces, cumplen el criterio <b>LLL</b> → Son semejantes.
+</p>
+
+<svg viewBox="0 0 200 200">
+
+<!-- Triangulo pequeño -->
+<polygon points="50,150 100,150 80,110" fill="none" stroke="blue"/>
+<text x="45" y="160">A</text>
+<text x="100" y="160">B</text>
+<text x="80" y="105">C</text>
+
+<!-- Triangulo grande -->
+<polygon points="120,170 180,170 150,110" fill="none" stroke="red"/>
+<text x="115" y="185">A'</text>
+<text x="180" y="185">B'</text>
+<text x="150" y="105">C'</text>
+
+</svg>
+
+</div>
+
+<div class="box">
+<h2>Ejercicios</h2>
+
+<ol>
+<li>Verifica si los triángulos con lados 2, 3, 4 y 4, 6, 8 son semejantes.</li>
+<li>Determina si cumplen LAL: lados proporcionales 3 y 6, 4 y 8, con ángulo igual.</li>
+<li>Si dos triángulos tienen ángulos 30°, 60°, 90°, ¿son semejantes?</li>
+<li>Comprueba si 5, 7, 9 y 10, 14, 18 son semejantes.</li>
+<li>Indica qué criterio usarías si conoces dos ángulos iguales.</li>
+</ol>
+
+</div>
+
+<div class="box">
+<h2>Respuestas</h2>
+
+<ol>
+<li>Sí, $$ k = 2 $$</li>
+<li>Sí, cumplen LAL</li>
+<li>Sí, por AAA</li>
+<li>Sí, $$ k = 2 $$</li>
+<li>AAA</li>
+</ol>
+
+</div>
+
+<div class="box">
+<h2>Videos recomendados</h2>
+
+<p>
+<a href="https://www.youtube.com/watch?v=g_c0c1b4rlA" target="_blank">
+Ver video: Criterios de semejanza de triángulos (LLL, LAL y AAA explicado paso a paso)
+</a>
+</p>
+
+<p>
+<a href="https://www.youtube.com/watch?v=nO58sj9bkAI" target="_blank">
+Ver video: Ejemplos de criterios de semejanza de triángulos
+</a>
+</p>
+
+</div>
+
+<div class="box">
+<h2>Referencias (APA)</h2>
+
+<p>
+Larson, R. (2018). <i>Geometría</i>. McGraw-Hill.
+</p>
+
+<p>
+Ministerio de Educación. (2020). <i>Semejanza de triángulos</i>.
+</p>
+
+<p>
+Khan Academy. (2023). <i>Criterios de semejanza</i>.
+</p>
+
+</div>
+
+</div>
+</body>
+</html>

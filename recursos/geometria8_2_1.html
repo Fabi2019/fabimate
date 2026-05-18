@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Homotecia - Puntos, Ángulos y Lados Homólogos</title>
+
+<style>
+body{
+  font-family: Arial, sans-serif;
+  margin:20px;
+  line-height:1.6;
+}
+.container{
+  max-width:900px;
+  margin:auto;
+}
+h1,h2{
+  color:#2c3e50;
+}
+.box{
+  background:#f4f6f7;
+  padding:15px;
+  border-radius:10px;
+  margin-bottom:20px;
+}
+button{
+  padding:10px 20px;
+  font-size:16px;
+  background:#3498db;
+  color:white;
+  border:none;
+  border-radius:8px;
+  cursor:pointer;
+}
+@media print{
+  button{
+    display:none;
+  }
+}
+svg{
+  width:100%;
+  max-width:400px;
+}
+</style>
+
+<script>
+function imprimir(){
+  window.print();
+}
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</head>
+
+<body>
+<div class="container">
+
+<button onclick="imprimir()">Imprimir / Guardar PDF</button>
+
+<h1>Homotecia: Puntos, Ángulos y Lados Homólogos</h1>
+
+<div class="box">
+<h2>Explicación</h2>
+
+<p>
+La <b>homotecia</b> es una transformación geométrica que cambia el tamaño de una figura
+manteniendo su forma. Se obtiene una nueva figura llamada <b>imagen</b>.
+</p>
+
+<p><b>Elementos importantes:</b></p>
+<ul>
+<li><b>Centro de homotecia (O):</b> punto fijo.</li>
+<li><b>Razón de homotecia (k):</b> número que indica el cambio de tamaño.</li>
+<li><b>Polígono original</b> y <b>polígono imagen</b>.</li>
+</ul>
+
+<p><b>Puntos homólogos:</b> puntos correspondientes entre las figuras.</p>
+<p>Ejemplo: $$ A \leftrightarrow A' $$, $$ B \leftrightarrow B' $$</p>
+
+<p><b>Lados homólogos:</b> segmentos correspondientes.</p>
+
+<p><b>Ángulos homólogos:</b> conservan su medida.</p>
+
+<p><b>Propiedades:</b></p>
+<ul>
+<li>Los ángulos se conservan.</li>
+<li>Los lados cambian proporcionalmente: $$ \frac{A'B'}{AB} = k $$</li>
+<li>Los puntos están alineados con el centro.</li>
+</ul>
+
+</div>
+
+<div class="box">
+<h2>Ejemplo</h2>
+
+<p>Se tiene el triángulo ABC y se aplica una homotecia con razón $$ k = 2 $$.</p>
+
+<svg viewBox="0 0 200 200">
+<!-- Triangulo original -->
+<polygon points="50,150 100,50 150,150" fill="none" stroke="blue"/>
+<text x="45" y="160">A</text>
+<text x="95" y="45">B</text>
+<text x="150" y="160">C</text>
+
+<!-- Triangulo homotecia -->
+<polygon points="20,180 100,20 180,180" fill="none" stroke="red"/>
+<text x="15" y="190">A'</text>
+<text x="100" y="15">B'</text>
+<text x="180" y="190">C'</text>
+</svg>
+
+<p>
+Los puntos homólogos son:
+A ↔ A', B ↔ B', C ↔ C'
+</p>
+
+<p>
+Los lados homólogos:
+AB ↔ A'B', BC ↔ B'C', AC ↔ A'C'
+</p>
+
+<p>Los ángulos corresponden y son iguales.</p>
+
+</div>
+
+<div class="box">
+<h2>Ejercicios</h2>
+
+<ol>
+<li>Identifica los puntos homólogos entre un cuadrado ABCD y A'B'C'D'.</li>
+<li>Si $$ k = 3 $$, ¿cómo cambian los lados?</li>
+<li>¿Los ángulos cambian en una homotecia? Explica.</li>
+<li>Si el lado AB mide 4 y $$ k = 2 $$, ¿cuánto mide A'B'?</li>
+<li>Dado un triángulo, señala sus lados homólogos después de una homotecia.</li>
+</ol>
+
+</div>
+
+<div class="box">
+<h2>Respuestas</h2>
+
+<ol>
+<li>A ↔ A', B ↔ B', C ↔ C', D ↔ D'</li>
+<li>Se multiplican por 3</li>
+<li>No, se conservan iguales</li>
+<li>$$ A'B' = 8 $$</li>
+<li>Correspondencia directa entre cada lado original y su imagen</li>
+</ol>
+
+</div>
+
+<div class="box">
+<h2>Videos recomendados</h2>
+
+<p>
+<a href="https://www.youtube.com/watch?v=t_F3wAqkumw" target="_blank">
+Ver video: Homotecias - Información básica (explicación clara para estudiantes)
+</a>
+</p>
+
+<p>
+<a href="https://www.youtube.com/watch?v=opxS5npSwH0" target="_blank">
+Ver video: Homotecia y sus propiedades - Khan Academy en Español
+</a>
+</p>
+
+</div>
+
+<div class="box">
+<h2>Referencias (APA)</h2>
+
+<p>
+Ministerio de Educación. (2020). <i>Geometría y transformaciones</i>.
+</p>
+
+<p>
+Larson, R., & Hostetler, R. (2018). <i>Geometría</i>. McGraw-Hill.
+</p>
+
+<p>
+Khan Academy. (2023). <i>Transformaciones geométricas: homotecia</i>.
+</p>
+
+</div>
+
+</div>
+</body>
+</html>
