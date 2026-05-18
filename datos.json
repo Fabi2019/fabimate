@@ -112,6 +112,10 @@
         {
         "nombre": "Geogebra",
         "url": "https://www.geogebra.org/classic?lang=es"
+        }, {
+        "nombre": "Calculadora Científica",
+        "url": "https://scientificcalculator.site/"
         }
+
        ]
   }
