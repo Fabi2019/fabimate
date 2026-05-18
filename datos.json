@@ -3,7 +3,7 @@
 "titulo_pagina": "Fabián Matemática",
 "menu": [
     {
-    "texto": "Programas",
+    "texto": "Programas de Estudio",
     "clave": "programas"
     },
     {
@@ -19,7 +19,9 @@
     { "texto": "Juegos",
     "clave": "juego"},
     { "texto": "Administrativo",
-    "clave": "admin"}
+    "clave": "admin"},
+    { "texto": "Herramientas",
+    "clave": "herra"}
 ]
 },
     "programas": [
@@ -105,5 +107,11 @@
          "nombre": "Planes pdf",
         "url": "https://script.google.com/macros/s/AKfycbwMRUBGACKdZ-b84FZkyjR-ooK4PeXUwp-zZQCHXx-SCTKOIykU_i_VE81LT_eqJCPUJQ/exec?pdf=true"
         }
-        ]
+        ],
+    "herra": [
+        {
+        "nombre": "Geogebra",
+        "url": "https://www.geogebra.org/classic?lang=es"
+        }
+       ]
   }
