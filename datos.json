@@ -97,7 +97,7 @@
     "admin": [
         {
         "nombre": "RegistrosB",
-        "url": "https://script.google.com/macros/s/AKfycbwMRUBGACKdZ-b84FZkyjR-ooK4PeXUwp-zZQCHXx-SCTKOIykU_i_VE81LT_eqJCPUJQ/exec"
+        "url": "bitacoraA.html"
         },
         {
          "nombre": "ArchivoB",
@@ -105,11 +105,11 @@
         },
         {
          "nombre": "Planes pdf",
-        "url": "https://script.google.com/macros/s/AKfycbwMRUBGACKdZ-b84FZkyjR-ooK4PeXUwp-zZQCHXx-SCTKOIykU_i_VE81LT_eqJCPUJQ/exec?pdf=true"
+        "url": "planes.html"
         },
         {
          "nombre": "Crónica",
-        "url": "https://script.google.com/macros/s/AKfycbzYTGynF9HhhSvARJyu3Oy9aoQ9ETYQOG-KnW5XDTxs44TgpsOfgCJpaav-x7A-F42t/exec"
+        "url": "cronica.html"
         }
         ],
     "herra": [

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bitácora</title>
+    <style>
+        /* Eliminamos los márgenes del navegador para que no haya huecos */
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden; /* Evita que aparezca una barra de scroll doble */
+            background-color: #ffffff;
+        }
+
+        /* Configuración del Iframe propio en GitHub */
+        iframe {
+            width: 100%;
+            border: none;
+            
+            /* EL TRUCO MAGICO: */
+            margin-top: 0px;          /* Empuja el iframe 45 píxeles hacia arriba, escondiendo el banner de Google */
+            height: calc(100% + 45px);  /* Le sumamos esos 45 píxeles al alto para que no quede un espacio en blanco abajo */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Tu iframe propio que apunta a la Web App de Google -->
+    <iframe src="https://script.google.com/macros/s/AKfycbwMRUBGACKdZ-b84FZkyjR-ooK4PeXUwp-zZQCHXx-SCTKOIykU_i_VE81LT_eqJCPUJQ/exec"></iframe>
+
+</body>
+</html>
