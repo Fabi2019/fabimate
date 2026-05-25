@@ -1,0 +1,167 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Relaciones en Figuras Tridimensionales</title>
+
+<script>
+function imprimirPagina() {
+  window.print();
+}
+</script>
+
+<style>
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+  line-height: 1.6;
+}
+
+h1, h2 {
+  color: #2c3e50;
+}
+
+.container {
+  max-width: 900px;
+  margin: auto;
+}
+
+.boton {
+  margin-bottom: 20px;
+}
+
+button {
+  padding: 10px;
+  font-size: 16px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #2980b9;
+}
+
+@media print {
+  .boton {
+    display: none;
+  }
+}
+
+.figura {
+  text-align: center;
+  margin: 20px 0;
+}
+</style>
+
+<!-- MathJax correctamente cargado -->
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</head>
+
+<body>
+<div class="container">
+
+<div class="boton">
+<button onclick="imprimirPagina()">Imprimir / Guardar en PDF</button>
+</div>
+
+<h1>Relaciones entre Elementos de Figuras Tridimensionales</h1>
+
+<h2>Explicación</h2>
+<p>
+En las figuras tridimensionales (sólidos geométricos) existen relaciones entre sus elementos:
+caras, aristas y vértices, así como entre líneas y planos.
+Estas relaciones permiten comprender la estructura y organización del sólido.
+</p>
+
+<ul>
+<li><b>Caras, aristas y vértices:</b> Las caras se unen formando aristas, y las aristas se encuentran en los vértices.</li>
+
+<li><b>Rectas paralelas:</b> Son aristas que nunca se intersectan y mantienen la misma distancia (por ejemplo, aristas opuestas de un cubo).</li>
+
+<li><b>Rectas perpendiculares:</b> Son aristas que se cruzan formando un ángulo de \(90^\circ\).</li>
+
+<li><b>Segmentos paralelos:</b> Partes de aristas que mantienen dirección y no se intersectan.</li>
+
+<li><b>Planos paralelos:</b> Caras que no se cortan, como las bases de un prisma.</li>
+
+<li><b>Planos perpendiculares:</b> Caras que se intersecan formando ángulos rectos.</li>
+</ul>
+
+<div class="figura">
+<svg width="230" height="200">
+  <rect x="50" y="60" width="80" height="80" fill="none" stroke="black"/>
+  <rect x="100" y="30" width="80" height="80" fill="none" stroke="black"/>
+  <line x1="50" y1="60" x2="100" y2="30" stroke="black"/>
+  <line x1="130" y1="60" x2="180" y2="30" stroke="black"/>
+  <line x1="50" y1="140" x2="100" y2="110" stroke="black"/>
+  <line x1="130" y1="140" x2="180" y2="110" stroke="black"/>
+</svg>
+<p>En el cubo se observan aristas paralelas y caras perpendiculares</p>
+</div>
+
+<h2>Ejemplo</h2>
+<p>
+En un cubo:
+</p>
+<ul>
+<li>Las caras opuestas son <b>planos paralelos</b>.</li>
+<li>Las aristas verticales son <b>paralelas entre sí</b>.</li>
+<li>Las caras laterales son <b>perpendiculares</b> a la base.</li>
+<li>Las aristas que se encuentran en un vértice forman ángulos de \(90^\circ\).</li>
+</ul>
+
+<h2>Ejercicios</h2>
+
+<ol>
+<li>Menciona dos aristas paralelas en un cubo.</li>
+<li>¿Las bases de un prisma son paralelas o perpendiculares?</li>
+<li>Indica una relación entre caras en un cubo.</li>
+<li>¿Cuándo dos aristas son perpendiculares?</li>
+<li>Da un ejemplo de planos paralelos en una figura tridimensional.</li>
+</ol>
+
+<h2>Respuestas</h2>
+
+<ol>
+<li>Las aristas opuestas superiores e inferiores.</li>
+<li>Son paralelas.</li>
+<li>Las caras opuestas son paralelas y las adyacentes son perpendiculares.</li>
+<li>Cuando forman un ángulo de \(90^\circ\).</li>
+<li>Las dos bases de un prisma o las caras opuestas de un cubo.</li>
+</ol>
+
+<h2>Videos explicativos</h2>
+
+<p>
+<a href="https://www.youtube.com/watch?v=kESdCbIz9Wc" target="_blank">
+LOS CUERPOS GEOMÉTRICOS PARA NIÑOS | Caras, aristas y vértices
+</a>
+</p>
+
+<p>
+<a href="https://www.youtube.com/watch?v=0lJwa9CoQEk" target="_blank">
+Cuerpos geométricos - Clasificación y sus elementos
+</a>
+</p>
+
+<h2>Referencias (APA)</h2>
+
+<p>
+Baldor, A. (2013). <i>Geometría y trigonometría</i>. Pearson Educación.
+</p>
+
+<p>
+Ministerio de Educación. (2020). <i>Texto de Geometría del espacio</i>.
+</p>
+
+</div>
+</body>
+</html>
+```

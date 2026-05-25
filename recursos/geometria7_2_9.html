@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Cálculo de Ángulos</title>
+
+<script>
+function imprimirPagina() {
+  window.print();
+}
+</script>
+
+<style>
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+  line-height: 1.6;
+}
+
+h1, h2 {
+  color: #2c3e50;
+}
+
+.container {
+  max-width: 900px;
+  margin: auto;
+}
+
+.boton {
+  margin-bottom: 20px;
+}
+
+button {
+  padding: 10px;
+  font-size: 16px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #2980b9;
+}
+
+@media print {
+  .boton {
+    display: none;
+  }
+}
+
+.figura {
+  text-align: center;
+  margin: 20px 0;
+}
+</style>
+
+<!-- MathJax correctamente cargado -->
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</head>
+
+<body>
+<div class="container">
+
+<div class="boton">
+<button onclick="imprimirPagina()">Imprimir / Guardar en PDF</button>
+</div>
+
+<h1>Determinación de Medidas de Ángulos</h1>
+
+<h2>Explicación</h2>
+
+<p>
+Para calcular ángulos desconocidos es necesario reconocer la relación que tienen:
+</p>
+
+<ul>
+<li><b>Ángulos congruentes:</b> tienen la misma medida. [1](https://www.unprofesor.com/matematicas/que-son-los-angulos-congruentes-ejemplos-6386.html)</li>
+
+<li><b>Ángulos complementarios:</b> suman $$90^\circ$$. [2](https://matemovil.com/angulos-segun-la-suma-de-sus-medidas-complementarios-y-suplementarios/)</li>
+
+<li><b>Ángulos suplementarios:</b> suman $$180^\circ$$. [2](https://matemovil.com/angulos-segun-la-suma-de-sus-medidas-complementarios-y-suplementarios/)</li>
+</ul>
+
+<p>
+Para resolver problemas:
+</p>
+
+<ul>
+<li>Si es complemento: $$x + \alpha = 90^\circ$$</li>
+<li>Si es suplemento: $$x + \alpha = 180^\circ$$</li>
+<li>Si es congruente: $$x = \alpha$$</li>
+</ul>
+
+<div class="figura">
+<svg width="250" height="180">
+  <line x1="50" y1="120" x2="200" y2="120" stroke="black"/>
+  <line x1="125" y1="120" x2="125" y2="40" stroke="black"/>
+</svg>
+<p>Ejemplo de relaciones: 90° (complementarios) y 180° (suplementarios)</p>
+</div>
+
+<h2>Ejemplo</h2>
+
+<p>
+Si un ángulo mide $$40^\circ$$, calcular:
+</p>
+
+<ul>
+<li><b>Complemento:</b>  
+$$
+90^\circ - 40^\circ = 50^\circ
+$$</li>
+
+<li><b>Suplemento:</b>  
+$$
+180^\circ - 40^\circ = 140^\circ
+$$</li>
+</ul>
+
+<p>
+Estos cálculos se basan en que los complementarios suman 90° y los suplementarios 180° [3](https://matemaestro.com/examen-resuelto-de-angulos-complementarios-y-suplementarios/)
+</p>
+
+<h2>Ejercicios</h2>
+
+<ol>
+<li>Un ángulo mide $$30^\circ$$. ¿Cuánto mide su complemento?</li>
+<li>Un ángulo mide $$75^\circ$$. ¿Cuánto mide su suplemento?</li>
+<li>Dos ángulos son congruentes y uno mide $$55^\circ$$. ¿Cuánto mide el otro?</li>
+<li>Dos ángulos son complementarios y uno mide $$20^\circ$$. ¿Cuánto mide el otro?</li>
+<li>Dos ángulos son suplementarios y uno mide $$125^\circ$$. ¿Cuánto mide el otro?</li>
+</ol>
+
+<h2>Respuestas</h2>
+
+<ol>
+<li>$$60^\circ$$</li>
+<li>$$105^\circ$$</li>
+<li>$$55^\circ$$</li>
+<li>$$70^\circ$$</li>
+<li>$$55^\circ$$</li>
+</ol>
+
+<h2>Videos explicativos</h2>
+
+<p>
+<a href="https://www.youtube.com/watch?v=18YG5INvMKc" target="_blank">
+Complemento y suplemento de un ángulo con ejercicios
+</a>
+</p>
+
+<p>
+<a href="https://www.youtube.com/watch?v=3gnOhspwEA8" target="_blank">
+Cómo calcular complemento y suplemento de un ángulo
+</a>
+</p>
+
+<h2>Referencias (APA)</h2>
+
+<p>
+Alexander, D., & Koeberlein, G. (2013). <i>Geometría</i>. Cengage Learning. [2](https://matemovil.com/angulos-segun-la-suma-de-sus-medidas-complementarios-y-suplementarios/)
+</p>
+
+<p>
+Mate Maestro. (2025). <i>Ejercicios de ángulos complementarios y suplementarios</i>. [3](https://matemaestro.com/examen-resuelto-de-angulos-complementarios-y-suplementarios/)
+</p>
+
+</div>
+</body>
+</html>

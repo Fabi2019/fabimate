@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Tipos de Ángulos y Relaciones</title>
+
+<script>
+function imprimirPagina() {
+  window.print();
+}
+</script>
+
+<style>
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+  line-height: 1.6;
+}
+
+h1, h2 {
+  color: #2c3e50;
+}
+
+.container {
+  max-width: 900px;
+  margin: auto;
+}
+
+.boton {
+  margin-bottom: 20px;
+}
+
+button {
+  padding: 10px;
+  font-size: 16px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #2980b9;
+}
+
+@media print {
+  .boton {
+    display: none;
+  }
+}
+
+.figura {
+  text-align: center;
+  margin: 20px 0;
+}
+</style>
+
+<!-- MathJax correctamente configurado -->
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</head>
+
+<body>
+<div class="container">
+
+<div class="boton">
+<button onclick="imprimirPagina()">Imprimir / Guardar en PDF</button>
+</div>
+
+<h1>Reconocimiento de Ángulos</h1>
+
+<h2>Explicación</h2>
+<p>
+En geometría, los ángulos representan la abertura entre dos rectas que se cortan en un punto llamado vértice.
+Existen diferentes tipos de relaciones entre ángulos:
+</p>
+
+<ul>
+<li><b>Ángulo llano:</b> mide $$180^\circ$$.</li>
+<li><b>Ángulos adyacentes:</b> comparten un vértice y un lado, y no se superponen.</li>
+<li><b>Par lineal:</b> dos ángulos adyacentes que suman $$180^\circ$$.</li>
+<li><b>Ángulos opuestos por el vértice:</b> se forman cuando dos rectas se cruzan y son iguales entre sí.</li>
+</ul>
+
+<div class="figura">
+<svg width="250" height="200">
+  <line x1="50" y1="100" x2="200" y2="100" stroke="black"/>
+  <line x1="125" y1="20" x2="125" y2="180" stroke="black"/>
+</svg>
+<p>Rectas que forman ángulos opuestos por el vértice y pares lineales</p>
+</div>
+
+<h2>Ejemplo</h2>
+<p>
+Si dos ángulos son adyacentes y forman una línea recta, entonces constituyen un par lineal.
+Por ejemplo:
+</p>
+
+<p>
+$$
+120^\circ + 60^\circ = 180^\circ
+$$
+</p>
+
+<p>
+Estos ángulos son adyacentes y forman un par lineal.
+</p>
+
+<h2>Ejercicios</h2>
+
+<ol>
+<li>¿Cuánto mide un ángulo llano?</li>
+<li>Si un ángulo mide $$70^\circ$$, ¿cuánto mide su ángulo adyacente en un par lineal?</li>
+<li>¿Qué relación tienen los ángulos opuestos por el vértice?</li>
+<li>Identifica si los ángulos de $$90^\circ$$ y $$90^\circ$$ pueden formar un par lineal.</li>
+<li>Si dos rectas se cruzan, ¿cuántos ángulos opuestos por el vértice se forman?</li>
+</ol>
+
+<h2>Respuestas</h2>
+
+<ol>
+<li>$$180^\circ$$</li>
+<li>$$110^\circ$$</li>
+<li>Son iguales en medida.</li>
+<li>Sí, porque suman $$180^\circ$$.</li>
+<li>Se forman 2 pares de ángulos opuestos por el vértice.</li>
+</ol>
+
+<h2>Videos explicativos</h2>
+
+<p>
+<a href="https://www.youtube.com/watch?v=oh7wbGzU1no" target="_blank">
+ÁNGULOS OPUESTOS POR EL VÉRTICE (explicación fácil)
+</a>
+</p>
+
+<p>
+<a href="https://www.youtube.com/watch?v=sVvqYskXjuw" target="_blank">
+Ángulos adyacentes y ángulos que forman par lineal
+</a>
+</p>
+
+
+<h2>Referencias (APA)</h2>
+
+<p>
+Ministerio de Educación. (2020). <i>Geometría básica: Ángulos y sus relaciones</i>.
+</p>
+
+<p>
+Baldor, A. (2013). <i>Geometría y trigonometría</i>. Pearson Educación.
+</p>
+
+</div>
+</body>
+</html>

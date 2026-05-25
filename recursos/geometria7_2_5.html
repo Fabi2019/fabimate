@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Elementos de Figuras Tridimensionales</title>
+
+<script>
+function imprimirPagina() {
+  window.print();
+}
+</script>
+
+<style>
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+  line-height: 1.6;
+}
+
+h1, h2 {
+  color: #2c3e50;
+}
+
+.container {
+  max-width: 900px;
+  margin: auto;
+}
+
+.boton {
+  display: block;
+  margin-bottom: 20px;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: #2980b9;
+}
+
+/* Ocultar botón al imprimir */
+@media print {
+  .boton {
+    display: none;
+  }
+}
+
+/* Figura simple */
+.figura {
+  text-align: center;
+  margin: 20px 0;
+}
+</style>
+</head>
+
+<body>
+<div class="container">
+
+<div class="boton">
+<button onclick="imprimirPagina()">Imprimir / Guardar en PDF</button>
+</div>
+
+<h1>Elementos de Figuras Tridimensionales</h1>
+
+<h2>Explicación</h2>
+<p>
+En geometría, las figuras tridimensionales (también llamadas sólidos) son aquellas que tienen largo, ancho y altura.
+Entre los elementos más importantes que las componen se encuentran:
+</p>
+
+<ul>
+<li><b>Caras:</b> Son las superficies planas que forman el sólido.</li>
+<li><b>Aristas:</b> Son las líneas donde se unen dos caras.</li>
+<li><b>Vértices:</b> Son los puntos donde se intersectan las aristas.</li>
+</ul>
+
+<p>
+Por ejemplo, en un cubo:
+</p>
+
+<div class="figura">
+<svg width="200" height="200">
+  <rect x="50" y="50" width="80" height="80" fill="none" stroke="black"/>
+  <rect x="80" y="20" width="80" height="80" fill="none" stroke="black"/>
+  <line x1="50" y1="50" x2="80" y2="20" stroke="black"/>
+  <line x1="130" y1="50" x2="160" y2="20" stroke="black"/>
+  <line x1="50" y1="130" x2="80" y2="100" stroke="black"/>
+  <line x1="130" y1="130" x2="160" y2="100" stroke="black"/>
+</svg>
+<p>Cubo: 6 caras, 12 aristas, 8 vértices</p>
+</div>
+
+<h2>Ejemplo</h2>
+<p>
+Determinar el número de caras, aristas y vértices de un prisma rectangular.
+</p>
+
+<p>
+Un prisma rectangular tiene:
+</p>
+
+<ul>
+<li>6 caras</li>
+<li>12 aristas</li>
+<li>8 vértices</li>
+</ul>
+
+<h2>Ejercicios</h2>
+
+<ol>
+<li>Indica cuántas caras, aristas y vértices tiene un cubo.</li>
+<li>¿Cuántos vértices tiene una pirámide de base cuadrada?</li>
+<li>Determina el número de aristas de un prisma triangular.</li>
+<li>¿Cuántas caras tiene un cilindro? (considera sus bases)</li>
+<li>Identifica caras, aristas y vértices en una pirámide triangular.</li>
+</ol>
+
+<h2>Respuestas</h2>
+<ol>
+<li>6 caras, 12 aristas, 8 vértices</li>
+<li>5 vértices</li>
+<li>9 aristas</li>
+<li>3 caras</li>
+<li>4 caras, 6 aristas, 4 vértices</li>
+</ol>
+
+<h2>Videos explicativos</h2>
+
+<p>
+<a href="https://www.youtube.com/watch?v=kESdCbIz9Wc" target="_blank">
+LOS CUERPOS GEOMÉTRICOS PARA NIÑOS | Caras, aristas y vértices
+</a>
+</p>
+
+<p>
+<a href="https://www.youtube.com/watch?v=0lJwa9CoQEk" target="_blank">
+Cuerpos geométricos - Clasificación y sus elementos
+</a>
+</p>
+
+
+<h2>Referencias (APA)</h2>
+<p>
+Ministerio de Educación. (2020). <i>Geometría básica</i>.  
+</p>
+<p>
+Baldor, A. (2013). <i>Geometría y trigonometría</i>. Pearson Educación.  
+</p>
+
+</div>
+
+</body>
+</html>
