@@ -1,0 +1,177 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Semejanza y Congruencia de Triángulos</title>
+
+<script>
+function imprimirPagina() {
+  window.print();
+}
+</script>
+
+<style>
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+  line-height: 1.6;
+}
+
+h1, h2 {
+  color: #2c3e50;
+}
+
+.container {
+  max-width: 900px;
+  margin: auto;
+}
+
+.boton {
+  margin-bottom: 20px;
+}
+
+button {
+  padding: 10px;
+  font-size: 16px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #2980b9;
+}
+
+@media print {
+  .boton {
+    display: none;
+  }
+}
+
+.figura {
+  text-align: center;
+  margin: 20px 0;
+}
+</style>
+
+<!-- MathJax correctamente cargado -->
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</head>
+
+<body>
+<div class="container">
+
+<div class="boton">
+<button onclick="imprimirPagina()">Imprimir / Guardar en PDF</button>
+</div>
+
+<h1>Semejanza y Congruencia de Triángulos</h1>
+
+<h2>Explicación</h2>
+
+<p>
+En geometría, los triángulos pueden relacionarse mediante semejanza o congruencia:
+</p>
+
+<ul>
+<li><b>Triángulos congruentes:</b> tienen la misma forma y tamaño. Sus lados y ángulos son iguales. [1](https://www.geeksforgeeks.org/maths/congruence-of-triangles/)</li>
+
+<li><b>Triángulos semejantes:</b> tienen la misma forma, pero distinto tamaño. Sus lados son proporcionales y sus ángulos iguales. [2](https://www.neurochispas.com/wiki/triangulos-semejantes-y-congruentes-con-ejercicios/)</li>
+</ul>
+
+<p><b>Criterios de congruencia:</b></p>
+<ul>
+<li>LLL (lado-lado-lado)</li>
+<li>LAL (lado-ángulo-lado)</li>
+<li>ALA (ángulo-lado-ángulo)</li>
+</ul>
+
+<p><b>Criterios de semejanza:</b></p>
+<ul>
+<li>AA (ángulo-ángulo)</li>
+<li>LLL (lados proporcionales)</li>
+<li>LAL (proporción y ángulo)</li>
+</ul>
+
+<div class="figura">
+<svg width="260" height="200">
+  <polygon points="60,150 120,50 180,150" fill="none" stroke="black"/>
+  <polygon points="80,150 130,70 180,150" fill="none" stroke="blue"/>
+</svg>
+<p>Triángulos semejantes: misma forma, distinto tamaño</p>
+</div>
+
+<h2>Ejemplo</h2>
+
+<p>
+Si dos triángulos tienen lados proporcionales:
+</p>
+
+<p>
+\[
+\frac{4}{2} = \frac{6}{3} = \frac{8}{4} = 2
+\]
+</p>
+
+<p>
+Entonces son semejantes y la razón de semejanza es 2.
+</p>
+
+<p>
+Si además sus lados fueran iguales, entonces serían congruentes.
+</p>
+
+<h2>Ejercicios</h2>
+
+<ol>
+<li>Determina si los triángulos con lados (3,4,5) y (6,8,10) son semejantes.</li>
+<li>Indica si dos triángulos con lados iguales son congruentes.</li>
+<li>Si dos triángulos tienen todos sus ángulos iguales, ¿qué relación existe?</li>
+<li>Un triángulo tiene lados 2, 3 y 4. Otro tiene lados 4, 6 y 8. ¿Son semejantes?</li>
+<li>¿Qué criterio se usa si se conocen dos lados y el ángulo entre ellos?</li>
+</ol>
+
+<h2>Respuestas</h2>
+
+<ol>
+<li>Sí, son semejantes (proporción 2)</li>
+<li>Sí, son congruentes</li>
+<li>Son semejantes</li>
+<li>Sí, son semejantes</li>
+<li>LAL</li>
+</ol>
+
+<h2>Videos explicativos</h2>
+
+<p>
+<a href="https://www.youtube.com/watch?v=U4MTmLvvKQ4" target="_blank">
+Criterios de congruencia de triángulos (explicación fácil)
+</a>
+</p>
+
+<p>
+<a href="https://www.youtube.com/watch?v=9JFngPZcH7c" target="_blank">
+Semejanza y congruencia de triángulos (conceptos y ejemplos)
+</a>
+</p>
+
+<h2>Referencias (APA)</h2>
+
+<p>
+GeeksforGeeks. (2026). <i>Congruence of triangles</i>. [1](https://www.geeksforgeeks.org/maths/congruence-of-triangles/)
+</p>
+
+<p>
+Neurochispas. (2025). <i>Triángulos semejantes y congruentes</i>. [2](https://www.neurochispas.com/wiki/triangulos-semejantes-y-congruentes-con-ejercicios/)
+</p>
+
+</div>
+</body>
+</html>
+```

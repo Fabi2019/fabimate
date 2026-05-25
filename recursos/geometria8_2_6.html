@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Teorema de Thales</title>
+
+<script>
+function imprimirPagina() {
+  window.print();
+}
+</script>
+
+<style>
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+  line-height: 1.6;
+}
+
+h1, h2 {
+  color: #2c3e50;
+}
+
+.container {
+  max-width: 900px;
+  margin: auto;
+}
+
+.boton {
+  margin-bottom: 20px;
+}
+
+button {
+  padding: 10px;
+  font-size: 16px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #2980b9;
+}
+
+@media print {
+  .boton {
+    display: none;
+  }
+}
+
+.figura {
+  text-align: center;
+  margin: 20px 0;
+}
+</style>
+
+<!-- MathJax correctamente cargado -->
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</head>
+
+<body>
+<div class="container">
+
+<div class="boton">
+<button onclick="imprimirPagina()">Imprimir / Guardar en PDF</button>
+</div>
+
+<h1>Aplicación del Teorema de Thales</h1>
+
+<h2>Explicación</h2>
+
+<p>
+El <b>Teorema de Thales</b> establece una relación de proporcionalidad entre segmentos cuando varias rectas paralelas
+cortan dos rectas o cuando se traza una recta paralela dentro de un triángulo.
+</p>
+
+<ul>
+<li>Si varias rectas paralelas cortan dos rectas, los segmentos correspondientes son proporcionales. [1](https://www.significados.com/teorema-de-tales/)</li>
+<li>Si se traza una recta paralela a un lado de un triángulo, se forma un triángulo semejante. [2](https://www.geogebra.org/m/A9EJgcZq)</li>
+</ul>
+
+<p>
+Esto permite escribir relaciones como:
+</p>
+
+<p>
+$$
+\frac{a}{b} = \frac{c}{d}
+$$
+</p>
+
+<p>
+y resolver problemas de medidas desconocidas mediante proporciones.
+</p>
+
+<div class="figura">
+<svg width="260" height="200">
+  <polygon points="50,150 130,40 210,150" fill="none" stroke="black"/>
+  <line x1="70" y1="120" x2="190" y2="120" stroke="red"/>
+</svg>
+<p>Recta paralela dentro de un triángulo (triángulos semejantes)</p>
+</div>
+
+<h2>Ejemplo</h2>
+
+<p>
+En un triángulo, una recta paralela divide los lados en segmentos:
+</p>
+
+<p>
+$$
+\frac{3}{6} = \frac{x}{12}
+$$
+</p>
+
+<p>
+Resolviendo:
+</p>
+
+<p>
+$$
+3 \cdot 12 = 6 \cdot x
+$$
+$$
+36 = 6x
+$$
+$$
+x = 6
+$$
+</p>
+
+<p>
+Se obtuvo la medida usando proporcionalidad de segmentos.
+</p>
+
+<h2>Ejercicios</h2>
+
+<ol>
+<li>Si $$\frac{2}{5} = \frac{x}{10}$$, encuentra $$x$$.</li>
+<li>Si $$\frac{3}{4} = \frac{6}{y}$$, calcula $$y$$.</li>
+<li>Un segmento se divide en razón 4:8. Si la parte mayor mide 16 cm, ¿cuánto mide la menor?</li>
+<li>Si dos triángulos son semejantes con razón 2, ¿qué pasa con sus lados?</li>
+<li>En un triángulo, una paralela divide los lados en segmentos proporcionales. ¿Qué propiedad se aplica?</li>
+</ol>
+
+<h2>Respuestas</h2>
+
+<ol>
+<li>$$x = 4$$</li>
+<li>$$y = 8$$</li>
+<li>8 cm</li>
+<li>Los lados son proporcionales</li>
+<li>Teorema de Thales</li>
+</ol>
+
+<h2>Videos explicativos</h2>
+
+<p>
+<a href="https://www.youtube.com/watch?v=staL7w-eT58" target="_blank">
+Teorema de Thales explicado fácil (para principiantes)
+</a>
+</p>
+
+<p>
+<a href="https://www.youtube.com/watch?v=JGyYSzhCxFA" target="_blank">
+Teorema de Thales - introducción y ejemplos
+</a>
+</p>
+
+<h2>Referencias (APA)</h2>
+
+<p>
+Enciclopedia Significados. (2024). <i>Teorema de Tales</i>. [1](https://www.significados.com/teorema-de-tales/)
+</p>
+
+<p>
+GeoGebra. (2025). <i>Aplicaciones del Teorema de Thales</i>. [2](https://www.geogebra.org/m/A9EJgcZq)
+</p>
+
+</div>
+</body>
+</html>
