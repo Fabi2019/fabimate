@@ -78,7 +78,27 @@
         const paramFecha = urlParams.get('fecha'); // Busca '?fecha=...'
         var vnivel =document.getElementById("vnivel")
         var vfecha =document.getElementById("vfecha")
-      
+       switch (paramNivel) {
+          case 7:
+              paramNivel="Sétimo"
+            // Código si la variable es igual a valor1
+            break;
+          case 8:
+            paramNivel="Octavo"
+            // Código si la variable es igual a valor2
+            break;
+          case 9:
+            // Código si la variable es igual a valor2
+            break;
+          case "Bm":
+              paramNivel="Bachillerato"
+            // Código si la variable es igual a valor2
+            break;
+          default:
+           console.log("valor original"
+            // Código si no coincidió con ningún caso anterior
+        }
+
         vnivel.innerText=paramNivel
         vfecha.innerText=paramFecha
       // alert(paramNivel)
