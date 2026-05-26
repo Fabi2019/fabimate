@@ -51,9 +51,9 @@
 </head>
 <body>
 
-    <h2>Datos Solicitados desde el Script</h2>
+    <h2>Datos Solicitados,  <spam id="vnivel"> nivel </spam>,  <spam id="vfecha"> fecha </spam></h2>
     <p id="estado">Cargando datos desde la API...</p>
-    <p id="nivel">nivel...</p>
+   
 
     <table id="tablaDatos">
         <thead>
@@ -76,9 +76,12 @@
         const urlParams = new URLSearchParams(window.location.search);
         const paramNivel = urlParams.get('nivel'); // Busca '?nivel=...'
         const paramFecha = urlParams.get('fecha'); // Busca '?fecha=...'
-        var vnivel =document.getElementById("nivel")
-        vnivel.innertText=paramNivel
-    alert(paramNivel)
+        var vnivel =document.getElementById("vnivel")
+        var vfecha =document.getElementById("vfecha")
+      
+        vnivel.innerText=paramNivel
+        vfecha.innerText=paramFecha
+      // alert(paramNivel)
         URL_SCRIPT=URL_SCRIPT+"?nivel="+paramNivel+"&fecha="+paramFecha
 
         async function cargarDatos() {
