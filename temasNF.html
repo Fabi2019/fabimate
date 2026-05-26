@@ -74,7 +74,7 @@
         var URL_SCRIPT = "https://script.google.com/macros/s/AKfycbwMRUBGACKdZ-b84FZkyjR-ooK4PeXUwp-zZQCHXx-SCTKOIykU_i_VE81LT_eqJCPUJQ/exec";
        
         const urlParams = new URLSearchParams(window.location.search);
-        const paramNivel = urlParams.get('nivel'); // Busca '?nivel=...'
+        var  paramNivel = urlParams.get('nivel'); // Busca '?nivel=...'
         const paramFecha = urlParams.get('fecha'); // Busca '?fecha=...'
         var vnivel =document.getElementById("vnivel")
         var vfecha =document.getElementById("vfecha")
