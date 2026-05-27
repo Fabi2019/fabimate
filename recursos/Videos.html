@@ -1,45 +1,40 @@
-<h3>Dibujo explicativo</h3>
-
-<svg viewBox="0 0 400 300">
-
-  <!-- Triángulo -->
-  <polygon points="100,250 320,250 220,80" 
-  style="fill:none;stroke:black;stroke-width:2"/>
-
-  <!-- Lados -->
-  <text x="200" y="270">a</text>
-  <text x="290" y="170">b</text>
-  <text x="140" y="170">c</text>
-
-  <!-- Ángulos -->
-  <text x="215" y="70">A</text>
-  <text x="85" y="265">B</text>
-  <text x="325" y="265">C</text>
-
-  <!-- Líneas punteadas para claridad -->
-  <line x1="220" y1="80" x2="220" y2="250" 
-  stroke="gray" stroke-dasharray="5,5"/>
-
-  <!-- Etiquetas explicativas -->
-  <text x="220" y="190" font-size="12">altura</text>
-
-</svg>
+<h2>Explicación (Base triangular equilátera)</h2>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
 <p>
-En este triángulo:
+En una <strong>pirámide recta de base triangular equilátera</strong>, la apotema es el segmento que une el vértice de la pirámide con el <strong>punto medio de uno de los lados del triángulo base</strong>.
 </p>
+
+<p>
+Para poder calcular la apotema, se forma un <strong>triángulo rectángulo</strong> donde:
+</p>
+
 <ul>
-<li>El lado <b>a</b> está frente al ángulo <b>A</b></li>
-<li>El lado <b>b</b> está frente al ángulo <b>B</b></li>
-<li>El lado <b>c</b> está frente al ángulo <b>C</b></li>
+<li>Un cateto es la <strong>altura de la pirámide</strong> $$ h $$</li>
+<li>El otro cateto corresponde a la <strong>distancia desde el centro del triángulo al punto medio de un lado</strong></li>
+<li>La hipotenusa es la <strong>apotema</strong></li>
 </ul>
 
 <p>
-Esto permite aplicar:
+En un triángulo equilátero, esa distancia se calcula como:
 </p>
 
 <p>
 $$
-\frac{a}{\sen(A)} = \frac{b}{\sen(B)} = \frac{c}{\sen(C)}
+\frac{l\sqrt{3}}{6}
 $$
+</p>
+
+<p>
+Por lo tanto, la fórmula de la apotema es:
+</p>
+
+<p>
+$$
+a = \sqrt{h^2 + \left(\frac{l\sqrt{3}}{6}\right)^2}
+$$
+</p>
+
+<p>
+Esta expresión proviene directamente del <strong>Teorema de Pitágoras</strong>, aplicado al triángulo rectángulo formado dentro de la pirámide.
 </p>

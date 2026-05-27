@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Apotema de pirámides rectas</title>
+
+ <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+<style>
+body{
+  font-family: Arial, sans-serif;
+  margin:20px;
+  line-height:1.6;
+}
+h1,h2,h3{
+  color:#2c3e50;
+}
+.container{
+  max-width:900px;
+  margin:auto;
+}
+.button-print{
+  display:block;
+  margin:10px 0;
+}
+@media print{
+  .button-print{
+    display:none;
+  }
+}
+.box{
+  border:1px solid #ccc;
+  padding:10px;
+  margin:10px 0;
+  border-radius:8px;
+  background:#f9f9f9;
+}
+svg{
+  max-width:100%;
+}
+</style>
+</head>
+
+<body>
+<div class="container">
+
+<button class="button-print" onclick="window.print()">Imprimir / Guardar en PDF (tamaño carta)</button>
+
+<h1>Apotema de Pirámides Rectas</h1>
+
+<h2>Explicación</h2>
+<p>
+La <strong>apotema de una pirámide recta</strong> es el segmento que une el vértice con el punto medio de un lado de la base.
+Este segmento forma un triángulo rectángulo con:
+</p>
+
+<ul>
+<li>La <strong>altura</strong> de la pirámide</li>
+<li>La <strong>mitad del lado</strong> de la base</li>
+</ul>
+
+<p>
+Por lo tanto, se calcula usando el Teorema de Pitágoras:
+</p>
+
+<p>
+$$
+apotema = \sqrt{h^2 + \left(\frac{l}{2}\right)^2}
+$$
+</p>
+
+<h3>Casos:</h3>
+
+<ul>
+<li><strong>Base cuadrada:</strong> el lado es directo.</li>
+<li><strong>Base triangular equilátera:</strong> el cateto (apotema de base) $$
+\frac{l\sqrt{3}}{6}
+$$.</li>
+</ul>
+
+<h3>Dibujo ilustrativo (vista 3D)</h3>
+
+<svg viewBox="0 0 300 250">
+
+  <!-- Base (cuadrado en perspectiva) -->
+  <polygon points="80,180 200,180 240,140 120,140"
+           style="fill:#dfe6e9;stroke:#2d3436;stroke-width:2"/>
+
+  <!-- Caras laterales -->
+  <polygon points="160,60 80,180 120,140"
+           style="fill:#74b9ff;stroke:#2d3436;stroke-width:2"/>
+           
+  <polygon points="160,60 200,180 240,140"
+           style="fill:#0984e3;stroke:#2d3436;stroke-width:2"/>
+
+  <!-- Aristas -->
+  <line x1="160" y1="60" x2="80" y2="180" style="stroke:black;stroke-width:2"/>
+  <line x1="160" y1="60" x2="200" y2="180" style="stroke:black;stroke-width:2"/>
+  <line x1="160" y1="60" x2="120" y2="140" style="stroke:black;stroke-width:2"/>
+  <line x1="160" y1="60" x2="240" y2="140" style="stroke:black;stroke-width:2"/>
+
+  <!-- Altura -->
+  <line x1="160" y1="60" x2="160" y2="160"
+        style="stroke:red;stroke-width:2;stroke-dasharray:5"/>
+
+  <!-- Apotema -->
+  <line x1="160" y1="60" x2="140" y2="180"
+        style="stroke:blue;stroke-width:2"/>
+
+  <!-- Etiquetas -->
+  <text x="165" y="110" font-size="12" fill="red">h</text>
+  <text x="130" y="170" font-size="12" fill="blue">apotema</text>
+
+</svg>
+
+<p>
+🔴 Rojo: altura &nbsp;&nbsp; 🔵 Azul: apotema
+</p>
+
+<h2>Ejemplo</h2>
+
+<div class="box">
+<p>Calcular la apotema de una pirámide de base cuadrada con lado $$ l = 8 $$ cm y altura $$ h = 6 $$ cm.</p>
+
+<p>
+$$
+apotema = \sqrt{6^2 + \left(\frac{8}{2}\right)^2}
+$$
+</p>
+
+<p>
+$$
+apotema = \sqrt{36 + 16}
+$$
+</p>
+
+<p>
+$$
+apotema = \sqrt{52} = 7.21 \, cm
+$$
+</p>
+</div>
+  <h2>Explicación (Base triangular equilátera)</h2>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+<p>
+En una <strong>pirámide recta de base triangular equilátera</strong>, la apotema es el segmento que une el vértice de la pirámide con el <strong>punto medio de uno de los lados del triángulo base</strong>.
+</p>
+
+<p>
+Para poder calcular la apotema, se forma un <strong>triángulo rectángulo</strong> donde:
+</p>
+
+<ul>
+<li>Un cateto es la <strong>altura de la pirámide</strong> $$ h $$</li>
+<li>El otro cateto corresponde a la <strong>distancia desde el centro del triángulo al punto medio de un lado</strong></li>
+<li>La hipotenusa es la <strong>apotema</strong></li>
+</ul>
+
+<p>
+En un triángulo equilátero, esa distancia se calcula como:
+</p>
+
+<p>
+$$
+\frac{l\sqrt{3}}{6}
+$$
+</p>
+
+<p>
+Por lo tanto, la fórmula de la apotema es:
+</p>
+
+<p>
+$$
+a = \sqrt{h^2 + \left(\frac{l\sqrt{3}}{6}\right)^2}
+$$
+</p>
+
+<p>
+Esta expresión proviene directamente del <strong>Teorema de Pitágoras</strong>, aplicado al triángulo rectángulo formado dentro de la pirámide.
+</p>
+
+
+<h2>Ejercicios</h2>
+
+<div class="box">
+1. Base cuadrada: $$ l=10 $$ cm, $$ h=12 $$ cm  
+</div>
+
+<div class="box">
+2. Base cuadrada: $$ l=6 $$ cm, $$ h=8 $$ cm  
+</div>
+
+<div class="box">
+3. Base triangular equilátera: $$ l=12 $$ cm, $$ h=5 $$ cm  
+</div>
+
+<div class="box">
+4. Base triangular equilátera: $$ l=9 $$ cm, $$ h=12 $$ cm  
+</div>
+
+<div class="box">
+5. Base cuadrada: $$ l=14 $$ cm, $$ h=10 $$ cm  
+</div>
+
+<h2>Respuestas</h2>
+
+<div class="box">
+1. $$ \sqrt{144 + 25} = \sqrt{169} = 13 \, cm $$<br>
+2. $$ \sqrt{64 + 9} = \sqrt{73} = 8.54 \, cm $$<br>
+3. $$ \sqrt{25 + 36} = \sqrt{61} = 7.81 \, cm $$<br>
+4. $$ \sqrt{144 + 20.25} = \sqrt{164.25} = 12.82 \, cm $$<br>
+5. $$ \sqrt{100 + 49} = \sqrt{149} = 12.21 \, cm $$
+</div>
+
+<h2>Videos recomendados</h2>
+
+<p>
+<a href="https://www.youtube.com/watch?v=zkx3AhnQJKE" target="_blank">
+Calcular la apotema de una pirámide usando Pitágoras
+</a>
+</p>
+
+<p>
+<a href="https://www.youtube.com/watch?v=nUOmQd87O0c" target="_blank">
+Apotema de una pirámide recta (base cuadrada y triangular)
+</a>
+</p>
+
+
+<h2>Referencias (APA)</h2>
+
+<p>
+- Larson, R., & Hostetler, R. (2018). <em>Geometría</em>. Cengage Learning. <br>
+- Ministerio de Educación. (2020). <em>Geometría espacial básica</em>. <br>
+- Baldor, A. (2013). <em>Geometría plana y del espacio</em>. Grupo Editorial Patria.
+</p>
+
+</div>
+</body>
+</html>
