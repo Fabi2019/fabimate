@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Área lateral y total de prismas</title>
+
+<!-- MathJax configuración -->
+<script>
+window.MathJax = {
+  tex: {
+    macros: {
+      sen: "\\operatorname{sen}"
+    }
+  }
+};
+</script>
+ <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+<style>
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+  line-height: 1.6;
+}
+h1, h2 {
+  text-align: center;
+}
+.container {
+  max-width: 900px;
+  margin: auto;
+}
+button {
+  padding: 10px;
+  font-size: 16px;
+  margin-bottom: 15px;
+  cursor: pointer;
+}
+@media print {
+  button {
+    display: none;
+  }
+}
+.box {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin: 10px 0;
+}
+svg {
+  display: block;
+  margin: auto;
+}
+</style>
+
+<script>
+function imprimir() {
+  window.print();
+}
+</script>
+
+</head>
+<body>
+
+<div class="container">
+
+<button onclick="imprimir()">Imprimir / Guardar en PDF</button>
+
+<h1>Área lateral y área total de prismas</h1>
+
+<h2>Explicación</h2>
+
+<p>
+Un prisma recto es un sólido con dos bases paralelas congruentes y caras laterales rectangulares.
+</p>
+
+<p><b>Área lateral (A<sub>L</sub>):</b></p>
+<p>$$
+A_L = Perímetro\ de\ la\ base \cdot altura
+$$</p>
+
+<p><b>Área total (A<sub>T</sub>):</b></p>
+<p>$$
+A_T = A_L + 2 \cdot Área\ de\ la\ base
+$$</p>
+
+<div class="box">
+<p><b>Dibujo de un prisma:</b></p>
+
+<svg width="200" height="150">
+  <polygon points="50,20 150,20 130,60 30,60" style="fill:none;stroke:black"/>
+  <polygon points="50,80 150,80 130,120 30,120" style="fill:none;stroke:black"/>
+  <line x1="50" y1="20" x2="50" y2="80" style="stroke:black"/>
+  <line x1="150" y1="20" x2="150" y2="80" style="stroke:black"/>
+  <line x1="130" y1="60" x2="130" y2="120" style="stroke:black"/>
+  <line x1="30" y1="60" x2="30" y2="120" style="stroke:black"/>
+</svg>
+</div>
+
+<h2>Ejemplo</h2>
+
+<p>Un prisma de base cuadrada tiene lado de 4 cm y altura de 10 cm.</p>
+
+<p><b>Paso 1:</b> Perímetro de la base</p>
+<p>$$
+P = 4 \cdot 4 = 16
+$$</p>
+
+<p><b>Paso 2:</b> Área lateral</p>
+<p>$$
+A_L = 16 \cdot 10 = 160\ cm^2
+$$</p>
+
+<p><b>Paso 3:</b> Área de la base</p>
+<p>$$
+A_b = 4 \cdot 4 = 16
+$$</p>
+
+<p><b>Paso 4:</b> Área total</p>
+<p>$$
+A_T = 160 + 2 \cdot 16 = 192\ cm^2
+$$</p>
+
+<h2>Ejercicios</h2>
+
+<div class="box">
+<p>1. Prisma cuadrado de lado 5 cm y altura 12 cm.</p>
+<p>2. Prisma rectangular de base 6 cm y 3 cm, altura 10 cm.</p>
+<p>3. Prisma triangular con base 4 cm, altura del triángulo 3 cm y altura del prisma 8 cm.</p>
+<p>4. Prisma rectangular de base 7 cm y 2 cm, altura 9 cm.</p>
+<p>5. Prisma cuadrado de lado 8 cm y altura 5 cm.</p>
+</div>
+
+<h2>Respuestas</h2>
+
+<div class="box">
+<p>1. A<sub>L</sub> = 240 cm², A<sub>T</sub> = 290 cm²</p>
+<p>2. A<sub>L</sub> = 180 cm², A<sub>T</sub> = 216 cm²</p>
+<p>3. A<sub>L</sub> = 96 cm², A<sub>T</sub> = 108 cm²</p>
+<p>4. A<sub>L</sub> = 162 cm², A<sub>T</sub> = 190 cm²</p>
+<p>5. A<sub>L</sub> = 160 cm², A<sub>T</sub> = 288 cm²</p>
+</div>
+
+<h2>Videos recomendados</h2>
+
+<p>
+<a href="https://www.youtube.com/watch?v=b0ovkIrnrpU" target="_blank">
+Área lateral y área total de una pirámide - ejercicios resueltos
+</a>
+</p>
+
+<p>
+<a href="https://www.youtube.com/watch?v=vApcJQyDv7o" target="_blank">
+Área de una pirámide rectangular (lateral y total)
+</a>
+</p>
+
+
+<h2>Referencias (APA)</h2>
+
+<p>
+Baldor, A. (2009). <i>Geometría y trigonometría</i>. México: Grupo Editorial Patria.
+</p>
+
+<p>
+Stewart, J., Redlin, L., & Watson, S. (2016). <i>Precálculo</i>. Cengage Learning.
+</p>
+
+<p>
+Ministerio de Educación. (2020). <i>Geometría básica para educación secundaria</i>.
+</p>
+
+</div>
+
+</body>
+</html>
