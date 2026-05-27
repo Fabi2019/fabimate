@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Problemas con Razones Trigonométricas</title>
+
+<script>
+  window.MathJax = {
+    tex: {
+      macros: { sen: "\\operatorname{sen}" }
+    }
+  };
+</script>
+ <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+<style>
+body{font-family:Arial;margin:20px;line-height:1.6}
+.container{max-width:900px;margin:auto}
+button{padding:10px;background:#1a4d8f;color:white;border:none}
+@media print{button{display:none}}
+.box{border:1px solid #ccc;padding:10px;margin:10px 0;background:#f9f9f9}
+iframe{width:100%;height:315px}
+</style>
+</head>
+
+<body>
+<div class="container">
+
+<button onclick="window.print()">Imprimir / Guardar PDF</button>
+
+<h1>2.10 Problemas con razones trigonométricas, elevación y depresión</h1>
+
+<h2>Explicación</h2>
+
+<p>
+Las razones trigonométricas (<b>sen, cos, tan</b>) se utilizan para resolver problemas reales relacionando ángulos y lados en triángulos rectángulos.
+</p>
+
+<p>
+$$
+\sen(\theta)=\frac{\text{opuesto}}{\text{hipotenusa}},\quad
+\cos(\theta)=\frac{\text{adyacente}}{\text{hipotenusa}},\quad
+\tan(\theta)=\frac{\text{opuesto}}{\text{adyacente}}
+$$
+</p>
+
+<p>
+Los ángulos de elevación y depresión permiten modelar situaciones como alturas y distancias reales mediante triángulos rectángulos. [1](https://laprofematematik.co/20-problemas-resueltos-de-angulos-de-elevacion-y-depresion-paso-a-paso/)
+</p>
+
+<h3>Dibujo claro</h3>
+
+<svg viewBox="0 0 400 300">
+
+  <!-- suelo -->
+  <line x1="50" y1="250" x2="350" y2="250" stroke="black"/>
+
+  <!-- edificio -->
+  <line x1="300" y1="250" x2="300" y2="100" stroke="black"/>
+
+  <!-- linea de vision -->
+  <line x1="50" y1="250" x2="300" y2="100" stroke="blue"/>
+
+  <!-- etiquetas -->
+  <text x="5" y="265">Observador</text>
+  <text x="305" y="100">Edificio</text>
+  <text x="85" y="245">θ</text>
+  <text x="180" y="265">distancia</text>
+  <text x="310" y="180">altura</text>
+
+</svg>
+
+<p>Se forma un triángulo rectángulo donde se aplica:</p>
+
+<p>$$
+\tan(\theta)=\frac{\text{altura}}{\text{distancia}}
+$$</p>
+
+---
+
+<h2>Ejemplo</h2>
+
+<div class="box">
+<p>Un observador está a 30 m de un edificio y ve la cima con ángulo de 40°. ¿Altura?</p>
+
+<p>$$
+\tan(40°)=\frac{h}{30}
+$$</p>
+
+<p>$$
+0.839=\frac{h}{30} \Rightarrow h=25.17m
+$$</p>
+
+<p><b>Respuesta:</b> altura ≈ 25.17 m</p>
+</div>
+
+---
+
+<h2>Ejercicios</h2>
+
+<ol>
+<li>Un árbol se observa a 20 m con ángulo 45°. Hallar altura.</li>
+<li>Un avión se observa con ángulo 60° desde 100 m. Altura.</li>
+<li>Desde un edificio de 50 m se ve un auto con ángulo de depresión 30°. ¿Distancia?</li>
+<li>Un faro mide 40 m. ¿Ángulo si estás a 20 m?</li>
+<li>Un dron está a 80 m de altura con ángulo 45°. ¿Distancia?</li>
+</ol>
+
+---
+
+<h2>Respuestas</h2>
+
+<div class="box">
+<ol>
+<li>$$
+h=20\cdot\tan(45)=20m
+$$</li>
+
+<li>$$
+h=100\cdot1.732=173.2m
+$$</li>
+
+<li>$$
+\tan(30)=\frac{50}{d} \Rightarrow d≈86.6m
+$$</li>
+
+<li>$$
+\tan(\theta)=\frac{40}{20}=2 \Rightarrow \theta≈63.4°
+$$</li>
+
+<li>$$
+\tan(45)=\frac{80}{d} \Rightarrow d=80m
+$$</li>
+</ol>
+</div>
+
+---
+
+<h2>Videos recomendados</h2>
+
+<h3>Video 1: Problemas de elevación y depresión</h3>
+<a href="https://www.youtube.com/watch?v=nQitaOD4eK4" target="_blank">Ver en YouTube</a>
+<br>
+https://www.youtube.com/embed/nQitaOD4eK4</iframe>
+
+<h3>Video 2: Problemas trigonométricos completos</h3>
+<a href="https://www.youtube.com/watch?v=uyKvSe6Ltgs" target="_blank">Ver en YouTube</a>
+<br>
+https://www.youtube.com/embed/uyKvSe6Ltgs</iframe>
+
+<p>
+Estos videos muestran cómo traducir problemas reales a triángulos y aplicar seno, coseno y tangente paso a paso. [2](https://www.lenny.com/video/solving-angle-of-elevation-and-depression-word-problems-527034)
+</p>
+
+---
+
+<h2>Referencias APA</h2>
+
+<ul>
+<li>Khan Academy. (2023). Trigonometría aplicada.</li>
+<li>OpenStax. (2015). Algebra and Trigonometry.</li>
+<li>Laprofematematik. (2025). Problemas de elevación y depresión. [1](https://laprofematematik.co/20-problemas-resueltos-de-angulos-de-elevacion-y-depresion-paso-a-paso/)</li>
+</ul>
+
+</div>
+</body>
+</html>

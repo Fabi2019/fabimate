@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Identidad Fundamental: sen² + cos² = 1</title>
+
+<script>
+  window.MathJax = {
+    tex: {
+      macros: {
+        sen: "\\operatorname{sen}"
+      }
+    }
+  };
+</script>
+https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.jsscript>
+
+<style>
+body{
+  font-family: Arial, sans-serif;
+  margin:20px;
+  line-height:1.6;
+}
+.container{
+  max-width:900px;
+  margin:auto;
+}
+h1,h2{
+  color:#1a4d8f;
+}
+button{
+  padding:10px 15px;
+  background:#1a4d8f;
+  color:white;
+  border:none;
+  cursor:pointer;
+  margin-bottom:20px;
+}
+@media print{
+  button{
+    display:none;
+  }
+}
+.box{
+  border:1px solid #ccc;
+  padding:10px;
+  margin:10px 0;
+  background:#f9f9f9;
+}
+svg{
+  max-width:100%;
+}
+iframe{
+  width:100%;
+  height:315px;
+}
+</style>
+</head>
+
+<body>
+<div class="container">
+
+<button onclick="window.print()">Imprimir / Guardar en PDF</button>
+
+<h1>2.8 Identidad Fundamental: sen²(θ) + cos²(θ) = 1</h1>
+
+<h2>Explicación</h2>
+
+<p>
+En trigonometría, existe una relación fundamental conocida como <b>identidad pitagórica</b>:
+</p>
+
+<p>
+$$
+\sen^2(\theta) + \cos^2(\theta) = 1
+$$
+</p>
+
+<p>
+Esta identidad se basa en el <b>teorema de Pitágoras</b> aplicado a un triángulo rectángulo:
+</p>
+
+<ul>
+<li>Hipotenusa = 1</li>
+<li>Cateto opuesto = sen(θ)</li>
+<li>Cateto adyacente = cos(θ)</li>
+</ul>
+
+<h3>Dibujo explicativo</h3>
+
+<svg height="220">
+  <polygon points="50,180 200,180 200,80" style="fill:none;stroke:black;stroke-width:2"/>
+  <text x="110" y="200">cos(θ)</text>
+  <text x="210" y="140">sen(θ)</text>
+  <text x="120" y="120">1</text>
+  <text x="180" y="170">θ</text>
+</svg>
+
+<p>
+Aplicando Pitágoras:
+</p>
+
+<p>
+$$
+(\sen(\theta))^2 + (\cos(\theta))^2 = 1^2
+$$
+</p>
+
+<h2>Ejemplo</h2>
+
+<div class="box">
+<p>Si $$\sen(\theta) = 0.6$$, verifica la identidad.</p>
+
+<p>
+$$
+\sen^2(\theta) = 0.6^2 = 0.36
+$$
+</p>
+
+<p>
+$$
+\cos^2(\theta) = 1 - 0.36 = 0.64
+$$
+</p>
+
+<p>
+$$
+0.36 + 0.64 = 1
+$$
+</p>
+
+<p><b>Conclusión:</b> Se cumple la identidad.</p>
+</div>
+
+<h2>Ejercicios</h2>
+
+<ol>
+<li>Verifica la identidad si $$\sen(\theta)=0.8$$.</li>
+<li>Calcula $$\cos(\theta)$$ si $$\sen(\theta)=0.5$$.</li>
+<li>Si $$\cos(\theta)=0.3$$, encuentra $$\sen(\theta)$$.</li>
+<li>Comprueba la identidad para $$\sen(\theta)=\frac{3}{5}$$.</li>
+<li>Si $$\cos(\theta)=\frac{12}{13}$$, halla $$\sen(\theta)$$.</li>
+</ol>
+
+<h2>Respuestas</h2>
+
+<div class="box">
+<ol>
+<li>
+$$
+0.8^2=0.64,\quad 1-0.64=0.36 \Rightarrow \cos=0.6
+$$
+</li>
+
+<li>
+$$
+\cos=\sqrt{1-0.25}=0.866
+$$
+</li>
+
+<li>
+$$
+\sen=\sqrt{1-0.09}=0.953
+$$
+</li>
+
+<li>
+$$
+\sen^2=\frac{9}{25},\quad \cos^2=\frac{16}{25}
+\Rightarrow 1
+$$
+</li>
+
+<li>
+$$
+\sen=\frac{5}{13}
+$$
+</li>
+
+</ol>
+</div>
+
+<h2>Videos recomendados</h2>
+
+<h3>Video 1: Identidad sen² + cos² = 1 (demostración)</h3>
+<a href="https://www.youtube.com/watch?v=To0B8yuL5M4" target="_blank">
+Ver video en YouTube
+</a>
+<br>
+ <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+<h3>Video 2: Identidades trigonométricas con seno y coseno</h3>
+<a href="https://www.youtube.com/watch?v=VX1-3l5KCZs" target="_blank">
+Ver video en YouTube
+</a>
+<br>
+https://www.youtube.com/embed/VX1-3l5KCZs</iframe>
+
+<h2>Referencias (APA)</h2>
+
+<ul>
+<li>Larson, R. (2017). <i>Trigonometry</i>. Cengage Learning.</li>
+<li>Stewart, J. (2016). <i>Precalculus</i>. Cengage Learning.</li>
+<li>OpenStax. (2015). <i>Algebra and Trigonometry</i>. Rice University.</li>
+</ul>
+
+</div>
+</body>
+</html>

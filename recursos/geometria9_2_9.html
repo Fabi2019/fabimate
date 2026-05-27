@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ley de Senos</title>
+
+<script>
+  window.MathJax = {
+    tex: {
+      macros: {
+        sen: "\\operatorname{sen}"
+      }
+    }
+  };
+</script>
+ <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+<style>
+body{
+  font-family: Arial, sans-serif;
+  margin:20px;
+  line-height:1.6;
+}
+.container{
+  max-width:900px;
+  margin:auto;
+}
+h1,h2{
+  color:#1a4d8f;
+}
+button{
+  padding:10px 15px;
+  background:#1a4d8f;
+  color:white;
+  border:none;
+  cursor:pointer;
+  margin-bottom:20px;
+}
+@media print{
+  button{
+    display:none;
+  }
+}
+.box{
+  border:1px solid #ccc;
+  padding:10px;
+  margin:10px 0;
+  background:#f9f9f9;
+}
+iframe{
+  width:100%;
+  height:315px;
+}
+</style>
+</head>
+
+<body>
+<div class="container">
+
+<button onclick="window.print()">Imprimir / Guardar en PDF</button>
+
+<h1>2.9 Aplicación de la Ley de Senos</h1>
+
+<h2>Explicación</h2>
+
+<p>
+La <b>Ley de Senos</b> establece una relación entre los lados de un triángulo y los senos de sus ángulos opuestos:
+</p>
+
+<p>
+$$
+\frac{a}{\sen(A)} = \frac{b}{\sen(B)} = \frac{c}{\sen(C)}
+$$
+</p>
+
+<p>
+Se utiliza para resolver <b>triángulos oblicuángulos</b> (que no tienen ángulo recto). [1](https://www.explicacion.net/ley-de-senos/)
+</p>
+
+<ul>
+<li>Permite encontrar lados desconocidos.</li>
+<li>Permite encontrar ángulos desconocidos.</li>
+<li>Se aplica cuando se conocen dos ángulos y un lado (AAL) o dos lados y un ángulo (LLA).</li>
+</ul>
+
+<h3>Dibujo explicativo</h3>
+
+<svg viewBox="0 0 400 300">
+
+  <!-- Triángulo -->
+  <polygon points="100,250 320,250 220,80" 
+  style="fill:none;stroke:black;stroke-width:2"/>
+
+  <!-- Lados -->
+  <text x="200" y="270">a</text>
+  <text x="290" y="170">b</text>
+  <text x="140" y="170">c</text>
+
+  <!-- Ángulos -->
+  <text x="215" y="70">A</text>
+  <text x="85" y="265">B</text>
+  <text x="325" y="265">C</text>
+
+  <!-- Líneas punteadas para claridad -->
+  <line x1="220" y1="80" x2="220" y2="250" 
+  stroke="gray" stroke-dasharray="5,5"/>
+
+  <!-- Etiquetas explicativas -->
+  <text x="220" y="190" font-size="12">altura</text>
+
+</svg>
+
+<p>
+En este triángulo:
+</p>
+<ul>
+<li>El lado <b>a</b> está frente al ángulo <b>A</b></li>
+<li>El lado <b>b</b> está frente al ángulo <b>B</b></li>
+<li>El lado <b>c</b> está frente al ángulo <b>C</b></li>
+</ul>
+
+<p>
+Esto permite aplicar:
+</p>
+
+<p>
+$$
+\frac{a}{\sen(A)} = \frac{b}{\sen(B)} = \frac{c}{\sen(C)}
+$$
+</p>
+
+<h2>Ejemplo</h2>
+
+<div class="box">
+<p>En un triángulo se conoce: $$A=30°$$, $$B=45°$$, $$a=10$$. Hallar el lado $$b$$.</p>
+
+<p>
+$$
+\frac{a}{\sen(A)} = \frac{b}{\sen(B)}
+$$
+</p>
+
+<p>
+$$
+\frac{10}{\sen(30°)} = \frac{b}{\sen(45°)}
+$$
+</p>
+
+<p>
+$$
+\frac{10}{0.5} = \frac{b}{0.707}
+$$
+</p>
+
+<p>
+$$
+20 = \frac{b}{0.707}
+\Rightarrow b = 14.14
+$$
+</p>
+
+<p><b>Respuesta:</b> $$b \approx 14.14$$</p>
+</div>
+
+<h2>Ejercicios</h2>
+
+<ol>
+<li>Si $$A=40°$$, $$B=60°$$, $$a=8$$, hallar $$b$$.</li>
+<li>Si $$a=12$$, $$b=10$$, $$A=30°$$, hallar $$B$$.</li>
+<li>Si $$A=50°$$, $$B=60°$$, $$a=15$$, hallar $$c$$.</li>
+<li>Si $$a=9$$, $$b=7$$, $$A=45°$$, hallar $$B$$.</li>
+<li>En un triángulo, $$A=70°$$, $$B=50°$$, $$b=20$$, hallar $$a$$.</li>
+</ol>
+
+<h2>Respuestas</h2>
+
+<div class="box">
+<ol>
+<li>
+$$
+b = \frac{8 \cdot \sen(60°)}{\sen(40°)} \approx 10.78
+$$
+</li>
+
+<li>
+$$
+\sen(B)=\frac{10\cdot \sen(30°)}{12}=0.416 \Rightarrow B\approx24.6°
+$$
+</li>
+
+<li>
+$$
+C=70°,\quad c=\frac{15\cdot \sen(70°)}{\sen(50°)}\approx18.36
+$$
+</li>
+
+<li>
+$$
+\sen(B)=\frac{7\cdot \sen(45°)}{9}=0.55 \Rightarrow B\approx33.4°
+$$
+</li>
+
+<li>
+$$
+a=\frac{20\cdot \sen(70°)}{\sen(50°)}\approx24.52
+$$
+</li>
+</ol>
+</div>
+
+<h2>Videos recomendados</h2>
+
+<h3>Video 1: Introducción a la Ley de Senos</h3>
+<a href="https://www.youtube.com/watch?v=e2_WDo5yK_Q" target="_blank">
+Ver video en YouTube
+</a>
+<br>
+https://www.youtube.com/embed/e2_WDo5yK_Q</iframe>
+
+<h3>Video 2: Ejemplo práctico de la Ley de Senos</h3>
+<a href="https://www.youtube.com/watch?v=nCK3jKq_Iyk" target="_blank">
+Ver video en YouTube
+</a>
+<br>
+https://www.youtube.com/embed/nCK3jKq_Iyk</iframe>
+
+<h2>Referencias (APA)</h2>
+
+<ul>
+<li>Larson, R. (2017). <i>Trigonometry</i>. Cengage Learning.</li>
+<li>OpenStax. (2015). <i>Algebra and Trigonometry</i>. Rice University.</li>
+<li>Explicación.net. (2023). Ley de senos: fórmulas y ejercicios. [1](https://www.explicacion.net/ley-de-senos/)</li>
+<li>Disfruta las Matemáticas. (2023). Ley de los senos. [2](https://www.disfrutalasmatematicas.com/algebra/trig-ley-senos.html)</li>
+</ul>
+
+</div>
+</body>
+</html>
