@@ -101,8 +101,8 @@
 
         vnivel.innerText=paramNivel
         vfecha.innerText=paramFecha
-       alert(paramFecha)
-        URL_SCRIPT=URL_SCRIPT+"?nivel="+paramNivel+"&fecha="+paramFecha
+        alert(paramFecha)
+        URL_SCRIPT=URL_SCRIPT+"?nivel="+encodeURIComponent(paramNivel)+"&fecha="+encodeURIComponent(paramFecha)
 
         async function cargarDatos() {
             const tbody = document.querySelector("#tablaDatos tbody");
