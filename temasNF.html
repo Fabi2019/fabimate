@@ -78,7 +78,7 @@
         const paramFecha = urlParams.get('fecha'); // Busca '?fecha=...'
         var vnivel =document.getElementById("vnivel")
         var vfecha =document.getElementById("vfecha")
-       switch (paramNivel) {
+       switch (paramNivel.trim()) {
           case "7":
               paramNivel="Sétimo"
             // Código si la variable es igual a valor1
