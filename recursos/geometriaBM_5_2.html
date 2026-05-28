@@ -1,0 +1,187 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Elementos homólogos en simetría axial</title>
+
+<script>
+  window.MathJax = {
+    tex: {
+      macros: {
+        sen: "\\operatorname{sen}"
+      }
+    }
+  };
+</script>
+ <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+<style>
+body{
+  font-family: Arial, sans-serif;
+  margin: 20px;
+}
+.container{
+  max-width: 900px;
+  margin: auto;
+}
+h1,h2{
+  color:#1a73e8;
+}
+button{
+  padding:10px;
+  background:#1a73e8;
+  color:white;
+  border:none;
+  border-radius:5px;
+}
+@media print{
+  button{
+    display:none;
+  }
+}
+svg{
+  max-width:100%;
+}
+.box{
+  background:#f4f4f4;
+  padding:10px;
+  border-left:4px solid #1a73e8;
+}
+</style>
+</head>
+
+<body>
+<div class="container">
+
+<button onclick="window.print()">Imprimir / Guardar PDF</button>
+
+<h1>5.2 Identificar elementos homólogos en simetría axial</h1>
+
+<h2>Explicación</h2>
+
+<div class="box">
+En una simetría axial, cada punto de una figura tiene un punto correspondiente llamado <b>homólogo</b>, ubicado al mismo nivel pero al otro lado del eje de simetría.
+</div>
+
+<p><b>Elementos homólogos:</b></p>
+<ul>
+<li>Puntos (A ↔ A')</li>
+<li>Lados (AB ↔ A'B')</li>
+<li>Segmentos y figuras completas</li>
+</ul>
+
+<p><b>Propiedades importantes:</b></p>
+<ul>
+<li>Los puntos homólogos están a la misma distancia del eje</li>
+<li>El eje actúa como espejo</li>
+<li>La figura original y su imagen son congruentes</li>
+</ul>
+
+<h3>Ejemplo visual</h3>
+
+<svg height="250">
+  <!-- eje -->
+  <line x1="150" y1="20" x2="150" y2="220" stroke="red" stroke-dasharray="5"/>
+  
+  <!-- figura original -->
+  <circle cx="100" cy="100" r="5"/>
+  <text x="100" y="115">A</text>
+
+  <circle cx="120" cy="150" r="5"/>
+  <text x="120" y="165">B</text>
+
+  <!-- figura reflejada -->
+  <circle cx="200" cy="100" r="5"/>
+  <text x="200" y="115">A'</text>
+
+  <circle cx="180" cy="150" r="5"/>
+  <text x="180" y="165">B'</text>
+</svg>
+
+<h3>Interpretación</h3>
+
+<p>
+\[
+A \leftrightarrow A', \quad B \leftrightarrow B'
+\]
+</p>
+
+<p>Los puntos A y A', B y B' son <b>homólogos</b>.</p>
+
+<h2>Ejemplo</h2>
+
+<p>El punto \(A(2,3)\) se refleja respecto al eje vertical \(x=5\).</p>
+
+<p><b>¿Cuál es su punto homólogo?</b></p>
+
+<p>
+La distancia al eje:
+\[
+5 - 2 = 3
+\]
+</p>
+
+<p>Entonces el punto reflejado será:
+\[
+x' = 5 + 3 = 8
+\]
+</p>
+
+<p>
+\[
+A'(8,3)
+\]
+</p>
+
+<h2>Ejercicios</h2>
+
+<ol>
+
+<li>Determinar el punto homólogo de \( (2,1) \) respecto al eje \(x=4\).</li>
+
+<li>Encontrar el punto simétrico de \( (5,3) \) respecto al eje \(y=2\).</li>
+
+<li>Identificar los pares de puntos homólogos en una figura reflejada.</li>
+
+<li>Si un punto se encuentra a 3 unidades del eje, ¿a qué distancia estará su homólogo?</li>
+
+<li>Determinar el homólogo de \( (1,4) \) respecto al eje \(x=0\).</li>
+
+</ol>
+
+<h2>Respuestas</h2>
+
+<ol>
+<li>(6,1)</li>
+<li>(5,1)</li>
+<li>Pares correspondientes (depende del dibujo)</li>
+<li>3 unidades</li>
+<li>(-1,4)</li>
+</ol>
+
+<h2>Videos de apoyo</h2>
+
+<p>
+<a href="https://www.youtube.com/watch?v=EcDFbUkyDHI" target="_blank">
+Simetría axial y puntos homólogos (explicación básica)
+</a>
+</p>
+
+<p>
+<a href="https://www.youtube.com/watch?v=5XKIbnewSno" target="_blank">
+Identificación de elementos homólogos en simetría (nivel secundaria)
+</a>
+</p>
+
+<h2>Referencias (APA)</h2>
+
+<p>Baldor, A. (2009). <i>Geometría y trigonometría</i>. Grupo Patria.</p>
+<p>Larson, R. (2018). <i>Geometría analítica</i>. McGraw-Hill.</p>
+<p>Ministerio de Educación Pública. (2012). <i>Programas de estudio Matemáticas</i>.</p>
+
+</div>
+</body>
+</html>
+```

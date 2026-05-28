@@ -1,0 +1,163 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ejes de simetría</title>
+
+<script>
+  window.MathJax = {
+    tex: {
+      macros: {
+        sen: "\\operatorname{sen}"
+      }
+    }
+  };
+</script>
+ <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+<style>
+body{
+  font-family: Arial, sans-serif;
+  margin: 20px;
+}
+.container{
+  max-width: 900px;
+  margin: auto;
+}
+h1,h2{
+  color:#1a73e8;
+}
+button{
+  padding:10px;
+  background:#1a73e8;
+  color:white;
+  border:none;
+  border-radius:5px;
+}
+@media print{
+  button{
+    display:none;
+  }
+}
+svg{
+  max-width:100%;
+}
+.box{
+  background:#f4f4f4;
+  padding:10px;
+  border-left:4px solid #1a73e8;
+}
+</style>
+</head>
+
+<body>
+<div class="container">
+
+<button onclick="window.print()">Imprimir / Guardar PDF</button>
+
+<h1>5.1 Determinar ejes de simetría en figuras simétricas</h1>
+
+<h2>Explicación</h2>
+
+<div class="box">
+Un eje de simetría es una línea imaginaria que divide una figura en dos partes iguales, de modo que al doblarlas coinciden exactamente.
+</div>
+
+<p><b>Características:</b></p>
+<ul>
+<li>Las figuras quedan reflejadas como en un espejo</li>
+<li>Puede haber uno, varios o ningún eje de simetría</li>
+<li>Depende de la forma del polígono</li>
+</ul>
+
+<p><b>Ejemplos comunes:</b></p>
+<ul>
+<li>Cuadrado: 4 ejes</li>
+<li>Rectángulo: 2 ejes</li>
+<li>Triángulo equilátero: 3 ejes</li>
+<li>Círculo: infinitos ejes</li>
+</ul>
+
+<h2>Ejemplo</h2>
+
+<p>Determinar los ejes de simetría de un cuadrado.</p>
+
+<h3>Dibujo</h3>
+
+<svg height="250">
+  <!-- cuadrado -->
+  <rect x="80" y="50" width="120" height="120" fill="lightblue" stroke="black"/>
+
+  <!-- ejes -->
+  <line x1="140" y1="50" x2="140" y2="170" stroke="red" stroke-dasharray="5"/>
+  <line x1="80" y1="110" x2="200" y2="110" stroke="red" stroke-dasharray="5"/>
+  <line x1="80" y1="50" x2="200" y2="170" stroke="red" stroke-dasharray="5"/>
+  <line x1="200" y1="50" x2="80" y2="170" stroke="red" stroke-dasharray="5"/>
+</svg>
+
+<h3>Resultado</h3>
+
+<p>El cuadrado tiene <b>4 ejes de simetría</b>:</p>
+<ul>
+<li>Vertical</li>
+<li>Horizontal</li>
+<li>2 diagonales</li>
+</ul>
+
+<h2>Ejercicios</h2>
+
+<ol>
+
+<li>¿Cuántos ejes de simetría tiene un rectángulo?</li>
+
+<li>Determinar los ejes de simetría de un triángulo equilátero.</li>
+
+<li>¿Tiene simetría un triángulo escaleno? Explica.</li>
+
+<li>Dibujar un pentágono regular e indicar sus ejes de simetría.</li>
+
+<li>Determinar si la siguiente figura tiene simetría:
+<ul>
+<li>Trapecio isósceles</li>
+</ul>
+</li>
+
+</ol>
+
+<h2>Respuestas</h2>
+
+<ol>
+<li>2 ejes</li>
+<li>3 ejes</li>
+<li>No tiene ejes de simetría</li>
+<li>5 ejes</li>
+<li>Sí, 1 eje de simetría</li>
+</ol>
+
+<h2>Videos de apoyo</h2>
+
+<p>
+<a href="https://www.youtube.com/watch?v=EcDFbUkyDHI" target="_blank">
+Ejes de simetría (explicación sencilla paso a paso)
+</a>
+</p>
+
+<p>
+<a href="https://www.youtube.com/watch?v=5XKIbnewSno" target="_blank">
+Ejes de simetría - nivel secundaria y preparación para exámenes
+</a>
+</p>
+
+
+<h2>Referencias (APA)</h2>
+
+<p>Baldor, A. (2009). <i>Geometría y trigonometría</i>. Grupo Patria.</p>
+<p>Larson, R. (2018). <i>Matemáticas</i>. McGraw-Hill.</p>
+<p>Ministerio de Educación Pública. (2012). <i>Programas de estudio Matemáticas</i>.</p>
+
+</div>
+</body>
+</html>
+```

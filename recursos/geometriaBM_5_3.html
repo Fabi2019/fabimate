@@ -1,0 +1,185 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Problemas de simetría axial</title>
+
+<script>
+  window.MathJax = {
+    tex: {
+      macros: {
+        sen: "\\operatorname{sen}"
+      }
+    }
+  };
+</script>
+ <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+<style>
+body{
+  font-family: Arial, sans-serif;
+  margin: 20px;
+}
+.container{
+  max-width: 900px;
+  margin: auto;
+}
+h1,h2{
+  color:#1a73e8;
+}
+button{
+  padding:10px;
+  background:#1a73e8;
+  color:white;
+  border:none;
+  border-radius:5px;
+}
+@media print{
+  button{
+    display:none;
+  }
+}
+svg{
+  max-width:100%;
+}
+.box{
+  background:#f4f4f4;
+  padding:10px;
+  border-left:4px solid #1a73e8;
+}
+</style>
+</head>
+
+<body>
+<div class="container">
+
+<button onclick="window.print()">Imprimir / Guardar PDF</button>
+
+<h1>5.3 Resolver problemas relacionados con la simetría axial</h1>
+
+<h2>Explicación</h2>
+
+<div class="box">
+La simetría axial permite resolver problemas donde una figura se refleja respecto a una recta (eje de simetría). Se basa en encontrar puntos homólogos, distancias y posiciones equivalentes.
+</div>
+
+<p><b>Ideas clave:</b></p>
+<ul>
+<li>El eje de simetría actúa como un espejo</li>
+<li>Los puntos homólogos están a la misma distancia del eje</li>
+<li>La figura original y la imagen son congruentes</li>
+</ul>
+
+<p><b>Casos comunes:</b></p>
+<ul>
+<li>Reflexión respecto a \(x = a\)</li>
+<li>Reflexión respecto a \(y = b\)</li>
+<li>Determinación de coordenadas reflejadas</li>
+</ul>
+
+<hr>
+
+<h2>Ejemplo</h2>
+
+<p>Reflejar el punto \( A(2,3) \) respecto al eje \(x = 4\).</p>
+
+<h3>Procedimiento</h3>
+
+<p>1. Calcular la distancia al eje:</p>
+<p>
+\[
+4 - 2 = 2
+\]
+</p>
+
+<p>2. Colocar el punto al otro lado:</p>
+<p>
+\[
+x' = 4 + 2 = 6
+\]
+</p>
+
+<p>3. Mantener la misma coordenada \(y\):</p>
+
+<p>
+\[
+A' = (6,3)
+\]
+</p>
+
+<h3>Dibujo</h3>
+
+<svg height="250">
+  <!-- eje -->
+  <line x1="150" y1="20" x2="150" y2="230" stroke="red" stroke-dasharray="5"/>
+
+  <!-- punto original -->
+  <circle cx="120" cy="150" r="5"/>
+  <text x="120" y="165">A(2,3)</text>
+
+  <!-- punto reflejado -->
+  <circle cx="180" cy="150" r="5"/>
+  <text x="180" y="165">A'(6,3)</text>
+</svg>
+
+<hr>
+
+<h2>Ejercicios</h2>
+
+<ol>
+
+<li>Reflejar el punto \( (1,2) \) respecto a \(x=3\).</li>
+
+<li>Encontrar la imagen de \( (4,5) \) respecto al eje \(y=2\).</li>
+
+<li>Un punto está a 4 unidades del eje. ¿Cuál es la distancia de su homólogo?</li>
+
+<li>Reflejar el triángulo con vértices:
+\( (1,1), (3,1), (2,4) \) respecto a \(x=2\).</li>
+
+<li>Determinar el punto simétrico de \( (6,2) \) respecto a \(x=4\).</li>
+
+</ol>
+
+<hr>
+
+<h2>Respuestas</h2>
+
+<ol>
+<li>(5,2)</li>
+<li>(4,-1)</li>
+<li>4 unidades</li>
+<li>(3,1), (1,1), (2,4)</li>
+<li>(2,2)</li>
+</ol>
+
+<hr>
+
+<h2>Videos de apoyo</h2>
+
+<p>
+<a href="https://www.youtube.com/watch?v=EcDFbUkyDHI" target="_blank">
+Simetría axial explicada paso a paso
+</a>
+</p>
+
+<p>
+<a href="https://www.youtube.com/watch?v=5XKIbnewSno" target="_blank">
+Problemas de simetría axial (nivel secundaria y bachillerato)
+</a>
+</p>
+
+<hr>
+
+<h2>Referencias (APA)</h2>
+
+<p>Baldor, A. (2009). <i>Geometría y trigonometría</i>. Grupo Patria.</p>
+<p>Larson, R. (2018). <i>Geometría analítica</i>. McGraw-Hill.</p>
+<p>Ministerio de Educación Pública. (2012). <i>Programas de estudio Matemáticas</i>.</p>
+
+</div>
+</body>
+</html>
+```
