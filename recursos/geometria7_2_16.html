@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2.16 Ángulos externos de un cuadrilátero</title>
+
+<style>
+body{
+  font-family: Arial, sans-serif;
+  margin:20px;
+  line-height:1.6;
+}
+.container{
+  max-width:900px;
+  margin:auto;
+}
+h1,h2,h3{
+  color:#2c3e50;
+}
+button{
+  padding:10px 15px;
+  background:#3498db;
+  color:white;
+  border:none;
+  border-radius:5px;
+  cursor:pointer;
+}
+@media print{
+  button{
+    display:none;
+  }
+}
+.ejercicio{
+  background:#f4f6f7;
+  padding:10px;
+  margin:10px 0;
+  border-left:5px solid #3498db;
+}
+.respuestas{
+  background:#e8f8f5;
+  padding:10px;
+}
+svg{
+  max-width:100%;
+}
+</style>
+
+<script>
+function imprimir(){
+  window.print();
+}
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<button onclick="imprimir()">Imprimir / Guardar en PDF</button>
+
+<h1>2.16 Suma de los ángulos externos de un cuadrilátero convexo</h1>
+
+<h2>Explicación</h2>
+
+<p>
+En un <strong>cuadrilátero convexo</strong>, los ángulos externos se forman al prolongar cada uno de sus lados.
+</p>
+
+<p>
+La propiedad fundamental establece que:
+</p>
+
+<p>
+$$
+E_1 + E_2 + E_3 + E_4 = 360^\circ
+$$
+</p>
+
+<p>
+Esto ocurre porque cada ángulo externo es suplementario a su ángulo interno:
+</p>
+
+<p>
+$$
+\text{interno} + \text{externo} = 180^\circ
+$$
+</p>
+
+<p>
+Y como la suma de ángulos internos es:
+</p>
+
+<p>
+$$
+360^\circ
+$$
+</p>
+
+<p>
+Entonces la suma de los externos también es:
+</p>
+
+<p>
+$$
+360^\circ
+$$
+</p>
+
+<h3>Representación gráfica</h3>
+
+<svg viewBox="0 0 220 150">
+<polygon points="40,120 160,120 180,60 80,30" fill="none" stroke="black"/>
+<line x1="40" y1="120" x2="20" y2="140" stroke="red"/>
+<line x1="160" y1="120" x2="200" y2="120" stroke="red"/>
+<line x1="180" y1="60" x2="200" y2="40" stroke="red"/>
+<line x1="80" y1="30" x2="60" y2="10" stroke="red"/>
+<text x="10" y="145">E1</text>
+<text x="200" y="120">E2</text>
+<text x="200" y="35">E3</text>
+<text x="55" y="10">E4</text>
+</svg>
+
+<p>
+Cada ángulo rojo es un ángulo externo del cuadrilátero.
+</p>
+
+---
+
+<h2>Ejemplo</h2>
+
+<p>
+En un cuadrilátero se conocen tres ángulos externos:
+</p>
+
+<p>
+$$
+E_1 = 80^\circ,\quad E_2 = 90^\circ,\quad E_3 = 70^\circ
+$$
+</p>
+
+<p>
+Hallar $$E_4$$.
+</p>
+
+<p>
+$$
+E_4 = 360^\circ - (80^\circ + 90^\circ + 70^\circ)
+$$
+$$
+E_4 = 360^\circ - 240^\circ = 120^\circ
+$$
+</p>
+
+<p>
+✅ El ángulo externo faltante es <strong>120°</strong>.
+</p>
+
+---
+
+<h2>Ejercicios</h2>
+
+<div class="ejercicio">
+1. Hallar el ángulo externo faltante si los otros son 60°, 80° y 100°.
+</div>
+
+<div class="ejercicio">
+2. En un cuadrilátero:
+$$
+E_1 = 90^\circ,\quad E_2 = 110^\circ,\quad E_3 = 70^\circ
+$$
+Hallar $$E_4$$.
+</div>
+
+<div class="ejercicio">
+3. Determinar $$x$$:
+$$
+x + 80^\circ + 90^\circ + 70^\circ = 360^\circ
+$$
+</div>
+
+<div class="ejercicio">
+4. En un cuadrilátero:
+$$
+E_1 = 2x,\quad E_2 = 3x,\quad E_3 = x,\quad E_4 = 4x
+$$
+Hallar $$x$$.
+</div>
+
+<div class="ejercicio">
+5. Si tres ángulos externos miden 50°, 120° y 130°, hallar el cuarto.
+</div>
+
+---
+
+<h2>Respuestas</h2>
+
+<div class="respuestas">
+<p>1. 120°</p>
+<p>2. 90°</p>
+<p>3. $$x = 120^\circ$$</p>
+<p>4. $$x = 36^\circ$$</p>
+<p>5. 60°</p>
+</div>
+
+---
+
+<h2>Videos explicativos</h2>
+
+<p>
+<a href="https://www.youtube.com/watch?v=IVyHy2ruIyY" target="_blank">
+Ángulo exterior y su relación (base para cuadriláteros)
+</a>
+</p>
+
+<p>
+<a href="https://www.youtube.com/watch?v=7QNunIUcNL0" target="_blank">
+Suma de ángulos en polígonos y cuadriláteros
+</a>
+</p>
+
+---
+
+<h2>Referencias (APA)</h2>
+
+<p>
+Baldor, A. (2009). <i>Geometría y Trigonometría</i>. Pearson.
+</p>
+
+<p>
+Euclides. (300 a.C.). <i>Elementos</i>.
+</p>
+
+<p>
+Larson, R. (2010). <i>Álgebra y trigonometría</i>. McGraw-Hill.
+</p>
+
+</div>
+
+</body>
+</html>
