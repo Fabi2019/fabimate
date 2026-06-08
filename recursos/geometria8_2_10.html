@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2.10 Secciones planas en prismas</title>
+
+<style>
+body{
+  font-family: Arial;
+  margin:20px;
+  line-height:1.6;
+}
+.container{
+  max-width:900px;
+  margin:auto;
+}
+h1,h2{
+  color:#2c3e50;
+}
+button{
+  padding:10px;
+  background:#3498db;
+  color:white;
+  border:none;
+  border-radius:5px;
+}
+@media print{
+  button{display:none;}
+}
+.ejercicio{
+  background:#f4f6f7;
+  padding:10px;
+  margin:10px 0;
+  border-left:5px solid #3498db;
+}
+.respuestas{
+  background:#e8f8f5;
+  padding:10px;
+}
+svg{
+  max-width:100%;
+}
+</style>
+
+<script>
+function imprimir(){
+  window.print();
+}
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<button onclick="imprimir()">Imprimir / Guardar en PDF</button>
+
+<h1>2.10 Secciones planas en prismas rectos</h1>
+
+<h2>Explicación</h2>
+
+<p>
+Un <strong>prisma recto</strong> es un sólido geométrico con dos bases iguales y paralelas,
+y caras laterales rectangulares.
+</p>
+
+<p>
+Una <strong>sección plana</strong> es la figura que se obtiene al cortar el prisma con un plano.
+</p>
+
+<p>
+Dependiendo del corte, se obtienen distintas figuras:
+</p>
+
+<ul>
+<li>Triángulos</li>
+<li>Rectángulos</li>
+<li>Paralelogramos</li>
+<li>Polígonos iguales o similares a la base</li>
+</ul>
+
+<h3>Casos principales</h3>
+
+<p><strong>1. Corte paralelo a la base:</strong></p>
+<p>Se obtiene una figura igual a la base (cuadrado, rectángulo, triángulo).</p>
+
+<p><strong>2. Corte perpendicular a la base:</strong></p>
+<p>Se obtiene un rectángulo.</p>
+
+<p><strong>3. Corte inclinado:</strong></p>
+<p>Se obtiene un paralelogramo o combinación de segmentos.</p>
+
+---
+
+<h3>Representación gráfica</h3>
+
+<svg viewBox="0 0 230 160">
+<polygon points="50,130 170,130 170,70 50,70" fill="none" stroke="black"/>
+<polygon points="70,110 190,110 190,50 70,50" fill="none" stroke="black"/>
+<line x1="50" y1="130" x2="70" y2="110" stroke="black"/>
+<line x1="170" y1="130" x2="190" y2="110" stroke="black"/>
+<line x1="170" y1="70" x2="190" y2="50" stroke="black"/>
+<line x1="50" y1="70" x2="70" y2="50" stroke="black"/>
+<line x1="60" y1="100" x2="180" y2="80" stroke="red"/>
+</svg>
+
+<p>
+La línea roja representa un corte inclinado que genera un paralelogramo.
+</p>
+
+---
+
+<h2>Ejemplo</h2>
+
+<p>
+Se corta un prisma rectangular con un plano paralelo a la base.
+</p>
+
+<p>
+¿Qué figura se obtiene?
+</p>
+
+<p>
+✅ El corte es paralelo a la base rectangular:
+</p>
+
+<p>
+Se obtiene un <strong>rectángulo</strong> igual o semejante a la base.
+</p>
+
+---
+
+<h2>Ejercicios</h2>
+
+<div class="ejercicio">
+1. ¿Qué figura se obtiene al cortar un prisma triangular paralelamente a su base?
+</div>
+
+<div class="ejercicio">
+2. En un prisma rectangular, un corte vertical (perpendicular a la base) forma:
+</div>
+
+<div class="ejercicio">
+3. ¿Qué figura resulta de un corte inclinado en un prisma cuadrado?
+</div>
+
+<div class="ejercicio">
+4. Si el corte es paralelo a la base en cualquier prisma, ¿qué ocurre?
+</div>
+
+<div class="ejercicio">
+5. ¿Qué figura se obtiene al cortar un prisma triangular pasando por tres puntos no alineados?
+</div>
+
+---
+
+<h2>Respuestas</h2>
+
+<div class="respuestas">
+<p>1. Triángulo</p>
+<p>2. Rectángulo</p>
+<p>3. Paralelogramo</p>
+<p>4. Figura igual a la base</p>
+<p>5. Triángulo</p>
+</div>
+
+---
+
+<h2>Videos explicativos</h2>
+
+<p>
+<a href="https://www.youtube.com/">
+Secciones planas en prismas (explicación clara)
+</a>
+</p>
+
+<p>
+<a href="https://www.youtube.com/">
+Cortes en prismas y sólidos geométricos
+</a>
+</p>
+
+---
+
+<h2>Referencias (APA)</h2>
+
+<p>
+Baldor, A. (2009). <i>Geometría y trigonometría</i>. Pearson.
+</p>
+
+<p>
+Larson, R. (2010). <i>Matemáticas</i>. McGraw-Hill.
+</p>
+
+<p>
+Stewart, J. (2013). <i>Geometría analítica</i>. Cengage.
+</p>
+
+</div>
+
+</body>
+</html>
