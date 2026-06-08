@@ -1,0 +1,219 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2.12 Desigualdad Triangular</title>
+
+<style>
+body{
+  font-family: Arial, sans-serif;
+  margin:20px;
+  line-height:1.6;
+}
+
+h1,h2,h3{
+  color:#2c3e50;
+}
+
+.container{
+  max-width:900px;
+  margin:auto;
+}
+
+button{
+  padding:10px 15px;
+  font-size:14px;
+  background:#3498db;
+  color:white;
+  border:none;
+  border-radius:5px;
+  cursor:pointer;
+}
+
+button:hover{
+  background:#2980b9;
+}
+
+@media print{
+  button{
+    display:none;
+  }
+}
+
+.ejercicio{
+  background:#f4f6f7;
+  padding:10px;
+  margin:10px 0;
+  border-left:5px solid #3498db;
+}
+
+.respuestas{
+  background:#e8f8f5;
+  padding:10px;
+  margin-top:20px;
+}
+
+svg{
+  max-width:100%;
+  height:auto;
+}
+</style>
+
+<script>
+function imprimir(){
+  window.print();
+}
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<button onclick="imprimir()">Imprimir / Guardar en PDF</button>
+
+<h1>2.12 Aplicar la Desigualdad Triangular</h1>
+
+<h2>Explicación</h2>
+
+<p>
+La <strong>desigualdad triangular</strong> es un principio fundamental en geometría y análisis matemático.
+Establece que en cualquier triángulo, la suma de las longitudes de dos lados siempre es mayor que la longitud del tercer lado.
+</p>
+
+<p>
+Matemáticamente:
+</p>
+
+<p>
+\[
+a + b > c,\quad a + c > b,\quad b + c > a
+\]
+</p>
+
+<p>
+También puede expresarse en forma de valor absoluto:
+</p>
+
+<p>
+\[
+|x + y| \leq |x| + |y|
+\]
+</p>
+
+<p>
+Esto significa que la distancia directa entre dos puntos siempre es menor o igual que cualquier recorrido indirecto.
+</p>
+
+<h3>Representación gráfica</h3>
+
+<svg viewBox="0 0 200 150">
+  <polygon points="50,120 150,120 100,30" fill="none" stroke="black"/>
+  <text x="45" y="130">A</text>
+  <text x="150" y="130">B</text>
+  <text x="100" y="20">C</text>
+</svg>
+
+<p>
+En el triángulo ABC:
+\[
+AB + BC > AC
+\]
+</p>
+
+<h2>Ejemplo</h2>
+
+<p>
+Verificar si existen valores que formen un triángulo con lados 5, 7 y 10.
+</p>
+
+<p>
+Comprobamos:
+</p>
+
+<p>
+\[
+5 + 7 = 12 > 10
+\]
+\[
+5 + 10 = 15 > 7
+\]
+\[
+7 + 10 = 17 > 5
+\]
+</p>
+
+<p>
+✅ Se cumple la desigualdad triangular, por lo tanto <strong>sí forman un triángulo</strong>.
+</p>
+
+<h2>Ejercicios</h2>
+
+<div class="ejercicio">
+1. Verificar si los lados 3, 4 y 8 forman un triángulo.
+</div>
+
+<div class="ejercicio">
+2. Determinar si 6, 9 y 12 cumplen la desigualdad triangular.
+</div>
+
+<div class="ejercicio">
+3. Hallar si con lados 2, 5 y 6 se puede construir un triángulo.
+</div>
+
+<div class="ejercicio">
+4. Verificar para 10, 15 y 30.
+</div>
+
+<div class="ejercicio">
+5. Comprobar si 7, 8 y 9 forman un triángulo.
+</div>
+
+<h2>Respuestas</h2>
+
+<div class="respuestas">
+<p>1. No forman triángulo.</p>
+<p>2. Sí forman triángulo.</p>
+<p>3. Sí forman triángulo.</p>
+<p>4. No forman triángulo.</p>
+<p>5. Sí forman triángulo.</p>
+</div>
+
+<h2>Videos explicativos</h2>
+
+<p>
+<a href="https://www.youtube.com/watch?v=1it4pEZsipo" target="_blank">
+Desigualdad triangular - explicación fácil (Daniel Carreón)
+</a>
+</p>
+
+<p>
+<a href="https://www.youtube.com/watch?v=ZEa8Rv8r8o4" target="_blank">
+Desigualdad triangular - explicación y ejemplos paso a paso
+</a>
+</p>
+
+<h2>Referencias (Formato APA)</h2>
+
+<p>
+Baldor, A. (2009). <i>Geometría y Trigonometría</i>. Pearson Educación.
+</p>
+
+<p>
+Stewart, J. (2013). <i>Cálculo de varias variables</i>. Cengage Learning.
+</p>
+
+<p>
+Larson, R., & Hostetler, R. (2010). <i>Álgebra y trigonometría</i>. McGraw-Hill.
+</p>
+
+</div>
+
+</body>
+</html>
+```
