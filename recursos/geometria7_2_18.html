@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Punto Medio de un Segmento</title>
+
+<!-- MathJax -->
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+<style>
+body{
+    font-family: Arial, sans-serif;
+    margin:20px;
+    line-height:1.6;
+}
+h1,h2{
+    text-align:center;
+}
+.container{
+    max-width:900px;
+    margin:auto;
+}
+button{
+    display:block;
+    margin:10px auto;
+    padding:10px;
+    font-size:16px;
+    cursor:pointer;
+}
+@media print {
+    button{
+        display:none;
+    }
+}
+svg{
+    display:block;
+    margin:auto;
+}
+</style>
+
+<script>
+function imprimir(){
+    window.print();
+}
+</script>
+
+</head>
+
+<body>
+<div class="container">
+
+<button onclick="imprimir()">Imprimir / Guardar en PDF</button>
+
+<h1>2.18 Determinar algebraicamente el punto medio de un segmento</h1>
+
+<h2>Explicación</h2>
+
+<p>
+En geometría analítica, el <b>punto medio</b> de un segmento es el punto que divide al segmento en dos partes iguales.
+</p>
+
+<p>
+Si se tienen dos puntos en el plano:
+</p>
+
+<p style="text-align:center;">
+$$ A(x_{1},y_{1}) $$ y $$ B(x_{2},y_{2}) $$
+</p>
+
+<p>
+El punto medio $$ M $$ se calcula mediante la fórmula:
+</p>
+
+<p style="text-align:center;">
+$$ M\left(\frac{x_{1}+x_{2}}{2}, \frac{y_{1}+y_{2}}{2} \right) $$
+</p>
+
+<p>
+Esto significa que se promedian las coordenadas en $$x$$ y en $$y$$.
+</p>
+
+<h3>Interpretación geométrica</h3>
+
+<svg width="300" height="200">
+  <line x1="50" y1="150" x2="250" y2="50" stroke="black"/>
+  <circle cx="50" cy="150" r="4" fill="blue"/>
+  <circle cx="250" cy="50" r="4" fill="blue"/>
+  <circle cx="150" cy="100" r="4" fill="red"/>
+  <text x="40" y="165">A</text>
+  <text x="255" y="55">B</text>
+  <text x="155" y="105">M</text>
+</svg>
+
+<p style="text-align:center;">
+El punto $$M$$ está exactamente a la mitad del segmento $$AB$$.
+</p>
+
+<h2>Ejemplo</h2>
+
+<p>
+Determinar el punto medio entre $$A(2,4)$$ y $$B(6,8)$$.
+</p>
+
+<p><b>Paso 1:</b> Aplicar la fórmula</p>
+
+<p style="text-align:center;">
+$$ M\left(\frac{2+6}{2}, \frac{4+8}{2}\right) $$
+</p>
+
+<p><b>Paso 2:</b> Resolver</p>
+
+<p style="text-align:center;">
+$$ M\left(\frac{8}{2}, \frac{12}{2}\right) $$
+</p>
+
+<p style="text-align:center;">
+$$ M(4,6) $$
+</p>
+
+<p><b>Resultado:</b> El punto medio es $$M(4,6)$$.</p>
+
+<h2>Ejercicios</h2>
+
+<ol>
+<li>Calcular el punto medio entre $$A(1,2)$$ y $$B(5,6)$$.</li>
+<li>Calcular el punto medio entre $$A(-2,4)$$ y $$B(6,-2)$$.</li>
+<li>Calcular el punto medio entre $$A(0,0)$$ y $$B(8,10)$$.</li>
+<li>Calcular el punto medio entre $$A(-3,-5)$$ y $$B(3,7)$$.</li>
+<li>Calcular el punto medio entre $$A(10,2)$$ y $$B(4,6)$$.</li>
+</ol>
+
+<h2>Respuestas</h2>
+
+<ol>
+<li>$$M(3,4)$$</li>
+<li>$$M(2,1)$$</li>
+<li>$$M(4,5)$$</li>
+<li>$$M(0,1)$$</li>
+<li>$$M(7,4)$$</li>
+</ol>
+
+<h2>Videos explicativos</h2>
+<p>
+<a href="https://www.youtube.com/watch?v=qzRxsVoUaMo" target="_blank">
+Ver video: Ejemplo de punto medio
+</a>
+</p>
+
+
+
+
+<h2>Referencias (formato APA)</h2>
+
+<p>
+Baldor, A. (2009). <i>Geometría analítica</i>. Pearson Educación.
+</p>
+
+<p>
+Larson, R., & Hostetler, R. (2011). <i>Geometría analítica y cálculo</i>. McGraw-Hill.
+</p>
+
+<p>
+Stewart, J. (2012). <i>Cálculo de varias variables</i>. Cengage Learning.
+</p>
+
+</div>
+</body>
+</html>

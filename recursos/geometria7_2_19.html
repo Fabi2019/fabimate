@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ubicar puntos en figuras cerradas</title>
+
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+<style>
+body{
+    font-family: Arial, sans-serif;
+    margin:20px;
+    line-height:1.6;
+}
+.container{
+    max-width:900px;
+    margin:auto;
+}
+h1,h2{
+    text-align:center;
+}
+button{
+    display:block;
+    margin:auto;
+    padding:10px;
+    font-size:16px;
+    cursor:pointer;
+}
+@media print{
+    button{display:none;}
+}
+svg{
+    display:block;
+    margin:auto;
+}
+</style>
+
+<script>
+function imprimir(){
+    window.print();
+}
+</script>
+
+</head>
+
+<body>
+<div class="container">
+
+<button onclick="imprimir()">Imprimir / Guardar en PDF</button>
+
+<h1>2.19 Ubicar puntos en el interior y en el exterior de figuras cerradas</h1>
+
+<h2>Explicación</h2>
+
+<p>
+En el plano cartesiano, una <b>figura cerrada</b> es aquella cuyos lados forman una región completamente delimitada, como triángulos, cuadrados o rectángulos.
+</p>
+
+<p><b>Clasificación de puntos:</b></p>
+
+<ul>
+<li><b>Punto interior:</b> Está dentro de la región de la figura.</li>
+<li><b>Punto exterior:</b> Está fuera de la figura.</li>
+<li><b>Punto sobre la frontera:</b> Está exactamente en uno de los lados.</li>
+</ul>
+
+<p>
+Para determinar la posición de un punto $$P(x,y)$$:
+</p>
+
+<ol>
+<li>Ubicar el punto en el plano cartesiano.</li>
+<li>Comparar sus coordenadas con los límites de la figura.</li>
+<li>Clasificar su ubicación: interior, exterior o frontera.</li>
+</ol>
+
+<h3>Representación gráfica</h3>
+
+<svg width="320" height="260">
+  <!-- Rectángulo -->
+  <rect x="80" y="50" width="160" height="150" fill="none" stroke="black"/>
+
+  <!-- Interior -->
+  <circle cx="150" cy="130" r="4" fill="green"/>
+  <text x="155" y="130">Interior</text>
+
+  <!-- Exterior -->
+  <circle cx="40" cy="200" r="4" fill="red"/>
+  <text x="5" y="215">Exterior</text>
+
+  <!-- Frontera -->
+  <circle cx="80" cy="120" r="4" fill="blue"/>
+  <text x="85" y="140">Frontera</text>
+</svg>
+
+<h2>Ejemplo</h2>
+
+<p>
+Sea el rectángulo con vértices:
+</p>
+
+<p style="text-align:center;">
+$$ (0,0), (10,0), (10,6), (0,6) $$
+</p>
+
+<p>
+Determinar la posición del punto $$P(5,3)$$.
+</p>
+
+<p><b>Paso 1:</b> Identificamos condiciones</p>
+
+<p>
+El punto es interior si:
+</p>
+
+<p style="text-align:center;">
+$$ 0 < x < 10 \quad y \quad 0 < y < 6 $$
+</p>
+
+<p><b>Paso 2:</b> Sustituimos</p>
+
+<p style="text-align:center;">
+$$ 0 < 5 < 10 \quad y \quad 0 < 3 < 6 $$
+</p>
+
+<p><b>Conclusión:</b> El punto es <b>interior</b>.</p>
+
+<h2>Ejercicios</h2>
+
+<p>Considere el rectángulo con vértices $$ (0,0), (8,0), (8,4), (0,4) $$</p>
+
+<ol>
+<li>Determinar la posición de $$A(2,1)$$</li>
+<li>Determinar la posición de $$B(9,2)$$</li>
+<li>Determinar la posición de $$C(0,3)$$</li>
+<li>Determinar la posición de $$D(6,4)$$</li>
+<li>Determinar la posición de $$E(-1,2)$$</li>
+</ol>
+
+<h2>Respuestas</h2>
+
+<ol>
+<li>Interior</li>
+<li>Exterior</li>
+<li>Frontera</li>
+<li>Frontera</li>
+<li>Exterior</li>
+</ol>
+
+<h2>Videos explicativos</h2>
+
+<p>
+<a href="https://www.youtube.com/watch?v=QTrE4x5DPZ8" target="_blank">
+Ver video: Cómo ubicar puntos en el plano cartesiano (Profe Alex)
+</a>
+</p>
+
+<p>
+<a href="https://www.youtube.com/watch?v=0cUkAd2o1yw" target="_blank">
+Ver video: Ubicación de puntos en el plano cartesiano fácil
+</a>
+</p>
+
+<h2>Referencias (formato APA)</h2>
+
+<p>
+Baldor, A. (2009). <i>Geometría analítica</i>. Pearson Educación.
+</p>
+
+<p>
+Larson, R., & Hostetler, R. (2011). <i>Geometría analítica</i>. McGraw-Hill.
+</p>
+
+<p>
+Khan Academy. (2026). <i>Plano cartesiano</i>. Recuperado de https://es.khanacademy.org
+</p>
+
+</div>
+</body>
+</html>
