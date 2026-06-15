@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>3.2 Representación de funciones lineales</title>
+
+<style>
+body{
+  font-family: Arial;
+  margin:20px;
+  line-height:1.6;
+}
+.container{
+  max-width:900px;
+  margin:auto;
+}
+h1,h2{
+  color:#2c3e50;
+}
+button{
+  padding:10px;
+  background:#3498db;
+  color:white;
+  border:none;
+  border-radius:5px;
+}
+@media print{
+  button{display:none;}
+}
+.ejercicio{
+  background:#f4f6f7;
+  padding:10px;
+  margin:10px 0;
+  border-left:5px solid #3498db;
+}
+.respuestas{
+  background:#e8f8f5;
+  padding:10px;
+}
+table{
+  border-collapse: collapse;
+  margin-top:10px;
+}
+td, th{
+  border:1px solid black;
+  padding:5px 10px;
+  text-align:center;
+}
+svg{
+  max-width:100%;
+}
+</style>
+
+<script>
+function imprimir(){
+  window.print();
+}
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<button onclick="imprimir()">Imprimir / Guardar en PDF</button>
+
+<h1>3.2 Representación tabular, algebraica y gráfica de una función lineal</h1>
+
+<h2>Explicación</h2>
+
+<p>
+Una función lineal puede representarse de tres formas:
+</p>
+
+<ul>
+<li><strong>Algebraica:</strong> mediante una ecuación $$y = ax + b$$</li>
+<li><strong>Tabular:</strong> mediante una tabla de valores</li>
+<li><strong>Gráfica:</strong> en el plano cartesiano como una recta</li>
+</ul>
+
+<p>
+Una función lineal siempre forma una línea recta en el plano cartesiano [1](https://www.unprofesor.com/matematicas/que-es-una-funcion-lineal-ejemplos-6821.html)
+</p>
+
+<p>
+Para representarla:
+</p>
+
+<ol>
+<li>Se eligen valores de $$x$$</li>
+<li>Se calculan los valores de $$y$$</li>
+<li>Se forman pares ordenados $$(x,y)$$</li>
+<li>Se grafican los puntos y se unen</li>
+</ol>
+
+---
+
+<h2>Ejemplo</h2>
+
+<p>
+Representar la función:
+</p>
+
+<p>$$
+y = 2x + 1
+$$</p>
+
+<h3>Tabla de valores</h3>
+
+<table>
+<tr><th>x</th><th>y</th></tr>
+<tr><td>-1</td><td>-1</td></tr>
+<tr><td>0</td><td>1</td></tr>
+<tr><td>1</td><td>3</td></tr>
+<tr><td>2</td><td>5</td></tr>
+</table>
+
+<h3>Gráfica</h3>
+
+<svg viewBox="0 0 200 200">
+<!-- ejes -->
+<line x1="0" y1="100" x2="200" y2="100" stroke="black"/>
+<line x1="100" y1="0" x2="100" y2="200" stroke="black"/>
+
+<!-- puntos -->
+<circle cx="80" cy="120" r="3" fill="red"/>
+<circle cx="100" cy="80" r="3" fill="red"/>
+<circle cx="120" cy="40" r="3" fill="red"/>
+<circle cx="140" cy="0" r="3" fill="red"/>
+
+<!-- recta -->
+<line x1="60" y1="160" x2="160" y2="-40" stroke="blue"/>
+</svg>
+
+<p>
+✅ La gráfica es una recta creciente porque $$a = 2 > 0$$
+</p>
+
+---
+
+<h2>Ejercicios</h2>
+
+<div class="ejercicio">
+1. Representar (tabla y gráfica) la función $$y = x + 2$$.
+</div>
+
+<div class="ejercicio">
+2. Construir una tabla para $$y = 3x$$.
+</div>
+
+<div class="ejercicio">
+3. Graficar $$y = -x + 1$$.
+</div>
+
+<div class="ejercicio">
+4. Completar la tabla:
+<br>x: 0,1,2
+<br>y: ?, ?, ?
+para $$y = 2x + 3$$
+</div>
+
+<div class="ejercicio">
+5. Identificar si la función $$y = -2x + 4$$ es creciente o decreciente.
+</div>
+
+---
+
+<h2>Respuestas</h2>
+
+<div class="respuestas">
+<p>1. Tabla y recta correspondiente.</p>
+<p>2. y = 0, 3, 6...</p>
+<p>3. Recta decreciente.</p>
+<p>4. y = 3, 5, 7</p>
+<p>5. Decreciente</p>
+</div>
+
+---
+
+<h2>Videos explicativos</h2>
+
+<p>
+<a href="https://www.youtube.com/watch?v=oysU114ONPE" target="_blank">
+Representación tabular, algebraica y gráfica de una función lineal
+</a>
+</p>
+
+<p>
+<a href="https://www.youtube.com/watch?v=UHDcC661CIM" target="_blank">
+Función lineal: tabla de valores y gráfica paso a paso
+</a>
+</p>
+
+---
+
+<h2>Referencias (APA)</h2>
+
+<p>
+Larson, R. (2010). <i>Álgebra y trigonometría</i>. McGraw-Hill.
+</p>
+
+<p>
+Stewart, J. (2013). <i>Precálculo</i>. Cengage.
+</p>
+
+<p>
+CK-12 Foundation. (2026). <i>Uso de tablas para graficar funciones</i>. [2](https://flexbooks.ck12.org/cbook/ck-12-conceptos-de-matem%c3%a1ticas-de-la-escuela-secundaria-grado-8-en-espa%c3%b1ol/section/9.5/primary/lesson/uso-de-tablas-para-graficar-funciones/)
+</p>
+
+</div>
+
+</body>
+</html>
