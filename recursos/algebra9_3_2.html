@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Representación de Función Cuadrática</title>
+
+<style>
+body{
+  font-family: Arial, sans-serif;
+  margin:20px;
+  line-height:1.6;
+}
+.container{
+  max-width:900px;
+  margin:auto;
+}
+h1,h2{
+  text-align:center;
+}
+button{
+  display:block;
+  margin:10px auto;
+  padding:10px 20px;
+  font-size:16px;
+  cursor:pointer;
+}
+table{
+  border-collapse: collapse;
+  width:100%;
+  margin:15px 0;
+}
+th, td{
+  border:1px solid #000;
+  padding:8px;
+  text-align:center;
+}
+canvas{
+  max-width:100%;
+}
+@media print{
+  button{
+    display:none;
+  }
+}
+</style>
+</head>
+
+<body>
+<div class="container">
+
+<button onclick="window.print()">Imprimir / Guardar en PDF</button>
+
+<h1>Representación de una Función Cuadrática</h1>
+
+<h2>Explicación</h2>
+
+<p>
+Una función cuadrática puede representarse de tres formas:
+</p>
+
+<ul>
+<li><b>Algebraica:</b> mediante una expresión como $$ y = a x^2 + b x + c $$</li>
+<li><b>Tabular:</b> mediante una tabla de valores</li>
+<li><b>Gráfica:</b> mediante una parábola en el plano cartesiano</li>
+</ul>
+
+<p>
+Estas tres representaciones describen la misma relación matemática.
+</p>
+
+<h2>Ejemplo</h2>
+
+<p>
+Sea la función:
+</p>
+
+<p style="text-align:center;">
+$$ y = x^2 - 4x + 3 $$
+</p>
+
+<h3>1. Forma algebraica</h3>
+<p>
+Ya está dada: $$ y = x^2 - 4x + 3 $$
+</p>
+
+<h3>2. Tabla de valores</h3>
+
+<table>
+<tr><th>$$ x $$</th><th>$$ y $$</th></tr>
+<tr><td>0</td><td>3</td></tr>
+<tr><td>1</td><td>0</td></tr>
+<tr><td>2</td><td>-1</td></tr>
+<tr><td>3</td><td>0</td></tr>
+<tr><td>4</td><td>3</td></tr>
+</table>
+
+<h3>3. Gráfica</h3>
+
+<canvas id="grafica" width="400" height="300"></canvas>
+
+<script>
+let c = document.getElementById("grafica");
+let ctx = c.getContext("2d");
+
+// eje
+ctx.beginPath();
+ctx.moveTo(0,150);
+ctx.lineTo(400,150);
+ctx.moveTo(200,0);
+ctx.lineTo(200,300);
+ctx.stroke();
+
+// función y=x^2-4x+3 escala simple
+ctx.beginPath();
+for(let x=-10; x<=10; x++){
+  let y = x*x - 4*x + 3;
+  let px = 200 + x*20;
+  let py = 150 - y*10;
+  if(x===-10){
+    ctx.moveTo(px,py);
+  } else {
+    ctx.lineTo(px,py);
+  }
+}
+ctx.stroke();
+</script>
+
+<p>
+La gráfica es una parábola que abre hacia arriba.
+</p>
+
+<h2>Ejercicios</h2>
+
+<ol>
+<li>Representar la función $$ y = x^2 $$ en forma tabular (valores de $$ x = -2 $$ a $$ 2 $$).</li>
+<li>Construir tabla para $$ y = x^2 + 2x $$.</li>
+<li>Identificar la forma algebraica de una función cuya gráfica es una parábola que abre hacia arriba.</li>
+<li>Completar tabla para $$ y = x^2 - 1 $$.</li>
+<li>Indicar si la función $$ y = -x^2 + 3x $$ abre hacia arriba o abajo.</li>
+</ol>
+
+<h2>Respuestas</h2>
+
+<ol>
+<li>$$ y = 4,1,0,1,4 $$</li>
+<li>Tabla depende de valores elegidos; ejemplo: $$ x=0 \to y=0 $$, $$ x=1 \to y=3 $$</li>
+<li>$$ y = ax^2 + bx + c $$</li>
+<li>$$ y = x^2 -1 $$ → valores: $$ -2→3, -1→0, 0→-1, 1→0, 2→3 $$</li>
+<li>Abre hacia abajo porque $$ a < 0 $$</li>
+</ol>
+
+<h2>Videos de apoyo</h2>
+
+<p>
+<a href="https://www.youtube.com/watch?v=gnAdna_tLK0" target="_blank">
+Ver video: Explicación de funciones cuadráticas
+</a>
+</p>
+
+<p>
+<a href="https://www.youtube.com/watch?v=svqAxfMPw7Q" target="_blank">
+Ver video: Función cuadrática completa
+</a>
+</p>
+
+<h2>Referencias (APA)</h2>
+
+<p>
+Baldor, A. (2009). <i>Álgebra</i>. México: Grupo Patria.
+</p>
+
+<p>
+Larson, R. (2012). <i>Precálculo</i>. Cengage Learning.
+</p>
+
+<p>
+Stewart, J. (2016). <i>Cálculo</i>. Cengage Learning.
+</p>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</body>
+</html>
