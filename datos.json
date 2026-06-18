@@ -36,11 +36,19 @@
         {
         "nombre": "Contenido 9, Página 14 (descargar)",
         "url": "https://dgec.mep.go.cr/wp-content/uploads/2026/02/Tabla-III-Ciclo.pdf"
+        },{
+        "nombre": "Contenido 7, 8 y 9,  #2 (descargar)",
+        "url": "https://dgec.mep.go.cr/wp-content/uploads/2026/03/Tabla-III-Ciclo-02-2026-Matematicas.pdf"
         },
         {
-        "nombre": "Contenido BXM (descargar)",
+        "nombre": "Contenido BXM #1 (descargar)",
         "url": "https://dgec.mep.go.cr/wp-content/uploads/2026/02/Tabla-de-BxM-1.pdf"
+        },
+         {
+        "nombre": "Contenido BXM #2 (descargar)",
+        "url": "https://dgec.mep.go.cr/wp-content/uploads/2026/03/Tabla-BXM-02-2026-Matematicas.pdf"
         }
+
         ],
     "practicas": [
         {
@@ -114,9 +122,13 @@
         ],
     "herra": [
         {
-        "nombre": "Geogebra",
+        "nombre": "Geogebra 2D",
         "url": "https://www.geogebra.org/classic?lang=es"
+        },{
+        "nombre": "Geogebra 3D",
+        "url": "https://www.geogebra.org/3d?lang=es"
         }, {
+
         "nombre": "Calculadora Científica",
         "url": "https://scientificcalculator.site/"
         }, {
