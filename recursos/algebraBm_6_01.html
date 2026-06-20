@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Transformaciones Geométricas</title>
+
+<style>
+body{
+  font-family: Arial, sans-serif;
+  margin:20px;
+  line-height:1.6;
+}
+.container{
+  max-width:900px;
+  margin:auto;
+}
+h1, h2{
+  color:#2c3e50;
+}
+.btn-print{
+  display:block;
+  margin:10px 0;
+  padding:10px;
+  background:#3498db;
+  color:white;
+  border:none;
+  cursor:pointer;
+  border-radius:5px;
+}
+@media print{
+  .btn-print{
+    display:none;
+  }
+}
+svg{
+  max-width:100%;
+  height:auto;
+}
+.exercise{
+  margin-bottom:10px;
+}
+</style>
+
+<script>
+function imprimir(){
+  window.print();
+}
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</head>
+
+<body>
+<div class="container">
+
+<button class="btn-print" onclick="imprimir()">Imprimir / Guardar como PDF</button>
+
+<h1>Transformaciones Geométricas</h1>
+
+<h2>Explicación</h2>
+
+<p>Las transformaciones geométricas permiten obtener nuevas figuras a partir de una figura inicial. Las principales son:</p>
+
+<ul>
+<li><b>Traslación:</b> Consiste en desplazar una figura sin cambiar su forma, tamaño ni orientación. Matemáticamente:  
+\( T(x,y) = (x+a, y+b) \)</li>
+
+<li><b>Homotecia:</b> Es una transformación que cambia el tamaño de la figura manteniendo su forma.  
+\( H(x,y) = (kx, ky) \), donde \( k \) es el factor de escala.</li>
+
+<li><b>Reflexión:</b> Es el reflejo de una figura respecto a una recta (eje). Por ejemplo:  
+Respecto al eje X: \( (x,y) → (x,-y) \)</li>
+
+<li><b>Rotación:</b> Es el giro de una figura alrededor de un punto.  
+Por ejemplo, rotación de 90°: \( (x,y) → (-y,x) \)</li>
+
+</ul>
+
+<h3>Dibujo explicativo</h3>
+
+<svg viewBox="0 0 300 200">
+  <!-- Triángulo original -->
+  <polygon points="50,150 100,50 150,150" fill="lightblue"/>
+  <text x="60" y="165">Original</text>
+
+  <!-- Traslación -->
+  <polygon points="180,150 230,50 280,150" fill="lightgreen"/>
+  <text x="180" y="165">Traslación</text>
+</svg>
+
+<h2>Ejemplo</h2>
+
+<p>Dado el punto \( A(2,3) \):</p>
+
+<ul>
+<li>Traslación: \( T(x,y) = (x+4, y-2) \) → \( A'(6,1) \)</li>
+<li>Homotecia con \( k=2 \): → \( A'(4,6) \)</li>
+<li>Reflexión eje X: → \( A'(2,-3) \)</li>
+<li>Rotación 90°: → \( A'(-3,2) \)</li>
+</ul>
+
+<h2>Ejercicios</h2>
+
+<div class="exercise">1. Traslada el punto \( (1,2) \) con \( (x+3, y+4) \).</div>
+
+<div class="exercise">2. Aplica homotecia con \( k=3 \) al punto \( (2,1) \).</div>
+
+<div class="exercise">3. Refleja el punto \( (4,5) \) respecto al eje X.</div>
+
+<div class="exercise">4. Rota el punto \( (3,2) \) 90° en sentido antihorario.</div>
+
+<div class="exercise">5. Determina la transformación: una figura mantiene forma, cambia tamaño y no gira.</div>
+
+<h2>Respuestas</h2>
+
+<ul>
+<li>1. \( (4,6) \)</li>
+<li>2. \( (6,3) \)</li>
+<li>3. \( (4,-5) \)</li>
+<li>4. \( (-2,3) \)</li>
+<li>5. Homotecia</li>
+</ul>
+
+<h2>Videos recomendados</h2>
+
+<p>
+<a href="https://www.youtube.com/watch?v=6jU1HKGn3bY"> </a> Transformaciones geométricas (explicación completa)
+</p>
+
+<p>
+<a href="https://www.youtube.com/watch?v=G7YJpFjR9eA"> </a> Traslación, rotación y reflexión paso a paso
+</p>
+
+<h2>Referencias (APA)</h2>
+
+<p>
+Baldor, A. (2009). <i>Geometría plana y del espacio</i>. México: Patria.
+</p>
+
+<p>
+Stewart, J. (2012). <i>Precálculo</i>. Cengage Learning.
+</p>
+
+<p>
+Ministerio de Educación. (2016). <i>Currículo de matemática</i>.
+</p>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Resolución de Problemas con Transformaciones</title>
+
+<style>
+body{
+  font-family: Arial, sans-serif;
+  margin:20px;
+  line-height:1.6;
+}
+.container{
+  max-width:900px;
+  margin:auto;
+}
+h1, h2{
+  color:#2c3e50;
+}
+.btn-print{
+  display:block;
+  margin:10px 0;
+  padding:10px;
+  background:#3498db;
+  color:white;
+  border:none;
+  cursor:pointer;
+  border-radius:5px;
+}
+@media print{
+  .btn-print{
+    display:none;
+  }
+}
+svg{
+  max-width:100%;
+  height:auto;
+}
+.exercise{
+  margin-bottom:10px;
+}
+</style>
+
+<script>
+function imprimir(){
+  window.print();
+}
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</head>
+
+<body>
+<div class="container">
+
+<button class="btn-print" onclick="imprimir()">Imprimir / Guardar como PDF</button>
+
+<h1>6.4 Resolución de Problemas con Transformaciones en el Plano</h1>
+
+<h2>Explicación</h2>
+
+<p>Resolver problemas con transformaciones en el plano implica aplicar correctamente reglas algebraicas para obtener nuevas posiciones de puntos o figuras.</p>
+
+<p>Las principales transformaciones y sus reglas son:</p>
+
+<ul>
+<li><b>Traslación:</b>  
+\( T(x,y) = (x+a, y+b) \)</li>
+
+<li><b>Reflexión:</b>  
+Respecto al eje X: \( (x,y) \rightarrow (x,-y) \)  
+Respecto al eje Y: \( (x,y) \rightarrow (-x,y) \)</li>
+
+<li><b>Rotación:</b>  
+90°: \( (x,y) \rightarrow (-y,x) \)  
+180°: \( (x,y) \rightarrow (-x,-y) \)</li>
+
+<li><b>Homotecia:</b>  
+\( H(x,y) = (kx, ky) \)</li>
+</ul>
+
+<p>Para resolver problemas:</p>
+<ol>
+<li>Identificar la transformación.</li>
+<li>Aplicar la regla matemática correspondiente.</li>
+<li>Sustituir las coordenadas del punto o figura.</li>
+<li>Interpretar el resultado.</li>
+</ol>
+
+<h3>Dibujo explicativo</h3>
+
+<svg viewBox="0 0 350 200">
+
+<!-- Ejes -->
+<line x1="0" y1="100" x2="350" y2="100" stroke="black"/>
+<line x1="175" y1="0" x2="175" y2="200" stroke="black"/>
+
+<!-- Triángulo original -->
+<polygon points="120,120 150,60 180,120" fill="lightblue"/>
+<text x="120" y="140">Original</text>
+
+<!-- Triángulo trasladado -->
+<polygon points="220,140 250,80 280,140" fill="lightgreen"/>
+<text x="220" y="160">Transformado</text>
+
+</svg>
+
+<h2>Ejemplo</h2>
+
+<p>Dado el triángulo con vértices \( A(1,2), B(3,2), C(2,4) \), se aplica primero una traslación \( (x+2, y+1) \) y luego una reflexión respecto al eje X.</p>
+
+<p><b>Paso 1: Traslación</b></p>
+
+<ul>
+<li>\( A'(3,3) \)</li>
+<li>\( B'(5,3) \)</li>
+<li>\( C'(4,5) \)</li>
+</ul>
+
+<p><b>Paso 2: Reflexión eje X</b></p>
+
+<ul>
+<li>\( A''(3,-3) \)</li>
+<li>\( B''(5,-3) \)</li>
+<li>\( C''(4,-5) \)</li>
+</ul>
+
+<p><b>Resultado:</b> Nuevo triángulo transformado.</p>
+
+<h2>Ejercicios</h2>
+
+<div class="exercise">1. Aplica una traslación \( (x+3, y-2) \) al punto \( (2,5) \).</div>
+
+<div class="exercise">2. Refleja el punto \( (6,-4) \) respecto al eje Y.</div>
+
+<div class="exercise">3. Rota el punto \( (4,1) \) 90° en sentido antihorario.</div>
+
+<div class="exercise">4. Aplica homotecia con \( k=2 \) al punto \( (3,-2) \).</div>
+
+<div class="exercise">5. Un punto \( (2,3) \) se transforma en \( (-2,-3) \). ¿Qué transformación se aplicó?</div>
+
+<h2>Respuestas</h2>
+
+<ul>
+<li>1. \( (5,3) \)</li>
+<li>2. \( (-6,-4) \)</li>
+<li>3. \( (-1,4) \)</li>
+<li>4. \( (6,-4) \)</li>
+<li>5. Rotación de 180°</li>
+</ul>
+
+<h2>Videos recomendados</h2>
+
+<p>
+<a href="https://www.youtube.com/watch?v=6jU1HKGn3bY" target="_blank">
+Transformaciones geométricas paso a paso
+</a>
+</p>
+
+<p>
+<a href="https://www.youtube.com/watch?v=G7YJpFjR9eA" target="_blank">
+Cómo resolver ejercicios de transformaciones en el plano
+</a>
+</p>
+
+<h2>Referencias (APA)</h2>
+
+<p>Baldor, A. (2009). <i>Geometría plana y del espacio</i>. México: Patria.</p>
+
+<p>Stewart, J. (2012). <i>Precálculo</i>. Cengage Learning.</p>
+
+<p>Larson, R. (2013). <i>Matemáticas</i>. McGraw-Hill.</p>
+
+</div>
+</body>
+</html>

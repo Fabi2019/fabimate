@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Invariantes en Transformaciones</title>
+
+<style>
+body{
+  font-family: Arial, sans-serif;
+  margin:20px;
+  line-height:1.6;
+}
+.container{
+  max-width:900px;
+  margin:auto;
+}
+h1, h2{
+  color:#2c3e50;
+}
+.btn-print{
+  display:block;
+  margin:10px 0;
+  padding:10px;
+  background:#3498db;
+  color:white;
+  border:none;
+  cursor:pointer;
+  border-radius:5px;
+}
+@media print{
+  .btn-print{
+    display:none;
+  }
+}
+svg{
+  max-width:100%;
+  height:auto;
+}
+.exercise{
+  margin-bottom:10px;
+}
+</style>
+
+<script>
+function imprimir(){
+  window.print();
+}
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</head>
+
+<body>
+<div class="container">
+
+<button class="btn-print" onclick="imprimir()">Imprimir / Guardar como PDF</button>
+
+<h1>6.2 Invariantes en Reflexiones y Rotaciones</h1>
+
+<h2>Explicación</h2>
+
+<p>En geometría, un <b>invariante</b> es un elemento o propiedad de una figura que <b>no cambia</b> al aplicar una transformación.</p>
+
+<p>En el caso de <b>reflexiones</b> y <b>rotaciones</b>, las figuras sufren cambios de posición u orientación, pero mantienen varias características importantes:</p>
+
+<ul>
+<li><b>Longitudes:</b> Las distancias entre puntos permanecen iguales.</li>
+<li><b>Ángulos:</b> No cambian de medida.</li>
+<li><b>Forma:</b> La figura conserva su estructura (congruencia).</li>
+<li><b>Área y perímetro:</b> permanecen constantes.</li>
+<li><b>Alineación:</b> Los puntos que están alineados, continúan alineados.</li>
+</ul>
+
+<h3>Reflexión</h3>
+<p>En una reflexión respecto a un eje:</p>
+<ul>
+<li>La distancia al eje es la misma antes y después.</li>
+<li>La figura es congruente, pero cambia orientación.</li>
+</ul>
+
+<h3>Rotación</h3>
+<p>En una rotación:</p>
+<ul>
+<li>Se conserva la distancia al centro de rotación.</li>
+<li>La figura gira, pero no cambia su forma ni tamaño.</li>
+</ul>
+
+<h3>Dibujo explicativo</h3>
+
+<svg viewBox="0 0 400 200">
+
+<!-- eje -->
+<line x1="200" y1="0" x2="200" y2="200" stroke="black" stroke-dasharray="5"/>
+
+<!-- figura original -->
+<polygon points="100,150 140,50 180,150" fill="lightblue"/>
+<text x="100" y="170">Original</text>
+
+<!-- figura reflejada -->
+<polygon points="300,150 260,50 220,150" fill="lightgreen"/>
+<text x="260" y="170">Reflejada</text>
+
+</svg>
+
+<h2>Ejemplo</h2>
+
+<p>Se tiene un triángulo con vértices \( A(1,2), B(3,2), C(2,4) \).</p>
+
+<p>Se aplica una rotación de 180° respecto al origen:</p>
+
+<ul>
+<li>\( A'(-1,-2) \), \( B'(-3,-2) \), \( C'(-2,-4) \)</li>
+</ul>
+
+<p><b>Invariantes:</b></p>
+
+<ul>
+<li>Las longitudes de los lados son iguales.</li>
+<li>Los ángulos no cambian.</li>
+<li>El área del triángulo permanece igual.</li>
+</ul>
+
+<h2>Ejercicios</h2>
+
+<div class="exercise">1. Si un segmento mide 5 cm y se refleja en un eje, ¿cuánto mide después?</div>
+
+<div class="exercise">2. Al rotar un cuadrado, ¿cambia la medida de sus ángulos?</div>
+
+<div class="exercise">3. ¿Qué sucede con el área de un triángulo después de una reflexión?</div>
+
+<div class="exercise">4. En una rotación, ¿la distancia al centro cambia?</div>
+
+<div class="exercise">5. Determina si la siguiente afirmación es correcta: "La forma de la figura cambia después de una reflexión".</div>
+
+<h2>Respuestas</h2>
+
+<ul>
+<li>1. 5 cm</li>
+<li>2. No, permanecen iguales (90°)</li>
+<li>3. Permanece igual</li>
+<li>4. No, se conserva</li>
+<li>5. Falso (la forma no cambia)</li>
+</ul>
+
+<h2>Videos recomendados</h2>
+
+<p>
+<a href="https://www.youtube.com/watch?v=6jU1HKGn3bY" target="_blank">Transformaciones geométricas explicadas claramente</a>
+</p>
+
+<p>
+<a href="https://www.youtube.com/watch?v=G7YJpFjR9eA" target="_blank">Reflexión y rotación paso a paso</a>
+</p>
+
+<h2>Referencias (APA)</h2>
+
+<p>Baldor, A. (2009). <i>Geometría plana y del espacio</i>. México: Patria.</p>
+
+<p>Stewart, J. (2012). <i>Precálculo</i>. Cengage Learning.</p>
+
+<p>Larson, R. (2013). <i>Matemáticas</i>. McGraw-Hill.</p>
+
+</div>
+</body>
+</html>
