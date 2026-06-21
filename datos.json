@@ -135,6 +135,12 @@
         "nombre": "IA Gemini",
         "url": "https://www.google.com/search?q=gemini"
         }
+        , {
+        "nombre": "IA Copilot 365",
+        "url": "https://login.microsoftonline.com/common/oauth2/v2.0/authorize?client_id=4765445b-32c6-49b0-83e6-1d93765276ca&redirect_uri=https%3A%2F%2Fwww.office.com%2Flandingv2&response_type=code%20id_token&scope=openid%20profile%20https%3A%2F%2Fwww.office.com%2Fv2%2FOfficeHome.All&response_mode=form_post&nonce=639176467190982310.YTVlM2Y5YjUtZTZhZC00ODM1LTk5ZGYtMGIyMmM4Y2NkMTZjMDAzMjU2NTctNmUwOS00YTA4LTg3ZDctMzQwNjg2MDE3YzM4&ui_locales=es-US&mkt=es-US&client-request-id=b61d54df-5ab7-46e4-9378-6a3dc749e726&state=KmSi1LfUvuekRVSzwPuvjHVoSEIuS6jrHsIju7hyg3dvPuD-sBS9gxv0LkxNzDHephpPfV90GFNlaEsOLtlwoyJuj8Ms8N9eMLornC6c-LH4BR1cC_bny5lvqpxlsG3sGqfzmvmW0dDF2wtGk0D9tbiO3m07GyU-HRBDSsE5n8p5QFVfA74Wx_QCXAmjEQpFyMuUdmeM40Ko0jYMUtdaXohYNRY8QhpnFL9fbKe9cuKVQ5xCBvOdbTuda7Vk5Bj9jYDmocfSqigUT_ij2LJODf9cBLm1jsONaOCDkU8_EuQF6X9WxLXxP9PsD9ZkIpGejJrZR2iLLcxoCOliHyGAIUgkly7ABMz7lBM9iNEx-7iStBMzIBPINgoDidL8htXyzSA8edq1OaQv7Jmp3OgPSnv6hPKG5iP1-Fst9xNWO-MwdUFa_HNc2wb2Ge_5Gq-NFTXJ9pJrf7tLW3lIdAhLx4gzLB2ElNJD9WxUSErETYVjZpfT1mTWqVseQmA1rKXe&x-client-SKU=ID_NET8_0&x-client-ver=8.14.0.0"
+        }
+        
+        
 
        ]
   }
