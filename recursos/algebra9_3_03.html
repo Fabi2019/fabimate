@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ecuaciones de Segundo Grado</title>
+
+<style>
+body{
+  font-family: Arial, sans-serif;
+  margin:20px;
+  line-height:1.6;
+}
+.container{
+  max-width:900px;
+  margin:auto;
+}
+h1, h2{
+  color:#2c3e50;
+}
+.btn-print{
+  display:block;
+  margin:10px 0;
+  padding:10px;
+  background:#3498db;
+  color:white;
+  border:none;
+  cursor:pointer;
+  border-radius:5px;
+}
+@media print{
+  .btn-print{
+    display:none;
+  }
+}
+.exercise{
+  margin-bottom:10px;
+}
+</style>
+
+<script>
+function imprimir(){
+  window.print();
+}
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</head>
+
+<body>
+<div class="container">
+
+<button class="btn-print" onclick="imprimir()">Imprimir / Guardar como PDF</button>
+
+<h1>3.3 Resolver problemas con ecuaciones de segundo grado</h1>
+
+<h2>Explicación</h2>
+
+<p>Una ecuación de segundo grado (o ecuación cuadrática) tiene la forma:</p>
+
+<p>\( ax^2 + bx + c = 0 \), con \( a \neq 0 \)</p>
+
+<p>Para resolver problemas, se deben seguir estos pasos:</p>
+
+<ol>
+<li>Leer el problema cuidadosamente.</li>
+<li>Plantear una ecuación cuadrática.</li>
+<li>Resolver la ecuación usando un método adecuado.</li>
+<li>Interpretar la solución en el contexto (descartar valores no válidos).</li>
+</ol>
+
+<p><b>Métodos principales:</b></p>
+
+<ul>
+<li><b>Factorización:</b> cuando la ecuación se puede descomponer en dos factores.</li>
+<li><b>Fórmula general:</b></li>
+</ul>
+
+<p>\[
+x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}
+\]</p>
+
+<ul>
+<li><b>Completar el cuadrado:</b> método algebraico general.</li>
+</ul>
+
+<h2>Ejemplo</h2>
+
+<p>El producto de dos números consecutivos es 56. ¿Cuáles son esos números?</p>
+
+<p><b>Planteamiento:</b></p>
+
+<p>\[
+x(x+1) = 56
+\]</p>
+
+<p>\[
+x^2 + x - 56 = 0
+\]</p>
+
+<p><b>Factorizamos:</b></p>
+
+<p>\[
+(x+8)(x-7)=0
+\]</p>
+
+<p><b>Soluciones:</b></p>
+
+<p>\( x = -8 \) o \( x = 7 \)</p>
+
+<p><b>Respuesta:</b> 7 y 8 (se descarta el negativo)</p>
+
+<h2>Ejercicios</h2>
+
+<div class="exercise">1. Resolver: \( x^2 - 7x + 10 = 0 \)</div>
+
+<div class="exercise">2. Resolver: \( 3x^2 + x - 2 = 0 \)</div>
+
+<div class="exercise">3. El área de un rectángulo es 60 m². Un lado mide \( x \) y el otro \( x+5 \). Encuentra los lados.</div>
+
+<div class="exercise">4. Resolver usando fórmula general: \( x^2 + 2x - 3 = 0 \)</div>
+
+<div class="exercise">5. Un número multiplicado por sí mismo más 5 veces el número es 24. Encuentra el número.</div>
+
+<h2>Respuestas</h2>
+
+<ul>
+<li>1. \( x=5, x=2 \)</li>
+<li>2. \( x=\frac{2}{3}, x=-1 \)</li>
+<li>3. \( 5 \) y \( 12 \)</li>
+<li>4. \( x=1, x=-3 \)</li>
+<li>5. \( x=3, x=-8 \) (válido según contexto)</li>
+</ul>
+
+<h2>Videos recomendados</h2>
+
+<p>
+<a href="https://www.youtube.com/watch?v=aYkOsFHCqPM" target="_blank">
+Ecuaciones de segundo grado: introducción y métodos de solución (explicación completa)
+</a>
+</p>
+
+<p>
+<a href="https://www.youtube.com/watch?v=BxrJmKdPHRs" target="_blank">
+Resolución de ecuaciones cuadráticas con fórmula general paso a paso
+</a>
+</p>
+
+<h2>Referencias (APA)</h2>
+
+<p>Baldor, A. (2009). <i>Álgebra</i>. México: Patria.</p>
+
+<p>Larson, R. (2013). <i>Álgebra y trigonometría</i>. McGraw-Hill.</p>
+
+<p>Stewart, J. (2012). <i>Precálculo</i>. Cengage Learning.</p>
+
+</div>
+</body>
+</html>
