@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cilindro Circular Recto</title>
+
+<style>
+body{font-family:Arial, sans-serif; margin:20px; line-height:1.6;}
+.container{max-width:900px; margin:auto;}
+h1,h2{color:#2c3e50;}
+button{padding:10px 15px; background:#3498db; color:white; border:none; border-radius:5px; cursor:pointer;}
+.no-print{margin-bottom:20px;}
+svg{width:100%; max-width:400px; display:block; margin:auto;}
+@media print{
+.no-print{display:none;}
+}
+</style>
+
+<script>
+function imprimir(){
+window.print();
+}
+</script>
+
+<script>
+  window.MathJax = {
+    tex: {
+      macros: {
+        sen: "\\operatorname{sen}"
+      }
+    }
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</head>
+
+<body>
+<div class="container">
+
+<div class="no-print">
+<button onclick="imprimir()">Imprimir / Guardar en PDF</button>
+</div>
+
+<h1>Identificación de elementos de un cilindro circular recto</h1>
+
+<h2>Explicación</h2>
+
+<p>Un <b>cilindro circular recto</b> es un sólido con dos bases circulares paralelas y una superficie lateral curva.</p>
+
+<!-- ESQUEMA EN HTML SVG -->
+<svg viewBox="0 0 300 350">
+
+<!-- Base superior -->
+<ellipse cx="150" cy="60" rx="80" ry="25" fill="none" stroke="black"/>
+
+<!-- Base inferior -->
+<ellipse cx="150" cy="250" rx="80" ry="25" fill="none" stroke="black"/>
+
+<!-- Lados -->
+<line x1="70" y1="60" x2="70" y2="250" stroke="black"/>
+<line x1="230" y1="60" x2="230" y2="250" stroke="black"/>
+
+<!-- Altura -->
+<line x1="260" y1="60" x2="260" y2="250" stroke="red" stroke-dasharray="5,5"/>
+<text x="265" y="160" fill="red">h</text>
+
+<!-- Radio -->
+<line x1="150" y1="250" x2="230" y2="250" stroke="blue"/>
+<text x="180" y="245" fill="blue">r</text>
+
+<!-- Diámetro -->
+<line x1="70" y1="290" x2="230" y2="290" stroke="green"/>
+<text x="140" y="310" fill="green">d</text>
+
+<!-- Etiquetas -->
+<text x="110" y="65">Base superior</text>
+<text x="110" y="265">Base inferior</text>
+<text x="90" y="160">Superficie lateral</text>
+
+</svg>
+
+<ul>
+<li><b>Bases:</b> Dos círculos iguales y paralelos.</li>
+<li><b>Altura ($$h$$):</b> Distancia entre las bases.</li>
+<li><b>Radio ($$r$$):</b> Distancia del centro al borde.</li>
+<li><b>Diámetro ($$d$$):</b> $$ d = 2r $$</li>
+<li><b>Superficie lateral:</b> Cara curva del cilindro.</li>
+</ul>
+
+<hr>
+
+<h2>Ejemplo</h2>
+
+<p>Si $$ r = 3 \, cm $$ y $$ h = 10 \, cm $$:</p>
+
+<ul>
+<li>Radio: $$3 \, cm$$</li>
+<li>Diámetro: $$ d = 2 \cdot 3 = 6 \, cm $$</li>
+<li>Altura: $$10 \, cm$$</li>
+<li>Bases: dos círculos de radio 3 cm</li>
+<li>Superficie lateral: rectángulo de base $$2\pi r = 6\pi$$</li>
+</ul>
+
+<hr>
+
+<h2>Ejercicios</h2>
+
+<ol>
+<li>Un cilindro tiene radio $$5$$. Calcule el diámetro.</li>
+<li>Identifique la altura en el esquema.</li>
+<li>Si $$d = 8$$, determine $$r$$.</li>
+<li>¿Qué forma tiene la superficie lateral?</li>
+<li>¿Cuántas bases tiene el cilindro?</li>
+</ol>
+
+<hr>
+
+<h2>Respuestas</h2>
+
+<ol>
+<li>$$10$$</li>
+<li>Segmento vertical entre bases</li>
+<li>$$4$$</li>
+<li>Rectángulo (al desplegarse)</li>
+<li>2 bases circulares</li>
+</ol>
+
+<hr>
+
+<h2>Videos explicativos</h2>
+
+<p>
+<a href="https://www.youtube.com/watch?v=uMcjfZelijw" target="_blank">
+Ver video: ¿Qué es un cilindro?
+</a>
+</p>
+
+<p>
+<a href="https://www.youtube.com/watch?v=pWru9nbKJnQ" target="_blank">
+Ver video: Partes del cilindro
+</a>
+</p>
+
+<hr>
+
+<h2>Referencias (APA)</h2>
+
+<p>Matematix. (s.f.). Cilindro: definición y partes.</p>
+<p>Enciclopedia Iberoamericana. (2024). Cilindro.</p>
+<p>Matemáticas18. (s.f.). Cilindro y propiedades.</p>
+
+</div>
+</body>
+</html>

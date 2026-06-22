@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Secciones paralelas en el cono</title>
+
+<style>
+body{font-family:Arial, sans-serif; margin:20px; line-height:1.6;}
+.container{max-width:900px; margin:auto;}
+h1,h2{color:#2c3e50;}
+button{padding:10px 15px; background:#3498db; color:white; border:none; border-radius:5px; cursor:pointer;}
+.no-print{margin-bottom:20px;}
+svg{width:100%; max-width:420px; display:block; margin:auto;}
+@media print{
+.no-print{display:none;}
+}
+</style>
+
+<script>
+function imprimir(){
+window.print();
+}
+</script>
+
+<script>
+window.MathJax = {
+tex: {
+macros: { sen: "\\operatorname{sen}" }
+}
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</head>
+
+<body>
+<div class="container">
+
+<div class="no-print">
+<button onclick="imprimir()">Imprimir / Guardar en PDF</button>
+</div>
+
+<h1>7.5 Secciones paralelas a la base en un cono</h1>
+
+<h2>Explicación</h2>
+
+<p>Cuando un cono circular recto se corta con un plano <b>paralelo a la base</b>, se obtiene siempre un <b>círculo</b>.</p>
+
+<p>Además, se forman dos sólidos:</p>
+<ul>
+<li>Un cono pequeño (similar al original)</li>
+<li>Un tronco de cono</li>
+</ul>
+
+<!-- DIBUJO -->
+<svg viewBox="0 0 300 320">
+
+<!-- cono -->
+<ellipse cx="150" cy="260" rx="90" ry="25" fill="none" stroke="black"/>
+<line x1="60" y1="260" x2="150" y2="40" stroke="black"/>
+<line x1="240" y1="260" x2="150" y2="40" stroke="black"/>
+
+<!-- corte -->
+<line x1="80" y1="180" x2="220" y2="180" stroke="red" stroke-width="2"/>
+<text x="95" y="170" fill="red">círculo</text>
+
+<!-- cono pequeño -->
+<line x1="100" y1="180" x2="150" y2="40" stroke="blue"/>
+<line x1="200" y1="180" x2="150" y2="40" stroke="blue"/>
+<text x="110" y="100" fill="blue">cono similar</text>
+
+</svg>
+
+<h3>Propiedad fundamental (semejanza)</h3>
+
+<p>Los radios y alturas son proporcionales:</p>
+
+$$
+\frac{r_1}{r_2} = \frac{h_1}{h_2}
+$$
+
+<p>Donde:</p>
+<ul>
+<li>$$r_1$$: radio del cono pequeño</li>
+<li>$$r_2$$: radio del cono original</li>
+<li>$$h_1$$: altura del cono pequeño</li>
+<li>$$h_2$$: altura total</li>
+</ul>
+
+<hr>
+
+<h2>Ejemplo</h2>
+
+<p>Un cono tiene altura $$10$$ cm y radio $$6$$ cm. Se realiza un corte paralelo a la base a $$5$$ cm del vértice.</p>
+
+<p><b>Paso 1:</b> Usar proporcionalidad</p>
+
+$$
+\frac{r_1}{6} = \frac{5}{10}
+$$
+
+$$
+\frac{r_1}{6} = \frac{1}{2}
+$$
+
+$$
+r_1 = 3 \, cm
+$$
+
+<p><b>Resultado:</b> el radio del círculo es $$3$$ cm.</p>
+
+<hr>
+
+<h2>Ejercicios</h2>
+
+<ol>
+<li>Un cono de altura 12 cm y radio 8 cm se corta a 6 cm. Encuentre el radio.</li>
+<li>Un cono tiene $$r=10$$ y $$h=20$$. Se corta a $$h=5$$. Determine el nuevo radio.</li>
+<li>¿Qué figura se obtiene siempre en este tipo de corte?</li>
+<li>¿Qué propiedad geométrica se utiliza?</li>
+<li>Si $$r_2=12$$, $$h_2=24$$, $$h_1=6$$, calcule $$r_1$$.</li>
+</ol>
+
+<hr>
+
+<h2>Respuestas</h2>
+
+<ol>
+<li>$$4$$</li>
+<li>$$2.5$$</li>
+<li>Círculo</li>
+<li>Semejanza de triángulos</li>
+<li>$$3$$</li>
+</ol>
+
+<hr>
+
+<h2>Videos explicativos</h2>
+
+<p>
+<a href="https://www.youtube.com/watch?v=xt-VaqLNFJs" target="_blank">
+Cono circular recto y proporcionalidad
+</a>
+</p>
+
+<p>
+<a href="https://www.youtube.com/watch?v=jmO7IPf3wWc" target="_blank">
+Elementos del cono explicados
+</a>
+</p>
+
+<hr>
+
+<h2>Referencias (APA)</h2>
+
+<p>Baldor, A. (2004). Geometría y trigonometría. Publicaciones Cultural.</p>
+<p>Larson, R., & Edwards, B. (2010). Geometría. Cengage Learning.</p>
+
+</div>
+</body>
+</html>

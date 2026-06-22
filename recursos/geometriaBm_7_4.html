@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Secciones planas del cono</title>
+
+<style>
+body{font-family:Arial, sans-serif; margin:20px; line-height:1.6;}
+.container{max-width:900px; margin:auto;}
+h1,h2{color:#2c3e50;}
+button{padding:10px 15px; background:#3498db; color:white; border:none; border-radius:5px; cursor:pointer;}
+.no-print{margin-bottom:20px;}
+svg{width:100%; max-width:420px; display:block; margin:auto;}
+@media print{
+.no-print{display:none;}
+}
+</style>
+
+<script>
+function imprimir(){
+window.print();
+}
+</script>
+
+<script>
+window.MathJax = {
+tex: {
+macros: { sen: "\\operatorname{sen}" }
+}
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</head>
+
+<body>
+<div class="container">
+
+<div class="no-print">
+<button onclick="imprimir()">Imprimir / Guardar en PDF</button>
+</div>
+
+<h1>7.4 Secciones planas de un cono circular recto</h1>
+
+<h2>Explicación</h2>
+
+<p>Al cortar un cono con un plano se obtienen diferentes figuras dependiendo de la posición del plano.</p>
+
+<h3>Tipos de secciones</h3>
+
+<ul>
+<li><b>Corte paralelo a la base:</b> círculo</li>
+<li><b>Corte que pasa por el vértice:</b> triángulo</li>
+<li><b>Corte inclinado:</b> elipse</li>
+</ul>
+
+<!-- DIBUJO CONO CON CORTE -->
+<h3>1. Corte paralelo (círculo)</h3>
+
+<svg viewBox="0 0 300 320">
+
+<ellipse cx="150" cy="260" rx="90" ry="25" fill="none" stroke="black"/>
+<line x1="60" y1="260" x2="150" y2="40" stroke="black"/>
+<line x1="240" y1="260" x2="150" y2="40" stroke="black"/>
+
+<!-- plano -->
+<line x1="80" y1="180" x2="220" y2="180" stroke="red" stroke-width="2"/>
+<text x="90" y="170" fill="red">círculo</text>
+
+</svg>
+
+<h3>2. Corte por el vértice (triángulo)</h3>
+
+<svg viewBox="0 0 300 320">
+
+<ellipse cx="150" cy="260" rx="90" ry="25" fill="none" stroke="black"/>
+<line x1="60" y1="260" x2="150" y2="40" stroke="black"/>
+<line x1="240" y1="260" x2="150" y2="40" stroke="black"/>
+
+<!-- plano -->
+<line x1="60" y1="260" x2="240" y2="260" stroke="transparent"/>
+<line x1="150" y1="40" x2="150" y2="260" stroke="red"/>
+<text x="160" y="150" fill="red">triángulo</text>
+
+</svg>
+
+<h3>3. Corte inclinado (elipse)</h3>
+
+<svg viewBox="0 0 300 320">
+
+<ellipse cx="150" cy="260" rx="90" ry="25" fill="none" stroke="black"/>
+<line x1="60" y1="260" x2="150" y2="40" stroke="black"/>
+<line x1="240" y1="260" x2="150" y2="40" stroke="black"/>
+
+<!-- plano inclinado -->
+<line x1="100" y1="200" x2="230" y2="120" stroke="red" stroke-width="2"/>
+<text x="170" y="110" fill="red">elipse</text>
+
+</svg>
+
+<h3>Características métricas</h3>
+
+<ul>
+<li>Círculo: $$ A = \pi r^2 $$</li>
+<li>Triángulo: $$ A = \frac{base \cdot altura}{2} $$</li>
+<li>Elipse: $$ A = \pi a \cdot b $$</li>
+</ul>
+
+<hr>
+
+<h2>Ejemplo</h2>
+
+<p>Un cono de radio $$4$$ cm es cortado paralelo a la base:</p>
+
+<ul>
+<li>Figura: círculo</li>
+<li>Área: $$ A = 16\pi $$</li>
+</ul>
+
+<hr>
+
+<h2>Ejercicios</h2>
+
+<ol>
+<li>¿Qué figura se obtiene en un corte paralelo?</li>
+<li>¿Qué figura se obtiene si el plano pasa por el vértice?</li>
+<li>¿Qué figura se obtiene en un corte inclinado?</li>
+<li>Calcule el área de un círculo de radio 3.</li>
+<li>Calcule el área de un triángulo de base 6 y altura 4.</li>
+</ol>
+
+<hr>
+
+<h2>Respuestas</h2>
+
+<ol>
+<li>Círculo</li>
+<li>Triángulo</li>
+<li>Elipse</li>
+<li>$$9\pi$$</li>
+<li>$$12$$</li>
+</ol>
+
+<hr>
+
+<h2>Videos explicativos</h2>
+
+<p>
+<a href="https://www.youtube.com/watch?v=zKqWkL5F5Go" target="_blank">
+Secciones (figuras obtenidas al cortar sólidos)
+</a>
+</p>
+
+<p>
+<a href="https://www.youtube.com/watch?v=xt-VaqLNFJs" target="_blank">
+Cono circular recto y sus cortes
+</a>
+</p>
+
+<hr>
+
+<h2>Referencias (APA)</h2>
+
+<p>Baldor, A. (2004). Geometría y trigonometría. Publicaciones Cultural.</p>
+<p>Larson, R., & Edwards, B. (2010). Geometría. Cengage Learning.</p>
+
+</div>
+</body>
+</html>

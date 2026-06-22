@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cono circular recto</title>
+
+<style>
+body{font-family:Arial, sans-serif; margin:20px; line-height:1.6;}
+.container{max-width:900px; margin:auto;}
+h1,h2{color:#2c3e50;}
+button{padding:10px 15px; background:#3498db; color:white; border:none; border-radius:5px; cursor:pointer;}
+.no-print{margin-bottom:20px;}
+svg{width:100%; max-width:420px; display:block; margin:auto;}
+@media print{
+.no-print{display:none;}
+}
+</style>
+
+<script>
+function imprimir(){
+window.print();
+}
+</script>
+
+<script>
+window.MathJax = {
+tex: {
+macros: { sen: "\\operatorname{sen}" }
+}
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</head>
+
+<body>
+<div class="container">
+
+<div class="no-print">
+<button onclick="imprimir()">Imprimir / Guardar en PDF</button>
+</div>
+
+<h1>7.3 Elementos del cono circular recto</h1>
+
+<h2>Explicación</h2>
+
+<p>Un <b>cono circular recto</b> es un cuerpo geométrico que tiene una base circular y un punto llamado vértice.</p>
+
+<!-- DIBUJO CONO -->
+<svg viewBox="0 0 300 320">
+
+<!-- base -->
+<ellipse cx="150" cy="260" rx="90" ry="25" fill="none" stroke="black"/>
+
+<!-- lados -->
+<line x1="60" y1="260" x2="150" y2="40" stroke="black"/>
+<line x1="240" y1="260" x2="150" y2="40" stroke="black"/>
+
+<!-- vértice -->
+<circle cx="150" cy="40" r="3" fill="black"/>
+<text x="155" y="35">Vértice</text>
+
+<!-- radio -->
+<line x1="150" y1="260" x2="240" y2="260" stroke="blue"/>
+<text x="185" y="280" fill="blue">r</text>
+
+<!-- diámetro -->
+<line x1="60" y1="290" x2="240" y2="290" stroke="green"/>
+<text x="140" y="310" fill="green">d</text>
+
+<!-- altura -->
+<line x1="150" y1="40" x2="150" y2="260" stroke="red" stroke-dasharray="5,5"/>
+<text x="155" y="150" fill="red">h</text>
+
+<!-- superficie lateral -->
+<text x="73" y="170">Superficie lateral</text>
+
+</svg>
+
+<ul>
+<li><b>Base:</b> círculo en la parte inferior.</li>
+<li><b>Radio (r):</b> distancia del centro al borde de la base.</li>
+<li><b>Diámetro (d):</b> $$ d = 2r $$</li>
+<li><b>Altura (h):</b> distancia vertical del vértice al centro de la base.</li>
+<li><b>Vértice:</b> punto superior del cono.</li>
+<li><b>Superficie lateral:</b> superficie curva que une la base con el vértice.</li>
+</ul>
+
+<hr>
+
+<h2>Ejemplo</h2>
+
+<p>Un cono tiene radio $$ r = 4 \, cm $$ y altura $$ h = 9 \, cm $$:</p>
+
+<ul>
+<li>Radio: $$4$$</li>
+<li>Diámetro: $$ d = 8 $$</li>
+<li>Altura: $$9$$</li>
+<li>Base: círculo de radio 4</li>
+<li>Vértice: punto superior</li>
+</ul>
+
+<hr>
+
+<h2>Ejercicios</h2>
+
+<ol>
+<li>Si $$ r = 5 $$, determine el diámetro.</li>
+<li>Identifique la altura en el dibujo.</li>
+<li>¿Dónde se ubica el vértice?</li>
+<li>¿Qué forma tiene la base?</li>
+<li>¿Qué tipo de superficie es la lateral?</li>
+</ol>
+
+<hr>
+
+<h2>Respuestas</h2>
+
+<ol>
+<li>$$10$$</li>
+<li>Segmento vertical del vértice al centro</li>
+<li>En la parte superior</li>
+<li>Círculo</li>
+<li>Curva</li>
+</ol>
+
+<hr>
+
+<h2>Videos explicativos</h2>
+
+<p>
+<a href="https://www.youtube.com/watch?v=jmO7IPf3wWc" target="_blank">
+Elementos del cono: vértice, altura, radio y diámetro (explicación clara)
+</a>
+</p>
+
+<p>
+<a href="https://www.youtube.com/watch?v=xt-VaqLNFJs" target="_blank">
+Cono circular recto: explicación completa con ejemplos
+</a>
+</p>
+
+
+<hr>
+
+<h2>Referencias (APA)</h2>
+
+<p>Baldor, A. (2004). Geometría y trigonometría. Publicaciones Cultural.</p>
+<p>Larson, R., & Edwards, B. (2010). Geometría. Cengage Learning.</p>
+
+</div>
+</body>
+</html>
