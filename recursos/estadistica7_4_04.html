@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>4.4 Medidas Estadísticas</title>
+
+<style>
+body{font-family:Arial, sans-serif; margin:20px; line-height:1.6;}
+h1,h2{color:#2c3e50;}
+.container{max-width:900px; margin:auto;}
+button{padding:10px 15px; background:#2c3e50; color:white; border:none; border-radius:8px;}
+.card{background:#f4f6f7; padding:15px; border-radius:12px; margin:10px 0;}
+table{border-collapse:collapse; width:100%; margin-top:10px;}
+th,td{border:1px solid #ccc; padding:8px; text-align:center;}
+@media print{
+  button{display:none;}
+}
+</style>
+
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+<script>
+function imprimir(){
+  window.print();
+}
+</script>
+
+</head>
+
+<body>
+<div class="container">
+
+<button onclick="imprimir()">Imprimir / Guardar PDF</button>
+
+<h1>4.4 Medidas Estadísticas de Resumen</h1>
+
+<h2>Explicación</h2>
+
+<p>Las medidas estadísticas permiten resumir y describir un conjunto de datos.</p>
+
+<div class="card">
+<strong>Medidas de posición:</strong>
+<ul>
+<li><strong>Media aritmética:</strong> promedio de los datos
+<br>\[\bar{x}=\frac{x_1+x_2+\cdots+x_n}{n}\]</li>
+
+<li><strong>Moda:</strong> valor que más se repite</li>
+
+<li><strong>Mínimo:</strong> menor valor del conjunto</li>
+
+<li><strong>Máximo:</strong> mayor valor del conjunto</li>
+
+<li><strong>Recorrido:</strong>
+\[
+\text{Recorrido} = \text{Máximo} - \text{Mínimo}
+\]
+</li>
+</ul>
+</div>
+
+<div class="card">
+<strong>Representación tabular:</strong>
+<p>Se utilizan <strong>tablas de frecuencia</strong>:</p>
+<ul>
+<li>Frecuencia absoluta (\(f\))</li>
+<li>Frecuencia porcentual (\(\%\))</li>
+</ul>
+</div>
+
+<hr>
+
+<h2>Ejemplo</h2>
+
+<p>Datos: \(2, 3, 3, 4, 5\)</p>
+
+<h3>1. Tabla de frecuencia</h3>
+
+<table>
+<tr>
+<th>Dato</th>
+<th>Frecuencia (f)</th>
+<th>Porcentaje</th>
+</tr>
+<tr><td>2</td><td>1</td><td>20%</td></tr>
+<tr><td>3</td><td>2</td><td>40%</td></tr>
+<tr><td>4</td><td>1</td><td>20%</td></tr>
+<tr><td>5</td><td>1</td><td>20%</td></tr>
+</table>
+
+<h3>2. Cálculo de medidas</h3>
+
+<p><strong>Media:</strong></p>
+<p>\[
+\bar{x}=\frac{2+3+3+4+5}{5}=\frac{17}{5}=3.4
+\]</p>
+
+<ul>
+<li><strong>Moda:</strong> 3</li>
+<li><strong>Mínimo:</strong> 2</li>
+<li><strong>Máximo:</strong> 5</li>
+</ul>
+
+<p><strong>Recorrido:</strong></p>
+<p>\[
+5 - 2 = 3
+\]</p>
+
+<hr>
+
+<h2>Ejercicios</h2>
+
+<ol>
+<li>Calcular media, moda, máximo y mínimo de: \(4, 4, 6, 8\)</li>
+<li>Hacer tabla de frecuencia de: \(1,1,2,3,3,3\)</li>
+<li>Calcular recorrido de: \(10, 15, 20\)</li>
+<li>Determinar la moda de: \(7,7,8,9\)</li>
+<li>Calcular la media de: \(2,4,6,8\)</li>
+</ol>
+
+<hr>
+
+<h2>Respuestas</h2>
+
+<ol>
+<li>Media: 5.5, Moda: 4, Máx: 8, Mín: 4</li>
+<li>
+Frecuencias: 1→2, 2→1, 3→3
+</li>
+<li>Recorrido: \(20-10=10\)</li>
+<li>Moda: 7</li>
+<li>Media: \(\frac{20}{4}=5\)</li>
+</ol>
+
+<hr>
+
+<h2>Videos explicativos</h2>
+
+<div>
+<a href="https://www.youtube.com/watch?v=kQ4WE9NLy28" target="_blank">
+▶ Media, moda y rango (explicación completa)
+</a>
+<p>Explica cómo calcular media, moda y recorrido con ejemplos paso a paso.</p>
+</div>
+
+<div>
+<a href="https://www.youtube.com/watch?v=JtB2w0QLRZ4" target="_blank">
+▶ Tablas de frecuencia y medidas estadísticas
+</a>
+<p>Desarrolla la construcción de tablas de frecuencia y el análisis de datos.</p>
+</div>
+
+<hr>
+
+<h2>Referencias (APA)</h2>
+
+<p>
+Triola, M. F. (2018). <em>Estadística</em>. Pearson.<br>
+Walpole, R. (2012). <em>Probabilidad y estadística</em>. Pearson.<br>
+Spiegel, M. (2009). <em>Estadística</em>. McGraw-Hill.
+</p>
+
+</div>
+</body>
+</html>
