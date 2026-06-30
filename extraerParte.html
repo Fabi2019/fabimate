@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Información Importada</title>
+    <style>
+        /* Estilos básicos para que se vea limpio */
+        body { font-family: Arial, sans-serif; margin: 40px; background-color: #f4f4f9; }
+        .contenedor { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+        .cargando { color: #666; font-style: italic; }
+    </style>
+</head>
+<body>
+
+    <div class="contenedor">
+        <h2>Contenido desde la web externa:</h2>
+        <!-- Aquí se inyectará el contenido automáticamente -->
+        <div id="contenido-externo" class="cargando">Cargando información desde la página web...</div>
+    </div>
+
+    <script>
+        // CONFIGURACIÓN: Pon aquí tus datos reales
+        const URL_OBJETIVO = 'https://dgec.mep.go.cr/iii-ciclo/#ui-id-10'; // <-- Cambia por tu URL
+        const ID_OBJETIVO = 'ui-id-10';                     // <-- Cambia por tu ID
+
+        // Función que se ejecuta automáticamente al abrir la página
+        async function cargarContenidoExterno() {
+            const contenedorDestino = document.getElementById('contenido-externo');
+            
+            // Usamos un proxy para saltar la restricción de seguridad CORS del navegador
+            const urlConProxy = `https://allorigins.win{encodeURIComponent(URL_OBJETIVO)}`;
+
+            try {
+                const respuesta = await fetch(urlConProxy);
+                if (!respuesta.ok) throw new Error('Error en la red');
+                
+                const datos = await respuesta.json();
+                
+                // Convertimos el texto HTML recibido en un documento que JS pueda leer
+                const parser = new DOMParser();
+                const documentoVirtual = parser.parseFromString(datos.contents, 'text/html');
+                
+                // Buscamos el ID que configuraste
+                const elementoExtraido = documentoVirtual.getElementById(ID_OBJETIVO);
+
+                if (elementoExtraido) {
+                    // Quitamos la clase de cargando e inyectamos el contenido
+                    contenedorDestino.classList.remove('cargando');
+                    contenedorDestino.innerHTML = elementoExtraido.innerHTML;
+                } else {
+                    contenedorDestino.innerHTML = `<span style="color:red;">Error: No se encontró el ID "${ID_OBJETIVO}" en la página de origen.</span>`;
+                }
+
+            } catch (error) {
+                console.error('Error al extraer:', error);
+                contenedorDestino.innerHTML = '<span style="color:red;">Error al conectar con la página externa o el proxy.</span>';
+            }
+        }
+
+        // Llamamos a la función inmediatamente al abrir la web
+        cargarContenidoExterno();
+    </script>
+
+</body>
+</html>
