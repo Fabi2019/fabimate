@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Extractor de Contenido</title>
+</head>
+<body>
+
+    <h1>Contenido Extraído:</h1>
+    
+    <!-- Aquí se mostrará la información de la otra página -->
+    <div id="contenedor-destino">Cargando información...</div>
+
+    <script>
+        // Configuración
+        const urlObjetivo = 'https://dgec.mep.go.cr/iii-ciclo/'; // La web que quieres leer
+        const idObjetivo = 'ui-id-10'; // El ID del elemento que quieres traer
+        
+        // Usamos un proxy gratuito para evitar el bloqueo CORS
+        const urlConProxy = `https://allorigins.win{encodeURIComponent(urlObjetivo)}`;
+
+        // Función para obtener y parsear la web
+        async function obtenerContenido() {
+            try {
+                const respuesta = await fetch(urlConProxy);
+                const datos = await respuesta.json();
+                
+                // Convertir el texto de la respuesta en HTML manipulable
+                const parser = new DOMParser();
+                const documentoClonado = parser.parseFromString(datos.contents, 'text/html');
+                
+                // Buscar el elemento por su ID
+                const elementoExtraido = documentoClonado.getElementById(idObjetivo);
+
+                if (elementoExtraido) {
+                    // Insertar el contenido en tu página
+                    document.getElementById('contenedor-destino').innerHTML = elementoExtraido.innerHTML;
+                } else {
+                    document.getElementById('contenedor-destino').innerText = 'No se encontró el ID en la página de origen.';
+                }
+            } catch (error) {
+                console.error('Error:', error);
+                document.getElementById('contenedor-destino').innerText = 'Error al cargar la información.';
+            }
+        }
+
+        // Ejecutar la función al cargar la página
+        obtenerContenido();
+    </script>
+
+</body>
+</html>
