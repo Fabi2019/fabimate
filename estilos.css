@@ -58,6 +58,10 @@ nav h1 { font-size: 1.3rem; margin: 0 0 20px 0; text-align: center; }
     transition: 0.3s;
     text-align: left;
 }
+.visible{
+    background: var(--primary); 
+    margin: 10px;
+}
 
 .btn-menu:hover { background: var(--accent); }
 

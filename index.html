@@ -23,14 +23,8 @@
 
     <nav>
         <h1 id="titulo-web">...</h1>
-        <div id="menu-dinamico">
-            
+        <div id="menu-dinamico">            
             </div>
-        <!--   
-  <a href="index.html">Inicio</a>
-  <a href="bitacora.html">Bitácora de Labores</a> 
-            -->
-
     </nav>
 
     <main id="contenido-principal">
@@ -42,7 +36,7 @@
     </div>
         <section id="caracteristicas-secundarias">
             <h2>Acceso rápido a avisos</h2>
-                    <div class="contenedor-avisos">                  
+                    <div id="contenedor-avisos" >                  
                     </div>
         </section>
     </main>
@@ -81,16 +75,19 @@
                 datosGlobales = await respuesta.json();
 
                 // 2. Crear los botones del menú dinámicamente
-                const contenedorAviso = document.getElementById('contenedorMenu');
-                datosGlobales.configuracion.avisomep.forEach(item => {
-                    if(item.nombre.indexOf("Fechas")!= 0){
+                const contenedorAviso = document.getElementById('contenedor-avisos');
+                datosGlobales.avisomep.forEach(item => {
+                    console.log(item.nombre)
+                    if(item.nombre.includes("Fechas")){
                         const boton = document.createElement('button');
-                        boton.className = 'btn-menu';
+                        //(boton.className = 'btn-menu visible';
+                        boton.classList.add('btn-menu', 'visible');
+
                         boton.innerText = item.nombre;
                         // Al hacer clic, carga la categoría correspondiente
-                        boton.onclick = () => {};
+                        boton.onclick = () => {window.open(item.url, '_blank');};
                         contenedorAviso.appendChild(boton);
-                }
+                    }
 
                 });
 
@@ -115,6 +112,7 @@
 
         // Arrancamos la carga al abrir la página
         inicializarPagina();
+        inicializarAvisos();
     </script>
 </body>
 </html>
