@@ -14,14 +14,14 @@
     <meta charset="UTF-8">
     <title>Contenido Extraído </title>  <!--- ${idBuscado} -->
     <style>
-        body { font-family: sans-serif; margin: 30px; background: #f9f9f9; color: #333; }
+        body { font-family: sans-serif; margin: 30px; background: #f9f9f9; color: #333;text-align:center; }
         .box { background: white; padding: 25px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
         h2 { color: #0066cc; margin-top: 0; }
     </style>
 </head>
 <body>
     <div class="box">
-        <h2>Contenido extraído del ID: ${idBuscado}</h2>
+        <h2 id="titulo">Contenido extraído</h2> <!-- del ID: ${idBuscado} -->
         <div id="contenido-recuperado">
             ${elemento.innerHTML}
         </div>
@@ -32,6 +32,9 @@
     // 2. Convertimos el texto en un archivo descargable (Blob)
     const blob = new Blob([contenidoHTML], { type: 'text/html' });
     const url = URL.createObjectURL(blob);
+
+    //const titulo= document.querySelector("titulo"); 
+    //titulo= elemento.innerHTML;
 
     // 3. Creamos un enlace invisible para forzar la descarga en tu Ubuntu
     const enlaceDescarga = document.createElement('a');
