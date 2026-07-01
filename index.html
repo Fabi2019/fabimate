@@ -40,6 +40,11 @@
         <div class="contenedor-imagen">
         <img src="horario.jpeg" alt="Descripción de la imagen">
     </div>
+        <section id="caracteristicas-secundarias">
+            <h2>Acceso rápido a avisos</h2>
+                    <div class="contenedor-avisos">                  
+                    </div>
+        </section>
     </main>
 
     <script>
@@ -63,6 +68,30 @@
                     // Al hacer clic, carga la categoría correspondiente
                     boton.onclick = () => mostrarContenido(item.clave, item.texto);
                     contenedorMenu.appendChild(boton);
+                });
+
+            } catch (e) {
+                console.error("Error inicializando:", e);
+            }
+        }
+
+        async function inicializarAvisos() {
+            try {
+                const respuesta = await fetch('datos.json');
+                datosGlobales = await respuesta.json();
+
+                // 2. Crear los botones del menú dinámicamente
+                const contenedorAviso = document.getElementById('contenedorMenu');
+                datosGlobales.configuracion.avisomep.forEach(item => {
+                    if(item.nombre.indexOf("Fechas")!= 0){
+                        const boton = document.createElement('button');
+                        boton.className = 'btn-menu';
+                        boton.innerText = item.nombre;
+                        // Al hacer clic, carga la categoría correspondiente
+                        boton.onclick = () => {};
+                        contenedorAviso.appendChild(boton);
+                }
+
                 });
 
             } catch (e) {
