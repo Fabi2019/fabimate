@@ -48,7 +48,7 @@
             try {
                 logStatus('Buscando dispositivo...');
                 device = await navigator.bluetooth.requestDevice({
-                    filters: [{ name: 'ESP32_LED' }], // Filtra por nombre
+                    acceptAllDevices: true, //filters: [{ name: 'ESP32_LED' }], // Filtra por nombre
                     optionalServices: [SERVICE_UUID]
                 });
 
