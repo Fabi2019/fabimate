@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Control LED ESP32-C3</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; margin-top: 50px; }
+        button { font-size: 20px; padding: 15px 30px; margin: 10px; cursor: pointer; }
+        #onBtn { background-color: #4CAF50; color: white; border: none; border-radius: 5px; }
+        #offBtn { background-color: #f44336; color: white; border: none; border-radius: 5px; }
+        #status { margin-top: 20px; font-weight: bold; }
+        #connectBtn { font-size: 16px; padding: 10px 20px; margin-bottom: 20px; }
+    </style>
+</head>
+<body>
+
+    <h1>Control de LED por Bluetooth</h1>
+    <button id="connectBtn">Conectar al ESP32-C3</button>
+    <div>
+        <button id="onBtn">Encender LED (1)</button>
+        <button id="offBtn">Apagar LED (0)</button>
+    </div>
+    <p id="status">Desconectado</p>
+
+    <script>
+        // --- Configuración BLE ---
+        // IMPORTANTE: Estos UUIDs deben coincidir exactamente con los del código del ESP32
+        const SERVICE_UUID = '6E400001-B5A3-F393-E0A9-E50E24DCCA9E;
+        const CHARACTERISTIC_UUID = '6E400002-B5A3-F393-E0A9-E50E24DCCA9E';
+
+        let device = null;
+        let characteristic = null;
+        const statusP = document.getElementById('status');
+
+        function logStatus(msg, isError = false) {
+            statusP.textContent = msg;
+            statusP.style.color = isError ? 'red' : 'black';
+        }
+
+        // --- Función para conectar ---
+        async function connect() {
+            // 1. Verificar si el navegador soporta Bluetooth
+            if (!navigator.bluetooth) {
+                logStatus('❌ Este navegador NO soporta Web Bluetooth. Usa Chrome/Edge.', true);
+                return;
+            }
+            try {
+                logStatus('Buscando dispositivo...');
+                device = await navigator.bluetooth.requestDevice({
+                    filters: [{ name: 'ESP32_LED' }], // Filtra por nombre
+                    optionalServices: [SERVICE_UUID]
+                });
+
+                logStatus('Conectando...');
+                const server = await device.gatt.connect();
+                const service = await server.getPrimaryService(SERVICE_UUID);
+                characteristic = await service.getCharacteristic(CHARACTERISTIC_UUID);
+
+                logStatus('✅ Conectado al ESP32-C3');
+            } catch (error) {
+                logStatus('❌ Error: ' + error.message, true);
+                console.error(error);
+            }
+        }
+
+        // --- Función para enviar datos ---
+        async function sendData(value) {
+            if (!characteristic) {
+                logStatus('❌ No conectado. Conecta primero.', true);
+                return;
+            }
+            try {
+                const encoder = new TextEncoder();
+                await characteristic.writeValue(encoder.encode(value));
+                logStatus(`✅ Comando enviado: ${value}`);
+            } catch (error) {
+                logStatus('❌ Error al enviar: ' + error.message, true);
+                console.error(error);
+            }
+        }
+
+        // --- Asignar eventos a los botones ---
+        document.getElementById('connectBtn').addEventListener('click', connect);
+        document.getElementById('onBtn').addEventListener('click', () => sendData('1'));
+        document.getElementById('offBtn').addEventListener('click', () => sendData('0'));
+    </script>
+</body>
+</html>
