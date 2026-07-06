@@ -41,6 +41,7 @@
         // --- Función para conectar ---
         async function connect() {
             // 1. Verificar si el navegador soporta Bluetooth
+             alert('El botón funciona');
             if (!navigator.bluetooth) {
                 logStatus('❌ Este navegador NO soporta Web Bluetooth. Usa Chrome/Edge.', true);
                 return;
