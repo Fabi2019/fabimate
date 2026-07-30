@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Análisis de una Función a partir de sus Representaciones</title>
+
+<script>
+window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    displayMath: [['\\[','\\]']]
+  }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+<style>
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background:#f4f6f8;
+    margin:0;
+    padding:0;
+    line-height:1.6;
+    color:#222;
+}
+
+.container{
+    max-width:900px;
+    margin:auto;
+    background:white;
+    padding:20px;
+}
+
+h1,h2,h3{
+    color:#0b5394;
+}
+
+.print-btn{
+    display:block;
+    margin:15px auto;
+    padding:12px 24px;
+    border:none;
+    border-radius:6px;
+    background:#0b5394;
+    color:white;
+    cursor:pointer;
+    font-size:16px;
+}
+
+.print-btn:hover{
+    background:#073763;
+}
+
+.ejemplo,
+.ejercicio{
+    background:#eef6ff;
+    border-left:5px solid #0b5394;
+    padding:12px;
+    margin:15px 0;
+}
+
+.respuestas{
+    background:#edf8ed;
+    border-left:5px solid #38761d;
+    padding:12px;
+    margin-top:20px;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    margin-top:10px;
+}
+
+table,th,td{
+    border:1px solid #444;
+}
+
+th,td{
+    padding:8px;
+    text-align:center;
+}
+
+.video{
+    background:#f8f8f8;
+    padding:12px;
+    border-radius:8px;
+    margin:12px 0;
+}
+
+svg{
+    max-width:100%;
+    height:auto;
+}
+
+a{
+    color:#0b5394;
+    word-break:break-word;
+}
+
+@media print{
+    .print-btn{
+        display:none;
+    }
+
+    @page{
+        size:letter;
+        margin:1.5cm;
+    }
+
+    body{
+        background:white;
+    }
+
+    .container{
+        max-width:100%;
+    }
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<button class="print-btn" onclick="window.print()">
+Imprimir / Guardar PDF
+</button>
+
+<h1>Analiza una Función a partir de sus Representaciones en Diversos Contextos</h1>
+
+<h2>Explicación</h2>
+
+<p>
+Analizar una función significa estudiar sus características utilizando
+sus diferentes representaciones: tabla de valores, expresión algebraica
+y gráfica.
+</p>
+
+<p>
+Al analizar una función podemos determinar:
+</p>
+
+<ul>
+<li>Dominio.</li>
+<li>Rango o recorrido.</li>
+<li>Interceptos con los ejes.</li>
+<li>Crecimiento o decrecimiento.</li>
+<li>Máximos y mínimos.</li>
+<li>Comportamiento de la gráfica.</li>
+<li>Interpretación en contextos reales.</li>
+</ul>
+
+<p>
+Por ejemplo, una función puede representar la temperatura durante el día,
+las ganancias de una empresa o la distancia recorrida por un vehículo.
+</p>
+
+<h2>Ejemplo Resuelto</h2>
+
+<div class="ejemplo">
+
+<p><strong>Representación tabular</strong></p>
+
+<table>
+<tr>
+<th>x</th>
+<th>f(x)</th>
+</tr>
+
+<tr>
+<td>0</td>
+<td>1</td>
+</tr>
+
+<tr>
+<td>1</td>
+<td>3</td>
+</tr>
+
+<tr>
+<td>2</td>
+<td>5</td>
+</tr>
+
+<tr>
+<td>3</td>
+<td>7</td>
+</tr>
+
+</table>
+
+<p><strong>Análisis:</strong></p>
+
+<ul>
+<li>Dominio: \(\{0,1,2,3\}\)</li>
+<li>Rango: \(\{1,3,5,7\}\)</li>
+<li>Intercepto con eje \(y\): 1</li>
+<li>La función es creciente.</li>
+<li>El mayor valor observado es 7.</li>
+</ul>
+
+</div>
+
+<h2>Ejercicios</h2>
+
+<div class="ejercicio">
+
+<h3>Ejercicio 1</h3>
+
+<table>
+<tr>
+<th>x</th>
+<th>f(x)</th>
+</tr>
+
+<tr>
+<td>-2</td>
+<td>1</td>
+</tr>
+
+<tr>
+<td>-1</td>
+<td>3</td>
+</tr>
+
+<tr>
+<td>0</td>
+<td>5</td>
+</tr>
+
+<tr>
+<td>1</td>
+<td>7</td>
+</tr>
+
+</table>
+
+<p>
+Determine:
+</p>
+
+<ul>
+<li>Dominio.</li>
+<li>Rango.</li>
+<li>Intercepto con eje \(y\).</li>
+</ul>
+
+</div>
+
+<div class="ejercicio">
+
+<h3>Ejercicio 2</h3>
+
+<p>
+Analice la función:
+</p>
+
+\[
+f(x)=2x+4
+\]
+
+<p>
+Determine:
+</p>
+
+<ul>
+<li>Intercepto con el eje \(y\).</li>
+<li>Si es creciente o decreciente.</li>
+</ul>
+
+</div>
+
+<div class="ejercicio">
+
+<h3>Ejercicio 3</h3>
+
+<p>
+Analice la función:
+</p>
+
+\[
+f(x)=x^2
+\]
+
+<p>
+Determine si tiene un valor mínimo o máximo.
+</p>
+
+</div>
+
+<div class="ejercicio">
+
+<h3>Ejercicio 4</h3>
+
+<p>Observe la gráfica.</p>
+
+<svg viewBox="0 0 400 220">
+
+<line x1="20" y1="110" x2="380" y2="110" stroke="black"/>
+<line x1="200" y1="20" x2="200" y2="200" stroke="black"/>
+
+<polyline
+points="40,180 90,150 140,120 190,95 240,70 290,45 340,25"
+fill="none"
+stroke="blue"
+stroke-width="3"/>
+
+</svg>
+
+<p>
+¿La función es creciente, decreciente o constante?
+</p>
+
+</div>
+
+<div class="ejercicio">
+
+<h3>Ejercicio 5</h3>
+
+<p>Observe la gráfica.</p>
+
+<svg viewBox="0 0 400 220">
+
+<line x1="20" y1="110" x2="380" y2="110" stroke="black"/>
+<line x1="200" y1="20" x2="200" y2="200" stroke="black"/>
+
+<path d="M60 40 Q200 180 340 40"
+fill="none"
+stroke="red"
+stroke-width="3"/>
+
+</svg>
+
+<p>
+Determine si existe un valor mínimo.
+</p>
+
+</div>
+
+<h2>Respuestas</h2>
+
+<div class="respuestas">
+
+<p><strong>Ejercicio 1</strong></p>
+
+<ul>
+<li>Dominio: \(\{-2,-1,0,1\}\)</li>
+<li>Rango: \(\{1,3,5,7\}\)</li>
+<li>Intercepto con eje \(y\): 5</li>
+</ul>
+
+<hr>
+
+<p><strong>Ejercicio 2</strong></p>
+
+<ul>
+<li>Intercepto con eje \(y\): 4</li>
+<li>La función es creciente.</li>
+</ul>
+
+<hr>
+
+<p><strong>Ejercicio 3</strong></p>
+
+<p>
+Tiene un valor mínimo igual a:
+</p>
+
+\[
+0
+\]
+
+<p>
+cuando \(x=0\).
+</p>
+
+<hr>
+
+<p><strong>Ejercicio 4</strong></p>
+
+<p>
+La función es creciente.
+</p>
+
+<hr>
+
+<p><strong>Ejercicio 5</strong></p>
+
+<p>
+Sí existe un valor mínimo. Se encuentra en el vértice de la parábola.
+</p>
+
+</div>
+
+<h2>Videos recomendados de YouTube</h2>
+
+<div class="video">
+
+<p>
+<a href="https://www.youtube.com/results?search_query=analisis+de+funciones+julioprofe"
+target="_blank">
+Análisis de funciones - JulioProfe
+</a>
+</p>
+
+<p>
+URL para impresión:<br>
+https://www.youtube.com/results?search_query=analisis+de+funciones+julioprofe
+</p>
+
+</div>
+
+<div class="video">
+
+<p>
+<a href="https://www.youtube.com/results?search_query=caracteristicas+de+las+funciones+profe+alex"
+target="_blank">
+Características de las funciones - Profe Alex
+</a>
+</p>
+
+<p>
+URL para impresión:<br>
+https://www.youtube.com/results?search_query=caracteristicas+de+las+funciones+profe+alex
+</p>
+
+</div>
+
+<h2>Referencias APA</h2>
+
+<ul>
+
+<li>
+OpenStax. (2025).
+<em>College Algebra</em>.
+OpenStax.
+https://openstax.org/details/books/college-algebra
+</li>
+
+<li>
+Stewart, J., Redlin, L., & Watson, S. (2020).
+<em>Precalculus: Mathematics for Calculus</em>.
+Cengage Learning.
+</li>
+
+<li>
+Larson, R. (2018).
+<em>Precalculus</em>.
+Cengage Learning.
+</li>
+
+<li>
+Sullivan, M. (2021).
+<em>Precalculus</em>.
+Pearson Education.
+</li>
+
+</ul>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Representación Gráfica de la Función Lineal</title>
+
+<script>
+window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    displayMath: [['\\[','\\]']]
+  }
+};
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+<style>
+body{
+    font-family:Arial,Helvetica,sans-serif;
+    margin:0;
+    padding:0;
+    background:#f4f6f8;
+    color:#222;
+    line-height:1.6;
+}
+
+.container{
+    max-width:900px;
+    margin:auto;
+    background:white;
+    padding:20px;
+}
+
+h1,h2,h3{
+    color:#0b5394;
+}
+
+.print-btn{
+    display:block;
+    margin:15px auto;
+    padding:12px 24px;
+    border:none;
+    border-radius:6px;
+    background:#0b5394;
+    color:white;
+    cursor:pointer;
+    font-size:16px;
+}
+
+.print-btn:hover{
+    background:#073763;
+}
+
+.ejemplo,
+.ejercicio{
+    background:#eef6ff;
+    border-left:5px solid #0b5394;
+    padding:12px;
+    margin:15px 0;
+}
+
+.respuestas{
+    background:#edf8ed;
+    border-left:5px solid #38761d;
+    padding:12px;
+    margin-top:20px;
+}
+
+.video{
+    background:#f8f8f8;
+    border-radius:8px;
+    padding:12px;
+    margin:12px 0;
+}
+
+svg{
+    max-width:100%;
+    height:auto;
+}
+
+a{
+    color:#0b5394;
+    font-weight:bold;
+    word-break:break-word;
+}
+
+@media print{
+
+    .print-btn{
+        display:none;
+    }
+
+    @page{
+        size:letter;
+        margin:1.5cm;
+    }
+
+    body{
+        background:white;
+    }
+
+    .container{
+        max-width:100%;
+    }
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<button class="print-btn" onclick="window.print()">
+Imprimir / Guardar PDF
+</button>
+
+<h1>Reconoce la Representación Gráfica de una Función Lineal en Diversos Contextos</h1>
+
+<h2>Explicación</h2>
+
+<p>
+Una función lineal es una función de la forma:
+</p>
+
+\[
+f(x)=mx+b
+\]
+
+<p>
+donde:
+</p>
+
+<ul>
+<li>\(m\) representa la pendiente.</li>
+<li>\(b\) representa el intercepto con el eje \(y\).</li>
+</ul>
+
+<p>
+La representación gráfica de una función lineal siempre es una
+<strong>línea recta</strong>.
+</p>
+
+<ul>
+<li>Si \(m>0\), la recta es creciente.</li>
+<li>Si \(m<0\), la recta es decreciente.</li>
+<li>Si \(m=0\), la recta es horizontal.</li>
+</ul>
+
+<p>
+Las funciones lineales se utilizan para modelar situaciones reales como:
+</p>
+
+<ul>
+<li>Costo de una llamada telefónica.</li>
+<li>Pago por horas trabajadas.</li>
+<li>Distancia recorrida a velocidad constante.</li>
+<li>Conversión de unidades.</li>
+</ul>
+
+<h2>Ejemplo Resuelto</h2>
+
+<div class="ejemplo">
+
+<p>
+Considere la función:
+</p>
+
+\[
+f(x)=2x+1
+\]
+
+<p>
+La pendiente es:
+</p>
+
+\[
+m=2
+\]
+
+<p>
+y el intercepto con el eje \(y\) es:
+</p>
+
+\[
+b=1
+\]
+
+<p>
+Su gráfica es una recta creciente porque la pendiente es positiva.
+</p>
+
+<svg viewBox="0 0 400 220">
+
+<line x1="20" y1="110" x2="380" y2="110" stroke="black"/>
+<line x1="200" y1="20" x2="200" y2="200" stroke="black"/>
+
+<line x1="90" y1="170" x2="310" y2="50"
+stroke="blue"
+stroke-width="3"/>
+
+</svg>
+
+</div>
+
+<h2>Ejercicios</h2>
+
+<div class="ejercicio">
+
+<h3>Ejercicio 1</h3>
+
+<p>
+La función:
+</p>
+
+\[
+f(x)=3x+2
+\]
+
+<p>
+¿Su gráfica es creciente o decreciente?
+</p>
+
+</div>
+
+<div class="ejercicio">
+
+<h3>Ejercicio 2</h3>
+
+<p>
+La función:
+</p>
+
+\[
+f(x)=-4x+5
+\]
+
+<p>
+¿Su gráfica es creciente o decreciente?
+</p>
+
+</div>
+
+<div class="ejercicio">
+
+<h3>Ejercicio 3</h3>
+
+<p>
+Observe la gráfica:
+</p>
+
+<svg viewBox="0 0 400 220">
+
+<line x1="20" y1="110" x2="380" y2="110" stroke="black"/>
+<line x1="200" y1="20" x2="200" y2="200" stroke="black"/>
+
+<line x1="80" y1="170" x2="320" y2="40"
+stroke="red"
+stroke-width="3"/>
+
+</svg>
+
+<p>
+¿Representa una función lineal?
+</p>
+
+</div>
+
+<div class="ejercicio">
+
+<h3>Ejercicio 4</h3>
+
+<p>
+Observe la gráfica:
+</p>
+
+<svg viewBox="0 0 400 220">
+
+<line x1="20" y1="110" x2="380" y2="110" stroke="black"/>
+<line x1="200" y1="20" x2="200" y2="200" stroke="black"/>
+
+<path d="M60 170 Q200 20 340 170"
+fill="none"
+stroke="green"
+stroke-width="3"/>
+
+</svg>
+
+<p>
+¿Representa una función lineal?
+</p>
+
+</div>
+
+<div class="ejercicio">
+
+<h3>Ejercicio 5</h3>
+
+<p>
+Un trabajador gana ₡3000 por cada hora trabajada.
+</p>
+
+<p>
+La relación entre horas trabajadas \(x\) y salario \(y\) es:
+</p>
+
+\[
+y=3000x
+\]
+
+<p>
+¿La gráfica corresponde a una función lineal?
+</p>
+
+</div>
+
+<h2>Respuestas</h2>
+
+<div class="respuestas">
+
+<p><strong>Ejercicio 1</strong></p>
+
+<p>
+Creciente, porque la pendiente \(m=3\) es positiva.
+</p>
+
+<hr>
+
+<p><strong>Ejercicio 2</strong></p>
+
+<p>
+Decreciente, porque la pendiente \(m=-4\) es negativa.
+</p>
+
+<hr>
+
+<p><strong>Ejercicio 3</strong></p>
+
+<p>
+Sí. Es una línea recta, por lo tanto representa una función lineal.
+</p>
+
+<hr>
+
+<p><strong>Ejercicio 4</strong></p>
+
+<p>
+No. La gráfica es una curva y no una recta.
+</p>
+
+<hr>
+
+<p><strong>Ejercicio 5</strong></p>
+
+<p>
+Sí. La ecuación tiene la forma:
+</p>
+
+\[
+y=mx+b
+\]
+
+<p>
+con \(m=3000\) y \(b=0\), por lo tanto es una función lineal.
+</p>
+
+</div>
+
+<h2>Videos recomendados de YouTube</h2>
+
+<div class="video">
+
+<p>
+<a href="https://www.youtube.com/results?search_query=funcion+lineal+julioprofe"
+target="_blank"
+rel="noopener noreferrer">
+Función Lineal - JulioProfe
+</a>
+</p>
+
+<p>
+URL para impresión:<br>
+https://www.youtube.com/results?search_query=funcion+lineal+julioprofe
+</p>
+
+</div>
+
+<div class="video">
+
+<p>
+<a href="https://www.youtube.com/results?search_query=funciones+lineales+profe+alex"
+target="_blank"
+rel="noopener noreferrer">
+Función Lineal
+</a>
+</p>
+
+<p>
+URL para impresión:<br>
+https://www.youtube.com/results?search_query=funciones+lineales+profe+alex
+</p>
+
+</div>
+
+<h2>Referencias APA</h2>
+
+<ul>
+
+<li>
+OpenStax. (2025). <em>College Algebra</em>. OpenStax.
+https://openstax.org/details/books/college-algebra
+</li>
+
+<li>
+Larson, R. (2018). <em>Precalculus</em>. Cengage Learning.
+</li>
+
+<li>
+Stewart, J., Redlin, L., & Watson, S. (2020).
+<em>Precalculus: Mathematics for Calculus</em>.
+Cengage Learning.
+</li>
+
+<li>
+Sullivan, M. (2021).
+<em>Precalculus</em>.
+Pearson Education.
+</li>
+
+</ul>
+
+</div>
+
+</body>
+</html>

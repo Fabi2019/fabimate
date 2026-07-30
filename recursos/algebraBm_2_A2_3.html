@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pendiente e Intersecciones de una Recta</title>
+
+<script>
+window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    displayMath: [['\\[','\\]']]
+  }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+<style>
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    margin:0;
+    padding:0;
+    background:#f4f6f8;
+    color:#222;
+    line-height:1.6;
+}
+
+.container{
+    max-width:900px;
+    margin:auto;
+    background:white;
+    padding:20px;
+}
+
+h1,h2,h3{
+    color:#0b5394;
+}
+
+.print-btn{
+    display:block;
+    margin:15px auto;
+    padding:12px 24px;
+    border:none;
+    border-radius:6px;
+    background:#0b5394;
+    color:white;
+    cursor:pointer;
+    font-size:16px;
+}
+
+.print-btn:hover{
+    background:#073763;
+}
+
+.ejemplo,
+.ejercicio{
+    background:#eef6ff;
+    border-left:5px solid #0b5394;
+    padding:12px;
+    margin:15px 0;
+}
+
+.respuestas{
+    background:#edf8ed;
+    border-left:5px solid #38761d;
+    padding:12px;
+    margin-top:20px;
+}
+
+.video{
+    background:#f8f8f8;
+    border-radius:8px;
+    padding:12px;
+    margin:12px 0;
+}
+
+svg{
+    max-width:100%;
+    height:auto;
+}
+
+a{
+    color:#0b5394;
+    font-weight:bold;
+}
+
+@media print{
+
+    .print-btn{
+        display:none;
+    }
+
+    @page{
+        size:letter;
+        margin:1.5cm;
+    }
+
+    body{
+        background:white;
+    }
+
+    .container{
+        max-width:100%;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<button class="print-btn" onclick="window.print()">
+Imprimir / Guardar PDF
+</button>
+
+<h1>Determinación de la Pendiente y de las Intersecciones de una Recta</h1>
+
+<h2>Explicación</h2>
+
+<p>
+La ecuación de una recta puede escribirse como:
+</p>
+
+\[
+y=mx+b
+\]
+
+<p>
+donde:
+</p>
+
+<ul>
+<li><strong>m</strong>: pendiente de la recta.</li>
+<li><strong>b</strong>: intersección con el eje de las ordenadas (eje \(y\)).</li>
+</ul>
+
+<h3>Pendiente</h3>
+
+<p>
+La pendiente indica cuánto cambia \(y\) cuando \(x\) aumenta una unidad.
+Se calcula mediante:
+</p>
+
+\[
+m=\frac{y_2-y_1}{x_2-x_1}
+\]
+
+<ul>
+<li>Si \(m>0\), la recta es creciente.</li>
+<li>Si \(m<0\), la recta es decreciente.</li>
+<li>Si \(m=0\), la recta es horizontal.</li>
+</ul>
+
+<h3>Intersección con el eje de las ordenadas</h3>
+
+<p>
+Es el punto donde la recta corta el eje \(y\).
+Se obtiene haciendo:
+</p>
+
+\[
+x=0
+\]
+
+<h3>Intersección con el eje de las abscisas</h3>
+
+<p>
+Es el punto donde la recta corta el eje \(x\).
+Se obtiene haciendo:
+</p>
+
+\[
+y=0
+\]
+
+<h2>Ejemplo Resuelto</h2>
+
+<div class="ejemplo">
+
+<p>
+Determine la pendiente y las intersecciones de:
+</p>
+
+\[
+y=2x+4
+\]
+
+<p>
+Pendiente:
+</p>
+
+\[
+m=2
+\]
+
+<p>
+Intersección con eje \(y\):
+</p>
+
+\[
+(0,4)
+\]
+
+<p>
+Intersección con eje \(x\):
+</p>
+
+\[
+0=2x+4
+\]
+
+\[
+2x=-4
+\]
+
+\[
+x=-2
+\]
+
+<p>
+Punto:
+</p>
+
+\[
+(-2,0)
+\]
+
+</div>
+
+<h2>Ejercicios</h2>
+
+<div class="ejercicio">
+
+<h3>Ejercicio 1</h3>
+
+<p>
+Determine la pendiente y la intersección con el eje \(y\):
+</p>
+
+\[
+y=3x-5
+\]
+
+</div>
+
+<div class="ejercicio">
+
+<h3>Ejercicio 2</h3>
+
+<p>
+Determine la pendiente y la intersección con el eje \(x\):
+</p>
+
+\[
+y=-2x+6
+\]
+
+</div>
+
+<div class="ejercicio">
+
+<h3>Ejercicio 3</h3>
+
+<p>
+Dados los puntos:
+</p>
+
+\[
+(1,2)
+\]
+
+y
+
+\[
+(4,8)
+\]
+
+<p>
+Calcule la pendiente.
+</p>
+
+</div>
+
+<div class="ejercicio">
+
+<h3>Ejercicio 4</h3>
+
+<p>
+Observe la gráfica:
+</p>
+
+<svg viewBox="0 0 400 250">
+
+<line x1="20" y1="125" x2="380" y2="125" stroke="black"/>
+<line x1="200" y1="20" x2="200" y2="230" stroke="black"/>
+
+<line x1="80" y1="190" x2="320" y2="60"
+stroke="blue"
+stroke-width="3"/>
+
+<circle cx="200" cy="125" r="4" fill="black"/>
+
+</svg>
+
+<p>
+Indique si la pendiente es positiva o negativa.
+</p>
+
+</div>
+
+<div class="ejercicio">
+
+<h3>Ejercicio 5</h3>
+
+<p>
+Una empresa cobra una tarifa fija de ₡5000 más ₡2000 por cada hora de servicio.
+</p>
+
+<p>
+La función es:
+</p>
+
+\[
+y=2000x+5000
+\]
+
+<p>
+Determine:
+</p>
+
+<ul>
+<li>La pendiente.</li>
+<li>La intersección con el eje \(y\).</li>
+</ul>
+
+</div>
+
+<h2>Respuestas</h2>
+
+<div class="respuestas">
+
+<p><strong>Ejercicio 1</strong></p>
+
+\[
+m=3
+\]
+
+Intersección con eje \(y\):
+
+\[
+(0,-5)
+\]
+
+<hr>
+
+<p><strong>Ejercicio 2</strong></p>
+
+\[
+m=-2
+\]
+
+Intersección con eje \(x\):
+
+\[
+0=-2x+6
+\]
+
+\[
+x=3
+\]
+
+Punto:
+
+\[
+(3,0)
+\]
+
+<hr>
+
+<p><strong>Ejercicio 3</strong></p>
+
+\[
+m=\frac{8-2}{4-1}
+\]
+
+\[
+m=\frac{6}{3}
+\]
+
+\[
+m=2
+\]
+
+<hr>
+
+<p><strong>Ejercicio 4</strong></p>
+
+La pendiente es positiva porque la recta asciende de izquierda a derecha.
+
+<hr>
+
+<p><strong>Ejercicio 5</strong></p>
+
+Pendiente:
+
+\[
+m=2000
+\]
+
+Intersección con eje \(y\):
+
+\[
+(0,5000)
+\]
+
+</div>
+
+<h2>Videos recomendados de YouTube</h2>
+
+<div class="video">
+
+<p>
+<a href="https://www.youtube.com/results?search_query=pendiente+de++julioprofe">
+Pendiente de una recta - JulioProfe
+</a>
+</p>
+
+<p>
+URL para impresión:<br>
+https://www.youtube.com/results?search_query=pendiente+de+una+recta+julioprofe
+</p>
+
+</div>
+
+<div class="video">
+
+<p>
+<a href="https://www.youtube.com/results?search_query=ecuacion+de+la+recta+profe+alex">
+Ecuación de la recta y pendiente - Profe Alex
+</a>
+</p>
+
+<p>
+URL para impresión:<br>
+https://www.youtube.com/results?search_query=ecuacion+de+la+recta+profe+alex
+</p>
+
+</div>
+
+<h2>Referencias APA</h2>
+
+<ul>
+
+<li>
+OpenStax. (2025).
+<em>College Algebra</em>.
+OpenStax.
+https://openstax.org/details/books/college-algebra
+</li>
+
+<li>
+Larson, R. (2018).
+<em>Precalculus</em>.
+Cengage Learning.
+</li>
+
+<li>
+Stewart, J., Redlin, L., & Watson, S. (2020).
+<em>Precalculus: Mathematics for Calculus</em>.
+Cengage Learning.
+</li>
+
+<li>
+Sullivan, M. (2021).
+<em>Precalculus</em>.
+Pearson Education.
+</li>
+
+</ul>
+
+</div>
+
+</body>
+</html>

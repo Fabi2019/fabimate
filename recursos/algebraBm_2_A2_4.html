@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ecuación de una Recta</title>
+
+<script>
+window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    displayMath: [['\\[','\\]']]
+  }
+};
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+<style>
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    margin:0;
+    padding:0;
+    background:#f4f6f8;
+    color:#222;
+    line-height:1.6;
+}
+
+.container{
+    max-width:900px;
+    margin:auto;
+    background:white;
+    padding:20px;
+}
+
+h1,h2,h3{
+    color:#0b5394;
+}
+
+.print-btn{
+    display:block;
+    margin:15px auto;
+    padding:12px 24px;
+    border:none;
+    border-radius:6px;
+    background:#0b5394;
+    color:white;
+    cursor:pointer;
+    font-size:16px;
+}
+
+.print-btn:hover{
+    background:#073763;
+}
+
+.ejemplo,
+.ejercicio{
+    background:#eef6ff;
+    border-left:5px solid #0b5394;
+    padding:12px;
+    margin:15px 0;
+}
+
+.respuestas{
+    background:#edf8ed;
+    border-left:5px solid #38761d;
+    padding:12px;
+    margin-top:20px;
+}
+
+.video{
+    background:#f8f8f8;
+    border-radius:8px;
+    padding:12px;
+    margin:12px 0;
+}
+
+svg{
+    max-width:100%;
+    height:auto;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+table,th,td{
+    border:1px solid #444;
+}
+
+th,td{
+    padding:8px;
+    text-align:center;
+}
+
+a{
+    color:#0b5394;
+    font-weight:bold;
+    word-break:break-word;
+}
+
+@media print{
+
+    .print-btn{
+        display:none;
+    }
+
+    @page{
+        size:letter;
+        margin:1.5cm;
+    }
+
+    body{
+        background:white;
+    }
+
+    .container{
+        max-width:100%;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<button class="print-btn" onclick="window.print()">
+Imprimir / Guardar PDF
+</button>
+
+<h1>Determina la Ecuación de una Recta Utilizando Datos Relacionados con Ella</h1>
+
+<h2>Explicación</h2>
+
+<p>
+La ecuación de una recta permite representar situaciones donde existe una relación lineal entre dos variables.
+</p>
+
+<p>
+La forma más utilizada es:
+</p>
+
+\[
+y=mx+b
+\]
+
+<p>
+donde:
+</p>
+
+<ul>
+<li>\(m\): pendiente.</li>
+<li>\(b\): intersección con el eje \(y\).</li>
+</ul>
+
+<h3>Casos frecuentes</h3>
+
+<ul>
+<li>Conociendo la pendiente y el intercepto.</li>
+<li>Conociendo dos puntos.</li>
+<li>Conociendo un punto y la pendiente.</li>
+<li>A partir de un contexto real.</li>
+</ul>
+
+<h3>Fórmula de la pendiente</h3>
+
+\[
+m=\frac{y_2-y_1}{x_2-x_1}
+\]
+
+<h2>Ejemplo Resuelto</h2>
+
+<div class="ejemplo">
+
+<p>
+Determina la ecuación de la recta que pasa por los puntos:
+</p>
+
+\[
+(1,3)
+\]
+
+y
+
+\[
+(3,7)
+\]
+
+<p>
+Calculamos la pendiente:
+</p>
+
+\[
+m=\frac{7-3}{3-1}
+\]
+
+\[
+m=\frac{4}{2}
+\]
+
+\[
+m=2
+\]
+
+<p>
+Sustituimos en:
+</p>
+
+\[
+y=mx+b
+\]
+
+<p>
+Utilizando el punto \((1,3)\):
+</p>
+
+\[
+3=2(1)+b
+\]
+
+\[
+3=2+b
+\]
+
+\[
+b=1
+\]
+
+<p>
+Por tanto:
+</p>
+
+\[
+y=2x+1
+\]
+
+</div>
+
+<h2>Ejercicios</h2>
+
+<div class="ejercicio">
+
+<h3>Ejercicio 1</h3>
+
+<p>
+Determine la ecuación de la recta con:
+</p>
+
+\[
+m=4
+\]
+
+y
+
+\[
+b=-3
+\]
+
+</div>
+
+<div class="ejercicio">
+
+<h3>Ejercicio 2</h3>
+
+<p>
+Determine la ecuación de la recta que pasa por:
+</p>
+
+\[
+(0,5)
+\]
+
+y
+
+\[
+(2,9)
+\]
+
+</div>
+
+<div class="ejercicio">
+
+<h3>Ejercicio 3</h3>
+
+<p>
+Determine la ecuación de la recta con pendiente:
+</p>
+
+\[
+m=-2
+\]
+
+<p>
+que pasa por:
+</p>
+
+\[
+(1,4)
+\]
+
+</div>
+
+<div class="ejercicio">
+
+<h3>Ejercicio 4</h3>
+
+<p>
+Una empresa cobra una tarifa fija de ₡2500 más ₡1500 por cada hora de servicio.
+</p>
+
+<p>
+Determine la ecuación que relaciona las horas \(x\) y el costo \(y\).
+</p>
+
+</div>
+
+<div class="ejercicio">
+
+<h3>Ejercicio 5</h3>
+
+<p>
+Observe la tabla.
+</p>
+
+<table>
+
+<tr>
+<th>x</th>
+<th>y</th>
+</tr>
+
+<tr>
+<td>0</td>
+<td>2</td>
+</tr>
+
+<tr>
+<td>1</td>
+<td>5</td>
+</tr>
+
+<tr>
+<td>2</td>
+<td>8</td>
+</tr>
+
+<tr>
+<td>3</td>
+<td>11</td>
+</tr>
+
+</table>
+
+<p>
+Determine la ecuación de la recta.
+</p>
+
+</div>
+
+<h2>Respuestas</h2>
+
+<div class="respuestas">
+
+<p><strong>Ejercicio 1</strong></p>
+
+\[
+y=4x-3
+\]
+
+<hr>
+
+<p><strong>Ejercicio 2</strong></p>
+
+\[
+m=\frac{9-5}{2-0}=2
+\]
+
+\[
+b=5
+\]
+
+\[
+y=2x+5
+\]
+
+<hr>
+
+<p><strong>Ejercicio 3</strong></p>
+
+\[
+y=-2x+6
+\]
+
+<hr>
+
+<p><strong>Ejercicio 4</strong></p>
+
+\[
+y=1500x+2500
+\]
+
+<hr>
+
+<p><strong>Ejercicio 5</strong></p>
+
+La pendiente es:
+
+\[
+m=3
+\]
+
+La intersección con el eje \(y\) es:
+
+\[
+b=2
+\]
+
+Por tanto:
+
+\[
+y=3x+2
+\]
+
+</div>
+
+<h2>Videos recomendados de YouTube</h2>
+
+<div class="video">
+
+<p>
+<a href="https://youtube.com/results?search_query=ecuacion+de+la+recta+julioprofe"
+   target="_blank"
+   rel="noopener noreferrer">
+   Ecuación de la recta - JulioProfe
+</a>
+</p>
+
+<p>
+URL para impresión:<br>
+https://www.youtube.com/results?search_query=ecuacion+de+la+recta+julioprofe
+</p>
+
+</div>
+
+<div class="video">
+
+<p>
+<a href="https://www.youtube.com/results?search_query=ecuacion+de+la+recta+profe+alex"
+   target="_blank"
+   rel="noopener noreferrer">
+   Ecuación de la recta - Profe Alex
+</a>
+</p>
+
+<p>
+URL para impresión:<br>
+https://www.youtube.com/results?search_query=ecuacion+de+la+recta+profe+alex
+</p>
+
+</div>
+
+<h2>Referencias APA</h2>
+
+<ul>
+
+<li>
+Larson, R. (2018). <em>Precalculus</em>. Cengage Learning.
+</li>
+
+<li>
+Stewart, J., Redlin, L., & Watson, S. (2020). <em>Precalculus: Mathematics for Calculus</em>. Cengage Learning.
+</li>
+
+<li>
+Sullivan, M. (2021). <em>Precalculus</em>. Pearson Education.
+</li>
+
+<li>
+OpenStax. (2025). <em>College Algebra</em>. OpenStax. https://openstax.org/details/books/college-algebra
+</li>
+
+</ul>
+
+</div>
+
+</body>
+</html>
