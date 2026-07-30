@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>3.6 Efectuar división de polinomios</title>
+
+<script>
+window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)'], ['$','$']],
+    displayMath: [['\\[','\\]']]
+  }
+};
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+<style>
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    line-height:1.6;
+    margin:0;
+    padding:0;
+    background:#f4f6f9;
+    color:#222;
+}
+
+.container{
+    max-width:1000px;
+    margin:auto;
+    background:white;
+    padding:25px;
+}
+
+h1{
+    text-align:center;
+    color:#0d47a1;
+}
+
+h2{
+    color:#1565c0;
+    border-bottom:2px solid #1565c0;
+    padding-bottom:5px;
+}
+
+.boton-imprimir{
+    text-align:center;
+    margin-bottom:20px;
+}
+
+.btn{
+    background:#1976d2;
+    color:white;
+    border:none;
+    padding:12px 20px;
+    border-radius:8px;
+    cursor:pointer;
+    font-size:16px;
+}
+
+.btn:hover{
+    background:#0d47a1;
+}
+
+.caja{
+    background:#f8f9ff;
+    border-left:5px solid #1976d2;
+    padding:14px;
+    margin:14px 0;
+    border-radius:8px;
+}
+
+.ejemplo{
+    background:#e8f4ff;
+    border-left:5px solid #0288d1;
+    padding:14px;
+    margin:14px 0;
+    border-radius:8px;
+}
+
+.ejercicio{
+    background:#f5f8ff;
+    border-left:5px solid #1976d2;
+    padding:14px;
+    margin:14px 0;
+    border-radius:8px;
+}
+
+.respuesta{
+    background:#eef8ee;
+    border-left:5px solid #2e7d32;
+    padding:14px;
+    margin:14px 0;
+    border-radius:8px;
+}
+
+.video{
+    background:#fafafa;
+    border-left:5px solid #6a1b9a;
+    padding:14px;
+    margin:14px 0;
+    border-radius:8px;
+}
+
+a{
+    color:#0d47a1;
+    font-weight:bold;
+    word-break:break-word;
+}
+
+ol li{
+    margin-bottom:8px;
+}
+
+@media(max-width:768px){
+    .container{
+        padding:15px;
+    }
+
+    body{
+        font-size:16px;
+    }
+
+    h1{
+        font-size:24px;
+    }
+
+    h2{
+        font-size:20px;
+    }
+}
+
+@media print{
+    .boton-imprimir{
+        display:none;
+    }
+
+    body{
+        background:white;
+    }
+
+    .container{
+        max-width:100%;
+        padding:0;
+    }
+
+    a::after{
+        content:" (" attr(href) ")";
+        font-size:90%;
+        color:black;
+        word-break:break-all;
+    }
+
+    @page{
+        size:letter;
+        margin:1.5cm;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="boton-imprimir">
+<button class="btn" onclick="window.print()">Imprimir / Guardar PDF</button>
+</div>
+
+<h1>3.6 Efectuar división de polinomios</h1>
+
+<h2>Explicación</h2>
+
+<p>
+La división de polinomios es un procedimiento algebraico que permite dividir un polinomio llamado
+<strong>dividendo</strong> entre otro polinomio llamado <strong>divisor</strong>.
+El resultado se expresa mediante un <strong>cociente</strong> y, en algunos casos, un <strong>residuo</strong>.
+</p>
+
+<p>
+La relación fundamental de la división es:
+</p>
+
+\[
+\text{Dividendo}=(\text{Divisor})\cdot(\text{Cociente})+\text{Residuo}
+\]
+
+<p>
+Cuando el residuo es cero, la división es exacta. Cuando el residuo no es cero, el resultado puede escribirse así:
+</p>
+
+\[
+\frac{\text{Dividendo}}{\text{Divisor}}
+=
+\text{Cociente}
++
+\frac{\text{Residuo}}{\text{Divisor}}
+\]
+
+<div class="caja">
+<strong>Procedimiento para dividir polinomios:</strong>
+
+<ol>
+<li>Ordenar el dividendo y el divisor de mayor a menor exponente.</li>
+<li>Dividir el primer término del dividendo entre el primer término del divisor.</li>
+<li>Escribir ese resultado como primer término del cociente.</li>
+<li>Multiplicar ese término por todo el divisor.</li>
+<li>Restar el resultado al dividendo.</li>
+<li>Bajar el siguiente término, si lo hay.</li>
+<li>Repetir el proceso hasta que el grado del residuo sea menor que el grado del divisor.</li>
+<li>Comprobar usando: dividendo igual a divisor por cociente más residuo.</li>
+</ol>
+</div>
+
+<h2>Ejemplo resuelto</h2>
+
+<div class="ejemplo">
+
+<p>
+Efectuar la división:
+</p>
+
+\[
+(2x^3+3x^2-11x-6)\div(x+3)
+\]
+
+<p>
+<strong>Paso 1.</strong> Dividir el primer término del dividendo entre el primer término del divisor:
+</p>
+
+\[
+\frac{2x^3}{x}=2x^2
+\]
+
+<p>
+<strong>Paso 2.</strong> Multiplicar:
+</p>
+
+\[
+2x^2\cdot(x+3)=2x^3+6x^2
+\]
+
+<p>
+<strong>Paso 3.</strong> Restar:
+</p>
+
+\[
+(2x^3+3x^2)-(2x^3+6x^2)=-3x^2
+\]
+
+<p>
+Ahora bajamos el término \(-11x\):
+</p>
+
+\[
+-3x^2-11x
+\]
+
+<p>
+<strong>Paso 4.</strong> Dividir:
+</p>
+
+\[
+\frac{-3x^2}{x}=-3x
+\]
+
+<p>
+<strong>Paso 5.</strong> Multiplicar:
+</p>
+
+\[
+-3x\cdot(x+3)=-3x^2-9x
+\]
+
+<p>
+<strong>Paso 6.</strong> Restar:
+</p>
+
+\[
+(-3x^2-11x)-(-3x^2-9x)=-2x
+\]
+
+<p>
+Ahora bajamos el término \(-6\):
+</p>
+
+\[
+-2x-6
+\]
+
+<p>
+<strong>Paso 7.</strong> Dividir:
+</p>
+
+\[
+\frac{-2x}{x}=-2
+\]
+
+<p>
+<strong>Paso 8.</strong> Multiplicar:
+</p>
+
+\[
+-2\cdot(x+3)=-2x-6
+\]
+
+<p>
+<strong>Paso 9.</strong> Restar:
+</p>
+
+\[
+(-2x-6)-(-2x-6)=0
+\]
+
+<p>
+Por lo tanto, el cociente es:
+</p>
+
+\[
+\boxed{2x^2-3x-2}
+\]
+
+<p>
+y el residuo es:
+</p>
+
+\[
+\boxed{0}
+\]
+
+<p>
+Entonces:
+</p>
+
+\[
+\boxed{
+(2x^3+3x^2-11x-6)\div(x+3)=2x^2-3x-2
+}
+\]
+
+</div>
+
+<h2>Ejercicios</h2>
+
+<div class="ejercicio">
+<strong>1.</strong> Efectuar la división:
+\[
+(x^2+7x+10)\div(x+5)
+\]
+</div>
+
+<div class="ejercicio">
+<strong>2.</strong> Efectuar la división:
+\[
+(x^2-4x-12)\div(x-6)
+\]
+</div>
+
+<div class="ejercicio">
+<strong>3.</strong> Efectuar la división:
+\[
+(2x^2+7x+3)\div(x+3)
+\]
+</div>
+
+<div class="ejercicio">
+<strong>4.</strong> Efectuar la división:
+\[
+(x^3+2x^2-5x-6)\div(x+3)
+\]
+</div>
+
+<div class="ejercicio">
+<strong>5.</strong> Efectuar la división:
+\[
+(3x^3-2x^2+4x-7)\div(x-1)
+\]
+</div>
+
+<h2>Respuestas</h2>
+
+<div class="respuesta">
+<strong>1.</strong>
+\[
+(x^2+7x+10)\div(x+5)=x+2
+\]
+Residuo:
+\[
+0
+\]
+</div>
+
+<div class="respuesta">
+<strong>2.</strong>
+\[
+(x^2-4x-12)\div(x-6)=x+2
+\]
+Residuo:
+\[
+0
+\]
+</div>
+
+<div class="respuesta">
+<strong>3.</strong>
+\[
+(2x^2+7x+3)\div(x+3)=2x+1
+\]
+Residuo:
+\[
+0
+\]
+</div>
+
+<div class="respuesta">
+<strong>4.</strong>
+\[
+(x^3+2x^2-5x-6)\div(x+3)=x^2-x-2
+\]
+Residuo:
+\[
+0
+\]
+</div>
+
+<div class="respuesta">
+<strong>5.</strong>
+\[
+(3x^3-2x^2+4x-7)\div(x-1)
+=
+3x^2+x+5-\frac{2}{x-1}
+\]
+Cociente:
+\[
+3x^2+x+5
+\]
+Residuo:
+\[
+-2
+\]
+</div>
+
+<h2>Videos de apoyo en YouTube</h2>
+
+<div class="video">
+<strong>Video 1:</strong><br>
+<a href="https://www.youtube.com/watch?v=gpBEUnFBhGc" target="_blank" rel="noopener noreferrer">
+División de polinomios | Ejemplo 1 | Matemáticas Profe Alex
+</a>
+</div>
+
+<div class="video">
+<strong>Video 2:</strong><br>
+<a href="https://www.youtube.com/watch?v=tc20GDFkPoc" target="_blank" rel="noopener noreferrer">
+División de polinomios | Ejemplo 1 | julioprofe
+</a>
+</div>
+
+<h2>Referencias tipo APA</h2>
+
+<p>
+Khan Academy. (s.f.). <em>División de polinomios</em>. Khan Academy.
+https://es.khanacademy.org/math/algebra2/x2ec2f6f830c9fb89:poly-div
+</p>
+
+<p>
+OpenStax. (2021). <em>College Algebra 2e: 5.4 Dividing Polynomials</em>. Rice University.
+https://openstax.org/books/college-algebra-2e/pages/5-4-dividing-polynomials
+</p>
+
+<p>
+Matemáticas Profe Alex. (2017). <em[','\\>
+
+="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+-family: Arial, Helvetica, sans-serif;
+-height:1.6;
+:0;
+:0;
+:#f4f6f9;
+:#222;
+-width:1000px;
+:auto;
+:white;
+:25px;
+{
+-align:center;
+:#0d47a1;
+{
+:#1565c0;
+-bottom:2px solid #1565c0;
+-bottom:5px;
+-imprimir{
+-align:center;
+-bottom:20px;
+:#1976d2;
+:white;
+:none;
+:12px 20px;
+-radius:8px;
+:pointer

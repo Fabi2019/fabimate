@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Expresar x² + px + q como (x + h)² + k</title>
+
+<script>
+window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)'], ['$', '$']],
+    displayMath: [['\\[','\\]']]
+  }
+};
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+<style>
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    line-height:1.6;
+    margin:0;
+    padding:0;
+    background:#f5f7fa;
+    color:#222;
+}
+
+.container{
+    max-width:1000px;
+    margin:auto;
+    background:white;
+    padding:20px;
+}
+
+h1,h2{
+    color:#0d47a1;
+}
+
+.ejercicio{
+    background:#f8f9ff;
+    border-left:5px solid #1976d2;
+    padding:10px;
+    margin:10px 0;
+}
+
+.respuesta{
+    background:#eef8ee;
+    border-left:5px solid #2e7d32;
+    padding:10px;
+    margin:10px 0;
+}
+
+.boton-imprimir{
+    text-align:center;
+    margin:20px 0;
+}
+
+button{
+    padding:12px 20px;
+    font-size:16px;
+    cursor:pointer;
+    border:none;
+    border-radius:8px;
+    background:#1976d2;
+    color:white;
+}
+
+a{
+    word-wrap: break-word;
+}
+
+@media(max-width:768px){
+    .container{
+        padding:12px;
+    }
+}
+
+@media print{
+    .boton-imprimir{
+        display:none;
+    }
+
+    body{
+        background:white;
+    }
+
+    .container{
+        max-width:100%;
+    }
+
+    @page{
+        size: letter;
+        margin:1.5cm;
+    }
+}
+</style>
+
+</head>
+<body>
+
+<div class="container">
+
+<div class="boton-imprimir">
+<button onclick="window.print()">Imprimir / Guardar PDF</button>
+</div>
+
+<h1>3.5 Expresar \(x^2+p x+q\) como \((x+h)^2+k\)</h1>
+
+<h2>Explicación</h2>
+
+<p>
+El objetivo es reescribir una expresión cuadrática de la forma:
+</p>
+
+\[
+x^2+px+q
+\]
+
+<p>
+como una expresión equivalente de la forma:
+</p>
+
+\[
+(x+h)^2+k
+\]
+
+<p>
+Este procedimiento se conoce como <strong>completar el cuadrado</strong>.
+</p>
+
+<p>
+Recordemos que:
+</p>
+
+\[
+(x+h)^2=x^2+2hx+h^2
+\]
+
+<p>
+Comparando con:
+</p>
+
+\[
+x^2+px+q
+\]
+
+<p>
+debemos tener:
+</p>
+
+\[
+2h=p
+\]
+
+<p>
+Por lo tanto:
+</p>
+
+\[
+h=\frac{p}{2}
+\]
+
+<p>
+Ahora agregamos y restamos \(\left(\frac{p}{2}\right)^2\):
+</p>
+
+\[
+x^2+px+q=
+x^2+px+\left(\frac{p}{2}\right)^2
+-\left(\frac{p}{2}\right)^2+q
+\]
+
+<p>
+Agrupando:
+</p>
+
+\[
+\left(x+\frac{p}{2}\right)^2
++
+\left(q-\frac{p^2}{4}\right)
+\]
+
+<p>
+Por lo tanto:
+</p>
+
+\[
+\boxed{
+x^2+px+q=
+\left(x+\frac{p}{2}\right)^2
++
+\left(q-\frac{p^2}{4}\right)
+}
+\]
+
+<p>
+Así:
+</p>
+
+\[
+\boxed{
+h=\frac{p}{2}
+}
+\]
+
+\[
+\boxed{
+k=q-\frac{p^2}{4}
+}
+\]
+
+<h2>Ejemplo</h2>
+
+<p>Expresar:</p>
+
+\[
+x^2+6x+1
+\]
+
+<p>en la forma \((x+h)^2+k\).</p>
+
+<p><strong>Paso 1.</strong> Hallar \(h\).</p>
+
+\[
+h=\frac{6}{2}=3
+\]
+
+<p><strong>Paso 2.</strong> Formar el cuadrado perfecto.</p>
+
+\[
+x^2+6x+9=(x+3)^2
+\]
+
+<p><strong>Paso 3.</strong> Compensar el valor agregado.</p>
+
+\[
+x^2+6x+1
+=
+x^2+6x+9-9+1
+\]
+
+\[
+=(x+3)^2-8
+\]
+
+<p><strong>Respuesta:</strong></p>
+
+\[
+\boxed{x^2+6x+1=(x+3)^2-8}
+\]
+
+<h2>Ejercicios</h2>
+
+<div class="ejercicio">
+<strong>1.</strong> Expresar:
+\[
+x^2+8x+3
+\]
+en la forma:
+\[
+(x+h)^2+k
+\]
+</div>
+
+<div class="ejercicio">
+<strong>2.</strong> Expresar:
+\[
+x^2-10x+7
+\]
+en la forma:
+\[
+(x+h)^2+k
+\]
+</div>
+
+<div class="ejercicio">
+<strong>3.</strong> Expresar:
+\[
+x^2+4x-5
+\]
+en la forma:
+\[
+(x+h)^2+k
+\]
+</div>
+
+<div class="ejercicio">
+<strong>4.</strong> Expresar:
+\[
+x^2-6x+2
+\]
+en la forma:
+\[
+(x+h)^2+k
+\]
+</div>
+
+<div class="ejercicio">
+<strong>5.</strong> Expresar:
+\[
+x^2+12x+8
+\]
+en la forma:
+\[
+(x+h)^2+k
+\]
+</div>
+
+<h2>Respuestas</h2>
+
+<div class="respuesta">
+<strong>1.</strong>
+\[
+x^2+8x+3=(x+4)^2-13
+\]
+</div>
+
+<div class="respuesta">
+<strong>2.</strong>
+\[
+x^2-10x+7=(x-5)^2-18
+\]
+</div>
+
+<div class="respuesta">
+<strong>3.</strong>
+\[
+x^2+4x-5=(x+2)^2-9
+\]
+</div>
+
+<div class="respuesta">
+<strong>4.</strong>
+\[
+x^2-6x+2=(x-3)^2-7
+\]
+</div>
+
+<div class="respuesta">
+<strong>5.</strong>
+\[
+x^2+12x+8=(x+6)^2-28
+\]
+</div>
+
+
+
+
+<h2>Videos de apoyo (YouTube)</h2>
+
+<div class="video">
+    <strong>Video 1:</strong><br>
+
+    <a href="https://www.youtube.com/watch?v=51Mjg1OVjTo"
+       target="_blank"
+       rel="noopener noreferrer">
+       Ecuación cuadrática completando cuadrados | Matemáticas Profe Alex
+    </a>
+</div>
+
+<div class="video">
+    <strong>Video 2:</strong><br>
+
+    <a href="https://www.youtube.com/watch?v=Ly-jE7Asxg0"
+       target="_blank"
+       rel="noopener noreferrer">
+       Ecuaciones cuadráticas por completación de cuadrados | julioprofe
+    </a>
+</div>
+
+<h2>Referencias (APA 7.ª edición)</h2>
+
+<p>
+OpenStax. (2021). <i>College Algebra 2e</i>. OpenStax, Rice University.
+Recuperado de https://openstax.org/
+</p>
+
+<p>
+Sullivan, M. (2020). <i>Algebra and Trigonometry</i> (11th ed.).
+Pearson Education.
+</p>
+
+<p>
+Khan Academy. (s.f.).
+<i>Completar el cuadrado</i>.
+Recuperado de https://es.khanacademy.org/math/algebra/quadratics
+</p>
+
+<p>
+Matemáticas Profe Alex. (s.f.).
+<i>Ecuación cuadrática completando cuadrados | Ejemplo 1</i>.
+YouTube.
+https://www.youtube.com/watch?v=51Mjg1OVjTo
+</p>
+
+<p>
+ProfeGuille Matemática. (2016).
+<i>Cómo completar cuadrados fácilmente - 3 ejercicios</i>.
+YouTube.
+https://www.youtube.com/watch?v=dEX7uMz41ZA
+</p>
+
+</div>
+
+</body>
+</html>
