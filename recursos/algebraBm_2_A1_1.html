@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Identificación de Funciones</title>
+
+<!-- MathJax -->
+<script>
+window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    displayMath: [['\\[','\\]']]
+  }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+<style>
+body{
+    font-family: Arial, sans-serif;
+    line-height:1.6;
+    margin:0;
+    padding:0;
+    background:#f5f7fa;
+    color:#222;
+}
+
+.container{
+    max-width:900px;
+    margin:auto;
+    background:white;
+    padding:20px;
+}
+
+h1,h2,h3{
+    color:#0b5394;
+}
+
+.ejercicio{
+    background:#f0f8ff;
+    border-left:5px solid #0b5394;
+    padding:12px;
+    margin:15px 0;
+}
+
+.respuesta{
+    background:#eef8ee;
+    border-left:5px solid #2e8b57;
+    padding:10px;
+    margin:10px 0;
+}
+
+table{
+    border-collapse:collapse;
+    width:100%;
+    margin-top:10px;
+}
+
+table, th, td{
+    border:1px solid #444;
+}
+
+th, td{
+    padding:8px;
+    text-align:center;
+}
+
+.print-btn{
+    display:block;
+    margin:20px auto;
+    padding:12px 24px;
+    background:#0b5394;
+    color:white;
+    border:none;
+    border-radius:6px;
+    cursor:pointer;
+    font-size:16px;
+}
+
+.print-btn:hover{
+    background:#073763;
+}
+
+svg{
+    max-width:100%;
+    height:auto;
+}
+
+.video{
+    margin:15px 0;
+    padding:10px;
+    background:#f8f8f8;
+    border-radius:8px;
+}
+
+@media print{
+    .print-btn{
+        display:none;
+    }
+
+    body{
+        background:white;
+    }
+
+    .container{
+        width:100%;
+        max-width:100%;
+    }
+
+    @page{
+        size: letter;
+        margin: 1.5cm;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<button class="print-btn" onclick="window.print()">
+Imprimir / Guardar PDF
+</button>
+
+<h1>Identificar si una relación corresponde a una función</h1>
+
+<h2>Explicación</h2>
+
+<p>
+Una <strong>función</strong> es una relación entre dos conjuntos donde
+a cada elemento del conjunto de partida (dominio) le corresponde
+<strong>un único valor</strong> en el conjunto de llegada.
+</p>
+
+<p>
+Para determinar si una relación es función, debemos verificar que ningún
+valor de entrada tenga dos o más imágenes distintas.
+</p>
+
+<h3>En forma tabular</h3>
+
+<p>
+Revisamos que ningún valor de la primera columna aparezca asociado a dos
+resultados diferentes.
+</p>
+
+<h3>En forma simbólica</h3>
+
+<p>
+Las expresiones como \(y=2x+3\) o \(f(x)=x^2\) son funciones porque para
+cada valor de \(x\) existe un único valor de salida.
+</p>
+
+<h3>En forma gráfica</h3>
+
+<p>
+Se utiliza la <strong>prueba de la recta vertical</strong>.
+Si una recta vertical corta la gráfica en más de un punto,
+entonces la relación no es función.
+</p>
+
+<h2>Ejemplo resuelto</h2>
+
+<div class="ejercicio">
+
+<p><strong>Relación tabular:</strong></p>
+
+<table>
+<tr>
+<th>x</th>
+<th>y</th>
+</tr>
+<tr>
+<td>1</td>
+<td>5</td>
+</tr>
+<tr>
+<td>2</td>
+<td>7</td>
+</tr>
+<tr>
+<td>3</td>
+<td>9</td>
+</tr>
+</table>
+
+<p>
+Cada valor de \(x\) tiene una sola imagen.
+Por lo tanto, <strong>sí es una función</strong>.
+</p>
+
+</div>
+
+<h2>Ejercicios</h2>
+
+<div class="ejercicio">
+<h3>Ejercicio 1</h3>
+
+<table>
+<tr>
+<th>x</th>
+<th>y</th>
+</tr>
+<tr>
+<td>1</td>
+<td>4</td>
+</tr>
+<tr>
+<td>2</td>
+<td>6</td>
+</tr>
+<tr>
+<td>3</td>
+<td>8</td>
+</tr>
+</table>
+
+<p>¿Es función?</p>
+</div>
+
+<div class="ejercicio">
+<h3>Ejercicio 2</h3>
+
+<table>
+<tr>
+<th>x</th>
+<th>y</th>
+</tr>
+<tr>
+<td>2</td>
+<td>5</td>
+</tr>
+<tr>
+<td>2</td>
+<td>7</td>
+</tr>
+<tr>
+<td>4</td>
+<td>8</td>
+</tr>
+</table>
+
+<p>¿Es función?</p>
+</div>
+
+<div class="ejercicio">
+<h3>Ejercicio 3</h3>
+
+<p>
+Determina si la relación dada por
+\[
+f(x)=3x-2
+\]
+es una función.
+</p>
+</div>
+
+<div class="ejercicio">
+<h3>Ejercicio 4</h3>
+
+<p>Observa la siguiente gráfica:</p>
+
+<svg viewBox="0 0 300 200">
+
+<line x1="20" y1="100" x2="280" y2="100" stroke="black"/>
+<line x1="150" y1="20" x2="150" y2="180" stroke="black"/>
+
+<polyline
+points="40,150 80,120 120,95 160,75 220,50 260,25"
+fill="none"
+stroke="blue"
+stroke-width="3"/>
+
+</svg>
+
+<p>¿Representa una función?</p>
+
+</div>
+
+<div class="ejercicio">
+<h3>Ejercicio 5</h3>
+
+<p>Observa la siguiente gráfica:</p>
+
+<svg viewBox="0 0 300 200">
+
+<line x1="20" y1="100" x2="280" y2="100" stroke="black"/>
+<line x1="150" y1="20" x2="150" y2="180" stroke="black"/>
+
+<ellipse
+cx="150"
+cy="100"
+rx="70"
+ry="50"
+fill="none"
+stroke="red"
+stroke-width="3"/>
+
+</svg>
+
+<p>¿Representa una función?</p>
+
+</div>
+
+<h2>Respuestas</h2>
+
+<div class="respuesta">
+
+<p><strong>Ejercicio 1:</strong> Sí es función.</p>
+
+<p><strong>Ejercicio 2:</strong> No es función porque \(x=2\) tiene dos imágenes (5 y 7).</p>
+
+<p><strong>Ejercicio 3:</strong> Sí es función. Para cada valor de \(x\) existe un único valor de salida.</p>
+
+<p><strong>Ejercicio 4:</strong> Sí es función. Toda recta vertical intersecta la gráfica una sola vez.</p>
+
+<p><strong>Ejercicio 5:</strong> No es función. Algunas rectas verticales cortan la elipse en dos puntos.</p>
+
+</div>
+
+<h2>Videos recomendados de YouTube</h2>
+
+<div class="video">
+<p>
+<a href="https://www.youtube.com/results?search_query=funciones+dominio+rango+julioprofe"
+target ="pto y reconocimiento (JulioProfe)">
+</a>
+</p>
+<p>
+URL:
+https://www.youtube.com/results?search_query=funciones+dominio+rango+julioprofe
+</p>
+</div>
+
+<div class="video">
+<p>
+<a href="https://www.youtube.com/results?search_query=funciones+prueba+de+la+recta+vertical+matematicasprofealex"
+target="_blank">
+Prueba de la recta vertical y funciones (Profe Alex)
+</a>
+</p>
+<p>
+URL:
+https://www.youtube.com/results?search_query=funciones+prueba+de+la+recta+vertical+matematicasprofealex
+</p>
+</div>
+
+<h2>Referencias APA</h2>
+
+<ul>
+<li>
+Stewart, J., Redlin, L., & Watson, S. (2020).
+<i>Precalculus: Mathematics for Calculus</i>.
+Cengage Learning.
+</li>
+
+<li>
+Larson, R. (2018).
+<i>Precalculus</i>.
+Cengage Learning.
+</li>
+
+<li>
+OpenStax. (2025).
+<i>College Algebra</i>.
+https://openstax.org
+</li>
+</ul>
+
+</div>
+
+</body>
+</html>

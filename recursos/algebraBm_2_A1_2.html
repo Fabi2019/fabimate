@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Propiedades y elementos de una función</title>
+
+<script>
+window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    displayMath: [['\\[','\\]']]
+  }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+<style>
+body{
+    font-family:Arial,Helvetica,sans-serif;
+    margin:0;
+    padding:0;
+    background:#f4f6f8;
+    color:#222;
+}
+
+.container{
+    max-width:900px;
+    margin:auto;
+    background:white;
+    padding:20px;
+}
+
+h1,h2,h3{
+    color:#0b5394;
+}
+
+.print-btn{
+    display:block;
+    margin:15px auto;
+    padding:12px 24px;
+    border:none;
+    border-radius:6px;
+    background:#0b5394;
+    color:white;
+    cursor:pointer;
+    font-size:16px;
+}
+
+.print-btn:hover{
+    background:#073763;
+}
+
+.ejercicio{
+    background:#eef7ff;
+    border-left:5px solid #0b5394;
+    padding:12px;
+    margin:15px 0;
+}
+
+.respuesta{
+    background:#edf8ed;
+    border-left:5px solid #2e8b57;
+    padding:12px;
+    margin:12px 0;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    margin-top:10px;
+}
+
+table,th,td{
+    border:1px solid #444;
+}
+
+th,td{
+    padding:8px;
+    text-align:center;
+}
+
+svg{
+    max-width:100%;
+    height:auto;
+}
+
+.video{
+    background:#f8f8f8;
+    padding:12px;
+    margin:12px 0;
+    border-radius:8px;
+}
+
+@media print{
+    .print-btn{
+        display:none;
+    }
+
+    @page{
+        size:letter;
+        margin:1.5cm;
+    }
+
+    body{
+        background:white;
+    }
+
+    .container{
+        max-width:100%;
+    }
+}
+</style>
+
+</head>
+<body>
+
+<div class="container">
+
+<button class="print-btn" onclick="window.print()">
+Imprimir / Guardar PDF
+</button>
+
+<h1>Determina elementos o propiedades de una función a partir de sus representaciones</h1>
+
+<h2>Explicación</h2>
+
+<p>
+Una función puede representarse mediante tablas, expresiones algebraicas o
+gráficas. A partir de estas representaciones es posible identificar
+diversos elementos y propiedades.
+</p>
+
+<h3>Elementos principales</h3>
+
+<ul>
+<li><strong>Dominio:</strong> conjunto de valores de entrada (\(x\)).</li>
+<li><strong>Rango o recorrido:</strong> conjunto de valores de salida (\(y\)).</li>
+<li><strong>Variable independiente:</strong> generalmente \(x\).</li>
+<li><strong>Variable dependiente:</strong> generalmente \(y\).</li>
+<li><strong>Intercepto con el eje \(y\):</strong> valor de la función cuando \(x=0\).</li>
+</ul>
+
+<h3>Propiedades frecuentes</h3>
+
+<ul>
+<li>Creciente: al aumentar \(x\), aumenta \(y\).</li>
+<li>Decreciente: al aumentar \(x\), disminuye \(y\).</li>
+<li>Constante: mantiene el mismo valor.</li>
+<li>Máximo: mayor valor de la función.</li>
+<li>Mínimo: menor valor de la función.</li>
+</ul>
+
+<h2>Ejemplo resuelto</h2>
+
+<div class="ejercicio">
+
+<p><strong>Tabla de valores</strong></p>
+
+<table>
+<tr>
+<th>x</th>
+<th>y</th>
+</tr>
+
+<tr>
+<td>0</td>
+<td>2</td>
+</tr>
+
+<tr>
+<td>1</td>
+<td>4</td>
+</tr>
+
+<tr>
+<td>2</td>
+<td>6</td>
+</tr>
+
+<tr>
+<td>3</td>
+<td>8</td>
+</tr>
+
+</table>
+
+<p><strong>Análisis:</strong></p>
+
+<ul>
+<li>Dominio: \(\{0,1,2,3\}\)</li>
+<li>Rango: \(\{2,4,6,8\}\)</li>
+<li>Intercepto en \(y\): 2</li>
+<li>La función es creciente.</li>
+</ul>
+
+</div>
+
+<h2>Ejercicios</h2>
+
+<div class="ejercicio">
+
+<h3>Ejercicio 1</h3>
+
+<table>
+<tr>
+<th>x</th>
+<th>y</th>
+</tr>
+
+<tr>
+<td>-1</td>
+<td>0</td>
+</tr>
+
+<tr>
+<td>0</td>
+<td>2</td>
+</tr>
+
+<tr>
+<td>1</td>
+<td>4</td>
+</tr>
+
+<tr>
+<td>2</td>
+<td>6</td>
+</tr>
+
+</table>
+
+<p>
+Determina:
+</p>
+
+<ul>
+<li>Dominio.</li>
+<li>Rango.</li>
+<li>Intercepto con el eje \(y\).</li>
+</ul>
+
+</div>
+
+<div class="ejercicio">
+
+<h3>Ejercicio 2</h3>
+
+<p>
+Sea
+\[
+f(x)=5-2x
+\]
+</p>
+
+<p>
+Indica si la función es creciente o decreciente.
+</p>
+
+</div>
+
+<div class="ejercicio">
+
+<h3>Ejercicio 3</h3>
+
+<p>
+Sea
+\[
+f(x)=x^2
+\]
+</p>
+
+<p>
+¿Cuál es el valor mínimo de la función?
+</p>
+
+</div>
+
+<div class="ejercicio">
+
+<h3>Ejercicio 4</h3>
+
+<p>Observa la gráfica:</p>
+
+<svg viewBox="0 0 400 220">
+
+<line x1="20" y1="110" x2="380" y2="110" stroke="black"/>
+<line x1="200" y1="20" x2="200" y2="200" stroke="black"/>
+
+<polyline points="40,180 90,150 140,120 190,100 240,80 290,55 340,30"
+fill="none"
+stroke="blue"
+stroke-width="3"/>
+
+</svg>
+
+<p>
+¿La función es creciente, decreciente o constante?
+</p>
+
+</div>
+
+<div class="ejercicio">
+
+<h3>Ejercicio 5</h3>
+
+<p>Observa la gráfica:</p>
+
+<svg viewBox="0 0 400 220">
+
+<line x1="20" y1="110" x2="380" y2="110" stroke="black"/>
+<line x1="200" y1="20" x2="200" y2="200" stroke="black"/>
+
+<path d="M80 40 Q200 190 320 40"
+fill="none"
+stroke="red"
+stroke-width="3"/>
+
+</svg>
+
+<p>
+Determina si existe un valor mínimo.
+</p>
+
+</div>
+
+<h2>Respuestas</h2>
+
+<div class="respuesta">
+
+<p>
+<strong>Ejercicio 1</strong>
+</p>
+
+<ul>
+<li>Dominio: \(\{-1,0,1,2\}\)</li>
+<li>Rango: \(\{0,2,4,6\}\)</li>
+<li>Intercepto con eje \(y\): 2</li>
+</ul>
+
+<p>
+<strong>Ejercicio 2</strong>
+</p>
+
+<p>
+Es decreciente porque el coeficiente de \(x\) es negativo.
+</p>
+
+<p>
+<strong>Ejercicio 3</strong>
+</p>
+
+<p>
+El valor mínimo es \(0\), cuando \(x=0\).
+</p>
+
+<p>
+<strong>Ejercicio 4</strong>
+</p>
+
+<p>
+La función es creciente.
+</p>
+
+<p>
+<strong>Ejercicio 5</strong>
+</p>
+
+<p>
+Sí existe un valor mínimo. Se encuentra en el vértice de la parábola.
+</p>
+
+</div>
+
+<h2>Videos recomendados de YouTube</h2>
+
+<div class="video">
+
+<p>
+<a href="https://www.youtube.com/results?search_query=dominio+y+rango+de+una+funcion+julioprofe"
+target="_blankunción (JulioProfe)">
+</a>
+</p>
+
+<p>
+URL:
+https://www.youtube.com/results?search_query=dominio+y+rango+de+una+funcion+julioprofe
+</p>
+
+</div>
+
+<div class="video">
+
+<p>
+<a href="https://www.youtube.com/results?search_query=caracteristicas+de+las+funciones+profe+alex"
+target="_blank">
+Características y propiedades de funciones (Profe Alex)
+</a>
+</p>
+
+<p>
+URL:
+https://www.youtube.com/results?search_query=caracteristicas+de+las+funciones+profe+alex
+</p>
+
+</div>
+
+<h2>Referencias APA</h2>
+
+<ul>
+
+<li>
+OpenStax. (2025). <em>College Algebra</em>. OpenStax.
+https://openstax.org
+</li>
+
+<li>
+Stewart, J., Redlin, L., & Watson, S. (2020).
+<em>Precalculus: Mathematics for Calculus</em>.
+Cengage Learning.
+</li>
+
+<li>
+Larson, R. (2018).
+<em>Precalculus</em>.
+Cengage Learning.
+</li>
+
+</ul>
+
+</div>
+
+</body>
+</html>

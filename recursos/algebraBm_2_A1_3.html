@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Composición de Funciones</title>
+
+<script>
+window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    displayMath: [['\\[','\\]']]
+  }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+<style>
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    margin:0;
+    padding:0;
+    background:#f5f7fa;
+    color:#222;
+}
+
+.container{
+    max-width:900px;
+    margin:auto;
+    background:#fff;
+    padding:20px;
+}
+
+h1,h2,h3{
+    color:#0b5394;
+}
+
+.print-btn{
+    background:#0b5394;
+    color:white;
+    border:none;
+    padding:12px 20px;
+    border-radius:6px;
+    cursor:pointer;
+    display:block;
+    margin:15px auto;
+    font-size:16px;
+}
+
+.print-btn:hover{
+    background:#073763;
+}
+
+.ejemplo, .ejercicio{
+    background:#eef6ff;
+    border-left:5px solid #0b5394;
+    padding:12px;
+    margin:15px 0;
+}
+
+.respuestas{
+    background:#edf8ed;
+    border-left:5px solid #2e8b57;
+    padding:12px;
+    margin-top:20px;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    margin-top:10px;
+}
+
+table, th, td{
+    border:1px solid #444;
+}
+
+th, td{
+    padding:8px;
+    text-align:center;
+}
+
+.video{
+    background:#f8f8f8;
+    padding:10px;
+    border-radius:8px;
+    margin:10px 0;
+}
+
+a{
+    color:#0b5394;
+    word-break:break-word;
+}
+
+@media print{
+    .print-btn{
+        display:none;
+    }
+
+    @page{
+        size:letter;
+        margin:1.5cm;
+    }
+
+    body{
+        background:white;
+    }
+
+    .container{
+        max-width:100%;
+    }
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<button class="print-btn" onclick="window.print()">
+Imprimir / Guardar PDF
+</button>
+
+<h1>Composición de Dos Funciones</h1>
+
+<h2>Explicación</h2>
+
+<p>
+La <strong>composición de funciones</strong> consiste en aplicar una función
+sobre el resultado de otra función.
+</p>
+
+<p>
+Si tenemos dos funciones:
+</p>
+
+\[
+f(x)
+\]
+
+y
+
+\[
+g(x)
+\]
+
+entonces la composición se representa como:
+
+\[
+(f \circ g)(x)=f(g(x))
+\]
+
+<p>
+Esto significa que primero se calcula \(g(x)\) y luego el resultado obtenido
+se sustituye dentro de \(f(x)\).
+</p>
+
+<p>
+También es posible calcular:
+</p>
+
+\[
+(g \circ f)(x)=g(f(x))
+\]
+
+<p>
+Es importante recordar que generalmente:
+</p>
+
+\[
+(f \circ g)(x)\neq(g \circ f)(x)
+\]
+
+<h3>Aplicaciones en contextos reales</h3>
+
+<ul>
+<li>Conversión de medidas.</li>
+<li>Cálculo de costos con impuestos.</li>
+<li>Transformaciones geométricas.</li>
+<li>Modelos económicos y financieros.</li>
+<li>Procesamiento de datos.</li>
+</ul>
+
+<h2>Ejemplo Resuelto</h2>
+
+<div class="ejemplo">
+
+<p>
+Sean:
+</p>
+
+\[
+f(x)=2x+1
+\]
+
+\[
+g(x)=x^2
+\]
+
+<p>
+Determina:
+</p>
+
+\[
+(f \circ g)(x)
+\]
+
+<p>
+Sustituimos \(g(x)\) dentro de \(f(x)\):
+</p>
+
+\[
+(f \circ g)(x)=f(x^2)
+\]
+
+\[
+=2(x^2)+1
+\]
+
+\[
+=2x^2+1
+\]
+
+<p>
+Respuesta:
+</p>
+
+\[
+(f \circ g)(x)=2x^2+1
+\]
+
+</div>
+
+<h2>Ejercicios</h2>
+
+<div class="ejercicio">
+
+<h3>Ejercicio 1</h3>
+
+<p>Sean:</p>
+
+\[
+f(x)=x+3
+\]
+
+\[
+g(x)=2x
+\]
+
+<p>Calcula:</p>
+
+\[
+(f \circ g)(x)
+\]
+
+</div>
+
+<div class="ejercicio">
+
+<h3>Ejercicio 2</h3>
+
+<p>Sean:</p>
+
+\[
+f(x)=x^2
+\]
+
+\[
+g(x)=x-1
+\]
+
+<p>Calcula:</p>
+
+\[
+(f \circ g)(x)
+\]
+
+</div>
+
+<div class="ejercicio">
+
+<h3>Ejercicio 3</h3>
+
+<p>Sean:</p>
+
+\[
+f(x)=3x+2
+\]
+
+\[
+g(x)=x+4
+\]
+
+<p>Calcula:</p>
+
+\[
+(g \circ f)(x)
+\]
+
+</div>
+
+<div class="ejercicio">
+
+<h3>Ejercicio 4</h3>
+
+<p>
+Una tienda aplica un descuento de ¢500 a un producto y luego agrega
+un impuesto de ¢200.
+</p>
+
+<p>Definimos:</p>
+
+\[
+g(x)=x-500
+\]
+
+\[
+f(x)=x+200
+\]
+
+<p>
+Determina:
+</p>
+
+\[
+(f \circ g)(x)
+\]
+
+</div>
+
+<div class="ejercicio">
+
+<h3>Ejercicio 5</h3>
+
+<p>
+La siguiente tabla representa una función \(g\):
+</p>
+
+<table>
+
+<tr>
+<th>x</th>
+<th>g(x)</th>
+</tr>
+
+<tr>
+<td>1</td>
+<td>3</td>
+</tr>
+
+<tr>
+<td>2</td>
+<td>5</td>
+</tr>
+
+<tr>
+<td>3</td>
+<td>7</td>
+</tr>
+
+</table>
+
+<p>
+Además:
+</p>
+
+\[
+f(x)=x+1
+\]
+
+<p>
+Calcula:
+</p>
+
+\[
+(f \circ g)(2)
+\]
+
+</div>
+
+<h2>Respuestas</h2>
+
+<div class="respuestas">
+
+<p><strong>Ejercicio 1</strong></p>
+
+\[
+(f \circ g)(x)=f(2x)
+\]
+
+\[
+=2x+3
+\]
+
+<hr>
+
+<p><strong>Ejercicio 2</strong></p>
+
+\[
+(f \circ g)(x)=f(x-1)
+\]
+
+\[
+=(x-1)^2
+\]
+
+\[
+=x^2-2x+1
+\]
+
+<hr>
+
+<p><strong>Ejercicio 3</strong></p>
+
+\[
+(g \circ f)(x)=g(3x+2)
+\]
+
+\[
+=(3x+2)+4
+\]
+
+\[
+=3x+6
+\]
+
+<hr>
+
+<p><strong>Ejercicio 4</strong></p>
+
+\[
+(f \circ g)(x)
+\]
+
+\[
+=(x-500)+200
+\]
+
+\[
+=x-300
+\]
+
+<hr>
+
+<p><strong>Ejercicio 5</strong></p>
+
+De la tabla:
+
+\[
+g(2)=5
+\]
+
+Entonces:
+
+\[
+(f \circ g)(2)=f(5)
+\]
+
+\[
+=5+1
+\]
+
+\[
+=6
+\]
+
+</div>
+
+<h2>Videos recomendados de YouTube</h2>
+
+<div class="video">
+
+<p>
+<a href="https://www.youtube.com/results?search_query=composicion+de+funciones+julioprofe"
+target="_blank">
+Composición de funciones - JulioProfe
+</a>
+</p>
+
+<p>
+URL para impresión:<br>
+https://www.youtube.com/results?search_query=composicion+de+funciones+julioprofe
+</p>
+
+</div>
+
+<div class="video">
+
+<p>
+<a href="https://www.youtube.com/results?search_query=composicion+de+funciones+profe+alex"
+target="_blank">
+Composición de funciones - Profe Alex
+</a>
+</p>
+
+<p>
+URL para impresión:<br>
+https://www.youtube.com/results?search_query=composicion+de+funciones+profe+alex
+</p>
+
+</div>
+
+<h2>Referencias APA</h2>
+
+<ul>
+
+<li>
+Stewart, J., Redlin, L., & Watson, S. (2020).
+<i>Precalculus: Mathematics for Calculus</i>.
+Cengage Learning.
+</li>
+
+<li>
+Larson, R. (2018).
+<i>Precalculus</i>.
+Cengage Learning.
+</li>
+
+<li>
+OpenStax. (2025).
+<i>College Algebra</i>.
+OpenStax.
+https://openstax.org/details/books/college-algebra
+</li>
+
+<li>
+Sullivan, M. (2021).
+<i>Precalculus</i>.
+Pearson Education.
+</li>
+
+</ul>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Condiciones para la Composición de Funciones</title>
+
+<script>
+window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    displayMath: [['\\[','\\]']]
+  }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+<style>
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    margin:0;
+    padding:0;
+    background:#f5f7fa;
+    color:#222;
+}
+
+.container{
+    max-width:900px;
+    margin:auto;
+    background:white;
+    padding:20px;
+}
+
+h1,h2,h3{
+    color:#0b5394;
+}
+
+.print-btn{
+    display:block;
+    margin:15px auto;
+    padding:12px 24px;
+    background:#0b5394;
+    color:white;
+    border:none;
+    border-radius:6px;
+    cursor:pointer;
+    font-size:16px;
+}
+
+.print-btn:hover{
+    background:#073763;
+}
+
+.ejemplo,.ejercicio{
+    background:#eef6ff;
+    border-left:5px solid #0b5394;
+    padding:12px;
+    margin:15px 0;
+}
+
+.respuestas{
+    background:#edf8ed;
+    border-left:5px solid #2e8b57;
+    padding:12px;
+    margin-top:20px;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    margin-top:10px;
+}
+
+table,th,td{
+    border:1px solid #444;
+}
+
+th,td{
+    padding:8px;
+    text-align:center;
+}
+
+.video{
+    background:#f8f8f8;
+    border-radius:8px;
+    padding:12px;
+    margin:10px 0;
+}
+
+a{
+    color:#0b5394;
+    word-break:break-word;
+}
+
+svg{
+    max-width:100%;
+    height:auto;
+}
+
+@media print{
+    .print-btn{
+        display:none;
+    }
+
+    @page{
+        size:letter;
+        margin:1.5cm;
+    }
+
+    body{
+        background:white;
+    }
+
+    .container{
+        max-width:100%;
+    }
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<button class="print-btn" onclick="window.print()">
+Imprimir / Guardar PDF
+</button>
+
+<h1>Condiciones necesarias y suficientes para definir la composición de dos funciones</h1>
+
+<h2>Explicación</h2>
+
+<p>
+La composición de funciones consiste en aplicar una función sobre el resultado
+obtenido por otra función.
+</p>
+
+<p>
+Si tenemos:
+</p>
+
+\[
+f:A \rightarrow B
+\]
+
+y
+
+\[
+g:C \rightarrow D
+\]
+
+<p>
+La composición
+</p>
+
+\[
+(f\circ g)(x)=f(g(x))
+\]
+
+<p>
+está definida únicamente cuando cada valor producido por \(g\) pertenece al
+dominio de \(f\).
+</p>
+
+<h3>Condición necesaria y suficiente</h3>
+
+<p>
+La composición \(f\circ g\) existe si:
+</p>
+
+\[
+\text{Recorrido de } g \subseteq \text{Dominio de } f
+\]
+
+<p>
+En otras palabras, todos los valores de salida de \(g\) deben poder entrar en
+la función \(f\).
+</p>
+
+<h3>Representación gráfica</h3>
+
+<svg viewBox="0 0 700 180">
+
+<rect x="40" y="50" width="120" height="70"
+fill="#cfe2f3" stroke="#0b5394"/>
+
+<text x="88" y="90" font-size="22">x</text>
+
+<rect x="290" y="50" width="120" height="70"
+fill="#d9ead3" stroke="#38761d"/>
+
+<text x="340" y="90" font-size="22">g(x)</text>
+
+<rect x="540" y="50" width="120" height="70"
+fill="#ffe599" stroke="#bf9000"/>
+
+<text x="588" y="90" font-size="22">f(g(x))</text>
+
+<line x1="160" y1="85" x2="290" y2="85"
+stroke="black" stroke-width="2"/>
+
+<line x1="410" y1="85" x2="540" y2="85"
+stroke="black" stroke-width="2"/>
+
+</svg>
+
+<p>
+Primero se evalúa \(g(x)\) y posteriormente ese resultado se utiliza como
+entrada de \(f\).
+</p>
+
+<h2>Ejemplo Resuelto</h2>
+
+<div class="ejemplo">
+
+<p>
+Sean:
+</p>
+
+\[
+g(x)=x+1
+\]
+
+con dominio
+
+\[
+\mathbb{R}
+\]
+
+<p>
+y
+</p>
+
+\[
+f(x)=\sqrt{x}
+\]
+
+<p>
+con dominio:
+</p>
+
+\[
+x\ge 0
+\]
+
+<p>
+Para que exista:
+</p>
+
+\[
+(f\circ g)(x)
+\]
+
+<p>
+se necesita:
+</p>
+
+\[
+x+1\ge 0
+\]
+
+\[
+x\ge -1
+\]
+
+<p>
+Por tanto, la composición está definida únicamente para
+\(x\ge -1\).
+</p>
+
+</div>
+
+<h2>Ejercicios</h2>
+
+<div class="ejercicio">
+
+<h3>Ejercicio 1</h3>
+
+<p>
+Sean:
+</p>
+
+\[
+g(x)=x+3
+\]
+
+\[
+f(x)=\sqrt{x}
+\]
+
+<p>
+Determine la condición para que exista:
+</p>
+
+\[
+(f\circ g)(x)
+\]
+
+</div>
+
+<div class="ejercicio">
+
+<h3>Ejercicio 2</h3>
+
+<p>
+Sean:
+</p>
+
+\[
+g(x)=x^2
+\]
+
+\[
+f(x)=\frac{1}{x}
+\]
+
+<p>
+¿Para cuáles valores de \(x\) existe:
+</p>
+
+\[
+(f\circ g)(x)
+\]
+
+<p>?</p>
+
+</div>
+
+<div class="ejercicio">
+
+<h3>Ejercicio 3</h3>
+
+<p>
+Sean:
+</p>
+
+\[
+g(x)=2x-5
+\]
+
+\[
+f(x)=\sqrt{x}
+\]
+
+<p>
+Determine el conjunto de valores permitidos para \(x\).
+</p>
+
+</div>
+
+<div class="ejercicio">
+
+<h3>Ejercicio 4</h3>
+
+<p>
+Una empresa registra la producción mediante:
+</p>
+
+\[
+g(x)=x+100
+\]
+
+<p>
+y luego calcula el costo:
+</p>
+
+\[
+f(x)=0.5x
+\]
+
+<p>
+¿La composición está definida para todos los números reales?
+</p>
+
+</div>
+
+<div class="ejercicio">
+
+<h3>Ejercicio 5</h3>
+
+<p>
+Sean:
+</p>
+
+\[
+g(x)=\sqrt{x}
+\]
+
+\[
+f(x)=\ln(x)
+\]
+
+<p>
+Determine las condiciones para que exista:
+</p>
+
+\[
+(f\circ g)(x)
+\]
+
+</div>
+
+<h2>Respuestas</h2>
+
+<div class="respuestas">
+
+<p><strong>Ejercicio 1</strong></p>
+
+\[
+x+3\ge0
+\]
+
+\[
+x\ge -3
+\]
+
+<hr>
+
+<p><strong>Ejercicio 2</strong></p>
+
+Se requiere:
+
+\[
+x^2\neq0
+\]
+
+Por tanto:
+
+\[
+x\neq0
+\]
+
+<hr>
+
+<p><strong>Ejercicio 3</strong></p>
+
+\[
+2x-5\ge0
+\]
+
+\[
+2x\ge5
+\]
+
+\[
+x\ge2.5
+\]
+
+<hr>
+
+<p><strong>Ejercicio 4</strong></p>
+
+Sí.
+
+Las funciones lineales presentadas están definidas para todos los números
+reales, por lo que la composición también está definida para todos los reales.
+
+<hr>
+
+<p><strong>Ejercicio 5</strong></p>
+
+Para la raíz cuadrada:
+
+\[
+x\ge0
+\]
+
+Para el logaritmo:
+
+\[
+\sqrt{x}>0
+\]
+
+Entonces:
+
+\[
+x>0
+\]
+
+</div>
+
+<h2>Videos recomendados de YouTube</h2>
+
+<div class="video">
+
+<p>
+<a href="www.youtube.com/results?search_query=composicion+de+funciones+julioprofe"
+target="_blank">
+Composición de funciones - JulioProfe
+</a>
+</p>
+
+<p>
+URL para impresión:<br>
+https://www.youtube.com/results?search_query=composicion+de+funciones+julioprofe
+</p>
+
+</div>
+
+<div class="video">
+
+<p>
+<a href="www.youtube.com/results?search_query=dominio+y+composicion+de+funciones+profe+alex"
+target="_blank">
+Dominio y composición de funciones - Profe Alex
+</a>
+</p>
+
+<p>
+URL para impresión:<br>
+https://www.youtube.com/results?search_query=dominio+y+composicion+de+funciones+profe+alex
+</p>
+
+</div>
+
+<h2>Referencias APA</h2>
+
+<ul>
+
+<li>
+Stewart, J., Redlin, L., & Watson, S. (2020).
+<i>Precalculus: Mathematics for Calculus</i>.
+Cengage Learning.
+</li>
+
+<li>
+Larson, R. (2018).
+<i>Precalculus</i>.
+Cengage Learning.
+</li>
+
+<li>
+OpenStax. (2025).
+<i>College Algebra</i>.
+OpenStax.
+https://openstax.org/details/books/college-algebra
+</li>
+
+<li>
+Sullivan, M. (2021).
+<i>Precalculus</i>.
+Pearson Education.
+</li>
+
+</ul>
+
+</div>
+
+</body>
+</html>
