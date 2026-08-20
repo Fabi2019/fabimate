@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>3.9 Resolver problemas utilizando ecuaciones de segundo grado con una incógnita</title>
+
+<style>
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    margin:0;
+    padding:20px;
+    background:#f4f6f9;
+    color:#222;
+    line-height:1.7;
+}
+
+.container{
+    max-width:900px;
+    margin:auto;
+    background:white;
+    padding:25px;
+    border-radius:10px;
+    box-shadow:0 0 10px rgba(0,0,0,0.1);
+}
+
+h1,h2,h3{
+    color:#0b5394;
+}
+
+.boton{
+    text-align:center;
+    margin-bottom:20px;
+}
+
+button{
+    background:#0b5394;
+    color:white;
+    border:none;
+    padding:12px 24px;
+    border-radius:6px;
+    cursor:pointer;
+    font-size:16px;
+}
+
+button:hover{
+    background:#073763;
+}
+
+.ejercicio{
+    background:#f8f9fa;
+    border-left:5px solid #0b5394;
+    padding:12px;
+    margin:12px 0;
+}
+
+.respuestas{
+    background:#eef8ee;
+    padding:15px;
+    border-radius:8px;
+}
+
+.video{
+    margin:12px 0;
+}
+
+a{
+    color:#0b5394;
+    font-weight:bold;
+    text-decoration:none;
+}
+
+a:hover{
+    text-decoration:underline;
+}
+
+@media (max-width:768px){
+    body{
+        padding:10px;
+    }
+
+    .container{
+        padding:15px;
+    }
+}
+
+@media print{
+
+    .boton{
+        display:none;
+    }
+
+    body{
+        background:white;
+    }
+
+    .container{
+        box-shadow:none;
+        max-width:100%;
+        width:100%;
+    }
+
+    @page{
+        size:letter;
+        margin:1.5cm;
+    }
+}
+</style>
+
+<script>
+function imprimirPDF(){
+    window.print();
+}
+</script>
+
+<script>
+window.MathJax = {
+    tex: {
+        inlineMath: [['\\(','\\)']],
+        displayMath: [['\\[','\\]']]
+    }
+};
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</head>
+<body>
+
+<div class="container">
+
+<div class="boton">
+<button onclick="imprimirPDF()">🖨️ Imprimir / Guardar como PDF</button>
+</div>
+
+<h1>3.9 Resolver problemas utilizando ecuaciones de segundo grado con una incógnita</h1>
+
+<h2>Explicación</h2>
+
+<p>
+Una ecuación de segundo grado o ecuación cuadrática con una incógnita
+es una ecuación de la forma:
+</p>
+
+\[
+ax^2+bx+c=0
+\]
+
+<p>
+donde:
+</p>
+
+<ul>
+<li>\(a \neq 0\)</li>
+<li>\(a\), \(b\) y \(c\) son números reales.</li>
+</ul>
+
+<p>
+Para resolver problemas mediante ecuaciones cuadráticas se recomienda:
+</p>
+
+<ol>
+<li>Leer cuidadosamente el problema.</li>
+<li>Definir la incógnita.</li>
+<li>Plantear la ecuación.</li>
+<li>Resolver la ecuación.</li>
+<li>Verificar cuál solución tiene sentido dentro del contexto.</li>
+</ol>
+
+<p>
+Una de las formas más utilizadas para resolverlas es la fórmula general:
+</p>
+
+\[
+x=\frac{-b\pm\sqrt{b^2-4a\cdot c}}{2a}
+\]
+
+<h2>Ejemplo resuelto</h2>
+
+<p>
+El área de un cuadrado es \(64\,cm^2\). Determine la longitud de cada lado.
+</p>
+
+<p>
+Sea \(x\) la medida del lado.
+</p>
+
+\[
+x^2=64
+\]
+
+\[
+x^2-64=0
+\]
+
+\[
+(x-8)(x+8)=0
+\]
+
+\[
+x=8 \quad \text{o} \quad x=-8
+\]
+
+<p>
+Como una longitud no puede ser negativa:
+</p>
+
+\[
+\boxed{x=8\,cm}
+\]
+
+<h2>Ejercicios</h2>
+
+<div class="ejercicio">
+<strong>1.</strong>
+El producto de dos números consecutivos es 56.
+Determine el número mayor.
+</div>
+
+<div class="ejercicio">
+<strong>2.</strong>
+El área de un cuadrado es \(121\,cm^2\).
+Determine la medida de su lado.
+</div>
+
+<div class="ejercicio">
+<strong>3.</strong>
+La base de un rectángulo mide 3 m más que su altura.
+Si su área es \(54\,m^2\), determine las dimensiones.
+</div>
+
+<div class="ejercicio">
+<strong>4.</strong>
+La suma de un número y su cuadrado es 30.
+Determine el número.
+</div>
+
+<div class="ejercicio">
+<strong>5.</strong>
+Un terreno rectangular tiene un área de \(72\,m^2\).
+El largo mide 2 m más que el ancho.
+Determine las dimensiones.
+</div>
+
+<h2>Respuestas</h2>
+
+<div class="respuestas">
+
+<p><strong>1.</strong></p>
+
+\[
+x(x+1)=56
+\]
+
+\[
+x^2+x-56=0
+\]
+
+\[
+(x+8)(x-7)=0
+\]
+
+\[
+x=7
+\]
+
+Número mayor:
+
+\[
+\boxed{8}
+\]
+
+<hr>
+
+<p><strong>2.</strong></p>
+
+\[
+x^2=121
+\]
+
+\[
+x=11
+\]
+
+\[
+\boxed{11\,cm}
+\]
+
+<hr>
+
+<p><strong>3.</strong></p>
+
+\[
+x(x+3)=54
+\]
+
+\[
+x^2+3x-54=0
+\]
+
+\[
+(x+9)(x-6)=0
+\]
+
+\[
+x=6
+\]
+
+Altura:
+
+\[
+\boxed{6\,m}
+\]
+
+Base:
+
+\[
+\boxed{9\,m}
+\]
+
+<hr>
+
+<p><strong>4.</strong></p>
+
+\[
+x+x^2=30
+\]
+
+\[
+x^2+x-30=0
+\]
+
+\[
+(x+6)(x-5)=0
+\]
+
+\[
+\boxed{x=5 \; \text{o} \; x=-6}
+\]
+
+<hr>
+
+<p><strong>5.</strong></p>
+
+\[
+x(x+2)=72
+\]
+
+\[
+x^2+2x-72=0
+\]
+
+\[
+(x+10)(x-8)=0
+\]
+
+\[
+x=8
+\]
+
+Ancho:
+
+\[
+\boxed{8\,m}
+\]
+
+Largo:
+
+\[
+\boxed{10\,m}
+\]
+
+</div>
+
+<h2>Videos de apoyo en YouTube</h2>
+
+<div class="video">
+<a href="https://www.youtube.com/results?search_query=problemas+s+cuadraticas+julioprofe">
+Problemas con ecuaciones cuadráticas - Julioprofe
+</a>
+<br>
+URL para impresión:
+https://www.youtube.com/results?search_query=problemas+ecuaciones+cuadraticas+julioprofe
+</div>
+
+<div class="video">
+<a href="https://www.youtube.com/results?search_query=problemas+ecuaciones+de+segundo+grado+math2me" target="_blank">
+Problemas de ecuaciones de segundo grado - Math2Me
+</a>
+<br>
+URL para impresión:
+https://www.youtube.com/results?search_query=problemas+ecuaciones+de+segundo+grado+math2me
+</div>
+
+<h2>Referencias (APA 7)</h2>
+
+<p>
+Baldor, A. (2019). <em>Álgebra</em>. Grupo Patria.
+</p>
+
+<p>
+OpenStax. (2024). <em>College Algebra 2e</em>. Rice University.
+</p>
+
+<p>
+Larson, R. (2018). <em>Algebra and Trigonometry</em> (11.ª ed.). Cengage Learning.
+</p>
+
+<p>
+Sullivan, M. (2020). <em>Algebra and Trigonometry</em>. Pearson.
+</p>
+
+</div>
+
+</body>
+</html>
