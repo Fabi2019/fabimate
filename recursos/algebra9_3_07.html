@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Operaciones con Expresiones Algebraicas Fraccionarias</title>
+
+<style>
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    margin:0;
+    padding:20px;
+    line-height:1.7;
+    background:#f4f6f9;
+    color:#222;
+}
+
+.container{
+    max-width:900px;
+    margin:auto;
+    background:white;
+    padding:25px;
+    border-radius:10px;
+    box-shadow:0 0 10px rgba(0,0,0,0.1);
+}
+
+h1,h2,h3{
+    color:#0b5394;
+}
+
+.ejercicio{
+    background:#f8f9fa;
+    border-left:5px solid #0b5394;
+    padding:10px;
+    margin:10px 0;
+}
+
+.video{
+    margin:10px 0;
+}
+
+.boton{
+    text-align:center;
+    margin-bottom:20px;
+}
+
+button{
+    background:#0b5394;
+    color:white;
+    border:none;
+    padding:12px 20px;
+    border-radius:5px;
+    cursor:pointer;
+    font-size:16px;
+}
+
+button:hover{
+    background:#073763;
+}
+
+.respuestas{
+    background:#eef7ee;
+    padding:12px;
+    border-radius:8px;
+}
+
+@media print{
+    .boton{
+        display:none;
+    }
+
+    body{
+        background:white;
+    }
+
+    .container{
+        box-shadow:none;
+        max-width:100%;
+    }
+
+    @page{
+        size: letter;
+        margin: 1.5cm;
+    }
+}
+</style>
+
+<script>
+function imprimirPDF(){
+    window.print();
+}
+</script>
+
+<script>
+window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    displayMath: [['\\[','\\]']]
+  }
+};
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</head>
+<body>
+
+<div class="container">
+
+<div class="boton">
+<button onclick="imprimirPDF()">🖨️ Imprimir / Guardar como PDF</button>
+</div>
+
+<h1>3.7 Operaciones con Expresiones Algebraicas Fraccionarias</h1>
+
+<h2>Explicación</h2>
+
+<p>
+Una <strong>expresión algebraica fraccionaria</strong> es una fracción cuyo numerador,
+denominador o ambos contienen expresiones algebraicas.
+</p>
+
+<p>Ejemplos:</p>
+
+\[
+\frac{x+2}{x-3}
+\]
+
+\[
+\frac{2x}{x^2-1}
+\]
+
+<p>
+Las operaciones básicas con expresiones algebraicas fraccionarias son:
+</p>
+
+<ul>
+<li><strong>Suma y resta:</strong> se busca un denominador común.</li>
+<li><strong>Multiplicación:</strong> se multiplican numeradores y denominadores.</li>
+<li><strong>División:</strong> se multiplica por el recíproco de la segunda fracción.</li>
+<li><strong>Simplificación:</strong> se factorizan numeradores y denominadores para cancelar factores comunes.</li>
+</ul>
+
+<h2>Ejemplo Resuelto</h2>
+
+<p>Realizar la operación:</p>
+
+\[
+\frac{x}{x+1}+\frac{2}{x+1}
+\]
+
+<p><strong>Paso 1:</strong> Verificar denominadores.</p>
+
+\[
+x+1 = x+1
+\]
+
+<p>Los denominadores son iguales.</p>
+
+<p><strong>Paso 2:</strong> Sumar numeradores.</p>
+
+\[
+\frac{x+2}{x+1}
+\]
+
+<p><strong>Resultado:</strong></p>
+
+\[
+\boxed{\frac{x+2}{x+1}}
+\]
+
+<h2>Ejercicios</h2>
+
+<div class="ejercicio">
+<strong>1.</strong>
+\[
+\frac{3x}{x+2}+\frac{5}{x+2}
+\]
+</div>
+
+<div class="ejercicio">
+<strong>2.</strong>
+\[
+\frac{x}{x-1}-\frac{2}{x-1}
+\]
+</div>
+
+<div class="ejercicio">
+<strong>3.</strong>
+\[
+\frac{2x}{3}\cdot\frac{9}{4x}
+\]
+</div>
+
+<div class="ejercicio">
+<strong>4.</strong>
+\[
+\frac{x^2-9}{x-3}
+\]
+</div>
+
+<div class="ejercicio">
+<strong>5.</strong>
+\[
+\frac{x}{2}\div\frac{3x}{4}
+\]
+</div>
+
+<h2>Respuestas</h2>
+
+<div class="respuestas">
+
+<p><strong>1.</strong></p>
+
+\[
+\frac{3x+5}{x+2}
+\]
+
+<p><strong>2.</strong></p>
+
+\[
+\frac{x-2}{x-1}
+\]
+
+<p><strong>3.</strong></p>
+
+\[
+\frac{2x}{3}\cdot\frac{9}{4x}
+=
+\frac{18x}{12x}
+=
+\frac{3}{2}
+\]
+
+<p><strong>4.</strong></p>
+
+Factorizando:
+
+\[
+x^2-9=(x-3)(x+3)
+\]
+
+\[
+\frac{(x-3)(x+3)}{x-3}
+\]
+
+\[
+x+3
+\]
+
+<p><strong>5.</strong></p>
+
+\[
+\frac{x}{2}\div\frac{3x}{4}
+=
+\frac{x}{2}\cdot\frac{4}{3x}
+=
+\frac{4x}{6x}
+=
+\frac{2}{3}
+\]
+
+</div>
+
+<h2>Videos de apoyo en YouTube</h2>
+
+<div class="video">
+<p>
+<a href="https://www.youtube.com/watch?v=tSYq8JoH96M"_blank">
+Multiplicar fracciones algebraicas | Ej. 1 - julioprofe
+</a>
+<br>
+URL para impresión:
+https://www.youtube.com/watch?v=tSYq8JoH96M
+</p>
+</div>
+
+<div class="video">
+<p>
+<a href="https://www.youtube.com/watch?v=hFKRrOwmruY" target="_blank">
+Simplificación de fracciones algebraicas | Ejercicios 1 al 4 - math2me
+</a>
+<br>
+URL para impresión:
+https://www.youtube.com/watch?v=hFKRrOwmruY
+</p>
+</div>
+
+<h2>Referencias (Formato APA 7)</h2>
+
+<p>
+Baldor, A. (2019). <em>Álgebra</em>. Grupo Patria.
+</p>
+
+<p>
+OpenStax. (2024). <em>College Algebra 2e</em>. Rice University.
+https://openstax.org/details/books/college-algebra-2e
+</p>
+
+<p>
+Larson, R. (2018). <em>Algebra and Trigonometry</em> (11th ed.). Cengage Learning.
+</p>
+
+</div>
+
+</body>
+</html>
