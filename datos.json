@@ -52,7 +52,7 @@
         ],
     "practicas": [
         {
-        "nombre": "<strong style='color: red;'>SETIMO</strong> Examen #1 (descargar)",
+        "nombre": "<strong style='color:var(--primary);'>SETIMO</strong> Examen #1 (descargar)",
         "url": "https://dgec.mep.go.cr/wp-content/uploads/2026/02/PRACTICA-SETIMO-MATEMATICAS.pdf"
         },
          {
