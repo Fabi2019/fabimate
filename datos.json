@@ -52,16 +52,28 @@
         ],
     "practicas": [
         {
-        "nombre": "Práctica Examen <strong> 7mo</strong> (descargar)",
+        "nombre": "Práctica Examen #1 <strong> 7mo</strong> (descargar)",
         "url": "https://dgec.mep.go.cr/wp-content/uploads/2026/02/PRACTICA-SETIMO-MATEMATICAS.pdf"
+        },
+         {
+        "nombre": "Práctica Examen #2 <strong> 7mo</strong> (descargar)",
+        "url": "https://dgec.mep.go.cr/wp-content/uploads/2026/07/Practica-Setimo-Matematicas-02-2026.pdf"
         },
         {
         "nombre": "Práctica Examen 8vo (descargar)",
         "url": "https://dgec.mep.go.cr/wp-content/uploads/2026/02/OCTAVO-PRACTICA.pdf"
         },
         {
+        "nombre": "Práctica Examen #2 <strong> 8vo</strong> (descargar)",
+        "url": "https://dgec.mep.go.cr/wp-content/uploads/2026/07/Practica-<Octavo-Matematicas-02-2026.pdf"
+        },
+        {
         "nombre": "Práctica Examen 9no (descargar)",
         "url": "https://dgec.mep.go.cr/wp-content/uploads/2026/02/PRACTICA-NOVENO-MATEMATICAS.pdf"
+        },
+        {
+        "nombre": "Práctica Examen #2 <strong> 9no</strong> (descargar)",
+        "url": "https://dgec.mep.go.cr/wp-content/uploads/2026/07/Practica-Noveno-Matematicas-02-2026.pdf"
         },
         {
         "nombre": "Práctica Examen1 BXM",
