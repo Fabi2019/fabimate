@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examen MEP - Ítems 4 y 5</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #eef2f5;
+            margin: 0;
+            padding: 20px;
+            color: #000000;
+        }
+
+        .exam-page {
+            max-width: 750px;
+            margin: 0 auto;
+            background: #ffffff;
+            padding: 40px 50px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+            border: 1px solid #ccc;
+            position: relative;
+            box-sizing: border-box;
+        }
+
+        .mep-sidebar {
+            position: absolute;
+            right: 15px;
+            top: 40px;
+            bottom: 40px;
+            width: 30px;
+            border-left: 2px solid #000;
+            padding-left: 8px;
+            writing-mode: vertical-rl;
+            text-orientation: mixed;
+            font-size: 0.75rem;
+            font-weight: bold;
+            letter-spacing: 1px;
+            color: #000;
+        }
+
+        .mep-header {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            margin-bottom: 25px;
+            padding-right: 40px;
+        }
+
+        .mep-logo-text {
+            text-align: left;
+            font-size: 0.95rem;
+            font-weight: bold;
+            line-height: 1.15;
+            border-left: 3px solid #000;
+            padding-left: 8px;
+        }
+
+        .main-content {
+            padding-right: 40px;
+        }
+
+        .instructions {
+            font-size: 1.05rem;
+            line-height: 1.4;
+            margin-bottom: 20px;
+        }
+
+        .graph-container {
+            text-align: center;
+            margin: 10px 0 20px 0;
+        }
+
+        svg {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .function-box-container {
+            text-align: center;
+            margin: 15px 0 25px 0;
+        }
+
+        .function-box {
+            display: inline-block;
+            border: 1.5px solid #000;
+            padding: 12px 25px;
+            text-align: left;
+            font-size: 1.05rem;
+            line-height: 1.7;
+            font-family: Arial, sans-serif;
+            background-color: #fff;
+        }
+
+        .item-block {
+            margin-bottom: 35px;
+            border-bottom: 1px dashed #ccc;
+            padding-bottom: 20px;
+        }
+
+        .question-text {
+            font-size: 1.05rem;
+            line-height: 1.5;
+            margin-bottom: 20px;
+        }
+
+        .options-container {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-bottom: 15px;
+        }
+
+        .option-row {
+            display: flex;
+            align-items: center;
+            font-size: 1.1rem;
+            cursor: pointer;
+            width: fit-content;
+            padding: 4px 8px;
+            border-radius: 4px;
+            user-select: none;
+        }
+
+        .option-row:hover {
+            background-color: #f0f0f0;
+        }
+
+        .option-label {
+            font-weight: bold;
+            width: 30px;
+        }
+
+        .option-value {
+            min-width: 60px;
+        }
+
+        .checkbox-square {
+            width: 18px;
+            height: 18px;
+            border: 2px solid #000;
+            display: inline-block;
+            margin-left: 10px;
+            position: relative;
+            background: #fff;
+        }
+
+        .option-row.selected .checkbox-square::after {
+            content: "✓";
+            position: absolute;
+            top: -5px;
+            left: 2px;
+            font-size: 20px;
+            font-weight: bold;
+            color: #000;
+        }
+
+        .option-row.correct-style .checkbox-square::after {
+            color: #27ae60;
+        }
+
+        .option-row.incorrect-style .checkbox-square::after {
+            content: "✕";
+            color: #c0392b;
+            top: -3px;
+            left: 3px;
+        }
+
+        .explanation-box {
+            display: none;
+            padding: 15px 20px;
+            border-radius: 6px;
+            font-size: 0.95rem;
+            line-height: 1.5;
+            margin-top: 10px;
+        }
+
+        .explanation-correct {
+            background-color: #e8f8f5;
+            border: 1.5px solid #27ae60;
+            color: #1e8449;
+        }
+
+        .explanation-incorrect {
+            background-color: #fadbd8;
+            border: 1.5px solid #e74c3c;
+            color: #78281f;
+        }
+    </style>
+</head>
+<body>
+
+<div class="exam-page">
+    <div class="mep-sidebar">
+        MINISTERIO DE EDUCACIÓN PÚBLICA | GOBIERNO DE COSTA RICA | Matemáticas / Bachillerato por Madurez Suficiente / Convocatoria 02-2025
+    </div>
+
+    <div class="main-content">
+        <div class="mep-header">
+            <div class="mep-logo-text">
+                MINISTERIO DE<br>EDUCACIÓN PÚBLICA
+            </div>
+        </div>
+
+        <div class="instructions">
+            Para responder los ítems 3, 4 y 5 considere la siguiente información referida a las funciones f, g, h y k:
+        </div>
+
+        <!-- Gráfica de f -->
+        <div class="graph-container">
+            <svg viewBox="0 0 450 280" width="450" height="280">
+                <line x1="60" y1="190" x2="380" y2="190" stroke="#000" stroke-width="2.5"/>
+                <polygon points="380,185 392,190 380,195" fill="#000"/>
+                <text x="375" y="220" font-size="20" font-family="sans-serif" font-weight="bold">x</text>
+
+                <line x1="140" y1="40" x2="140" y2="240" stroke="#000" stroke-width="2.5"/>
+                <polygon points="135,40 140,28 145,40" fill="#000"/>
+                <text x="115" y="40" font-size="20" font-family="sans-serif" font-weight="bold">y</text>
+
+                <text x="80" y="220" font-size="20" font-weight="bold">-1</text>
+                <circle cx="95" cy="190" r="4.5" fill="#000"/>
+
+                <text x="290" y="220" font-size="20" font-weight="bold">3</text>
+                <circle cx="300" cy="190" r="4.5" fill="#000"/>
+
+                <text x="335" y="220" font-size="20" font-weight="bold">4</text>
+
+                <text x="115" y="160" font-size="20" font-weight="bold">2</text>
+                <circle cx="140" cy="155" r="4.5" fill="#000"/>
+
+                <text x="115" y="90" font-size="20" font-weight="bold">3</text>
+
+                <line x1="140" y1="85" x2="330" y2="85" stroke="#000" stroke-width="2" stroke-dasharray="6,5"/>
+                <line x1="330" y1="85" x2="330" y2="190" stroke="#000" stroke-width="2" stroke-dasharray="6,5"/>
+
+                <polyline points="95,190 140,155 300,190 330,85" fill="none" stroke="#000" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <circle cx="330" cy="85" r="4.5" fill="#000"/>
+                <text x="310" y="145" font-size="20" font-family="sans-serif" font-style="italic">f</text>
+            </svg>
+        </div>
+
+        <div class="function-box-container">
+            <div class="function-box">
+                g: [-2, 2] → [-4, 0], con g(x) = x³ - 2<br>
+                h: [-2, 3] → [-1, 4], con h(x) = x + 1<br>
+                k: [-4, 0] → [0, 4], con k(x) = x + 4
+            </div>
+        </div>
+
+        <!-- Ítem 4 -->
+        <div class="item-block">
+            <div class="question-text">
+                <strong>4)</strong> El valor de (f ∘ h)(-1) corresponde a
+            </div>
+
+            <div class="options-container">
+                <div class="option-row" onclick="selectOption(4, this, false, 'A')">
+                    <span class="option-label">A)</span>
+                    <span class="option-value">0</span>
+                    <span class="checkbox-square"></span>
+                </div>
+                <div class="option-row" onclick="selectOption(4, this, true, 'B')">
+                    <span class="option-label">B)</span>
+                    <span class="option-value">2</span>
+                    <span class="checkbox-square"></span>
+                </div>
+                <div class="option-row" onclick="selectOption(4, this, false, 'C')">
+                    <span class="option-label">C)</span>
+                    <span class="option-value">-1</span>
+                    <span class="checkbox-square"></span>
+                </div>
+            </div>
+
+            <div id="explanation-4" class="explanation-box"></div>
+        </div>
+
+        <!-- Ítem 5 -->
+        <div class="item-block">
+            <div class="question-text">
+                <strong>5)</strong> ¿Cuál de las siguientes funciones permite completar la expresión (k ∘ ____) para que la composición sea posible?
+            </div>
+
+            <div class="options-container">
+                <div class="option-row" onclick="selectOption(5, this, false, 'A')">
+                    <span class="option-label">A)</span>
+                    <span class="option-value">h</span>
+                    <span class="checkbox-square"></span>
+                </div>
+                <div class="option-row" onclick="selectOption(5, this, false, 'B')">
+                    <span class="option-label">B)</span>
+                    <span class="option-value">f</span>
+                    <span class="checkbox-square"></span>
+                </div>
+                <div class="option-row" onclick="selectOption(5, this, true, 'C')">
+                    <span class="option-label">C)</span>
+                    <span class="option-value">g</span>
+                    <span class="checkbox-square"></span>
+                </div>
+            </div>
+
+            <div id="explanation-5" class="explanation-box"></div>
+        </div>
+    </div>
+</div>
+
+<script>
+    function selectOption(itemNum, element, isCorrect, letter) {
+        const itemBlock = element.closest('.item-block');
+        itemBlock.querySelectorAll('.option-row').forEach(row => {
+            row.classList.remove('selected', 'correct-style', 'incorrect-style');
+        });
+
+        const expBox = document.getElementById('explanation-' + itemNum);
+        expBox.style.display = 'block';
+
+        if (isCorrect) {
+            element.classList.add('selected', 'correct-style');
+            expBox.className = 'explanation-box explanation-correct';
+
+            if (itemNum === 4) {
+                expBox.innerHTML = '<strong>¡Correcto! (Opción B)</strong><br>' +
+                    '1. Evaluamos h(-1): h(-1) = -1 + 1 = 0.<br>' +
+                    '2. Evaluamos f(0): En la gráfica, cuando x = 0, y = 2.<br>' +
+                    'Por lo tanto, (f ∘ h)(-1) = f(h(-1)) = f(0) = 2.';
+            } else if (itemNum === 5) {
+                expBox.innerHTML = '<strong>¡Correcto! (Opción C)</strong><br>' +
+                    'Para que (k ∘ g) sea posible, el ámbito de g debe estar contenido en el dominio de k.<br>' +
+                    '• Dominio de k = [-4, 0]<br>' +
+                    '• Ámbito de g = [-4, 0]<br>' +
+                    'Como coinciden perfectamente, la composición (k ∘ g) es válida.';
+            }
+        } else {
+            element.classList.add('selected', 'incorrect-style');
+            expBox.className = 'explanation-box explanation-incorrect';
+            expBox.innerHTML = '<strong>Opción Incorrecta (' + letter + ')</strong><br>' +
+                (itemNum === 4 ? 'Recuerda que (f ∘ h)(-1) = f(h(-1)). Primero calcula h(-1) y luego busca ese resultado en la gráfica de f.' :
+                'Para que la composición (k ∘ M) sea posible, el ámbito de M debe ser un subconjunto del dominio de k, que es [-4, 0].');
+        }
+    }
+</script>
+
+</body>
+</html>
