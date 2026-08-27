@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>4.4 Utilizar el concepto de frecuencia relativa como una aproximación al concepto de probabilidad</title>
+
+<style>
+
+*{
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    line-height:1.7;
+    margin:0;
+    padding:20px;
+    background:#f4f6f9;
+    color:#222;
+}
+
+.container{
+    max-width:1000px;
+    margin:auto;
+    background:white;
+    padding:30px;
+    border-radius:10px;
+    box-shadow:0 0 10px rgba(0,0,0,0.15);
+}
+
+h1,h2,h3{
+    color:#0B5394;
+}
+
+.btn-print{
+    background:#0B5394;
+    color:white;
+    border:none;
+    padding:12px 20px;
+    border-radius:6px;
+    cursor:pointer;
+    font-size:16px;
+    margin-bottom:20px;
+}
+
+.btn-print:hover{
+    background:#073763;
+}
+
+.ejemplo,
+.ejercicio,
+.video{
+    background:#F8F9FA;
+    border-left:5px solid #0B5394;
+    padding:12px;
+    margin:15px 0;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    margin:15px 0;
+}
+
+th,td{
+    border:1px solid #cccccc;
+    padding:10px;
+    text-align:center;
+}
+
+th{
+    background:#D9EAF7;
+}
+
+a{
+    color:#1155CC;
+    font-weight:bold;
+    word-break:break-word;
+}
+
+@media(max-width:768px){
+
+    body{
+        padding:10px;
+    }
+
+    .container{
+        padding:15px;
+    }
+
+    table{
+        font-size:13px;
+    }
+
+}
+
+@media print{
+
+    .btn-print{
+        display:none;
+    }
+
+    body{
+        background:white;
+        padding:0;
+    }
+
+    .container{
+        box-shadow:none;
+        max-width:100%;
+    }
+
+    @page{
+        size:letter;
+        margin:1.5cm;
+    }
+
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<button class="btn-print" onclick="window.print()">
+Imprimir / Guardar como PDF
+</button>
+
+<h1>4.4 Utilizar el concepto de frecuencia relativa como una aproximación al concepto de probabilidad, en eventos en los cuales el espacio muestral es infinito o indeterminado</h1>
+
+<h2>Explicación</h2>
+
+<p>
+En muchos fenómenos reales no es posible utilizar la probabilidad clásica porque no se conocen todos los resultados posibles o el espacio muestral es muy grande, infinito o indeterminado.
+</p>
+
+<p>
+En estas situaciones se utiliza la <strong>probabilidad frecuencial o experimental</strong>, basada en la observación de datos reales.
+</p>
+
+<p>
+La idea fundamental es que la probabilidad de un evento puede aproximarse mediante la <strong>frecuencia relativa</strong>.
+</p>
+
+<p>
+La fórmula es:
+</p>
+
+$$
+P(E)\approx h=\frac{f}{n}
+$$
+
+donde:
+
+<ul>
+<li>$$P(E)$$ = probabilidad aproximada del evento.</li>
+<li>$$f$$ = número de veces que ocurre el evento.</li>
+<li>$$n$$ = número total de observaciones o experimentos.</li>
+<li>$$h$$ = frecuencia relativa.</li>
+</ul>
+
+<h3>Interpretación</h3>
+
+<p>
+Mientras mayor sea la cantidad de observaciones realizadas, mejor será la aproximación de la frecuencia relativa a la probabilidad real del evento.
+</p>
+
+<p>
+Este enfoque se utiliza en situaciones como:
+</p>
+
+<ul>
+<li>Predicción del clima.</li>
+<li>Accidentes de tránsito.</li>
+<li>Mercados financieros.</li>
+<li>Rendimiento académico.</li>
+<li>Control de calidad industrial.</li>
+</ul>
+
+<hr>
+
+<h2>Ejemplo</h2>
+
+<div class="ejemplo">
+
+<p>
+Durante 100 días se registró si llovía o no en una ciudad.
+</p>
+
+<p>
+Se observó que llovió en 28 días.
+</p>
+
+<p>
+La frecuencia relativa de lluvia es:
+</p>
+
+$$
+h=\frac{28}{100}
+$$
+
+$$
+h=0.28
+$$
+
+<p>
+Expresando el resultado en porcentaje:
+</p>
+
+$$
+0.28\cdot100=28\%
+$$
+
+<p>
+<strong>Interpretación:</strong>
+Con base en los datos observados, la probabilidad aproximada de que llueva en un día cualquiera es del 28%.
+</p>
+
+</div>
+
+<hr>
+
+<h2>Ejercicios</h2>
+
+<div class="ejercicio">
+
+<strong>1.</strong>
+
+<p>
+En una fábrica se inspeccionan 500 productos. Se detectan 15 defectuosos.
+Utilice la frecuencia relativa para estimar la probabilidad de que un producto sea defectuoso.
+</p>
+
+</div>
+
+<div class="ejercicio">
+
+<strong>2.</strong>
+
+<p>
+Durante 80 partidos de fútbol, un equipo ganó 44 encuentros.
+Estime la probabilidad de victoria mediante la frecuencia relativa.
+</p>
+
+</div>
+
+<div class="ejercicio">
+
+<strong>3.</strong>
+
+<p>
+Un estudiante aprobó 18 de 24 exámenes realizados.
+Estime la probabilidad de aprobar un examen.
+</p>
+
+</div>
+
+<div class="ejercicio">
+
+<strong>4.</strong>
+
+<p>
+En una carretera circularon 1200 vehículos durante un día y 36 excedieron el límite de velocidad.
+Estime la probabilidad de que un vehículo exceda el límite.
+</p>
+
+</div>
+
+<div class="ejercicio">
+
+<strong>5.</strong>
+
+<p>
+Durante 200 días de observación, en 50 días se registró lluvia.
+Determine la probabilidad aproximada de lluvia utilizando la frecuencia relativa.
+</p>
+
+</div>
+
+<hr>
+
+<h2>Respuestas</h2>
+
+<p><strong>1.</strong></p>
+
+$$
+h=\frac{15}{500}
+$$
+
+$$
+h=0.03
+$$
+
+$$
+P(E)\approx3\%
+$$
+
+<p><strong>2.</strong></p>
+
+$$
+h=\frac{44}{80}
+$$
+
+$$
+h=0.55
+$$
+
+$$
+P(E)\approx55\%
+$$
+
+<p><strong>3.</strong></p>
+
+$$
+h=\frac{18}{24}
+$$
+
+$$
+h=0.75
+$$
+
+$$
+P(E)\approx75\%
+$$
+
+<p><strong>4.</strong></p>
+
+$$
+h=\frac{36}{1200}
+$$
+
+$$
+h=0.03
+$$
+
+$$
+P(E)\approx3\%
+$$
+
+<p><strong>5.</strong></p>
+
+$$
+h=\frac{50}{200}
+$$
+
+$$
+h=0.25
+$$
+
+$$
+P(E)\approx25\%
+$$
+
+<hr>
+
+<h2>Videos recomendados de YouTube</h2>
+
+<div class="video">
+
+<p><strong>Video 1</strong></p>
+
+<a href="https://www.youtube.com/watch?v=f9FcXXxUm4A" target="_blank">
+Calcular la probabilidad mediante la frecuencia relativa
+</a>
+
+<p>
+URL para impresión:
+<br>
+https://www.youtube.com/watch?v=f9FcXXxUm4A
+</p>
+
+</div>
+
+<div class="video">
+
+<p><strong>Video 2</strong></p>
+
+<a href="https://www.youtube.com/watch?v=I7Wjp2zgx0w" target="_blank">
+Probabilidad por frecuencia relativa
+</a>
+
+<p>
+URL para impresión:
+<br>
+https://www.youtube.com/watch?v=I7Wjp2zgx0w
+</p>
+
+</div>
+
+<hr>
+
+<h2>Referencias APA (7.ª edición)</h2>
+
+<p>
+Blitzstein, J. K., & Hwang, J. (2019).
+<em>Introduction to Probability</em>.
+Chapman & Hall/CRC.
+</p>
+
+<p>
+Triola, M. F. (2022).
+<em>Estadística</em> (13.ª ed.).
+Pearson.
+</p>
+
+<p>
+Walpole, R. E., Myers, R. H., Myers, S. L., & Ye, K. (2018).
+<em>Probabilidad y estadística para ingeniería y ciencias</em>.
+Pearson.
+</p>
+
+<p>
+OpenStax. (2023).
+<em>Introductory Statistics</em>.
+Rice University.
+</p>
+
+<p>
+Ross, S. (2019).
+<em>A First Course in Probability</em> (10th ed.).
+Pearson.
+</p>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</body>
+</html>

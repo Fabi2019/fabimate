@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>4.3 Identificar eventos para los cuales su probabilidad no puede ser determinada empleando el concepto clásico</title>
+
+<style>
+*{
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    line-height:1.7;
+    margin:0;
+    padding:20px;
+    background:#f4f6f9;
+    color:#222;
+}
+
+.container{
+    max-width:1000px;
+    margin:auto;
+    background:white;
+    padding:30px;
+    border-radius:10px;
+    box-shadow:0 0 10px rgba(0,0,0,0.15);
+}
+
+h1,h2,h3{
+    color:#0B5394;
+}
+
+.btn-print{
+    background:#0B5394;
+    color:white;
+    border:none;
+    padding:12px 20px;
+    border-radius:6px;
+    cursor:pointer;
+    font-size:16px;
+    margin-bottom:20px;
+}
+
+.btn-print:hover{
+    background:#073763;
+}
+
+.ejemplo,
+.ejercicio,
+.video{
+    background:#F8F9FA;
+    border-left:5px solid #0B5394;
+    padding:12px;
+    margin:15px 0;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    margin:15px 0;
+}
+
+th,td{
+    border:1px solid #ccc;
+    padding:10px;
+    text-align:left;
+}
+
+th{
+    background:#D9EAF7;
+}
+
+a{
+    color:#1155CC;
+    font-weight:bold;
+    word-break:break-word;
+}
+
+@media(max-width:768px){
+
+    body{
+        padding:10px;
+    }
+
+    .container{
+        padding:15px;
+    }
+
+}
+
+@media print{
+
+    .btn-print{
+        display:none;
+    }
+
+    body{
+        background:white;
+        padding:0;
+    }
+
+    .container{
+        box-shadow:none;
+        max-width:100%;
+    }
+
+    @page{
+        size:letter;
+        margin:1.5cm;
+    }
+
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<button class="btn-print" onclick="window.print()">
+Imprimir / Guardar como PDF
+</button>
+
+<h1>4.3 Identificar eventos para los cuales su probabilidad no puede ser determinada empleando el concepto clásico</h1>
+
+<h2>Explicación</h2>
+
+<p>
+La probabilidad clásica, propuesta por Pierre-Simon Laplace, se utiliza cuando todos los resultados posibles de un experimento son conocidos y tienen la misma posibilidad de ocurrir.
+</p>
+
+<p>
+Su fórmula es:
+</p>
+
+$$
+P(E)=\frac{\text{Número de casos favorables}}
+{\text{Número de casos posibles}}
+$$
+
+<p>
+Para aplicar esta fórmula deben cumplirse dos condiciones:
+</p>
+
+<ul>
+<li>El número de resultados posibles debe ser finito.</li>
+<li>Todos los resultados deben ser equiprobables.</li>
+</ul>
+
+<h3>Ejemplos donde sí puede aplicarse</h3>
+
+<ul>
+<li>Lanzar una moneda equilibrada.</li>
+<li>Lanzar un dado equilibrado.</li>
+<li>Extraer una carta de una baraja bien mezclada.</li>
+<li>Elegir al azar una bola de una urna.</li>
+</ul>
+
+<h3>Eventos donde NO puede aplicarse el concepto clásico</h3>
+
+<p>
+Existen situaciones en las que no es posible enumerar todos los resultados o estos no tienen la misma probabilidad de ocurrir.
+</p>
+
+<table>
+
+<tr>
+<th>Evento</th>
+<th>¿Se puede usar probabilidad clásica?</th>
+<th>Motivo</th>
+</tr>
+
+<tr>
+<td>Que llueva mañana</td>
+<td>No</td>
+<td>Depende de condiciones meteorológicas.</td>
+</tr>
+
+<tr>
+<td>Que una persona apruebe un examen</td>
+<td>No</td>
+<td>Influyen muchos factores.</td>
+</tr>
+
+<tr>
+<td>Que suba el precio de una acción</td>
+<td>No</td>
+<td>No existen resultados equiprobables conocidos.</td>
+</tr>
+
+<tr>
+<td>Que nazca un bebé en una fecha determinada</td>
+<td>No</td>
+<td>Depende de múltiples variables biológicas.</td>
+</tr>
+
+<tr>
+<td>Obtener un número par en un dado equilibrado</td>
+<td>Sí</td>
+<td>Todos los resultados son equiprobables.</td>
+</tr>
+
+</table>
+
+<h3>¿Qué tipo de probabilidad se utiliza entonces?</h3>
+
+<p>
+Cuando el concepto clásico no puede utilizarse, se recurre a:
+</p>
+
+<ul>
+<li>Probabilidad experimental o frecuencial.</li>
+<li>Probabilidad subjetiva.</li>
+<li>Modelos estadísticos y predictivos.</li>
+</ul>
+
+<hr>
+
+<h2>Ejemplo</h2>
+
+<div class="ejemplo">
+
+<p><strong>Situación:</strong></p>
+
+<p>
+Se desea determinar la probabilidad de que un estudiante apruebe un examen final utilizando la fórmula clásica.
+</p>
+
+<p><strong>Análisis:</strong></p>
+
+<ul>
+<li>No existe un conjunto de resultados equiprobables.</li>
+<li>El resultado depende del estudio realizado.</li>
+<li>Influyen factores como preparación, salud y dificultad del examen.</li>
+</ul>
+
+<p><strong>Conclusión:</strong></p>
+
+<p>
+La probabilidad de que un estudiante apruebe un examen no puede determinarse mediante el concepto clásico de probabilidad.
+Para estimarla sería necesario analizar datos reales de exámenes anteriores o información estadística.
+</p>
+
+</div>
+
+<hr>
+
+<h2>Ejercicios</h2>
+
+<div class="ejercicio">
+<strong>1.</strong>
+Indique si la probabilidad de obtener una carta de corazones de una baraja puede calcularse mediante el concepto clásico.
+</div>
+
+<div class="ejercicio">
+<strong>2.</strong>
+Indique si la probabilidad de que llueva mañana puede determinarse mediante el concepto clásico.
+</div>
+
+<div class="ejercicio">
+<strong>3.</strong>
+Indique si la probabilidad de obtener un número impar al lanzar un dado equilibrado puede calcularse mediante el concepto clásico.
+</div>
+
+<div class="ejercicio">
+<strong>4.</strong>
+Indique si la probabilidad de que una persona encuentre trabajo el próximo mes puede calcularse mediante el concepto clásico.
+</div>
+
+<div class="ejercicio">
+<strong>5.</strong>
+Indique si la probabilidad de obtener cara al lanzar una moneda equilibrada puede calcularse mediante el concepto clásico.
+</div>
+
+<hr>
+
+<h2>Respuestas</h2>
+
+<ol>
+
+<li>
+Sí. Todos los resultados son equiprobables y conocidos.
+</li>
+
+<li>
+No. Depende de factores meteorológicos y no existen resultados equiprobables claramente definidos.
+</li>
+
+<li>
+Sí. Los seis resultados posibles del dado son equiprobables.
+</li>
+
+<li>
+No. Intervienen múltiples factores sociales, económicos y personales.
+</li>
+
+<li>
+Sí. Cara y cruz son resultados equiprobables.
+</li>
+
+</ol>
+
+<hr>
+
+<h2>Videos recomendados de YouTube</h2>
+
+<div class="video">
+
+<p><strong>Video 1</strong></p>
+
+<a href="https://www.youtube.com/watch?v=33rpg1NcGBc" target="_blank">
+Probabilidad Clásica - Introducción a la Probabilidad con Fórmula y Ejemplos
+</a>
+
+<p>
+URL para impresión:
+<br>
+https://www.youtube.com/watch?v=33rpg1NcGBc
+</p>
+
+</div>
+
+<div class="video">
+
+<p><strong>Video 2</strong></p>
+
+<a href="https://www.youtube.com/watch?v=B1YE6ChdzgM" target="_blank">
+Probabilidad: Conceptos Básicos - Matemáticas Profe Alex
+</a>
+
+<p>
+URL para impresión:
+<br>
+https://www.youtube.com/watch?v=B1YE6ChdzgM
+</p>
+
+</div>
+
+<hr>
+
+<h2>Referencias APA (7.ª edición)</h2>
+
+<p>
+Blitzstein, J. K., & Hwang, J. (2019). <em>Introduction to Probability</em>. Chapman & Hall/CRC.
+</p>
+
+<p>
+Laplace, P. S. (1812). <em>Théorie analytique des probabilités</em>. Courcier.
+</p>
+
+<p>
+Triola, M. F. (2022). <em>Estadística</em> (13.ª ed.). Pearson.
+</p>
+
+<p>
+Walpole, R. E., Myers, R. H., Myers, S. L., & Ye, K. (2018). <em>Probabilidad y estadística para ingeniería y ciencias</em>. Pearson.
+</p>
+
+<p>
+OpenStax. (2023). <em>Introductory Statistics</em>. Rice University.
+</p>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</body>
+</html>

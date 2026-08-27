@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>4.2 Interpretar la información que proporciona un cuadro de distribución de frecuencias</title>
+
+<style>
+
+*{
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    line-height:1.7;
+    margin:0;
+    padding:20px;
+    background:#f4f6f9;
+    color:#222;
+}
+
+.container{
+    max-width:1000px;
+    margin:auto;
+    background:white;
+    padding:30px;
+    border-radius:10px;
+    box-shadow:0 0 10px rgba(0,0,0,0.15);
+}
+
+h1,h2,h3{
+    color:#0B5394;
+}
+
+.btn-print{
+    background:#0B5394;
+    color:white;
+    border:none;
+    padding:12px 20px;
+    border-radius:6px;
+    cursor:pointer;
+    font-size:16px;
+    margin-bottom:20px;
+}
+
+.btn-print:hover{
+    background:#073763;
+}
+
+.ejemplo,
+.ejercicio,
+.video{
+    background:#F8F9FA;
+    border-left:5px solid #0B5394;
+    padding:12px;
+    margin:15px 0;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    margin:15px 0;
+}
+
+th,td{
+    border:1px solid #cccccc;
+    padding:10px;
+    text-align:center;
+}
+
+th{
+    background:#D9EAF7;
+}
+
+a{
+    color:#1155CC;
+    font-weight:bold;
+    word-break:break-word;
+}
+
+@media(max-width:768px){
+
+    body{
+        padding:10px;
+    }
+
+    .container{
+        padding:15px;
+    }
+
+    table{
+        font-size:13px;
+    }
+
+}
+
+@media print{
+
+    .btn-print{
+        display:none;
+    }
+
+    body{
+        background:white;
+        padding:0;
+    }
+
+    .container{
+        box-shadow:none;
+        max-width:100%;
+    }
+
+    @page{
+        size:letter;
+        margin:1.5cm;
+    }
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<button class="btn-print" onclick="window.print()">
+Imprimir / Guardar como PDF
+</button>
+
+<h1>4.2 Interpretar la información que proporciona un cuadro de distribución de frecuencias al resumir un grupo de datos cuantitativos</h1>
+
+<h2>Explicación</h2>
+
+<p>
+Cuando se recopilan muchos datos, resulta difícil analizarlos individualmente.
+Por esta razón se utiliza un <strong>cuadro o tabla de distribución de frecuencias</strong>, el cual organiza y resume la información de manera clara.
+</p>
+
+<p>
+Una tabla de distribución de frecuencias muestra cuántas veces aparece cada valor dentro de un conjunto de datos.
+</p>
+
+<h3>Elementos de una tabla de frecuencias</h3>
+
+<table>
+
+<tr>
+<th>Elemento</th>
+<th>Significado</th>
+</tr>
+
+<tr>
+<td>Dato o valor</td>
+<td>Valor observado de la variable.</td>
+</tr>
+
+<tr>
+<td>Frecuencia absoluta (fi)</td>
+<td>Número de veces que aparece un dato.</td>
+</tr>
+
+<tr>
+<td>Frecuencia acumulada (Fi)</td>
+<td>Suma progresiva de las frecuencias absolutas.</td>
+</tr>
+
+<tr>
+<td>Frecuencia relativa (hi)</td>
+<td>Proporción respecto al total de datos.</td>
+</tr>
+
+<tr>
+<td>Frecuencia porcentual (%)</td>
+<td>Porcentaje que representa cada dato.</td>
+</tr>
+
+</table>
+
+<h3>¿Qué información puede interpretarse?</h3>
+
+<ul>
+<li>Cuál es el dato más frecuente.</li>
+<li>Cuál es el dato menos frecuente.</li>
+<li>Cuántos datos fueron observados.</li>
+<li>Qué porcentaje corresponde a cada valor.</li>
+<li>Cuántos datos se acumulan hasta determinado valor.</li>
+<li>Cómo se distribuyen los datos en general.</li>
+</ul>
+
+<hr>
+
+<h2>Ejemplo</h2>
+
+<div class="ejemplo">
+
+<p>
+Las siguientes cantidades representan el número de libros leídos durante un año por 20 estudiantes.
+</p>
+
+<table>
+
+<tr>
+<th>Libros leídos</th>
+<th>fi</th>
+<th>Fi</th>
+<th>hi</th>
+<th>%</th>
+</tr>
+
+<tr>
+<td>1</td>
+<td>2</td>
+<td>2</td>
+<td>0.10</td>
+<td>10%</td>
+</tr>
+
+<tr>
+<td>2</td>
+<td>5</td>
+<td>7</td>
+<td>0.25</td>
+<td>25%</td>
+</tr>
+
+<tr>
+<td>3</td>
+<td>7</td>
+<td>14</td>
+<td>0.35</td>
+<td>35%</td>
+</tr>
+
+<tr>
+<td>4</td>
+<td>4</td>
+<td>18</td>
+<td>0.20</td>
+<td>20%</td>
+</tr>
+
+<tr>
+<td>5</td>
+<td>2</td>
+<td>20</td>
+<td>0.10</td>
+<td>10%</td>
+</tr>
+
+</table>
+
+<p><strong>Interpretación:</strong></p>
+
+<ul>
+
+<li>Participaron 20 estudiantes.</li>
+
+<li>La cantidad de libros más frecuente fue 3.</li>
+
+<li>7 estudiantes leyeron 3 libros.</li>
+
+<li>El 35% de los estudiantes leyó 3 libros.</li>
+
+<li>Hasta 3 libros se acumulan 14 estudiantes.</li>
+
+<li>Solo el 10% leyó 5 libros.</li>
+
+</ul>
+
+</div>
+
+<hr>
+
+<h2>Ejercicios</h2>
+
+<div class="ejercicio">
+
+<strong>1.</strong>
+
+<table>
+
+<tr>
+<th>Dato</th>
+<th>fi</th>
+</tr>
+
+<tr>
+<td>10</td>
+<td>4</td>
+</tr>
+
+<tr>
+<td>20</td>
+<td>8</td>
+</tr>
+
+<tr>
+<td>30</td>
+<td>5</td>
+</tr>
+
+<tr>
+<td>40</td>
+<td>3</td>
+</tr>
+
+</table>
+
+<p>
+¿Cuál es el dato con mayor frecuencia?
+</p>
+
+</div>
+
+<div class="ejercicio">
+
+<strong>2.</strong>
+
+<p>
+En una tabla de frecuencias, un valor aparece 12 veces de un total de 60 observaciones.
+</p>
+
+<p>
+¿Qué porcentaje representa?
+</p>
+
+</div>
+
+<div class="ejercicio">
+
+<strong>3.</strong>
+
+<p>
+¿Qué indica la frecuencia acumulada de un valor?
+</p>
+
+</div>
+
+<div class="ejercicio">
+
+<strong>4.</strong>
+
+<p>
+Si la frecuencia relativa de una categoría es 0.40, ¿qué porcentaje representa?
+</p>
+
+</div>
+
+<div class="ejercicio">
+
+<strong>5.</strong>
+
+<p>
+La última frecuencia acumulada de una tabla es 150.
+</p>
+
+<p>
+¿Qué representa este valor?
+</p>
+
+</div>
+
+<hr>
+
+<h2>Respuestas</h2>
+
+<ol>
+
+<li>
+El dato con mayor frecuencia es <strong>20</strong>, porque aparece 8 veces.
+</li>
+
+<li>
+
+$$
+\frac{12}{60}=0.20
+$$
+
+$$
+0.20\cdot100=20
+$$
+
+Respuesta: <strong>20%</strong>.
+</li>
+
+<li>
+Representa la cantidad total de datos acumulados hasta ese valor.
+</li>
+
+<li>
+
+$$
+0.40\cdot100=40
+$$
+
+Respuesta: <strong>40%</strong>.
+</li>
+
+<li>
+Representa el total de observaciones registradas: <strong>150 datos</strong>.
+</li>
+
+</ol>
+
+<hr>
+
+<h2>Videos recomendados de YouTube</h2>
+
+<div class="video">
+
+<p><strong>Video 1</strong></p>
+
+<a href="https://www.youtube.com/watch?v=JtB2w0QLRZ4" target="_blank">
+Tabla de Frecuencias Súper Fácil - Daniel Carreón
+</a>
+
+<p>
+URL para impresión:
+<br>
+https://www.youtube.com/watch?v=JtB2w0QLRZ4
+</p>
+
+</div>
+
+<div class="video">
+
+<p><strong>Video 2</strong></p>
+
+<a href="https://www.youtube.com/watch?v=xq6tBKbg3HQ" target="_blank">
+Tabla de Frecuencias - Estadística - Susi Profe
+</a>
+
+<p>
+URL para impresión:
+<br>
+https://www.youtube.com/watch?v=xq6tBKbg3HQ
+</p>
+
+</div>
+
+<hr>
+
+<h2>Referencias APA (7.ª edición)</h2>
+
+<p>
+Triola, M. F. (2022). <em>Estadística</em> (13.ª ed.). Pearson.
+</p>
+
+<p>
+Anderson, D. R., Sweeney, D. J., & Williams, T. A. (2020). <em>Estadística para administración y economía</em>. Cengage Learning.
+</p>
+
+<p>
+Mendenhall, W., Beaver, R. J., & Beaver, B. M. (2019). <em>Introducción a la probabilidad y estadística</em>. Cengage Learning.
+</p>
+
+<p>
+OpenStax. (2023). <em>Introductory Statistics</em>. Rice University.
+</p>
+
+<p>
+Levine, D. M., Stephan, D. F., Szabat, K. A., & Viswanathan, U. (2021). <em>Statistics for Managers Using Microsoft Excel</em>. Pearson.
+</p>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</body>
+</html>

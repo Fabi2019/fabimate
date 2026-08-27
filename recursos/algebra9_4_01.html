@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>4.1 Clasificar variables cuantitativas en discretas o continuas</title>
+
+<style>
+
+*{
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    line-height:1.7;
+    background:#f4f6f9;
+    margin:0;
+    padding:20px;
+    color:#222;
+}
+
+.container{
+    max-width:950px;
+    margin:auto;
+    background:white;
+    padding:30px;
+    border-radius:10px;
+    box-shadow:0 0 10px rgba(0,0,0,0.12);
+}
+
+h1,h2,h3{
+    color:#0B5394;
+}
+
+.btn-print{
+    background:#0B5394;
+    color:white;
+    border:none;
+    padding:12px 20px;
+    border-radius:6px;
+    cursor:pointer;
+    font-size:16px;
+    margin-bottom:20px;
+}
+
+.btn-print:hover{
+    background:#073763;
+}
+
+.ejemplo,
+.ejercicio,
+.video{
+    background:#F8F9FA;
+    border-left:5px solid #0B5394;
+    padding:12px;
+    margin:12px 0;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    margin:15px 0;
+}
+
+th,td{
+    border:1px solid #cccccc;
+    padding:10px;
+    text-align:left;
+}
+
+th{
+    background:#D9EAF7;
+}
+
+a{
+    color:#1155CC;
+    font-weight:bold;
+    word-break:break-word;
+}
+
+@media(max-width:768px){
+
+    body{
+        padding:10px;
+    }
+
+    .container{
+        padding:15px;
+    }
+
+    table{
+        font-size:14px;
+    }
+
+}
+
+@media print{
+
+    .btn-print{
+        display:none;
+    }
+
+    body{
+        background:white;
+        padding:0;
+    }
+
+    .container{
+        box-shadow:none;
+        max-width:100%;
+    }
+
+    @page{
+        size:letter;
+        margin:1.5cm;
+    }
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<button class="btn-print" onclick="window.print()">
+Imprimir / Guardar como PDF
+</button>
+
+<h1>4.1 Clasificar variables cuantitativas en discretas o continuas</h1>
+
+<h2>Explicación</h2>
+
+<p>
+En estadística, una variable es una característica que puede variar de un individuo a otro.
+Cuando dicha característica se expresa mediante números, se denomina
+<strong>variable cuantitativa</strong>.
+</p>
+
+<p>
+Las variables cuantitativas se clasifican en:
+</p>
+
+<ul>
+<li><strong>Variables cuantitativas discretas.</strong></li>
+<li><strong>Variables cuantitativas continuas.</strong></li>
+</ul>
+
+<h3>Variables cuantitativas discretas</h3>
+
+<p>
+Son las que se obtienen mediante un conteo.
+Sus valores suelen ser números enteros y no admiten valores intermedios entre dos resultados consecutivos.
+</p>
+
+<p><strong>Ejemplos:</strong></p>
+
+<ul>
+<li>Número de estudiantes en un aula.</li>
+<li>Cantidad de hermanos.</li>
+<li>Número de vehículos en un parqueo.</li>
+<li>Cantidad de libros en una biblioteca.</li>
+</ul>
+
+<h3>Variables cuantitativas continuas</h3>
+
+<p>
+Son las que se obtienen mediante una medición.
+Pueden tomar cualquier valor dentro de un intervalo determinado y generalmente admiten decimales.
+</p>
+
+<p><strong>Ejemplos:</strong></p>
+
+<ul>
+<li>Estatura de una persona.</li>
+<li>Peso corporal.</li>
+<li>Temperatura ambiental.</li>
+<li>Tiempo empleado para realizar una actividad.</li>
+</ul>
+
+<h3>Resumen</h3>
+
+<table>
+
+<tr>
+<th>Variable Discreta</th>
+<th>Variable Continua</th>
+</tr>
+
+<tr>
+<td>Se obtiene contando.</td>
+<td>Se obtiene midiendo.</td>
+</tr>
+
+<tr>
+<td>Toma valores separados.</td>
+<td>Puede tomar infinitos valores.</td>
+</tr>
+
+<tr>
+<td>Generalmente usa números enteros.</td>
+<td>Puede incluir decimales.</td>
+</tr>
+
+<tr>
+<td>Ejemplo: número de hijos.</td>
+<td>Ejemplo: estatura.</td>
+</tr>
+
+</table>
+
+<h2>Ejemplo</h2>
+
+<div class="ejemplo">
+
+<p>
+Clasifique las siguientes variables cuantitativas:
+</p>
+
+<ol>
+<li>Número de estudiantes en un colegio.</li>
+<li>Peso de una mochila.</li>
+<li>Cantidad de mascotas en una familia.</li>
+<li>Temperatura de una habitación.</li>
+</ol>
+
+<p><strong>Solución:</strong></p>
+
+<table>
+
+<tr>
+<th>Variable</th>
+<th>Clasificación</th>
+<th>Razón</th>
+</tr>
+
+<tr>
+<td>Número de estudiantes</td>
+<td>Discreta</td>
+<td>Se obtiene mediante conteo.</td>
+</tr>
+
+<tr>
+<td>Peso de una mochila</td>
+<td>Continua</td>
+<td>Se obtiene mediante medición.</td>
+</tr>
+
+<tr>
+<td>Cantidad de mascotas</td>
+<td>Discreta</td>
+<td>Se cuentan las mascotas.</td>
+</tr>
+
+<tr>
+<td>Temperatura de una habitación</td>
+<td>Continua</td>
+<td>Puede tomar muchos valores decimales.</td>
+</tr>
+
+</table>
+
+</div>
+
+<h2>Ejercicios</h2>
+
+<div class="ejercicio">
+<strong>1.</strong> Número de alumnos matriculados en una sección.
+</div>
+
+<div class="ejercicio">
+<strong>2.</strong> Altura de un edificio.
+</div>
+
+<div class="ejercicio">
+<strong>3.</strong> Cantidad de goles anotados por un equipo en un torneo.
+</div>
+
+<div class="ejercicio">
+<strong>4.</strong> Tiempo que tarda una persona en recorrer un kilómetro.
+</div>
+
+<div class="ejercicio">
+<strong>5.</strong> Cantidad de páginas de un libro.
+</div>
+
+<h2>Respuestas</h2>
+
+<ol>
+<li><strong>Discreta</strong>. Se obtiene contando estudiantes.</li>
+
+<li><strong>Continua</strong>. La altura se mide.</li>
+
+<li><strong>Discreta</strong>. Los goles se cuentan.</li>
+
+<li><strong>Continua</strong>. El tiempo se mide y puede tener decimales.</li>
+
+<li><strong>Discreta</strong>. Las páginas se cuentan.</li>
+</ol>
+
+<h2>Videos recomendados de YouTube</h2>
+
+<div class="video">
+
+<p><strong>Video 1</strong></p>
+
+<a href="https://www.youtube.com/watch?v=fMW5S6JdMzg" target="_blank">
+Variables Discretas y Continuas - Ejemplos y Ejercicios Resueltos
+</a>
+
+<p>
+URL para impresión:
+<br>
+https://www.youtube.com/watch?v=fMW5S6JdMzg
+</p>
+
+</div>
+
+<div class="video">
+
+<p><strong>Video 2</strong></p>
+
+<a href="https://www.youtube.com/watch?v=Tb3sgUSd2SQ" target="_blank">
+Variables estadísticas: cualitativas, cuantitativas, discretas y continuas
+</a>
+
+<p>
+URL para impresión:
+<br>
+https://www.youtube.com/watch?v=Tb3sgUSd2SQ
+</p>
+
+</div>
+
+<h2>Referencias APA (7.ª edición)</h2>
+
+<p>
+Anderson, D. R., Sweeney, D. J., & Williams, T. A. (2020).
+<em>Estadística para administración y economía</em>.
+Cengage Learning.
+</p>
+
+<p>
+Mendenhall, W., Beaver, R. J., & Beaver, B. M. (2019).
+<em>Introducción a la probabilidad y estadística</em>.
+Cengage Learning.
+</p>
+
+<p>
+OpenStax. (2023).
+<em>Introductory Statistics</em>.
+Rice University.
+</p>
+
+<p>
+Triola, M. F. (2022).
+<em>Estadística</em> (13.ª ed.).
+Pearson.
+</p>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</body>
+</html>
