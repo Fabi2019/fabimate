@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>4.5 Resolver problemas vinculados con fenómenos aleatorios dentro del contexto estudiantil</title>
+
+<style>
+
+*{
+    box-sizing:border-box;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    margin:0;
+    padding:20px;
+    background:#f4f6f9;
+    color:#222;
+    line-height:1.7;
+}
+
+.container{
+    max-width:1000px;
+    margin:auto;
+    background:white;
+    padding:30px;
+    border-radius:10px;
+    box-shadow:0 0 10px rgba(0,0,0,0.15);
+}
+
+h1,h2,h3{
+    color:#0B5394;
+}
+
+.btn-print{
+    background:#0B5394;
+    color:white;
+    border:none;
+    padding:12px 20px;
+    border-radius:6px;
+    cursor:pointer;
+    font-size:16px;
+    margin-bottom:20px;
+}
+
+.btn-print:hover{
+    background:#073763;
+}
+
+.ejemplo,
+.ejercicio,
+.video{
+    background:#F8F9FA;
+    border-left:5px solid #0B5394;
+    padding:12px;
+    margin:15px 0;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    margin:15px 0;
+}
+
+th,td{
+    border:1px solid #CCCCCC;
+    padding:10px;
+}
+
+th{
+    background:#D9EAF7;
+}
+
+a{
+    color:#1155CC;
+    font-weight:bold;
+    word-break:break-word;
+}
+
+@media(max-width:768px){
+
+    body{
+        padding:10px;
+    }
+
+    .container{
+        padding:15px;
+    }
+
+}
+
+@media print{
+
+    .btn-print{
+        display:none;
+    }
+
+    body{
+        background:white;
+        padding:0;
+    }
+
+    .container{
+        max-width:100%;
+        box-shadow:none;
+    }
+
+    @page{
+        size:letter;
+        margin:1.5cm;
+    }
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<button class="btn-print" onclick="window.print()">
+Imprimir / Guardar como PDF
+</button>
+
+<h1>4.5 Resolver problemas vinculados con fenómenos aleatorios dentro del contexto estudiantil</h1>
+
+<h2>Explicación</h2>
+
+<p>
+Un <strong>fenómeno aleatorio</strong> es una situación cuyo resultado no puede predecirse con certeza antes de que ocurra, aunque sí se conocen los resultados posibles.
+</p>
+
+<p>
+En el contexto estudiantil, muchos eventos pueden analizarse mediante la probabilidad:
+</p>
+
+<ul>
+<li>Seleccionar estudiantes al azar.</li>
+<li>Extraer materiales escolares de una caja.</li>
+<li>Elegir un libro de la biblioteca.</li>
+<li>Participar en rifas estudiantiles.</li>
+<li>Responder preguntas de opción múltiple.</li>
+</ul>
+
+<p>
+Cuando todos los resultados tienen la misma posibilidad de ocurrir, se utiliza la Regla de Laplace:
+</p>
+
+$$
+P(E)=
+\frac{\text{Casos favorables}}
+{\text{Casos posibles}}
+$$
+
+<p>
+El resultado puede expresarse como fracción, decimal o porcentaje.
+</p>
+
+<h3>Pasos para resolver problemas de probabilidad</h3>
+
+<ol>
+<li>Identificar el experimento aleatorio.</li>
+<li>Determinar el espacio muestral.</li>
+<li>Identificar el evento solicitado.</li>
+<li>Contar los casos favorables.</li>
+<li>Aplicar la fórmula de probabilidad.</li>
+<li>Interpretar el resultado.</li>
+</ol>
+
+<hr>
+
+<h2>Ejemplo</h2>
+
+<div class="ejemplo">
+
+<p>
+En un grupo hay 18 mujeres y 12 hombres.
+Se selecciona un estudiante al azar.
+¿Cuál es la probabilidad de seleccionar una mujer?
+</p>
+
+<p><strong>Paso 1. Determinar los casos favorables</strong></p>
+
+$$
+18
+$$
+
+<p><strong>Paso 2. Determinar los casos posibles</strong></p>
+
+$$
+18+12=30
+$$
+
+<p><strong>Paso 3. Aplicar la fórmula</strong></p>
+
+$$
+P(\text{mujer})=
+\frac{18}{30}
+$$
+
+$$
+P(\text{mujer})=
+\frac{3}{5}
+$$
+
+$$
+P(\text{mujer})=0.60
+$$
+
+<p><strong>Paso 4. Expresar en porcentaje</strong></p>
+
+$$
+0.60\cdot100=60
+$$
+
+$$
+60\%
+$$
+
+<p>
+<strong>Respuesta:</strong>
+La probabilidad de seleccionar una mujer es del 60%.
+</p>
+
+</div>
+
+<hr>
+
+<h2>Ejercicios</h2>
+
+<div class="ejercicio">
+
+<strong>1.</strong>
+
+<p>
+En una caja hay 7 lápices azules y 3 lápices rojos.
+Se extrae un lápiz al azar.
+¿Cuál es la probabilidad de obtener un lápiz rojo?
+</p>
+
+</div>
+
+<div class="ejercicio">
+
+<strong>2.</strong>
+
+<p>
+Una pregunta de examen tiene 5 opciones de respuesta y solamente una es correcta.
+Si un estudiante responde al azar, ¿cuál es la probabilidad de acertar?
+</p>
+
+</div>
+
+<div class="ejercicio">
+
+<strong>3.</strong>
+
+<p>
+En una biblioteca escolar hay 14 libros de Matemática y 6 libros de Ciencias.
+Se selecciona un libro al azar.
+¿Cuál es la probabilidad de elegir un libro de Ciencias?
+</p>
+
+</div>
+
+<div class="ejercicio">
+
+<strong>4.</strong>
+
+<p>
+En una rifa escolar participan 80 estudiantes.
+Si un estudiante posee un único boleto, ¿cuál es la probabilidad de ganar?
+</p>
+
+</div>
+
+<div class="ejercicio">
+
+<strong>5.</strong>
+
+<p>
+En una bolsa hay 5 fichas verdes, 4 fichas amarillas y 1 ficha roja.
+Se extrae una ficha al azar.
+¿Cuál es la probabilidad de obtener una ficha roja?
+</p>
+
+</div>
+
+<hr>
+
+<h2>Respuestas</h2>
+
+<p><strong>1.</strong></p>
+
+$$
+P(\text{rojo})
+=
+\frac{3}{10}
+$$
+
+$$
+0.30
+$$
+
+$$
+30\%
+$$
+
+<p><strong>2.</strong></p>
+
+$$
+P(\text{acertar})
+=
+\frac{1}{5}
+$$
+
+$$
+0.20
+$$
+
+$$
+20\%
+$$
+
+<p><strong>3.</strong></p>
+
+$$
+P(\text{Ciencias})
+=
+\frac{6}{20}
+$$
+
+$$
+0.30
+$$
+
+$$
+30\%
+$$
+
+<p><strong>4.</strong></p>
+
+$$
+P(\text{ganar})
+=
+\frac{1}{80}
+$$
+
+$$
+0.0125
+$$
+
+$$
+1.25\%
+$$
+
+<p><strong>5.</strong></p>
+
+$$
+P(\text{roja})
+=
+\frac{1}{10}
+$$
+
+$$
+0.10
+$$
+
+$$
+10\%
+$$
+
+<hr>
+
+<h2>Videos recomendados de YouTube</h2>
+
+<div class="video">
+
+<p><strong>Video 1</strong></p>
+
+<a href="https://www.youtube.com/watch?v=B1YE6ChdzgM" target="_blank">
+Probabilidad: Conceptos Básicos - Matemáticas Profe Alex
+</a>
+
+<p>
+URL para impresión:
+<br>
+https://www.youtube.com/watch?v=B1YE6ChdzgM
+</p>
+
+</div>
+
+<div class="video">
+
+<p><strong>Video 2</strong></p>
+
+<a href="https://www.youtube.com/watch?v=lSXnltu3SZQ" target="_blank">
+Probabilidad | Aula Chachi
+</a>
+
+<p>
+URL para impresión:
+<br>
+https://www.youtube.com/watch?v=lSXnltu3SZQ
+</p>
+
+</div>
+
+<hr>
+
+<h2>Referencias APA (7.ª edición)</h2>
+
+<p>
+Blitzstein, J. K., & Hwang, J. (2019). <em>Introduction to Probability</em>. Chapman & Hall/CRC.
+</p>
+
+<p>
+Ross, S. (2019). <em>A First Course in Probability</em> (10th ed.). Pearson.
+</p>
+
+<p>
+Triola, M. F. (2022). <em>Estadística</em> (13.ª ed.). Pearson.
+</p>
+
+<p>
+Walpole, R. E., Myers, R. H., Myers, S. L., & Ye, K. (2018). <em>Probabilidad y estadística para ingeniería y ciencias</em>. Pearson.
+</p>
+
+<p>
+OpenStax. (2023). <em>Introductory Statistics</em>. Rice University.
+</p>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</body>
+</html>
