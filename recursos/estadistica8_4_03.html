@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>4.3 Identificar el espacio muestral y sus puntos muestrales</title>
+
+<style>
+
+*{
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    margin:0;
+    padding:20px;
+    background:#f4f6f9;
+    color:#222;
+    line-height:1.7;
+}
+
+.container{
+    max-width:1000px;
+    margin:auto;
+    background:white;
+    padding:30px;
+    border-radius:10px;
+    box-shadow:0 0 10px rgba(0,0,0,0.15);
+}
+
+h1,h2,h3{
+    color:#0B5394;
+}
+
+.btn-print{
+    background:#0B5394;
+    color:white;
+    border:none;
+    padding:12px 20px;
+    border-radius:6px;
+    cursor:pointer;
+    font-size:16px;
+    margin-bottom:20px;
+}
+
+.btn-print:hover{
+    background:#073763;
+}
+
+.ejemplo,
+.ejercicio,
+.video{
+    background:#F8F9FA;
+    border-left:5px solid #0B5394;
+    padding:12px;
+    margin:15px 0;
+}
+
+.diagrama{
+    background:#ffffff;
+    border:1px solid #cccccc;
+    padding:15px;
+    margin:15px 0;
+    text-align:center;
+    font-family:monospace;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    margin:15px 0;
+}
+
+th,td{
+    border:1px solid #CCCCCC;
+    padding:10px;
+    text-align:center;
+}
+
+th{
+    background:#D9EAF7;
+}
+
+a{
+    color:#1155CC;
+    font-weight:bold;
+    word-break:break-word;
+}
+
+@media(max-width:768px){
+
+    body{
+        padding:10px;
+    }
+
+    .container{
+        padding:15px;
+    }
+
+}
+
+@media print{
+
+    .btn-print{
+        display:none;
+    }
+
+    body{
+        background:white;
+        padding:0;
+    }
+
+    .container{
+        max-width:100%;
+        box-shadow:none;
+    }
+
+    @page{
+        size:letter;
+        margin:1.5cm;
+    }
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<button class="btn-print" onclick="window.print()">
+Imprimir / Guardar como PDF
+</button>
+
+<h1>
+4.3 Identificar el espacio muestral y sus puntos muestrales como resultados simples en una situación o experimento aleatorio y representarlos por medio de la numeración de sus elementos o de diagramas
+</h1>
+
+<h2>Explicación</h2>
+
+<p>
+Un <strong>experimento aleatorio</strong> es una acción cuyo resultado no puede conocerse con certeza antes de realizarse.
+</p>
+
+<p>
+Al estudiar un experimento aleatorio se utilizan dos conceptos fundamentales:
+</p>
+
+<ul>
+<li><strong>Espacio muestral.</strong></li>
+<li><strong>Puntos muestrales.</strong></li>
+</ul>
+
+<h3>Espacio muestral</h3>
+
+<p>
+El espacio muestral es el conjunto formado por todos los resultados posibles de un experimento aleatorio.
+</p>
+
+<p>
+Se representa mediante:
+</p>
+
+$$
+S
+$$
+
+<p>
+o también:
+</p>
+
+$$
+\Omega
+$$
+
+<h3>Puntos muestrales</h3>
+
+<p>
+Los puntos muestrales son cada uno de los resultados simples que forman parte del espacio muestral.
+</p>
+
+<p>
+Por ejemplo, al lanzar un dado:
+</p>
+
+$$
+S=\{1,2,3,4,5,6\}
+$$
+
+<p>
+Los puntos muestrales son:
+</p>
+
+$$
+1,\;2,\;3,\;4,\;5,\;6
+$$
+
+<h3>Representación mediante numeración</h3>
+
+<p>
+Los elementos del espacio muestral pueden escribirse entre llaves.
+</p>
+
+<p>
+Ejemplo:
+</p>
+
+$$
+S=\{Cara,Cruz\}
+$$
+
+<h3>Representación mediante diagramas</h3>
+
+<p>
+Los espacios muestrales también pueden representarse mediante diagramas.
+</p>
+
+<div class="diagrama">
+
+Lanzamiento de una moneda
+
+<br><br>
+
+Moneda
+<br>
+├── Cara
+<br>
+└── Cruz
+
+</div>
+
+<hr>
+
+<h2>Ejemplo</h2>
+
+<div class="ejemplo">
+
+<p>
+Se lanza un dado equilibrado.
+</p>
+
+<p><strong>Paso 1. Identificar todos los resultados posibles.</strong></p>
+
+$$
+1,\;2,\;3,\;4,\;5,\;6
+$$
+
+<p><strong>Paso 2. Construir el espacio muestral.</strong></p>
+
+$$
+S=\{1,2,3,4,5,6\}
+$$
+
+<p><strong>Paso 3. Identificar los puntos muestrales.</strong></p>
+
+$$
+1,\;2,\;3,\;4,\;5,\;6
+$$
+
+<p><strong>Paso 4. Representar mediante un diagrama.</strong></p>
+
+<div class="diagrama">
+
+Dado
+
+<br><br>
+
+┌─► 1
+<br>
+├─► 2
+<br>
+├─► 3
+<br>
+├─► 4
+<br>
+├─► 5
+<br>
+└─► 6
+
+</div>
+
+</div>
+
+<hr>
+
+<h2>Ejercicios</h2>
+
+<div class="ejercicio">
+<strong>1.</strong>
+
+Determine el espacio muestral y los puntos muestrales al lanzar una moneda.
+</div>
+
+<div class="ejercicio">
+<strong>2.</strong>
+
+Determine el espacio muestral y los puntos muestrales al seleccionar una vocal del alfabeto.
+</div>
+
+<div class="ejercicio">
+<strong>3.</strong>
+
+Determine el espacio muestral y los puntos muestrales al elegir un día del fin de semana.
+</div>
+
+<div class="ejercicio">
+<strong>4.</strong>
+
+Determine el espacio muestral y los puntos muestrales al extraer una ficha de una bolsa que contiene una ficha roja, una azul y una verde.
+</div>
+
+<div class="ejercicio">
+<strong>5.</strong>
+
+Determine el espacio muestral y los puntos muestrales al girar una ruleta con los números 1, 2, 3 y 4.
+</div>
+
+<hr>
+
+<h2>Respuestas</h2>
+
+<p><strong>1.</strong></p>
+
+$$
+S=\{Cara,Cruz\}
+$$
+
+Puntos muestrales:
+
+$$
+Cara,\;Cruz
+$$
+
+<p><strong>2.</strong></p>
+
+$$
+S=\{A,E,I,O,U\}
+$$
+
+Puntos muestrales:
+
+$$
+A,\;E,\;I,\;O,\;U
+$$
+
+<p><strong>3.</strong></p>
+
+$$
+S=\{Sábado,Domingo\}
+$$
+
+Puntos muestrales:
+
+$$
+Sábado,\;Domingo
+$$
+
+<p><strong>4.</strong></p>
+
+$$
+S=\{Roja,Azul,Verde\}
+$$
+
+Puntos muestrales:
+
+$$
+Roja,\;Azul,\;Verde
+$$
+
+<p><strong>5.</strong></p>
+
+$$
+S=\{1,2,3,4\}
+$$
+
+Puntos muestrales:
+
+$$
+1,\;2,\;3,\;4
+$$
+
+<hr>
+
+<h2>Videos recomendados de YouTube</h2>
+
+<div class="video">
+
+<p><strong>Video 1</strong></p>
+
+<a href="https://www.youtube.com/watch?v=B1YE6ChdzgM" target="_blank">
+Probabilidad: Conceptos Básicos (espacio muestral, eventos y sucesos)
+</a>
+
+<p>
+URL para impresión:
+<br>
+https://www.youtube.com/watch?v=B1YE6ChdzgM
+</p>
+
+</div>
+
+<div class="video">
+
+<p><strong>Video 2</strong></p>
+
+<a href="https://www.youtube.com/watch?v=kPIR4_FB0qs" target="_blank">
+Experimentos Aleatorios y Deterministas - Ejemplos
+</a>
+
+<p>
+URL para impresión:
+<br>
+https://www.youtube.com/watch?v=kPIR4_FB0qs
+</p>
+
+</div>
+
+<hr>
+
+<h2>Referencias APA (7.ª edición)</h2>
+
+<p>
+Blitzstein, J. K., & Hwang, J. (2019). <em>Introduction to Probability</em>. Chapman & Hall/CRC.
+</p>
+
+<p>
+Ross, S. (2019). <em>A First Course in Probability</em> (10th ed.). Pearson.
+</p>
+
+<p>
+Triola, M. F. (2022). <em>Estadística</em> (13.ª ed.). Pearson.
+</p>
+
+<p>
+Walpole, R. E., Myers, R. H., Myers, S. L., & Ye, K. (2018). <em>Probabilidad y estadística para ingeniería y ciencias</em>. Pearson.
+</p>
+
+<p>
+OpenStax. (2023). <em>Introductory Statistics</em>. Rice University.
+</p>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</body>
+</html>

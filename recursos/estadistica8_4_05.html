@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>4.5 Clasificar eventos en simples o compuestos</title>
+
+<style>
+*{
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:#f4f6f9;
+    margin:0;
+    padding:20px;
+    line-height:1.7;
+    color:#222;
+}
+
+.container{
+    max-width:1000px;
+    margin:auto;
+    background:white;
+    padding:30px;
+    border-radius:10px;
+    box-shadow:0 0 10px rgba(0,0,0,0.15);
+}
+
+h1,h2,h3{
+    color:#0B5394;
+}
+
+.btn-print{
+    background:#0B5394;
+    color:white;
+    border:none;
+    padding:12px 20px;
+    border-radius:6px;
+    cursor:pointer;
+    margin-bottom:20px;
+}
+
+.btn-print:hover{
+    background:#073763;
+}
+
+.ejemplo,
+.ejercicio{
+    background:#F8F9FA;
+    border-left:5px solid #0B5394;
+    padding:12px;
+    margin:15px 0;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    margin:15px 0;
+}
+
+th,td{
+    border:1px solid #CCCCCC;
+    padding:10px;
+    text-align:center;
+}
+
+th{
+    background:#D9EAF7;
+}
+
+@media print{
+    .btn-print{
+        display:none;
+    }
+
+    @page{
+        size:letter;
+        margin:1.5cm;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<button class="btn-print" onclick="window.print()">
+Imprimir / Guardar como PDF
+</button>
+
+<h1>4.5 Clasificar eventos en simples o compuestos</h1>
+
+<h2>Explicación</h2>
+
+<p>
+En probabilidad, un <strong>evento o suceso</strong> es un conjunto de resultados de un experimento aleatorio.
+</p>
+
+<p>
+Los eventos se clasifican en:
+</p>
+
+<ul>
+<li><strong>Eventos simples.</strong></li>
+<li><strong>Eventos compuestos.</strong></li>
+</ul>
+
+<h3>Evento simple</h3>
+
+<p>
+Es un evento formado por un solo resultado del espacio muestral.
+</p>
+
+<p><strong>Ejemplo:</strong></p>
+
+<p>
+Al lanzar un dado:
+</p>
+
+$$
+S=\{1,2,3,4,5,6\}
+$$
+
+<p>
+Evento A: obtener un 4.
+</p>
+
+$$
+A=\{4\}
+$$
+
+<p>
+Como contiene un solo resultado, es un <strong>evento simple</strong>.
+</p>
+
+<h3>Evento compuesto</h3>
+
+<p>
+Es un evento formado por dos o más resultados del espacio muestral.
+</p>
+
+<p><strong>Ejemplo:</strong></p>
+
+<p>
+Al lanzar un dado:
+</p>
+
+$$
+S=\{1,2,3,4,5,6\}
+$$
+
+<p>
+Evento B: obtener un número par.
+</p>
+
+$$
+B=\{2,4,6\}
+$$
+
+<p>
+Como contiene varios resultados, es un <strong>evento compuesto</strong>.
+</p>
+
+<hr>
+
+<h2>Diferencias entre eventos simples y compuestos</h2>
+
+<table>
+
+<tr>
+<th>Evento simple</th>
+<th>Evento compuesto</th>
+</tr>
+
+<tr>
+<td>Tiene un solo resultado favorable.</td>
+<td>Tiene dos o más resultados favorables.</td>
+</tr>
+
+<tr>
+<td>Representa una sola posibilidad.</td>
+<td>Representa varias posibilidades.</td>
+</tr>
+
+<tr>
+<td>Ejemplo: obtener un 5.</td>
+<td>Ejemplo: obtener un número impar.</td>
+</tr>
+
+</table>
+
+<hr>
+
+<h2>Ejemplo resuelto</h2>
+
+<div class="ejemplo">
+
+<p>
+Se lanza un dado.
+</p>
+
+<p>
+Espacio muestral:
+</p>
+
+$$
+S=\{1,2,3,4,5,6\}
+$$
+
+<table>
+
+<tr>
+<th>Evento</th>
+<th>Resultados</th>
+<th>Clasificación</th>
+</tr>
+
+<tr>
+<td>Obtener un 3</td>
+<td>{3}</td>
+<td>Simple</td>
+</tr>
+
+<tr>
+<td>Obtener un número mayor que 4</td>
+<td>{5,6}</td>
+<td>Compuesto</td>
+</tr>
+
+<tr>
+<td>Obtener un número impar</td>
+<td>{1,3,5}</td>
+<td>Compuesto</td>
+</tr>
+
+</table>
+
+</div>
+
+<hr>
+
+<h2>Ejercicios</h2>
+
+<div class="ejercicio">
+<strong>1.</strong>
+Al lanzar un dado, clasifique el evento:
+<br>
+"Obtener un 6".
+</div>
+
+<div class="ejercicio">
+<strong>2.</strong>
+Al lanzar un dado, clasifique el evento:
+<br>
+"Obtener un número par".
+</div>
+
+<div class="ejercicio">
+<strong>3.</strong>
+Al lanzar una moneda, clasifique el evento:
+<br>
+"Obtener cara".
+</div>
+
+<div class="ejercicio">
+<strong>4.</strong>
+Al lanzar un dado, clasifique el evento:
+<br>
+"Obtener un número menor que 4".
+</div>
+
+<div class="ejercicio">
+<strong>5.</strong>
+Al elegir una vocal al azar, clasifique el evento:
+<br>
+"Seleccionar A o E".
+</div>
+
+<hr>
+
+<h2>Respuestas</h2>
+
+<ol>
+
+<li>
+Obtener un 6:
+$$
+\{6\}
+$$
+<strong>Evento simple.</strong>
+</li>
+
+<li>
+Obtener un número par:
+$$
+\{2,4,6\}
+$$
+<strong>Evento compuesto.</strong>
+</li>
+
+<li>
+Obtener cara:
+$$
+\{Cara\}
+$$
+<strong>Evento simple.</strong>
+</li>
+
+<li>
+Obtener un número menor que 4:
+$$
+\{1,2,3\}
+$$
+<strong>Evento compuesto.</strong>
+</li>
+
+<li>
+Seleccionar A o E:
+$$
+\{A,E\}
+$$
+<strong>Evento compuesto.</strong>
+</li>
+
+</ol>
+
+<hr>
+
+<h2>Resumen</h2>
+
+<ul>
+<li>Un evento simple contiene un único resultado.</li>
+<li>Un evento compuesto contiene dos o más resultados.</li>
+<li>Para clasificarlos es necesario identificar cuántos resultados favorables posee el evento.</li>
+</ul>
+
+<hr>
+
+
+<h2>Videos recomendados de YouTube</h2>
+
+<div class="video">
+
+<p><strong>Video 1</strong></p>
+
+<a href="https://www.youtube.com/watch?v=cmRexIwhqaM" target="_blank">
+Casos posibles y casos favorables
+</a>
+
+<p>
+URL para impresión:
+<br>
+https://www.youtube.com/watch?v=cmRexIwhqaM
+</p>
+
+<p>
+Explica cómo identificar casos favorables, eventos y probabilidades sencillas.
+</p>
+
+</div>
+
+<div class="video">
+
+<p><strong>Video 2</strong></p>
+
+<a href="https://www.youtube.com/watch?v=HVTl6X7Mvx4" target="_blank">
+Sucesos y Probabilidades II
+</a>
+
+<p>
+URL para impresión:
+<br>
+https://www.youtube.com/watch?v=HVTl6X7Mvx4
+</p>
+
+<p>
+Presenta ejercicios sobre sucesos simples, compuestos y análisis de eventos aleatorios.
+</p>
+
+</div>
+<hr>
+<h2>Referencias APA (7.ª edición)</h2>
+
+<p>
+Blitzstein, J. K., & Hwang, J. (2019). <em>Introduction to Probability</em>. Chapman & Hall/CRC.
+</p>
+
+<p>
+Ross, S. (2019). <em>A First Course in Probability</em> (10th ed.). Pearson.
+</p>
+
+<p>
+Triola, M. F. (2022). <em>Estadística</em> (13.ª ed.). Pearson.
+</p>
+
+<p>
+Walpole, R. E., Myers, R. H., Myers, S. L., & Ye, K. (2018). <em>Probabilidad y estadística para ingeniería y ciencias</em>. Pearson.
+</p>
+
+<p>
+OpenStax. (2023). <em>Introductory Statistics</em>. Rice University.
+</p>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</body>
+</html>

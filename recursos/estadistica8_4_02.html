@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>4.2 Identificar diferencias entre situaciones aleatorias y deterministas</title>
+
+<style>
+
+*{
+    box-sizing:border-box;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    margin:0;
+    padding:20px;
+    background:#f4f6f9;
+    color:#222;
+    line-height:1.7;
+}
+
+.container{
+    max-width:1000px;
+    margin:auto;
+    background:white;
+    padding:30px;
+    border-radius:10px;
+    box-shadow:0 0 10px rgba(0,0,0,0.15);
+}
+
+h1,h2,h3{
+    color:#0B5394;
+}
+
+.btn-print{
+    background:#0B5394;
+    color:white;
+    border:none;
+    padding:12px 20px;
+    border-radius:6px;
+    cursor:pointer;
+    font-size:16px;
+    margin-bottom:20px;
+}
+
+.btn-print:hover{
+    background:#073763;
+}
+
+.ejemplo,
+.ejercicio,
+.video{
+    background:#F8F9FA;
+    border-left:5px solid #0B5394;
+    padding:12px;
+    margin:15px 0;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    margin:15px 0;
+}
+
+th,td{
+    border:1px solid #CCCCCC;
+    padding:10px;
+    text-align:center;
+}
+
+th{
+    background:#D9EAF7;
+}
+
+a{
+    color:#1155CC;
+    font-weight:bold;
+    word-break:break-word;
+}
+
+@media(max-width:768px){
+
+    body{
+        padding:10px;
+    }
+
+    .container{
+        padding:15px;
+    }
+
+    table{
+        font-size:13px;
+    }
+
+}
+
+@media print{
+
+    .btn-print{
+        display:none;
+    }
+
+    body{
+        background:white;
+        padding:0;
+    }
+
+    .container{
+        max-width:100%;
+        box-shadow:none;
+    }
+
+    @page{
+        size:letter;
+        margin:1.5cm;
+    }
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<button class="btn-print" onclick="window.print()">
+Imprimir / Guardar como PDF
+</button>
+
+<h1>4.2 Identificar diferencias entre situaciones aleatorias y deterministas</h1>
+
+<h2>Explicación</h2>
+
+<p>
+En estadística y probabilidad, los fenómenos se clasifican en
+<strong>deterministas</strong> o <strong>aleatorios</strong>.
+</p>
+
+<h3>Situaciones deterministas</h3>
+
+<p>
+Son aquellas en las que el resultado puede predecirse con certeza antes de que ocurra el fenómeno.
+Cuando las condiciones son las mismas, siempre se obtiene el mismo resultado.
+</p>
+
+<p><strong>Ejemplos:</strong></p>
+
+<ul>
+<li>Después del martes sigue el miércoles.</li>
+<li>Una piedra soltada desde cierta altura cae al suelo.</li>
+<li>El agua hierve al alcanzar su punto de ebullición bajo condiciones normales.</li>
+<li>Después de las 7:00 a.m. sigue las 8:00 a.m.</li>
+</ul>
+
+<h3>Situaciones aleatorias</h3>
+
+<p>
+Son aquellas cuyo resultado no puede conocerse con certeza antes de que ocurra. Aunque se conocen los resultados posibles, no se puede predecir cuál ocurrirá.
+</p>
+
+<p><strong>Ejemplos:</strong></p>
+
+<ul>
+<li>Lanzar una moneda.</li>
+<li>Lanzar un dado.</li>
+<li>Extraer una ficha de una bolsa.</li>
+<li>Ganar una rifa escolar.</li>
+</ul>
+
+<h3>Diferencias principales</h3>
+
+<table>
+
+<tr>
+<th>Situaciones Deterministas</th>
+<th>Situaciones Aleatorias</th>
+</tr>
+
+<tr>
+<td>El resultado es seguro.</td>
+<td>El resultado es incierto.</td>
+</tr>
+
+<tr>
+<td>Siempre ocurre lo mismo.</td>
+<td>Puede ocurrir cualquiera de varios resultados.</td>
+</tr>
+
+<tr>
+<td>No dependen del azar.</td>
+<td>Dependen del azar.</td>
+</tr>
+
+<tr>
+<td>No requieren probabilidad.</td>
+<td>Se estudian mediante la probabilidad.</td>
+</tr>
+
+<tr>
+<td>Ejemplo: salida del Sol.</td>
+<td>Ejemplo: obtener cara al lanzar una moneda.</td>
+</tr>
+
+</table>
+
+<hr>
+
+<h2>Ejemplo</h2>
+
+<div class="ejemplo">
+
+<p>
+Clasifique las siguientes situaciones:
+</p>
+
+<ol>
+<li>Lanzar una moneda y obtener cara.</li>
+<li>Después del viernes sigue el sábado.</li>
+<li>Seleccionar un estudiante al azar de una sección.</li>
+<li>Soltar una pelota y observar que cae al suelo.</li>
+</ol>
+
+<p><strong>Solución</strong></p>
+
+<table>
+
+<tr>
+<th>Situación</th>
+<th>Clasificación</th>
+<th>Justificación</th>
+</tr>
+
+<tr>
+<td>Lanzar una moneda y obtener cara</td>
+<td>Aleatoria</td>
+<td>El resultado no puede conocerse antes del lanzamiento.</td>
+</tr>
+
+<tr>
+<td>Después del viernes sigue el sábado</td>
+<td>Determinista</td>
+<td>Siempre ocurre de la misma forma.</td>
+</tr>
+
+<tr>
+<td>Seleccionar un estudiante al azar</td>
+<td>Aleatoria</td>
+<td>No se sabe cuál estudiante será elegido.</td>
+</tr>
+
+<tr>
+<td>Soltar una pelota</td>
+<td>Determinista</td>
+<td>La gravedad provoca siempre la caída.</td>
+</tr>
+
+</table>
+
+</div>
+
+<hr>
+
+<h2>Ejercicios</h2>
+
+<div class="ejercicio">
+<strong>1.</strong>
+Clasifique como aleatoria o determinista:
+<br><br>
+Extraer una carta de una baraja.
+</div>
+
+<div class="ejercicio">
+<strong>2.</strong>
+Clasifique como aleatoria o determinista:
+<br><br>
+Después de las 11:00 a.m. son las 12:00 m.d.
+</div>
+
+<div class="ejercicio">
+<strong>3.</strong>
+Clasifique como aleatoria o determinista:
+<br><br>
+Obtener un número 6 al lanzar un dado.
+</div>
+
+<div class="ejercicio">
+<strong>4.</strong>
+Clasifique como aleatoria o determinista:
+<br><br>
+Una manzana cae al suelo al soltarla.
+</div>
+
+<div class="ejercicio">
+<strong>5.</strong>
+Clasifique como aleatoria o determinista:
+<br><br>
+Ganar una rifa organizada por el colegio.
+</div>
+
+<hr>
+
+<h2>Respuestas</h2>
+
+<ol>
+
+<li>
+<strong>Aleatoria.</strong> No puede conocerse con certeza qué carta será obtenida.
+</li>
+
+<li>
+<strong>Determinista.</strong> Siempre ocurre el mismo resultado.
+</li>
+
+<li>
+<strong>Aleatoria.</strong> Depende del azar.
+</li>
+
+<li>
+<strong>Determinista.</strong> La gravedad hace que caiga al suelo.
+</li>
+
+<li>
+<strong>Aleatoria.</strong> No se puede predecir quién será el ganador.
+</li>
+
+</ol>
+
+<hr>
+
+<h2>Videos recomendados de YouTube</h2>
+
+<div class="video">
+
+<p><strong>Video 1</strong></p>
+
+<a href="https://www.youtube.com/watch?v=-ZieWdWtVEQ" target="_blank">
+Sucesos aleatorios y deterministas
+</a>
+
+<p>
+URL para impresión:
+<br>
+https://www.youtube.com/watch?v=-ZieWdWtVEQ
+</p>
+
+</div>
+
+<div class="video">
+
+<p><strong>Video 2</strong></p>
+
+<a href="https://www.youtube.com/watch?v=kPIR4_FB0qs" target="_blank">
+Experimentos aleatorios y deterministas - Ejemplos
+</a>
+
+<p>
+URL para impresión:
+<br>
+https://www.youtube.com/watch?v=kPIR4_FB0qs
+</p>
+
+</div>
+
+<hr>
+
+<h2>Referencias APA (7.ª edición)</h2>
+
+<p>
+Blitzstein, J. K., & Hwang, J. (2019). <em>Introduction to Probability</em>. Chapman & Hall/CRC.
+</p>
+
+<p>
+Ross, S. (2019). <em>A First Course in Probability</em> (10th ed.). Pearson.
+</p>
+
+<p>
+Triola, M. F. (2022). <em>Estadística</em> (13.ª ed.). Pearson.
+</p>
+
+<p>
+Walpole, R. E., Myers, R. H., Myers, S. L., & Ye, K. (2018). <em>Probabilidad y estadística para ingeniería y ciencias</em>. Pearson.
+</p>
+
+<p>
+OpenStax. (2023). <em>Introductory Statistics</em>. Rice University.
+</p>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</body>
+</html>

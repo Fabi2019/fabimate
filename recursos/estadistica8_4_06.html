@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>4.6 Identificar eventos seguros, probables e imposibles</title>
+
+<style>
+
+*{
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    margin:0;
+    padding:20px;
+    background:#f4f6f9;
+    color:#222;
+    line-height:1.7;
+}
+
+.container{
+    max-width:1000px;
+    margin:auto;
+    background:white;
+    padding:30px;
+    border-radius:10px;
+    box-shadow:0 0 10px rgba(0,0,0,0.15);
+}
+
+h1,h2,h3{
+    color:#0B5394;
+}
+
+.btn-print{
+    background:#0B5394;
+    color:white;
+    border:none;
+    padding:12px 20px;
+    border-radius:6px;
+    cursor:pointer;
+    margin-bottom:20px;
+}
+
+.btn-print:hover{
+    background:#073763;
+}
+
+.ejemplo,
+.ejercicio,
+.video{
+    background:#F8F9FA;
+    border-left:5px solid #0B5394;
+    padding:12px;
+    margin:15px 0;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    margin:15px 0;
+}
+
+th,td{
+    border:1px solid #CCCCCC;
+    padding:10px;
+    text-align:center;
+}
+
+th{
+    background:#D9EAF7;
+}
+
+a{
+    color:#1155CC;
+    font-weight:bold;
+}
+
+@media print{
+
+.btn-print{
+display:none;
+}
+
+@page{
+size:letter;
+margin:1.5cm;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<button class="btn-print" onclick="window.print()">
+Imprimir / Guardar como PDF
+</button>
+
+<h1>4.6 Identificar eventos seguros, probables e imposibles en una situación aleatoria determinada</h1>
+
+<h2>Explicación</h2>
+
+<p>
+En una situación aleatoria pueden ocurrir distintos tipos de eventos según la posibilidad de que sucedan.
+</p>
+
+<h3>Evento seguro</h3>
+
+<p>
+Es un evento que ocurrirá siempre.
+Su probabilidad es:
+</p>
+
+$$
+P(E)=1
+$$
+
+<p><strong>Ejemplo:</strong></p>
+
+<p>
+Al lanzar un dado:
+</p>
+
+<p>
+"Obtener un número menor que 7".
+</p>
+
+<p>
+El evento es seguro porque todos los resultados posibles del dado cumplen esa condición.
+</p>
+
+$$
+\{1,2,3,4,5,6\}
+$$
+
+<h3>Evento imposible</h3>
+
+<p>
+Es un evento que nunca puede ocurrir.
+Su probabilidad es:
+</p>
+
+$$
+P(E)=0
+$$
+
+<p><strong>Ejemplo:</strong></p>
+
+<p>
+Al lanzar un dado:
+</p>
+
+<p>
+"Obtener un número 9".
+</p>
+
+<p>
+El evento es imposible porque ese resultado no pertenece al espacio muestral del dado.
+</p>
+
+<h3>Evento probable</h3>
+
+<p>
+Es un evento que puede ocurrir, pero no existe certeza de que suceda.
+</p>
+
+$$
+0<P(E)<1
+$$
+
+<p><strong>Ejemplo:</strong></p>
+
+<p>
+Al lanzar un dado:
+</p>
+
+<p>
+"Obtener un número par".
+</p>
+
+<p>
+El evento puede ocurrir, pero no siempre.
+</p>
+
+$$
+\{2,4,6\}
+$$
+
+<hr>
+
+<h2>Resumen</h2>
+
+<table>
+
+<tr>
+<th>Tipo de evento</th>
+<th>Probabilidad</th>
+<th>Descripción</th>
+</tr>
+
+<tr>
+<td>Seguro</td>
+<td>1</td>
+<td>Siempre ocurre.</td>
+</tr>
+
+<tr>
+<td>Probable</td>
+<td>Mayor que 0 y menor que 1</td>
+<td>Puede ocurrir.</td>
+</tr>
+
+<tr>
+<td>Imposible</td>
+<td>0</td>
+<td>Nunca ocurre.</td>
+</tr>
+
+</table>
+
+<hr>
+
+<h2>Ejemplo resuelto</h2>
+
+<div class="ejemplo">
+
+<p>
+Se lanza una moneda equilibrada.
+</p>
+
+<table>
+
+<tr>
+<th>Evento</th>
+<th>Clasificación</th>
+</tr>
+
+<tr>
+<td>Obtener cara o cruz</td>
+<td>Seguro</td>
+</tr>
+
+<tr>
+<td>Obtener cara</td>
+<td>Probable</td>
+</tr>
+
+<tr>
+<td>Obtener el número 3</td>
+<td>Imposible</td>
+</tr>
+
+</table>
+
+<p>
+La moneda solamente puede producir cara o cruz. Por ello, obtener cualquiera de esos dos resultados es seguro, obtener solo cara es probable y obtener un número 3 es imposible.
+</p>
+
+</div>
+
+<hr>
+
+<h2>Ejercicios</h2>
+
+<div class="ejercicio">
+<strong>1.</strong>
+Al lanzar un dado:
+<br><br>
+Obtener un número menor que 7.
+</div>
+
+<div class="ejercicio">
+<strong>2.</strong>
+Al lanzar un dado:
+<br><br>
+Obtener un número 10.
+</div>
+
+<div class="ejercicio">
+<strong>3.</strong>
+Al lanzar un dado:
+<br><br>
+Obtener un número impar.
+</div>
+
+<div class="ejercicio">
+<strong>4.</strong>
+Seleccionar una vocal al azar:
+<br><br>
+Obtener una vocal.
+</div>
+
+<div class="ejercicio">
+<strong>5.</strong>
+Seleccionar un día de la semana:
+<br><br>
+Elegir el día domingo.
+</div>
+
+<hr>
+
+<h2>Respuestas</h2>
+
+<ol>
+
+<li>
+<strong>Evento seguro.</strong>
+Todos los resultados del dado son menores que 7.
+</li>
+
+<li>
+<strong>Evento imposible.</strong>
+El número 10 no pertenece al espacio muestral del dado.
+</li>
+
+<li>
+<strong>Evento probable.</strong>
+Puede ocurrir obtener 1, 3 o 5.
+</li>
+
+<li>
+<strong>Evento seguro.</strong>
+Todas las opciones posibles son vocales.
+</li>
+
+<li>
+<strong>Evento probable.</strong>
+Puede ocurrir, pero no siempre.
+</li>
+
+</ol>
+
+<hr>
+
+<h2>Videos recomendados de YouTube</h2>
+
+<div class="video">
+
+<p><strong>Video 1</strong></p>
+
+<a href="https://www.youtube.com/watch?v=HVTl6X7Mvx4" target="_blank">
+Sucesos y Probabilidades II
+</a>
+
+<p>
+URL para impresión:
+<br>
+https://www.youtube.com/watch?v=HVTl6X7Mvx4
+</p>
+
+<p>
+Incluye ejercicios sobre sucesos seguros, posibles e imposibles.
+</p>
+
+</div>
+
+<div class="video">
+
+<p><strong>Video 2</strong></p>
+
+<a href="https://www.youtube.com/watch?v=-ZieWdWtVEQ" target="_blank">
+Sucesos aleatorios y deterministas
+</a>
+
+<p>
+URL para impresión:
+<br>
+https://www.youtube.com/watch?v=-ZieWdWtVEQ
+</p>
+
+<p>
+Explica diversos tipos de sucesos y fenómenos aleatorios.
+</p>
+
+</div>
+
+<hr>
+
+<h2>Referencias APA (7.ª edición)</h2>
+
+<p>
+Blitzstein, J. K., & Hwang, J. (2019). <em>Introduction to Probability</em>. Chapman & Hall/CRC.
+</p>
+
+<p>
+Ross, S. (2019). <em>A First Course in Probability</em> (10th ed.). Pearson.
+</p>
+
+<p>
+Triola, M. F. (2022). <em>Estadística</em> (13.ª ed.). Pearson.
+</p>
+
+<p>
+Walpole, R. E., Myers, R. H., Myers, S. L., & Ye, K. (2018). <em>Probabilidad y estadística para ingeniería y ciencias</em>. Pearson.
+</p>
+
+<p>
+OpenStax. (2023). <em>Introductory Statistics</em>. Rice University.
+</p>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</body>
+</html>

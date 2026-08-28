@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>4.1 Caracterizar un grupo de datos utilizando medidas estadísticas de resumen</title>
+
+<style>
+
+*{
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    line-height:1.7;
+    margin:0;
+    padding:20px;
+    background:#f4f6f9;
+    color:#222;
+}
+
+.container{
+    max-width:1000px;
+    margin:auto;
+    background:white;
+    padding:30px;
+    border-radius:10px;
+    box-shadow:0 0 10px rgba(0,0,0,0.15);
+}
+
+h1,h2,h3{
+    color:#0B5394;
+}
+
+.btn-print{
+    background:#0B5394;
+    color:white;
+    border:none;
+    padding:12px 20px;
+    border-radius:6px;
+    cursor:pointer;
+    font-size:16px;
+    margin-bottom:20px;
+}
+
+.btn-print:hover{
+    background:#073763;
+}
+
+.ejemplo,
+.ejercicio,
+.video{
+    background:#F8F9FA;
+    border-left:5px solid #0B5394;
+    padding:12px;
+    margin:15px 0;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    margin:15px 0;
+}
+
+th,td{
+    border:1px solid #CCCCCC;
+    padding:10px;
+    text-align:center;
+}
+
+th{
+    background:#D9EAF7;
+}
+
+a{
+    color:#1155CC;
+    font-weight:bold;
+    word-break:break-word;
+}
+
+@media(max-width:768px){
+
+    body{
+        padding:10px;
+    }
+
+    .container{
+        padding:15px;
+    }
+
+    table{
+        font-size:13px;
+    }
+
+}
+
+@media print{
+
+    .btn-print{
+        display:none;
+    }
+
+    body{
+        background:white;
+        padding:0;
+    }
+
+    .container{
+        max-width:100%;
+        box-shadow:none;
+    }
+
+    @page{
+        size:letter;
+        margin:1.5cm;
+    }
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<button class="btn-print" onclick="window.print()">
+Imprimir / Guardar como PDF
+</button>
+
+<h1>4.1 Caracterizar un grupo de datos utilizando medidas estadísticas de resumen: moda, media aritmética, máximo, mínimo y recorrido</h1>
+
+<h2>Explicación</h2>
+
+<p>
+Las medidas estadísticas de resumen permiten describir un conjunto de datos mediante valores representativos que facilitan su análisis e interpretación.
+</p>
+
+<p>
+Las principales medidas de resumen son:
+</p>
+
+<ul>
+<li><strong>Media aritmética.</strong></li>
+<li><strong>Moda.</strong></li>
+<li><strong>Máximo.</strong></li>
+<li><strong>Mínimo.</strong></li>
+<li><strong>Recorrido o rango.</strong></li>
+</ul>
+
+<h3>1. Media aritmética</h3>
+
+<p>
+Es el promedio de todos los datos.
+Se obtiene sumando los valores y dividiendo entre la cantidad de datos.
+</p>
+
+$$
+\bar{x}
+=
+\frac{\sum x}{n}
+$$
+
+<h3>2. Moda</h3>
+
+<p>
+Es el dato que más veces se repite dentro del conjunto.
+</p>
+
+<h3>3. Máximo</h3>
+
+<p>
+Es el valor más grande del conjunto de datos.
+</p>
+
+<h3>4. Mínimo</h3>
+
+<p>
+Es el valor más pequeño del conjunto de datos.
+</p>
+
+<h3>5. Recorrido o rango</h3>
+
+<p>
+Representa la amplitud de los datos y se calcula restando el valor mínimo al valor máximo.
+</p>
+
+$$
+R=\text{Máximo}-\text{Mínimo}
+$$
+
+<table>
+
+<tr>
+<th>Medida</th>
+<th>Descripción</th>
+</tr>
+
+<tr>
+<td>Media</td>
+<td>Promedio de los datos.</td>
+</tr>
+
+<tr>
+<td>Moda</td>
+<td>Dato que más se repite.</td>
+</tr>
+
+<tr>
+<td>Máximo</td>
+<td>Valor más alto.</td>
+</tr>
+
+<tr>
+<td>Mínimo</td>
+<td>Valor más bajo.</td>
+</tr>
+
+<tr>
+<td>Recorrido</td>
+<td>Diferencia entre el máximo y el mínimo.</td>
+</tr>
+
+</table>
+
+<hr>
+
+<h2>Ejemplo</h2>
+
+<div class="ejemplo">
+
+<p>
+Las notas obtenidas por 8 estudiantes son:
+</p>
+
+$$
+6,\;8,\;7,\;8,\;9,\;10,\;8,\;6
+$$
+
+<p><strong>Paso 1. Calcular la media aritmética</strong></p>
+
+$$
+\bar{x}
+=
+\frac{6+8+7+8+9+10+8+6}{8}
+$$
+
+$$
+\bar{x}
+=
+\frac{62}{8}
+$$
+
+$$
+\bar{x}
+=
+7.75
+$$
+
+<p><strong>Paso 2. Determinar la moda</strong></p>
+
+<p>
+El valor que más se repite es:
+</p>
+
+$$
+8
+$$
+
+<p>
+Moda = 8
+</p>
+
+<p><strong>Paso 3. Determinar el máximo</strong></p>
+
+$$
+10
+$$
+
+<p><strong>Paso 4. Determinar el mínimo</strong></p>
+
+$$
+6
+$$
+
+<p><strong>Paso 5. Calcular el recorrido</strong></p>
+
+$$
+R=10-6
+$$
+
+$$
+R=4
+$$
+
+<p><strong>Resumen:</strong></p>
+
+<table>
+
+<tr>
+<th>Media</th>
+<th>Moda</th>
+<th>Máximo</th>
+<th>Mínimo</th>
+<th>Recorrido</th>
+</tr>
+
+<tr>
+<td>7.75</td>
+<td>8</td>
+<td>10</td>
+<td>6</td>
+<td>4</td>
+</tr>
+
+</table>
+
+</div>
+
+<hr>
+
+<h2>Ejercicios</h2>
+
+<div class="ejercicio">
+
+<strong>1.</strong>
+
+$$
+4,\;5,\;6,\;6,\;9
+$$
+
+Calcule la media, moda, máximo, mínimo y recorrido.
+
+</div>
+
+<div class="ejercicio">
+
+<strong>2.</strong>
+
+$$
+10,\;12,\;14,\;12,\;18
+$$
+
+Calcule la media, moda, máximo, mínimo y recorrido.
+
+</div>
+
+<div class="ejercicio">
+
+<strong>3.</strong>
+
+$$
+3,\;3,\;3,\;5,\;7,\;9
+$$
+
+Calcule la media, moda, máximo, mínimo y recorrido.
+
+</div>
+
+<div class="ejercicio">
+
+<strong>4.</strong>
+
+$$
+2,\;4,\;6,\;8,\;10
+$$
+
+Calcule la media, moda, máximo, mínimo y recorrido.
+
+</div>
+
+<div class="ejercicio">
+
+<strong>5.</strong>
+
+$$
+15,\;18,\;18,\;20,\;24
+$$
+
+Calcule la media, moda, máximo, mínimo y recorrido.
+
+</div>
+
+<hr>
+
+<h2>Respuestas</h2>
+
+<p><strong>1.</strong></p>
+
+$$
+\text{Media}=6
+$$
+
+$$
+\text{Moda}=6
+$$
+
+$$
+\text{Máximo}=9
+$$
+
+$$
+\text{Mínimo}=4
+$$
+
+$$
+\text{Recorrido}=5
+$$
+
+<p><strong>2.</strong></p>
+
+$$
+\text{Media}=13.2
+$$
+
+$$
+\text{Moda}=12
+$$
+
+$$
+\text{Máximo}=18
+$$
+
+$$
+\text{Mínimo}=10
+$$
+
+$$
+\text{Recorrido}=8
+$$
+
+<p><strong>3.</strong></p>
+
+$$
+\text{Media}=5
+$$
+
+$$
+\text{Moda}=3
+$$
+
+$$
+\text{Máximo}=9
+$$
+
+$$
+\text{Mínimo}=3
+$$
+
+$$
+\text{Recorrido}=6
+$$
+
+<p><strong>4.</strong></p>
+
+$$
+\text{Media}=6
+$$
+
+$$
+\text{Moda}=\text{No existe}
+$$
+
+$$
+\text{Máximo}=10
+$$
+
+$$
+\text{Mínimo}=2
+$$
+
+$$
+\text{Recorrido}=8
+$$
+
+<p><strong>5.</strong></p>
+
+$$
+\text{Media}=19
+$$
+
+$$
+\text{Moda}=18
+$$
+
+$$
+\text{Máximo}=24
+$$
+
+$$
+\text{Mínimo}=15
+$$
+
+$$
+\text{Recorrido}=9
+$$
+
+<hr>
+
+<h2>Videos recomendados de YouTube</h2>
+
+<div class="video">
+
+<p><strong>Video 1</strong></p>
+
+<a href="https://www.youtube.com/watch?v=meGd38l2CMY" target="_blank">
+Así puedes calcular la media aritmética, mediana, moda y rango
+</a>
+
+<p>
+URL para impresión:
+<br>
+https://www.youtube.com/watch?v=meGd38l2CMY
+</p>
+
+</div>
+
+<div class="video">
+
+<p><strong>Video 2</strong></p>
+
+<a href="https://www.youtube.com/watch?v=OXbBL5F18SA" target="_blank">
+Media, Mediana, Moda y Rango explicados paso a paso
+</a>
+
+<p>
+URL para impresión:
+<br>
+https://www.youtube.com/watch?v=OXbBL5F18SA
+</p>
+
+</div>
+
+<hr>
+
+<h2>Referencias APA (7.ª edición)</h2>
+
+<p>
+Triola, M. F. (2022). <em>Estadística</em> (13.ª ed.). Pearson.
+</p>
+
+<p>
+Anderson, D. R., Sweeney, D. J., & Williams, T. A. (2020). <em>Estadística para administración y economía</em>. Cengage Learning.
+</p>
+
+<p>
+Mendenhall, W., Beaver, R. J., & Beaver, B. M. (2019). <em>Introducción a la probabilidad y estadística</em>. Cengage Learning.
+</p>
+
+<p>
+OpenStax. (2023). <em>Introductory Statistics</em>. Rice University.
+</p>
+
+<p>
+Levine, D. M., Stephan, D. F., Szabat, K. A., & Viswanathan, U. (2021). <em>Statistics for Managers Using Microsoft Excel</em>. Pearson.
+</p>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</body>
+</html>

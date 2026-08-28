@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>4.4 Determinar eventos y sus resultados favorables dentro de una situación aleatoria</title>
+
+<style>
+
+*{
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    margin:0;
+    padding:20px;
+    background:#f4f6f9;
+    color:#222;
+    line-height:1.7;
+}
+
+.container{
+    max-width:1000px;
+    margin:auto;
+    background:white;
+    padding:30px;
+    border-radius:10px;
+    box-shadow:0 0 10px rgba(0,0,0,0.15);
+}
+
+h1,h2,h3{
+    color:#0B5394;
+}
+
+.btn-print{
+    background:#0B5394;
+    color:white;
+    border:none;
+    padding:12px 20px;
+    border-radius:6px;
+    cursor:pointer;
+    font-size:16px;
+    margin-bottom:20px;
+}
+
+.btn-print:hover{
+    background:#073763;
+}
+
+.ejemplo,
+.ejercicio,
+.video{
+    background:#F8F9FA;
+    border-left:5px solid #0B5394;
+    padding:12px;
+    margin:15px 0;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    margin:15px 0;
+}
+
+th,td{
+    border:1px solid #CCCCCC;
+    padding:10px;
+    text-align:center;
+}
+
+th{
+    background:#D9EAF7;
+}
+
+a{
+    color:#1155CC;
+    font-weight:bold;
+    word-break:break-word;
+}
+
+@media(max-width:768px){
+
+    body{
+        padding:10px;
+    }
+
+    .container{
+        padding:15px;
+    }
+
+}
+
+@media print{
+
+    .btn-print{
+        display:none;
+    }
+
+    body{
+        background:white;
+        padding:0;
+    }
+
+    .container{
+        max-width:100%;
+        box-shadow:none;
+    }
+
+    @page{
+        size:letter;
+        margin:1.5cm;
+    }
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<button class="btn-print" onclick="window.print()">
+Imprimir / Guardar como PDF
+</button>
+
+<h1>4.4 Determinar eventos y sus resultados favorables dentro de una situación aleatoria</h1>
+
+<h2>Explicación</h2>
+
+<p>
+En probabilidad, un <strong>evento o suceso</strong> es un conjunto de resultados que cumplen una condición específica dentro de un experimento aleatorio.
+</p>
+
+<p>
+Los <strong>resultados favorables</strong> son aquellos puntos muestrales que permiten que ocurra el evento.
+</p>
+
+<p>
+Para determinar los resultados favorables se deben seguir estos pasos:
+</p>
+
+<ol>
+<li>Identificar el experimento aleatorio.</li>
+<li>Determinar el espacio muestral.</li>
+<li>Definir el evento.</li>
+<li>Seleccionar los resultados que cumplen la condición establecida.</li>
+</ol>
+
+<h3>Ejemplo básico</h3>
+
+<p>
+Se lanza un dado equilibrado.
+</p>
+
+<p>
+Espacio muestral:
+</p>
+
+$$
+S=\{1,2,3,4,5,6\}
+$$
+
+<p>
+Evento A: obtener un número impar.
+</p>
+
+<p>
+Resultados favorables:
+</p>
+
+$$
+A=\{1,3,5\}
+$$
+
+<p>
+Los números 1, 3 y 5 son favorables porque cumplen la condición de ser impares.
+</p>
+
+<hr>
+
+<h2>Representación de eventos</h2>
+
+<table>
+
+<tr>
+<th>Experimento</th>
+<th>Evento</th>
+<th>Resultados favorables</th>
+</tr>
+
+<tr>
+<td>Lanzar un dado</td>
+<td>Número par</td>
+<td>{2,4,6}</td>
+</tr>
+
+<tr>
+<td>Lanzar un dado</td>
+<td>Número mayor que 4</td>
+<td>{5,6}</td>
+</tr>
+
+<tr>
+<td>Lanzar una moneda</td>
+<td>Obtener cara</td>
+<td>{Cara}</td>
+</tr>
+
+<tr>
+<td>Elegir una vocal</td>
+<td>Elegir una vocal cerrada</td>
+<td>{I,U}</td>
+</tr>
+
+</table>
+
+<hr>
+
+<h2>Ejemplo resuelto</h2>
+
+<div class="ejemplo">
+
+<p>
+En una bolsa hay fichas numeradas del 1 al 10.
+Se extrae una ficha al azar.
+</p>
+
+<p><strong>Paso 1. Determinar el espacio muestral</strong></p>
+
+$$
+S=\{1,2,3,4,5,6,7,8,9,10\}
+$$
+
+<p><strong>Paso 2. Definir el evento</strong></p>
+
+<p>
+Evento B: obtener un número múltiplo de 2.
+</p>
+
+<p><strong>Paso 3. Identificar los resultados favorables</strong></p>
+
+$$
+B=\{2,4,6,8,10\}
+$$
+
+<p>
+Los resultados favorables son 2, 4, 6, 8 y 10 porque todos son múltiplos de 2.
+</p>
+
+</div>
+
+<hr>
+
+<h2>Ejercicios</h2>
+
+<div class="ejercicio">
+
+<strong>1.</strong>
+
+<p>
+Se lanza un dado.
+Determine los resultados favorables del evento:
+</p>
+
+<p>
+"Obtener un número mayor que 3".
+</p>
+
+</div>
+
+<div class="ejercicio">
+
+<strong>2.</strong>
+
+<p>
+Se lanza una moneda.
+Determine los resultados favorables del evento:
+</p>
+
+<p>
+"Obtener cruz".
+</p>
+
+</div>
+
+<div class="ejercicio">
+
+<strong>3.</strong>
+
+<p>
+Se selecciona una vocal al azar.
+Determine los resultados favorables del evento:
+</p>
+
+<p>
+"Seleccionar una vocal abierta".
+</p>
+
+</div>
+
+<div class="ejercicio">
+
+<strong>4.</strong>
+
+<p>
+Se extrae una ficha numerada del 1 al 8.
+Determine los resultados favorables del evento:
+</p>
+
+<p>
+"Obtener un número par".
+</p>
+
+</div>
+
+<div class="ejercicio">
+
+<strong>5.</strong>
+
+<p>
+Se selecciona un día de la semana al azar.
+Determine los resultados favorables del evento:
+</p>
+
+<p>
+"Seleccionar un día laboral".
+</p>
+
+</div>
+
+<hr>
+
+<h2>Respuestas</h2>
+
+<p><strong>1.</strong></p>
+
+$$
+A=\{4,5,6\}
+$$
+
+<p><strong>2.</strong></p>
+
+$$
+A=\{Cruz\}
+$$
+
+<p><strong>3.</strong></p>
+
+$$
+A=\{A,E,O\}
+$$
+
+<p><strong>4.</strong></p>
+
+$$
+A=\{2,4,6,8\}
+$$
+
+<p><strong>5.</strong></p>
+
+$$
+A=\{Lunes,Martes,Miércoles,Jueves,Viernes\}
+$$
+
+<hr>
+
+<h2>Videos recomendados de YouTube</h2>
+
+<div class="video">
+
+<p><strong>Video 1</strong></p>
+
+<a href="https://www.youtube.com/watch?v=cmRexIwhqaM" target="_blank">
+Casos posibles y casos favorables
+</a>
+
+<p>
+URL para impresión:
+<br>
+https://www.youtube.com/watch?v=cmRexIwhqaM
+</p>
+
+</div>
+
+<div class="video">
+
+<p><strong>Video 2</strong></p>
+
+<a href="https://www.youtube.com/watch?v=HVTl6X7Mvx4" target="_blank">
+Sucesos y Probabilidades II
+</a>
+
+<p>
+URL para impresión:
+<br>
+https://www.youtube.com/watch?v=HVTl6X7Mvx4
+</p>
+
+</div>
+
+<hr>
+
+<h2>Referencias APA (7.ª edición)</h2>
+
+<p>
+Blitzstein, J. K., & Hwang, J. (2019). <em>Introduction to Probability</em>. Chapman & Hall/CRC.
+</p>
+
+<p>
+Ross, S. (2019). <em>A First Course in Probability</em> (10th ed.). Pearson.
+</p>
+
+<p>
+Triola, M. F. (2022). <em>Estadística</em> (13.ª ed.). Pearson.
+</p>
+
+<p>
+Walpole, R. E., Myers, R. H., Myers, S. L., & Ye, K. (2018). <em>Probabilidad y estadística para ingeniería y ciencias</em>. Pearson.
+</p>
+
+<p>
+OpenStax. (2023). <em>Introductory Statistics</em>. Rice University.
+</p>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</body>
+</html>
