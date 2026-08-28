@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>4.9 Resolver problemas vinculados con el cálculo de probabilidades</title>
+
+<style>
+
+*{
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    margin:0;
+    padding:20px;
+    background:#f4f6f9;
+    color:#222;
+    line-height:1.7;
+}
+
+.container{
+    max-width:1000px;
+    margin:auto;
+    background:white;
+    padding:30px;
+    border-radius:10px;
+    box-shadow:0 0 10px rgba(0,0,0,0.15);
+}
+
+h1,h2,h3{
+    color:#0B5394;
+}
+
+.btn-print{
+    background:#0B5394;
+    color:white;
+    border:none;
+    padding:12px 20px;
+    border-radius:6px;
+    cursor:pointer;
+    margin-bottom:20px;
+}
+
+.btn-print:hover{
+    background:#073763;
+}
+
+.ejemplo,
+.ejercicio,
+.video{
+    background:#F8F9FA;
+    border-left:5px solid #0B5394;
+    padding:12px;
+    margin:15px 0;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    margin:15px 0;
+}
+
+th,td{
+    border:1px solid #CCCCCC;
+    padding:10px;
+    text-align:center;
+}
+
+th{
+    background:#D9EAF7;
+}
+
+a{
+    color:#1155CC;
+    font-weight:bold;
+}
+
+@media print{
+
+.btn-print{
+display:none;
+}
+
+@page{
+size:letter;
+margin:1.5cm;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<button class="btn-print" onclick="window.print()">
+Imprimir / Guardar como PDF
+</button>
+
+<h1>4.9 Resolver problemas vinculados con el cálculo de probabilidades</h1>
+
+<h2>Explicación</h2>
+
+<p>
+La probabilidad permite determinar qué tan posible es que ocurra un evento dentro de una situación aleatoria.
+</p>
+
+<p>
+Para resolver problemas de probabilidad se utiliza la fórmula:
+</p>
+
+$$
+P(E)=
+\frac{\text{Número de resultados favorables}}
+{\text{Número total de resultados}}
+$$
+
+<p>
+Donde:
+</p>
+
+<ul>
+
+<li>Resultados favorables: cumplen la condición solicitada.</li>
+
+<li>Resultados totales: todos los resultados posibles del experimento.</li>
+
+</ul>
+
+<h3>Pasos para resolver problemas</h3>
+
+<ol>
+
+<li>Identificar el experimento aleatorio.</li>
+
+<li>Determinar el espacio muestral.</li>
+
+<li>Identificar el evento solicitado.</li>
+
+<li>Contar los resultados favorables.</li>
+
+<li>Aplicar la fórmula de probabilidad.</li>
+
+<li>Interpretar el resultado.</li>
+
+</ol>
+
+<hr>
+
+<h2>Ejemplo resuelto</h2>
+
+<div class="ejemplo">
+
+<p>
+Se lanza un dado equilibrado.
+¿Cuál es la probabilidad de obtener un número menor que 4?
+</p>
+
+<p>
+Espacio muestral:
+</p>
+
+$$
+S=\{1,2,3,4,5,6\}
+$$
+
+<p>
+Resultados favorables:
+</p>
+
+$$
+\{1,2,3\}
+$$
+
+<p>
+Número de resultados favorables:
+</p>
+
+$$
+3
+$$
+
+<p>
+Número total de resultados:
+</p>
+
+$$
+6
+$$
+
+<p>
+Aplicamos la fórmula:
+</p>
+
+$$
+P(E)=\frac{3}{6}
+$$
+
+$$
+P(E)=\frac{1}{2}
+$$
+
+$$
+P(E)=0.5
+$$
+
+$$
+P(E)=50\%
+$$
+
+<p>
+Respuesta:
+La probabilidad de obtener un número menor que 4 es del 50%.
+</p>
+
+</div>
+
+<hr>
+
+<h2>Problemas de aplicación</h2>
+
+<div class="ejercicio">
+
+<strong>1.</strong>
+
+<p>
+En una bolsa hay 5 fichas rojas y 3 fichas azules.
+Se extrae una ficha al azar.
+¿Cuál es la probabilidad de obtener una ficha azul?
+</p>
+
+</div>
+
+<div class="ejercicio">
+
+<strong>2.</strong>
+
+<p>
+Se lanza un dado.
+¿Cuál es la probabilidad de obtener un número par?
+</p>
+
+</div>
+
+<div class="ejercicio">
+
+<strong>3.</strong>
+
+<p>
+En una clase hay 12 mujeres y 8 hombres.
+Si se selecciona un estudiante al azar,
+¿cuál es la probabilidad de seleccionar una mujer?
+</p>
+
+</div>
+
+<div class="ejercicio">
+
+<strong>4.</strong>
+
+<p>
+Se extrae una carta de una baraja formada por las tarjetas numeradas del 1 al 10.
+¿Cuál es la probabilidad de obtener un número mayor que 7?
+</p>
+
+</div>
+
+<div class="ejercicio">
+
+<strong>5.</strong>
+
+<p>
+Una pregunta tiene 4 opciones de respuesta y solamente una es correcta.
+Si un estudiante responde al azar,
+¿cuál es la probabilidad de responder correctamente?
+</p>
+
+</div>
+
+<hr>
+
+<h2>Respuestas</h2>
+
+<p><strong>1.</strong></p>
+
+$$
+P(E)=\frac{3}{8}
+$$
+
+$$
+0.375
+$$
+
+$$
+37.5\%
+$$
+
+<p><strong>2.</strong></p>
+
+$$
+P(E)=\frac{3}{6}
+$$
+
+$$
+\frac{1}{2}
+$$
+
+$$
+50\%
+$$
+
+<p><strong>3.</strong></p>
+
+$$
+P(E)=\frac{12}{20}
+$$
+
+$$
+0.60
+$$
+
+$$
+60\%
+$$
+
+<p><strong>4.</strong></p>
+
+<p>
+Resultados favorables:
+</p>
+
+$$
+\{8,9,10\}
+$$
+
+$$
+P(E)=\frac{3}{10}
+$$
+
+$$
+30\%
+$$
+
+<p><strong>5.</strong></p>
+
+$$
+P(E)=\frac{1}{4}
+$$
+
+$$
+0.25
+$$
+
+$$
+25\%
+$$
+
+<hr>
+
+<h2>Videos recomendados de YouTube</h2>
+
+<div class="video">
+
+<p><strong>Video 1</strong></p>
+
+<a href="https://www.youtube.com/watch?v=hG0xa-fVCwQ" target="_blank">
+Probabilidad: casos favorables y posibles. Fórmula. ¡Muy fácil!
+</a>
+
+<p>
+URL para impresión:
+<br>
+https://www.youtube.com/watch?v=hG0xa-fVCwQ
+</p>
+
+</div>
+
+<div class="video">
+
+<p><strong>Video 2</strong></p>
+
+<a href="https://www.youtube.com/watch?v=cmRexIwhqaM" target="_blank">
+Casos posibles y casos favorables
+</a>
+
+<p>
+URL para impresión:
+<br>
+https://www.youtube.com/watch?v=cmRexIwhqaM
+</p>
+
+</div>
+
+<hr>
+
+<h2>Referencias APA (7.ª edición)</h2>
+
+<p>
+Blitzstein, J. K., & Hwang, J. (2019). <em>Introduction to Probability</em>. Chapman & Hall/CRC.
+</p>
+
+<p>
+Ross, S. (2019). <em>A First Course in Probability</em> (10th ed.). Pearson.
+</p>
+
+<p>
+Triola, M. F. (2022). <em>Estadística</em> (13.ª ed.). Pearson.
+</p>
+
+<p>
+Walpole, R. E., Myers, R. H., Myers, S. L., & Ye, K. (2018). <em>Probabilidad y estadística para ingeniería y ciencias</em>. Pearson.
+</p>
+
+<p>
+OpenStax. (2023). <em>Introductory Statistics</em>. Rice University.
+</p>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</body>
+</html>

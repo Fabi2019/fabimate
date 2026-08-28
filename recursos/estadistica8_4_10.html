@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>4.10 Utilizar probabilidades para favorecer la toma de decisiones</title>
+
+<style>
+
+*{
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    margin:0;
+    padding:20px;
+    background:#f4f6f9;
+    color:#222;
+    line-height:1.7;
+}
+
+.container{
+    max-width:1000px;
+    margin:auto;
+    background:white;
+    padding:30px;
+    border-radius:10px;
+    box-shadow:0 0 10px rgba(0,0,0,0.15);
+}
+
+h1,h2,h3{
+    color:#0B5394;
+}
+
+.btn-print{
+    background:#0B5394;
+    color:white;
+    border:none;
+    padding:12px 20px;
+    border-radius:6px;
+    cursor:pointer;
+    margin-bottom:20px;
+}
+
+.btn-print:hover{
+    background:#073763;
+}
+
+.ejemplo,
+.ejercicio,
+.video{
+    background:#F8F9FA;
+    border-left:5px solid #0B5394;
+    padding:12px;
+    margin:15px 0;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    margin:15px 0;
+}
+
+th,td{
+    border:1px solid #CCCCCC;
+    padding:10px;
+    text-align:center;
+}
+
+th{
+    background:#D9EAF7;
+}
+
+a{
+    color:#1155CC;
+    font-weight:bold;
+}
+
+@media print{
+
+.btn-print{
+display:none;
+}
+
+@page{
+size:letter;
+margin:1.5cm;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<button class="btn-print" onclick="window.print()">
+Imprimir / Guardar como PDF
+</button>
+
+<h1>
+4.10 Utilizar probabilidades para favorecer la toma de decisiones en problemas vinculados con fenómenos aleatorios
+</h1>
+
+<h2>Explicación</h2>
+
+<p>
+La probabilidad no solo permite calcular posibilidades, sino que también ayuda a tomar decisiones informadas cuando existen situaciones de incertidumbre.
+</p>
+
+<p>
+Muchas decisiones cotidianas se basan en la probabilidad de que ocurra un evento:
+</p>
+
+<ul>
+
+<li>Elegir la fila más rápida en un supermercado.</li>
+
+<li>Decidir si llevar paraguas según la probabilidad de lluvia.</li>
+
+<li>Seleccionar una estrategia en un juego.</li>
+
+<li>Participar o no en una rifa.</li>
+
+<li>Escoger entre diferentes alternativas con distinto nivel de riesgo.</li>
+
+</ul>
+
+<p>
+Cuando la probabilidad de un evento es mayor, existe una mayor posibilidad de que ocurra.
+Esto permite comparar opciones y seleccionar la más conveniente.
+</p>
+
+<h3>Interpretación de probabilidades</h3>
+
+<table>
+
+<tr>
+<th>Probabilidad</th>
+<th>Interpretación</th>
+</tr>
+
+<tr>
+<td>0</td>
+<td>Evento imposible.</td>
+</tr>
+
+<tr>
+<td>0.25</td>
+<td>Poca posibilidad de ocurrir.</td>
+</tr>
+
+<tr>
+<td>0.50</td>
+<td>Posibilidad intermedia.</td>
+</tr>
+
+<tr>
+<td>0.75</td>
+<td>Alta posibilidad de ocurrir.</td>
+</tr>
+
+<tr>
+<td>1</td>
+<td>Evento seguro.</td>
+</tr>
+
+</table>
+
+<hr>
+
+<h2>Ejemplo resuelto</h2>
+
+<div class="ejemplo">
+
+<p>
+Una estudiante puede elegir una de dos bolsas para extraer una ficha y ganar un premio.
+</p>
+
+<p>
+<strong>Bolsa A:</strong>
+3 fichas premiadas y 7 no premiadas.
+</p>
+
+<p>
+<strong>Bolsa B:</strong>
+6 fichas premiadas y 4 no premiadas.
+</p>
+
+<p>
+Probabilidad de ganar con la bolsa A:
+</p>
+
+$$
+P(A)=\frac{3}{10}=0.30
+$$
+
+<p>
+Probabilidad de ganar con la bolsa B:
+</p>
+
+$$
+P(B)=\frac{6}{10}=0.60
+$$
+
+<p>
+Como:
+</p>
+
+$$
+0.60 > 0.30
+$$
+
+<p>
+La mejor decisión es elegir la bolsa B, porque ofrece una mayor probabilidad de obtener el premio.
+</p>
+
+</div>
+
+<hr>
+
+<h2>Situaciones de toma de decisiones</h2>
+
+<table>
+
+<tr>
+<th>Situación</th>
+<th>Decisión basada en probabilidad</th>
+</tr>
+
+<tr>
+<td>Probabilidad de lluvia del 80%</td>
+<td>Llevar paraguas.</td>
+</tr>
+
+<tr>
+<td>Mayor posibilidad de ganar en una opción</td>
+<td>Elegir la opción con mayor probabilidad.</td>
+</tr>
+
+<tr>
+<td>Juego con pocas posibilidades de ganar</td>
+<td>Evaluar si vale la pena participar.</td>
+</tr>
+
+<tr>
+<td>Varias rutas disponibles</td>
+<td>Elegir la ruta con menor probabilidad de atraso.</td>
+</tr>
+
+</table>
+
+<hr>
+
+<h2>Ejercicios</h2>
+
+<div class="ejercicio">
+
+<strong>1.</strong>
+
+<p>
+Una bolsa contiene 2 fichas premiadas y 8 no premiadas.
+Otra contiene 5 premiadas y 5 no premiadas.
+¿En cuál bolsa conviene participar para tener mayor probabilidad de ganar?
+</p>
+
+</div>
+
+<div class="ejercicio">
+
+<strong>2.</strong>
+
+<p>
+La probabilidad de lluvia para mañana es del 90%.
+¿Qué decisión sería más razonable?
+</p>
+
+</div>
+
+<div class="ejercicio">
+
+<strong>3.</strong>
+
+<p>
+Un concurso tiene dos opciones:
+Opción A con probabilidad de ganar de 20% y opción B con probabilidad de ganar de 50%.
+¿Cuál debería elegir una persona?
+</p>
+
+</div>
+
+<div class="ejercicio">
+
+<strong>4.</strong>
+
+<p>
+Una rifa ofrece una probabilidad de ganar de 1 entre 500.
+¿La probabilidad de ganar es alta o baja?
+</p>
+
+</div>
+
+<div class="ejercicio">
+
+<strong>5.</strong>
+
+<p>
+Un estudiante tiene 4 respuestas posibles en una pregunta y solo una correcta.
+Si responde al azar, ¿qué probabilidad tiene de acertar?
+</p>
+
+</div>
+
+<hr>
+
+<h2>Respuestas</h2>
+
+<ol>
+
+<li>
+Conviene elegir la segunda bolsa porque:
+$$
+\frac{5}{10}=0.50
+$$
+es mayor que
+$$
+\frac{2}{10}=0.20
+$$
+</li>
+
+<li>
+Llevar paraguas o preparar un plan alternativo debido a la alta probabilidad de lluvia.
+</li>
+
+<li>
+Elegir la opción B porque presenta una probabilidad mayor de ganar.
+</li>
+
+<li>
+La probabilidad es muy baja.
+</li>
+
+<li>
+$$
+P(E)=\frac{1}{4}
+$$
+$$
+0.25=25\%
+$$
+</li>
+
+</ol>
+
+<hr>
+
+<h2>Videos recomendados de YouTube</h2>
+
+<div class="video">
+
+<p><strong>Video 1</strong></p>
+
+<a href="https://www.youtube.com/watch?v=hG0xa-fVCwQ" target="_blank">
+Probabilidad: Casos favorables y posibles. Fórmula. ¡Muy fácil!
+</a>
+
+<p>
+https://www.youtube.com/watch?v=hG0xa-fVCwQ
+</p>
+
+</div>
+
+<div class="video">
+
+<p><strong>Video 2</strong></p>
+
+<a href="https://www.youtube.com/watch?v=cmRexIwhqaM" target="_blank">
+Casos posibles y casos favorables
+</a>
+
+<p>
+https://www.youtube.com/watch?v=cmRexIwhqaM
+</p>
+
+</div>
+
+<hr>
+
+<h2>Referencias APA (7.ª edición)</h2>
+
+<p>
+Blitzstein, J. K., & Hwang, J. (2019). <em>Introduction to Probability</em>. Chapman & Hall/CRC.
+</p>
+
+<p>
+Ross, S. (2019). <em>A First Course in Probability</em> (10th ed.). Pearson.
+</p>
+
+<p>
+Triola, M. F. (2022). <em>Estadística</em> (13.ª ed.). Pearson.
+</p>
+
+<p>
+Walpole, R. E., Myers, R. H., Myers, S. L., & Ye, K. (2018). <em>Probabilidad y estadística para ingeniería y ciencias</em>. Pearson.
+</p>
+
+<p>
+OpenStax. (2023). <em>Introductory Statistics</em>. Rice University.
+</p>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</body>
+</html>

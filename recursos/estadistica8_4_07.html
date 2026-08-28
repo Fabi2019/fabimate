@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>4.7 Eventos más probables, menos probables e igualmente probables</title>
+
+<style>
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    margin:0;
+    padding:20px;
+    background:#f4f6f9;
+    color:#222;
+    line-height:1.7;
+}
+
+.container{
+    max-width:900px;
+    margin:auto;
+    background:#fff;
+    padding:25px;
+    border-radius:10px;
+    box-shadow:0 0 10px rgba(0,0,0,0.1);
+}
+
+h1,h2{
+    color:#0b5394;
+}
+
+.boton{
+    text-align:center;
+    margin-bottom:20px;
+}
+
+button{
+    background:#0b5394;
+    color:white;
+    border:none;
+    padding:12px 20px;
+    border-radius:6px;
+    cursor:pointer;
+    font-size:16px;
+}
+
+button:hover{
+    background:#073763;
+}
+
+.ejercicio{
+    background:#f8f9fa;
+    border-left:5px solid #0b5394;
+    padding:12px;
+    margin:12px 0;
+}
+
+.respuestas{
+    background:#eef8ee;
+    padding:15px;
+    border-radius:8px;
+}
+
+.video{
+    margin-top:15px;
+}
+
+a{
+    color:#0b5394;
+    font-weight:bold;
+}
+
+@media print{
+
+    .boton{
+        display:none;
+    }
+
+    .container{
+        box-shadow:none;
+        max-width:100%;
+    }
+
+    @page{
+        size:letter;
+        margin:1.5cm;
+    }
+}
+</style>
+
+<script>
+function imprimirPDF(){
+    window.print();
+}
+</script>
+
+<script>
+window.MathJax = {
+  tex: {
+    inlineMath: [['\$$','\$$']],
+    displayMath: [['\$$','\$$']]
+  }
+};
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</head>
+<body>
+
+<div class="container">
+
+<div class="boton">
+<button onclick="imprimirPDF()">🖨️ Imprimir / Guardar como PDF</button>
+</div>
+
+<h1>4.7 Diferenciar entre eventos más probables, menos probables e igualmente probables</h1>
+
+<h2>Explicación</h2>
+
+<p>
+En probabilidad, un <strong>evento</strong> es un conjunto de resultados de un experimento aleatorio.
+Para determinar si un evento es más probable, menos probable o igualmente probable que otro,
+debemos comparar la cantidad de <strong>puntos muestrales favorables</strong> de cada evento.
+</p>
+
+<p>
+La probabilidad de un evento se calcula mediante:
+</p>
+
+$$
+P(E)=\frac{\text{Casos favorables}}{\text{Casos posibles}}
+$$
+
+<h3>Eventos igualmente probables</h3>
+
+<p>
+Dos eventos son igualmente probables cuando tienen la misma cantidad de resultados favorables.
+</p>
+
+<p>
+Ejemplo: lanzar una moneda.
+</p>
+
+$$
+S=\{cara, cruz\}
+$$
+
+<p>
+La probabilidad de obtener cara es igual a la de obtener cruz.
+</p>
+
+<h3>Evento más probable</h3>
+
+<p>
+Es el evento que tiene una mayor cantidad de resultados favorables.
+</p>
+
+<p>
+Ejemplo: lanzar un dado.
+</p>
+
+$$
+S=\{1,2,3,4,5,6\}
+$$
+
+<p>
+Evento A: obtener un número par.
+</p>
+
+$$
+A=\{2,4,6\}
+$$
+
+<p>
+Evento B: obtener un 6.
+</p>
+
+$$
+B=\{6\}
+$$
+
+<p>
+Como A tiene 3 resultados favorables y B solamente 1,
+el evento A es más probable.
+</p>
+
+<h3>Evento menos probable</h3>
+
+<p>
+Es el evento que tiene menos resultados favorables que otro evento del mismo experimento.
+</p>
+
+<h2>Ejemplo Resuelto</h2>
+
+<p>
+Se lanza un dado.
+</p>
+
+<p>
+Comparar los eventos:
+</p>
+
+<ul>
+<li>A: Obtener número menor que 5.</li>
+<li>B: Obtener número mayor que 5.</li>
+</ul>
+
+$$
+A=\{1,2,3,4\}
+$$
+
+$$
+B=\{6\}
+$$
+
+<p>
+Cantidad de resultados favorables:
+</p>
+
+$$
+n(A)=4
+$$
+
+$$
+n(B)=1
+$$
+
+<p>
+Por lo tanto:
+</p>
+
+<ul>
+<li>A es más probable.</li>
+<li>B es menos probable.</li>
+</ul>
+
+<h2>Ejercicios</h2>
+
+<div class="ejercicio">
+<strong>1.</strong>
+Se lanza una moneda.
+¿Cuáles eventos son igualmente probables?
+<br>
+A: obtener cara.
+<br>
+B: obtener cruz.
+</div>
+
+<div class="ejercicio">
+<strong>2.</strong>
+Se lanza un dado.
+Compare:
+<br>
+A: obtener número par.
+<br>
+B: obtener el número 1.
+</div>
+
+<div class="ejercicio">
+<strong>3.</strong>
+En una bolsa hay 5 bolas rojas y 2 azules.
+Compare:
+<br>
+A: sacar una bola roja.
+<br>
+B: sacar una bola azul.
+</div>
+
+<div class="ejercicio">
+<strong>4.</strong>
+Se lanza un dado.
+Compare:
+<br>
+A: obtener un número mayor que 4.
+<br>
+B: obtener un número menor que 3.
+</div>
+
+<div class="ejercicio">
+<strong>5.</strong>
+Se extrae una carta de un conjunto formado por:
+A, B, C, D, E, F.
+<br>
+Compare:
+<br>
+A: obtener vocal.
+<br>
+B: obtener consonante.
+</div>
+
+<h2>Respuestas</h2>
+
+<div class="respuestas">
+
+<p><strong>1.</strong></p>
+
+$$
+P(cara)=\frac{1}{2}
+$$
+
+$$
+P(cruz)=\frac{1}{2}
+$$
+
+Respuesta: <strong>igualmente probables</strong>.
+
+<hr>
+
+<p><strong>2.</strong></p>
+
+$$
+A=\{2,4,6\}
+$$
+
+$$
+n(A)=3
+$$
+
+$$
+B=\{1\}
+$$
+
+$$
+n(B)=1
+$$
+
+Respuesta: <strong>A es más probable.</strong>
+
+<hr>
+
+<p><strong>3.</strong></p>
+
+Bolas rojas = 5
+
+<br>
+
+Bolas azules = 2
+
+<br>
+
+Respuesta: <strong>sacar una bola roja es más probable.</strong>
+
+<hr>
+
+<p><strong>4.</strong></p>
+
+$$
+A=\{5,6\}
+$$
+
+$$
+n(A)=2
+$$
+
+$$
+B=\{1,2\}
+$$
+
+$$
+n(B)=2
+$$
+
+Respuesta: <strong>igualmente probables.</strong>
+
+<hr>
+
+<p><strong>5.</strong></p>
+
+Vocales:
+
+$$
+\{A,E\}
+$$
+
+$$
+n(A)=2
+$$
+
+Consonantes:
+
+$$
+\{B,C,D,F\}
+$$
+
+$$
+n(B)=4
+$$
+
+Respuesta:
+<strong>obtener una consonante es más probable.</strong>
+
+</div>
+
+<h2>Videos de apoyo en YouTube</h2>
+
+<div class="video">
+
+<a href="https://www.youtube.com/watch?v=IgTOqPBShng" target="_blank">
+EVENTOS EQUIPROBABLES Y NO EQUIPROBABLES - Profesor Sagal
+</a>
+
+<br>
+
+URL para impresión:
+
+<br>
+
+https://www.youtube.com/watch?v=IgTOqPBShng
+
+</div>
+
+<div class="video">
+
+<a href="https://www.youtube.com/watch?v=tQh29_Noo9w" target="_blank">
+Experimento aleatorio, espacio muestral y evento - Matemáticas Profe Alex
+</a>
+
+<br>
+
+URL para impresión:
+
+<br>
+
+https://www.youtube.com/watch?v=tQh29_Noo9w
+
+</div>
+
+<h2>Referencias (APA 7)</h2>
+
+<p>
+OpenStax. (2024). <em>Introductory Statistics 2e</em>. Rice University.
+</p>
+
+<p>
+Mendenhall, W., Beaver, R., & Beaver, B. (2020).
+<em>Introduction to Probability and Statistics</em>.
+Cengage Learning.
+</p>
+
+<p>
+Triola, M. F. (2022).
+<em>Elementary Statistics</em> (14th ed.).
+Pearson.
+</p>
+
+<p>
+Walpole, R. E., Myers, R. H., Myers, S. L., & Ye, K. (2017).
+<em>Probability and Statistics for Engineers and Scientists</em>.
+Pearson.
+</p>
+
+</div>
+
+</body>
+</html>

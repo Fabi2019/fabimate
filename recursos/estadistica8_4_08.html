@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>4.8 Determinar la probabilidad de un evento</title>
+
+<style>
+
+*{
+    box-sizing:border-box;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    margin:0;
+    padding:20px;
+    background:#f4f6f9;
+    color:#222;
+    line-height:1.7;
+}
+
+.container{
+    max-width:1000px;
+    margin:auto;
+    background:white;
+    padding:30px;
+    border-radius:10px;
+    box-shadow:0 0 10px rgba(0,0,0,0.15);
+}
+
+h1,h2,h3{
+    color:#0B5394;
+}
+
+.btn-print{
+    background:#0B5394;
+    color:white;
+    border:none;
+    padding:12px 20px;
+    border-radius:6px;
+    cursor:pointer;
+    margin-bottom:20px;
+}
+
+.btn-print:hover{
+    background:#073763;
+}
+
+.ejemplo,
+.ejercicio,
+.video{
+    background:#F8F9FA;
+    border-left:5px solid #0B5394;
+    padding:12px;
+    margin:15px 0;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    margin:15px 0;
+}
+
+th,td{
+    border:1px solid #CCCCCC;
+    padding:10px;
+    text-align:center;
+}
+
+th{
+    background:#D9EAF7;
+}
+
+a{
+    color:#1155CC;
+    font-weight:bold;
+}
+
+@media print{
+
+.btn-print{
+display:none;
+}
+
+@page{
+size:letter;
+margin:1.5cm;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<button class="btn-print" onclick="window.print()">
+Imprimir / Guardar como PDF
+</button>
+
+<h1>
+4.8 Determinar la probabilidad de un evento como la razón entre el número de resultados favorables y el número total de resultados
+</h1>
+
+<h2>Explicación</h2>
+
+<p>
+La probabilidad mide qué tan posible es que ocurra un evento dentro de un experimento aleatorio.
+</p>
+
+<p>
+Cuando todos los resultados tienen la misma posibilidad de ocurrir, la probabilidad se calcula mediante:
+</p>
+
+$$
+P(E)=
+\frac{\text{Número de resultados favorables}}
+{\text{Número total de resultados}}
+$$
+
+<p>
+Donde:
+</p>
+
+<ul>
+<li><strong>P(E)</strong> representa la probabilidad del evento.</li>
+<li><strong>Resultados favorables</strong> son los que cumplen la condición solicitada.</li>
+<li><strong>Resultados totales</strong> son todos los elementos del espacio muestral.</li>
+</ul>
+
+<h3>Pasos para calcular una probabilidad</h3>
+
+<ol>
+
+<li>Identificar el experimento aleatorio.</li>
+
+<li>Determinar el espacio muestral.</li>
+
+<li>Contar los resultados favorables.</li>
+
+<li>Aplicar la fórmula.</li>
+
+<li>Expresar el resultado como fracción, decimal o porcentaje.</li>
+
+</ol>
+
+<hr>
+
+<h2>Ejemplo 1</h2>
+
+<div class="ejemplo">
+
+<p>
+Se lanza un dado equilibrado.
+¿Cuál es la probabilidad de obtener un número par?
+</p>
+
+<p>
+Espacio muestral:
+</p>
+
+$$
+S=\{1,2,3,4,5,6\}
+$$
+
+<p>
+Resultados favorables:
+</p>
+
+$$
+\{2,4,6\}
+$$
+
+<p>
+Hay 3 resultados favorables y 6 resultados posibles.
+</p>
+
+$$
+P(E)=\frac{3}{6}
+$$
+
+$$
+P(E)=\frac{1}{2}
+$$
+
+$$
+P(E)=0.5
+$$
+
+$$
+P(E)=50\%
+$$
+
+</div>
+
+<hr>
+
+<h2>Ejemplo 2</h2>
+
+<div class="ejemplo">
+
+<p>
+Se lanza una moneda.
+¿Cuál es la probabilidad de obtener cara?
+</p>
+
+<p>
+Espacio muestral:
+</p>
+
+$$
+S=\{Cara,Cruz\}
+$$
+
+<p>
+Resultados favorables:
+</p>
+
+$$
+\{Cara\}
+$$
+
+$$
+P(E)=\frac{1}{2}
+$$
+
+$$
+P(E)=0.5
+$$
+
+$$
+P(E)=50\%
+$$
+
+</div>
+
+<hr>
+
+<h2>Ejercicios</h2>
+
+<div class="ejercicio">
+
+<strong>1.</strong>
+
+<p>
+Al lanzar un dado, determine la probabilidad de obtener el número 5.
+</p>
+
+</div>
+
+<div class="ejercicio">
+
+<strong>2.</strong>
+
+<p>
+Al lanzar un dado, determine la probabilidad de obtener un número impar.
+</p>
+
+</div>
+
+<div class="ejercicio">
+
+<strong>3.</strong>
+
+<p>
+En una bolsa hay 4 fichas rojas y 6 fichas azules.
+Determine la probabilidad de extraer una ficha roja.
+</p>
+
+</div>
+
+<div class="ejercicio">
+
+<strong>4.</strong>
+
+<p>
+Se selecciona una vocal al azar.
+Determine la probabilidad de obtener la vocal A.
+</p>
+
+</div>
+
+<div class="ejercicio">
+
+<strong>5.</strong>
+
+<p>
+En una baraja de 10 tarjetas numeradas del 1 al 10, determine la probabilidad de obtener un número mayor que 7.
+</p>
+
+</div>
+
+<hr>
+
+<h2>Respuestas</h2>
+
+<p><strong>1.</strong></p>
+
+$$
+P(E)=\frac{1}{6}
+$$
+
+$$
+16.7\%
+$$
+
+<p><strong>2.</strong></p>
+
+$$
+P(E)=\frac{3}{6}
+$$
+
+$$
+P(E)=\frac{1}{2}
+$$
+
+$$
+50\%
+$$
+
+<p><strong>3.</strong></p>
+
+$$
+P(E)=\frac{4}{10}
+$$
+
+$$
+P(E)=0.4
+$$
+
+$$
+40\%
+$$
+
+<p><strong>4.</strong></p>
+
+$$
+P(E)=\frac{1}{5}
+$$
+
+$$
+20\%
+$$
+
+<p><strong>5.</strong></p>
+
+<p>
+Resultados favorables:
+</p>
+
+$$
+\{8,9,10\}
+$$
+
+$$
+P(E)=\frac{3}{10}
+$$
+
+$$
+30\%
+$$
+
+<hr>
+
+<h2>Videos recomendados de YouTube</h2>
+
+<div class="video">
+
+<p><strong>Video 1</strong></p>
+
+<a href="https://www.youtube.com/watch?v=hG0xa-fVCwQ" target="_blank">
+Probabilidad: casos favorables y posibles. Fórmula. ¡Muy fácil!
+</a>
+
+<p>
+URL para impresión:
+<br>
+https://www.youtube.com/watch?v=hG0xa-fVCwQ
+</p>
+
+</div>
+
+<div class="video">
+
+<p><strong>Video 2</strong></p>
+
+<a href="https://www.youtube.com/watch?v=cmRexIwhqaM" target="_blank">
+Casos posibles y casos favorables
+</a>
+
+<p>
+URL para impresión:
+<br>
+https://www.youtube.com/watch?v=cmRexIwhqaM
+</p>
+
+</div>
+
+<hr>
+
+<h2>Referencias APA (7.ª edición)</h2>
+
+<p>
+Blitzstein, J. K., & Hwang, J. (2019). <em>Introduction to Probability</em>. Chapman & Hall/CRC.
+</p>
+
+<p>
+Ross, S. (2019). <em>A First Course in Probability</em> (10th ed.). Pearson.
+</p>
+
+<p>
+Triola, M. F. (2022). <em>Estadística</em> (13.ª ed.). Pearson.
+</p>
+
+<p>
+Walpole, R. E., Myers, R. H., Myers, S. L., & Ye, K. (2018). <em>Probabilidad y estadística para ingeniería y ciencias</em>. Pearson.
+</p>
+
+<p>
+OpenStax. (2023). <em>Introductory Statistics</em>. Rice University.
+</p>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</body>
+</html>
