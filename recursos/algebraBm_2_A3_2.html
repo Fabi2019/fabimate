@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sistemas de dos ecuaciones lineales con dos incógnitas</title>
+
+<style>
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    max-width:1100px;
+    margin:auto;
+    padding:20px;
+    line-height:1.6;
+    color:#222;
+}
+
+h1,h2,h3{
+    color:#0b5394;
+}
+
+.seccion{
+    background:#f4f8fc;
+    padding:18px;
+    border-radius:10px;
+    margin-bottom:20px;
+}
+
+.ejercicio{
+    background:#eef7ff;
+    border-left:6px solid #0b5394;
+    padding:15px;
+    margin:15px 0;
+}
+
+.respuestas{
+    background:#fff8dc;
+    padding:20px;
+    border-radius:10px;
+}
+
+button{
+    background:#0b5394;
+    color:white;
+    border:none;
+    padding:12px 20px;
+    border-radius:6px;
+    cursor:pointer;
+    font-size:16px;
+}
+
+button:hover{
+    background:#073763;
+}
+
+svg{
+    max-width:100%;
+    height:auto;
+}
+
+@media print{
+
+#btnImprimir{
+display:none;
+}
+
+body{
+font-size:12pt;
+}
+
+}
+</style>
+
+<script>
+function imprimirPDF(){
+window.print();
+}
+</script>
+
+<script>
+window.MathJax = {
+tex: {
+inlineMath: [['\$$','\$$']],
+displayMath: [['\$$','\$$']]
+}
+};
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</head>
+
+<body>
+
+<div style="text-align:center;">
+<button id="btnImprimir" onclick="imprimirPDF()">
+🖨️ Imprimir / Guardar como PDF
+</button>
+</div>
+
+<h1>Determinación del tipo de solución de un sistema de dos ecuaciones lineales con dos incógnitas</h1>
+
+<div class="seccion">
+
+<h2>Explicación</h2>
+
+<p>
+Un sistema de dos ecuaciones lineales con dos incógnitas está formado por dos rectas en el plano cartesiano.
+El número de soluciones depende de la forma en que las rectas se relacionan.
+</p>
+
+<p>
+Un sistema puede presentar tres casos:
+</p>
+
+<h3>1. Única solución</h3>
+
+<p>
+Las rectas se cortan en un único punto.
+</p>
+
+<p>
+Gráficamente:
+</p>
+
+<svg viewBox="0 0 320 220">
+<line x1="20" y1="190" x2="300" y2="20" stroke="#0b5394" stroke-width="3"/>
+<line x1="30" y1="40" x2="280" y2="190" stroke="#e69138" stroke-width="3"/>
+<circle cx="154" cy="109" r="5" fill="red"/>
+</svg>
+
+<p>
+Sistema compatible determinado.
+</p>
+
+<p>
+Tiene una única solución.
+</p>
+
+<h3>2. Solución vacía</h3>
+
+<p>
+Las rectas son paralelas y nunca se intersectan.
+</p>
+
+<p>
+Gráficamente:
+</p>
+
+<svg viewBox="0 0 320 220">
+<line x1="20" y1="180" x2="300" y2="40" stroke="#0b5394" stroke-width="3"/>
+<line x1="20" y1="140" x2="300" y2="0" stroke="#e69138" stroke-width="3"/>
+</svg>
+
+<p>
+Sistema incompatible.
+</p>
+
+<p>
+No tiene solución.
+</p>
+
+<h3>3. Infinitas soluciones</h3>
+
+<p>
+Las rectas coinciden exactamente.
+</p>
+
+<p>
+Gráficamente:
+</p>
+
+<svg viewBox="0 0 320 220">
+<line x1="20" y1="180" x2="300" y2="40" stroke="#0b5394" stroke-width="5"/>
+<line x1="20" y1="180" x2="300" y2="40" stroke="#e69138" stroke-width="2"/>
+</svg>
+
+<p>
+Sistema compatible indeterminado.
+</p>
+
+<p>
+Tiene infinitas soluciones.
+</p>
+
+<h3>Criterio algebraico</h3>
+
+<p>
+Para dos ecuaciones:
+</p>
+
+$$
+a_1x+b_1y=c_1
+$$
+
+$$
+a_2x+b_2y=c_2
+$$
+
+<ul>
+<li>Única solución si $$ \dfrac{a_1}{a_2} \neq \dfrac{b_1}{b_2}$$.</li>
+
+<li>Solución vacía si $$ \dfrac{a_1}{a_2}=\dfrac{b_1}{b_2}$$ pero $$ \dfrac{c_1}{c_2}$$ es diferente.</li>
+
+<li>Infinitas soluciones si $$ \dfrac{a_1}{a_2}=\dfrac{b_1}{b_2}=\dfrac{c_1}{c_2}$$.</li>
+</ul>
+
+</div>
+
+<h2>Ejemplo resuelto</h2>
+
+<div class="ejercicio">
+
+<p>
+Determinar el tipo de solución del sistema:
+</p>
+
+$$
+x+y=5
+$$
+
+$$
+2x-y=4
+$$
+
+<p><strong>Paso 1.</strong> Identificar coeficientes.</p>
+
+$$
+a_1=1,\quad b_1=1
+$$
+
+$$
+a_2=2,\quad b_2=-1
+$$
+
+<p><strong>Paso 2.</strong> Comparar razones.</p>
+
+$$
+\frac{1}{2}\neq\frac{1}{-1}
+$$
+
+<p>
+Las razones son diferentes.
+</p>
+
+<p><strong>Respuesta:</strong></p>
+
+<p>
+El sistema posee una <strong>única solución</strong>.
+Las rectas se intersectan en un único punto.
+</p>
+
+</div>
+
+<h2>Ejercicios</h2>
+
+<div class="ejercicio">
+
+<h3>1. Venta de entradas</h3>
+
+<p>
+En un teatro se registra el siguiente sistema:
+</p>
+
+$$
+x+y=120
+$$
+
+$$
+x-y=20
+$$
+
+<p>
+Determina si existe una única solución, solución vacía o infinitas soluciones.
+</p>
+
+</div>
+
+<div class="ejercicio">
+
+<h3>2. Producción de una fábrica</h3>
+
+$$
+2x+4y=80
+$$
+
+$$
+x+2y=40
+$$
+
+<p>
+Determina el tipo de solución.
+</p>
+
+</div>
+
+<div class="ejercicio">
+
+<h3>3. Distribución de materiales</h3>
+
+$$
+3x+6y=30
+$$
+
+$$
+x+2y=15
+$$
+
+<p>
+Determina el tipo de solución.
+</p>
+
+</div>
+
+<div class="ejercicio">
+
+<h3>4. Presupuesto empresarial</h3>
+
+$$
+5x+2y=70
+$$
+
+$$
+10x+4y=140
+$$
+
+<p>
+Determina el tipo de solución.
+</p>
+
+</div>
+
+<div class="ejercicio">
+
+<h3>5. Contexto de transporte</h3>
+
+$$
+2x+y=18
+$$
+
+$$
+4x+2y=30
+$$
+
+<p>
+Determina el tipo de solución.
+</p>
+
+</div>
+
+<h2>Respuestas</h2>
+
+<div class="respuestas">
+
+<h3>1. Venta de entradas</h3>
+
+$$
+\frac{1}{1}\neq\frac{1}{-1}
+$$
+
+<p>
+✅ Única solución.
+</p>
+
+<hr>
+
+<h3>2. Producción de una fábrica</h3>
+
+$$
+\frac{2}{1}=\frac{4}{2}=\frac{80}{40}=2
+$$
+
+<p>
+✅ Infinitas soluciones.
+</p>
+
+<hr>
+
+<h3>3. Distribución de materiales</h3>
+
+$$
+\frac{3}{1}=\frac{6}{2}=3
+$$
+
+pero
+
+$$
+\frac{30}{15}=2
+$$
+
+<p>
+✅ Solución vacía.
+</p>
+
+<hr>
+
+<h3>4. Presupuesto empresarial</h3>
+
+$$
+\frac{5}{10}=\frac{2}{4}=\frac{70}{140}
+$$
+
+$$
+\frac{1}{2}=\frac{1}{2}=\frac{1}{2}
+$$
+
+<p>
+✅ Infinitas soluciones.
+</p>
+
+<hr>
+
+<h3>5. Contexto de transporte</h3>
+
+$$
+\frac{2}{4}= \frac{1}{2}
+$$
+
+$$
+\frac{1}{2}= \frac{1}{2}
+$$
+
+pero
+
+$$
+\frac{18}{30}= \frac{3}{5}
+$$
+
+<p>
+✅ Solución vacía.
+</p>
+
+</div>
+
+<h2>Videos recomendados (YouTube)</h2>
+
+<ul>
+
+<li>
+    <a href="https://www.youtube.com/results?search_query=sistemas+de+ecuaciones+clasificacion+julioprofe">
+Clasificación de sistemas de ecuaciones lineales - JulioProfe
+</a>
+<br>
+URL para impresión:
+<br>
+https://www.youtube.com/results?search_query=sistemas+de+ecuaciones+clasificacion+julioprofe
+</li>
+
+<br>
+
+<li>
+<a href="https://www.youtube.com/results?search_query=sistemas+de+ecuaciones+lineales+math2me">
+Sistemas de ecuaciones lineales - Math2Me
+</a>
+<br>
+URL para impresión:
+<br>
+https://www.youtube.com/results?search_query=sistemas+de+ecuaciones+lineales+math2me
+</li>
+
+</ul>
+
+<h2>Referencias APA (7.ª edición)</h2>
+
+<p>
+Stewart, J., Redlin, L., & Watson, S. (2021). <em>Precálculo: Matemáticas para el cálculo</em>. Cengage Learning.
+</p>
+
+<p>
+Larson, R. (2017). <em>Precalculus</em> (11th ed.). Cengage Learning.
+</p>
+
+<p>
+OpenStax. (2022). <em>College Algebra 2e</em>. Rice University. https://openstax.org/details/books/college-algebra-2e
+</p>
+
+<p>
+Sullivan, M. (2020). <em>Algebra and Trigonometry</em> (11th ed.). Pearson.
+</p>
+
+</body>
+</html>

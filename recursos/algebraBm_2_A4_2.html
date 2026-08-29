@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Reconocimiento de la gráfica de la función inversa</title>
+
+<style>
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    max-width:1100px;
+    margin:auto;
+    padding:20px;
+    line-height:1.6;
+    color:#222;
+}
+
+h1,h2,h3{
+    color:#0b5394;
+}
+
+.seccion{
+    background:#f4f8fc;
+    padding:18px;
+    border-radius:10px;
+    margin-bottom:20px;
+}
+
+.ejercicio{
+    background:#eef7ff;
+    border-left:6px solid #0b5394;
+    padding:15px;
+    margin:15px 0;
+}
+
+.respuestas{
+    background:#fff8dc;
+    padding:20px;
+    border-radius:10px;
+}
+
+button{
+    background:#0b5394;
+    color:white;
+    border:none;
+    padding:12px 20px;
+    border-radius:6px;
+    cursor:pointer;
+    font-size:16px;
+}
+
+button:hover{
+    background:#073763;
+}
+
+svg{
+    max-width:100%;
+    height:auto;
+}
+
+.video{
+    margin-bottom:15px;
+}
+
+@media print{
+    #btnImprimir{
+        display:none;
+    }
+
+    body{
+        font-size:12pt;
+    }
+}
+</style>
+
+<script>
+function imprimirPDF(){
+    window.print();
+}
+</script>
+
+<script>
+window.MathJax = {
+    tex: {
+        inlineMath: [['\$$','\$$']],
+        displayMath: [['\$$','\$$']]
+    }
+};
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</head>
+
+<body>
+
+<div style="text-align:center;">
+<button id="btnImprimir" onclick="imprimirPDF()">
+🖨️ Imprimir / Guardar como PDF
+</button>
+</div>
+
+<h1>Reconocimiento de la gráfica de la función inversa a partir de la gráfica de una función</h1>
+
+<div class="seccion">
+
+<h2>Explicación</h2>
+
+<p>
+La gráfica de una función inversa se obtiene intercambiando las coordenadas
+de todos los puntos de la función original.
+</p>
+
+<p>
+Si un punto pertenece a la función:
+</p>
+
+$$
+(x,y)
+$$
+
+<p>
+entonces en la función inversa aparece el punto:
+</p>
+
+$$
+(y,x)
+$$
+
+<p>
+Gráficamente, la función y su inversa son simétricas respecto a la recta:
+</p>
+
+$$
+y=x
+$$
+
+<h3>Regla para reconocer la inversa</h3>
+
+<ul>
+<li>Se reflejan todos los puntos respecto a la recta $$y=x$$.</li>
+<li>Los valores de entrada y salida intercambian posiciones.</li>
+<li>Las funciones exponenciales y logarítmicas son inversas.</li>
+<li>Una función lineal creciente conserva su forma al reflejarse.</li>
+<li>La gráfica de la inversa solo existe si la función original tiene inversa.</li>
+</ul>
+
+<h3>Representación gráfica</h3>
+
+<svg viewBox="0 0 700 350">
+
+<line x1="50" y1="300" x2="650" y2="300" stroke="black" stroke-width="2"/>
+<line x1="50" y1="30" x2="50" y2="320" stroke="black" stroke-width="2"/>
+
+<!-- recta y=x -->
+<line x1="50" y1="300" x2="320" y2="30"
+stroke="gray"
+stroke-width="2"
+stroke-dasharray="8,8"/>
+
+<!-- función -->
+<path d="M70 280
+Q120 250 180 210
+Q260 150 370 70"
+stroke="#0b5394"
+stroke-width="4"
+fill="none"/>
+
+<!-- inversa -->
+<path d="M70 40
+Q130 110 190 170
+Q250 220 320 280"
+stroke="#e69138"
+stroke-width="4"
+fill="none"/>
+
+<text x="390" y="80" fill="#0b5394">f(x)</text>
+<text x="250" y="250" fill="#e69138">f⁻¹(x)</text>
+<text x="240" y="60">y = x</text>
+
+</svg>
+
+<p>
+La curva naranja representa la gráfica de la función inversa obtenida como reflexión de la curva azul respecto a la recta $$y=x$$.
+</p>
+
+</div>
+
+<h2>Ejemplo resuelto</h2>
+
+<div class="ejercicio">
+
+<p>
+Una empresa utiliza la función:
+</p>
+
+$$
+f(x)=2x+3
+$$
+
+<p>
+para relacionar la cantidad producida con el costo.
+</p>
+
+<p>
+Se sabe que el punto:
+</p>
+
+$$
+(4,11)
+$$
+
+<p>
+pertenece a la gráfica de la función.
+</p>
+
+<p>
+¿Cuál es el punto correspondiente en la gráfica de la inversa?
+</p>
+
+<p><strong>Solución</strong></p>
+
+<p>
+Intercambiamos las coordenadas:
+</p>
+
+$$
+(4,11)
+\rightarrow
+(11,4)
+$$
+
+<p><strong>Respuesta:</strong></p>
+
+<p>
+El punto correspondiente en la gráfica de la inversa es:
+</p>
+
+$$
+(11,4)
+$$
+
+</div>
+
+<h2>Ejercicios</h2>
+
+<div class="ejercicio">
+
+<h3>1. Intercambio de coordenadas</h3>
+
+<p>
+Si el punto:
+</p>
+
+$$
+(3,8)
+$$
+
+<p>
+pertenece a la gráfica de una función, determine el punto correspondiente en la gráfica de la inversa.
+</p>
+
+</div>
+
+<div class="ejercicio">
+
+<h3>2. Contexto de temperatura</h3>
+
+<p>
+Una función transforma grados Celsius en grados Fahrenheit.
+El punto:
+</p>
+
+$$
+(20,68)
+$$
+
+<p>
+pertenece a la función.
+Determine el punto correspondiente en la gráfica de la función inversa.
+</p>
+
+</div>
+
+<div class="ejercicio">
+
+<h3>3. Identificación gráfica</h3>
+
+<p>
+Una gráfica es el reflejo exacto de otra respecto a la recta:
+</p>
+
+$$
+y=x
+$$
+
+<p>
+¿Qué relación existe entre ambas funciones?
+</p>
+
+</div>
+
+<div class="ejercicio">
+
+<h3>4. Contexto financiero</h3>
+
+<p>
+La función relaciona años de inversión con el monto acumulado.
+Si el punto:
+</p>
+
+$$
+(5,12000)
+$$
+
+<p>
+pertenece a la función original, determine el punto correspondiente en la inversa.
+</p>
+
+</div>
+
+<div class="ejercicio">
+
+<h3>5. Función exponencial</h3>
+
+<p>
+La función:
+</p>
+
+$$
+y=2^x
+$$
+
+<p>
+posee una inversa. Indique cuál es y describa cómo se relacionan gráficamente.
+</p>
+
+</div>
+
+<h2>Respuestas</h2>
+
+<div class="respuestas">
+
+<h3>1.</h3>
+
+$$
+(3,8)
+\rightarrow
+(8,3)
+$$
+
+<p><strong>Respuesta:</strong> $$(8,3)$$</p>
+
+<hr>
+
+<h3>2.</h3>
+
+$$
+(20,68)
+\rightarrow
+(68,20)
+$$
+
+<p><strong>Respuesta:</strong> $$(68,20)$$</p>
+
+<hr>
+
+<h3>3.</h3>
+
+<p>
+Las dos gráficas representan funciones inversas.
+</p>
+
+<hr>
+
+<h3>4.</h3>
+
+$$
+(5,12000)
+\rightarrow
+(12000,5)
+$$
+
+<p><strong>Respuesta:</strong> $$(12000,5)$$</p>
+
+<hr>
+
+<h3>5.</h3>
+
+<p>
+La inversa es:
+</p>
+
+$$
+y=\log_2(x)
+$$
+
+<p>
+Ambas gráficas son simétricas respecto a la recta:
+</p>
+
+$$
+y=x
+$$
+
+</div>
+
+<h2>Videos recomendados (YouTube)</h2>
+
+<div class="video">
+<strong>Video 1:</strong>
+    <a href="https://www.youtube.com/results?search_query=funcion+inversa+grafica+julioprofe">
+Función inversa y su gráfica - JulioProfe
+</a>
+<br>
+URL para impresión:
+<br>
+https://www.youtube.com/results?search_query=funcion+inversa+grafica+julioprofe
+</div>
+
+<div class="video">
+<strong>Video 2:</strong>
+ <a href="https://www.youtube.com/results?search_query=funcion+inversa+math2me">
+Función inversa y reflexión respecto a y=x - Math2Me
+</a>
+<br>
+URL para impresión:
+<br>
+https://www.youtube.com/results?search_query=funcion+inversa+math2me
+</div>
+
+<h2>Referencias APA (7.ª edición)</h2>
+
+<p>
+Larson, R. (2017). <em>Precalculus</em> (11th ed.). Cengage Learning.
+</p>
+
+<p>
+Stewart, J., Redlin, L., & Watson, S. (2021). <em>Precálculo: Matemáticas para el cálculo</em>. Cengage Learning.
+</p>
+
+<p>
+OpenStax. (2022). <em>College Algebra 2e</em>. Rice University. https://openstax.org/details/books/college-algebra-2e
+</p>
+
+<p>
+Sullivan, M. (2020). <em>Algebra and Trigonometry</em> (11th ed.). Pearson.
+</p>
+
+</body>
+</html>

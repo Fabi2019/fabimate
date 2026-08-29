@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Problemas de contexto real con funciones raíz cuadrada</title>
+
+<style>
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    max-width:1000px;
+    margin:auto;
+    padding:20px;
+    line-height:1.6;
+    color:#222;
+}
+
+h1,h2,h3{
+    color:#0b5394;
+}
+
+.caja{
+    background:#f4f8fc;
+    border-radius:10px;
+    padding:18px;
+    margin-bottom:20px;
+}
+
+.problema{
+    background:#eef7ff;
+    border-left:6px solid #0b5394;
+    padding:15px;
+    margin:15px 0;
+}
+
+.respuestas{
+    background:#fff8dc;
+    padding:20px;
+    border-radius:10px;
+}
+
+button{
+    background:#0b5394;
+    color:white;
+    border:none;
+    padding:12px 20px;
+    border-radius:6px;
+    cursor:pointer;
+    font-size:16px;
+}
+
+button:hover{
+    background:#073763;
+}
+
+@media print{
+    #btnImprimir{
+        display:none;
+    }
+
+    body{
+        font-size:12pt;
+    }
+}
+</style>
+
+<script>
+function imprimirPDF(){
+    window.print();
+}
+</script>
+
+<script>
+window.MathJax = {
+  tex: {
+    inlineMath: [['\$$','\$$']],
+    displayMath: [['\$$','\$$']]
+  }
+};
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</head>
+
+<body>
+
+<div style="text-align:center;">
+<button id="btnImprimir" onclick="imprimirPDF()">
+🖨️ Imprimir / Guardar como PDF
+</button>
+</div>
+
+<h1>Resolución de problemas reales mediante funciones de la forma $$f(x)=a\sqrt{x+b}+c$$</h1>
+
+<div class="caja">
+
+<h2>Explicación</h2>
+
+<p>
+Las funciones de raíz cuadrada aparecen en numerosos fenómenos reales.
+Se utilizan para modelar situaciones donde el crecimiento ocurre cada vez
+más lentamente, como la intensidad de iluminación, la velocidad de difusión
+de una sustancia, ciertos procesos físicos, el alcance de señales o la
+altura de objetos en determinadas condiciones.
+</p>
+
+<p>
+La forma general es:
+</p>
+
+$$
+f(x)=a\sqrt{x+b}+c
+$$
+
+<p>
+donde:
+</p>
+
+<ul>
+<li><strong>$$a$$</strong>: modifica la rapidez del crecimiento y puede reflejar la gráfica.</li>
+<li><strong>$$b$$</strong>: desplaza la función horizontalmente.</li>
+<li><strong>$$c$$</strong>: desplaza la función verticalmente.</li>
+</ul>
+
+<p>
+Para resolver problemas de contexto se recomienda:
+</p>
+
+<ol>
+<li>Identificar qué representa la variable $$x$$.</li>
+<li>Sustituir el valor dado en la función.</li>
+<li>Realizar las operaciones.</li>
+<li>Interpretar el resultado según el contexto.</li>
+</ol>
+
+</div>
+
+<h2>Ejemplo resuelto</h2>
+
+<div class="problema">
+
+<p>
+La intensidad lumínica de una lámpara LED se modela mediante:
+</p>
+
+$$
+I(x)=5\sqrt{x}+10
+$$
+
+<p>
+donde $$I(x)$$ representa la intensidad en lúmenes y $$x$$ el tiempo de
+encendido en horas.
+</p>
+
+<p>
+¿Cuál será la intensidad después de 16 horas?
+</p>
+
+<p><strong>Solución:</strong></p>
+
+$$
+I(16)=5\sqrt{16}+10
+$$
+
+$$
+I(16)=5(4)+10
+$$
+
+$$
+I(16)=20+10
+$$
+
+$$
+I(16)=30
+$$
+
+<p><strong>Respuesta:</strong> Después de 16 horas la intensidad será de 30 lúmenes.</p>
+
+</div>
+
+<h2>Ejercicios</h2>
+
+<div class="problema">
+
+<h3>Problema 1: Alcance de una señal</h3>
+
+<p>
+El alcance de una señal inalámbrica se modela mediante:
+</p>
+
+$$
+A(x)=8\sqrt{x}+12
+$$
+
+<p>
+donde $$A(x)$$ es el alcance en metros y $$x$$ el tiempo en minutos.
+Determina el alcance después de 25 minutos.
+</p>
+
+</div>
+
+<div class="problema">
+
+<h3>Problema 2: Producción agrícola</h3>
+
+<p>
+La cantidad de kilogramos de cierto cultivo producidos en una parcela se
+estima mediante:
+</p>
+
+$$
+P(x)=4\sqrt{x-1}+6
+$$
+
+<p>
+donde $$x$$ representa el número de semanas.
+Calcula la producción en la semana 10.
+</p>
+
+</div>
+
+<div class="problema">
+
+<h3>Problema 3: Altura de una fuente decorativa</h3>
+
+<p>
+La altura de un chorro de agua se modela mediante:
+</p>
+
+$$
+H(x)=3\sqrt{x}+2
+$$
+
+<p>
+donde $$H(x)$$ se mide en metros y $$x$$ en segundos.
+Calcula la altura cuando han transcurrido 36 segundos.
+</p>
+
+</div>
+
+<div class="problema">
+
+<h3>Problema 4: Crecimiento de una planta</h3>
+
+<p>
+La altura de una planta sigue el modelo:
+</p>
+
+$$
+C(x)=2\sqrt{x+4}+5
+$$
+
+<p>
+donde $$C(x)$$ se expresa en centímetros y $$x$$ en días.
+Determina la altura cuando han pasado 32 días.
+</p>
+
+</div>
+
+<div class="problema">
+
+<h3>Problema 5: Beneficio económico</h3>
+
+<p>
+Una empresa estima su beneficio mediante:
+</p>
+
+$$
+B(x)=10\sqrt{x}+50
+$$
+
+<p>
+donde $$B(x)$$ representa miles de colones y $$x$$ el número de proyectos realizados.
+Calcula el beneficio cuando se completan 49 proyectos.
+</p>
+
+</div>
+
+<h2>Respuestas</h2>
+
+<div class="respuestas">
+
+<h3>Problema 1</h3>
+
+$$
+A(25)=8\sqrt{25}+12
+$$
+
+$$
+A(25)=8(5)+12
+$$
+
+$$
+A(25)=52
+$$
+
+<p><strong>Respuesta:</strong> 52 metros.</p>
+
+<hr>
+
+<h3>Problema 2</h3>
+
+$$
+P(10)=4\sqrt{10-1}+6
+$$
+
+$$
+P(10)=4\sqrt{9}+6
+$$
+
+$$
+P(10)=4(3)+6
+$$
+
+$$
+P(10)=18
+$$
+
+<p><strong>Respuesta:</strong> 18 kilogramos.</p>
+
+<hr>
+
+<h3>Problema 3</h3>
+
+$$
+H(36)=3\sqrt{36}+2
+$$
+
+$$
+H(36)=3(6)+2
+$$
+
+$$
+H(36)=20
+$$
+
+<p><strong>Respuesta:</strong> 20 metros.</p>
+
+<hr>
+
+<h3>Problema 4</h3>
+
+$$
+C(32)=2\sqrt{32+4}+5
+$$
+
+$$
+C(32)=2\sqrt{36}+5
+$$
+
+$$
+C(32)=2(6)+5
+$$
+
+$$
+C(32)=17
+$$
+
+<p><strong>Respuesta:</strong> 17 centímetros.</p>
+
+<hr>
+
+<h3>Problema 5</h3>
+
+$$
+B(49)=10\sqrt{49}+50
+$$
+
+$$
+B(49)=10(7)+50
+$$
+
+$$
+B(49)=120
+$$
+
+<p><strong>Respuesta:</strong> 120 mil colones.</p>
+
+</div>
+
+<h2>Videos recomendados (YouTube)</h2>
+
+<p>
+Estos recursos explican funciones raíz cuadrada y problemas aplicados.
+</p>
+
+<ul>
+<li>
+    <a href="https://www.youtube.com/results?search_query=funcion+raiz+cuadrada+julioprofe">
+Funciones de raíz cuadrada - JulioProfe
+</a>
+<br>
+URL para impresión:
+<br>
+https://www.youtube.com/results?search_query=funcion+raiz+cuadrada+julioprofe
+</li>
+
+<br>
+
+<li>
+<a href="https://www.youtube.com/results?search_query=funciones+radicales+math2me">
+Funciones radicales y aplicaciones - Math2Me
+</a>
+<br>
+URL para impresión:
+<br>
+https://www.youtube.com/results?search_query=funciones+radicales+math2me
+</li>
+</ul>
+
+<h2>Referencias APA (7.ª edición)</h2>
+
+<p>
+Larson, R. (2017). <em>Precalculus</em> (11th ed.). Cengage Learning.
+</p>
+
+<p>
+OpenStax. (2022). <em>College Algebra 2e</em>. Rice University.
+https://openstax.org/details/books/college-algebra-2e
+</p>
+
+<p>
+Stewart, J., Redlin, L., & Watson, S. (2021).
+<em>Precálculo: Matemáticas para el cálculo</em>.
+Cengage Learning.
+</p>
+
+<p>
+Sullivan, M. (2020).
+<em>Algebra and Trigonometry</em> (11th ed.).
+Pearson.
+</p>
+
+</body>
+</html>

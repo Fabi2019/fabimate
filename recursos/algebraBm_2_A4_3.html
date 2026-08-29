@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Intervalos donde una función tiene inversa</title>
+
+<style>
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    max-width:1100px;
+    margin:auto;
+    padding:20px;
+    line-height:1.6;
+    color:#222;
+}
+
+h1,h2,h3{
+    color:#0b5394;
+}
+
+.seccion{
+    background:#f4f8fc;
+    padding:18px;
+    border-radius:10px;
+    margin-bottom:20px;
+}
+
+.ejercicio{
+    background:#eef7ff;
+    border-left:6px solid #0b5394;
+    padding:15px;
+    margin:15px 0;
+}
+
+.respuestas{
+    background:#fff8dc;
+    padding:20px;
+    border-radius:10px;
+}
+
+button{
+    background:#0b5394;
+    color:white;
+    border:none;
+    padding:12px 20px;
+    border-radius:6px;
+    cursor:pointer;
+    font-size:16px;
+}
+
+button:hover{
+    background:#073763;
+}
+
+svg{
+    max-width:100%;
+    height:auto;
+}
+
+.video{
+    margin-bottom:15px;
+}
+
+@media print{
+#btnImprimir{
+display:none;
+}
+
+body{
+font-size:12pt;
+}
+}
+</style>
+
+<script>
+function imprimirPDF(){
+window.print();
+}
+</script>
+
+<script>
+window.MathJax = {
+tex: {
+inlineMath: [['\$$','\$$']],
+displayMath: [['\$$','\$$']]
+}
+};
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</head>
+
+<body>
+
+<div style="text-align:center;">
+<button id="btnImprimir" onclick="imprimirPDF()">
+🖨️ Imprimir / Guardar como PDF
+</button>
+</div>
+
+<h1>Determinación de intervalos en los cuales una función representada gráficamente tiene inversa</h1>
+
+<div class="seccion">
+
+<h2>Explicación</h2>
+
+<p>
+Una función tiene inversa en un intervalo cuando dentro de dicho intervalo es
+<strong>inyectiva</strong>, es decir, cuando no repite valores de salida.
+</p>
+
+<p>
+Gráficamente esto ocurre cuando cualquier recta horizontal corta la gráfica
+a lo sumo en un punto dentro del intervalo analizado.
+</p>
+
+<p>
+En términos prácticos:
+</p>
+
+<ul>
+<li>Si la función es estrictamente creciente en un intervalo, tiene inversa en ese intervalo.</li>
+<li>Si la función es estrictamente decreciente en un intervalo, tiene inversa en ese intervalo.</li>
+<li>Si cambia de creciente a decreciente o viceversa, puede no tener inversa en todo el dominio.</li>
+</ul>
+
+<h3>Ejemplo gráfico</h3>
+
+<p>
+La siguiente gráfica representa una parábola:
+</p>
+
+<svg viewBox="0 0 500 300">
+
+<line x1="40" y1="250" x2="470" y2="250" stroke="black" stroke-width="2"/>
+<line x1="250" y1="20" x2="250" y2="270" stroke="black" stroke-width="2"/>
+
+<path d="M80 60
+Q250 250 420 60"
+stroke="#0b5394"
+stroke-width="4"
+fill="none"/>
+
+<line x1="40" y1="150" x2="460" y2="150"
+stroke="red"
+stroke-width="2"
+stroke-dasharray="6,6"/>
+
+</svg>
+
+<p>
+La parábola completa no tiene inversa porque una recta horizontal la corta en dos puntos.
+</p>
+
+<p>
+Sin embargo:
+</p>
+
+<ul>
+<li>En el intervalo $$x \le 0$$ sí tiene inversa.</li>
+<li>En el intervalo $$x \ge 0$$ sí tiene inversa.</li>
+</ul>
+
+<p>
+Esto ocurre porque en cada uno de esos intervalos la función es monótona.
+</p>
+
+<h3>Aplicaciones en contextos reales</h3>
+
+<ul>
+<li>Producción de una fábrica durante una etapa de crecimiento.</li>
+<li>Velocidad de un vehículo durante una fase de frenado.</li>
+<li>Crecimiento poblacional.</li>
+<li>Costos de producción.</li>
+<li>Modelos físicos y económicos.</li>
+</ul>
+
+</div>
+
+<h2>Ejemplo resuelto</h2>
+
+<div class="ejercicio">
+
+<p>
+La función:
+</p>
+
+$$
+f(x)=x^2
+$$
+
+<p>
+está representada por una parábola.
+Determine los intervalos donde tiene inversa.
+</p>
+
+<p><strong>Análisis:</strong></p>
+
+<ul>
+<li>La función es decreciente en $$ (-\infty,0] $$.</li>
+<li>La función es creciente en $$ [0,+\infty) $$.</li>
+</ul>
+
+<p>
+En cada uno de esos intervalos pasa la prueba de la recta horizontal.
+</p>
+
+<p><strong>Respuesta:</strong></p>
+
+$$
+(-\infty,0]
+$$
+
+<p>y</p>
+
+$$
+[0,+\infty)
+$$
+
+</div>
+
+<h2>Ejercicios</h2>
+
+<div class="ejercicio">
+
+<h3>1. Función cuadrática</h3>
+
+<p>
+La gráfica corresponde a:
+</p>
+
+$$
+f(x)=x^2
+$$
+
+<p>
+Indique los intervalos donde tiene inversa.
+</p>
+
+</div>
+
+<div class="ejercicio">
+
+<h3>2. Función cúbica</h3>
+
+<p>
+La función:
+</p>
+
+$$
+f(x)=x^3
+$$
+
+<p>
+es creciente en todo su dominio.
+¿En qué intervalo tiene inversa?
+</p>
+
+</div>
+
+<div class="ejercicio">
+
+<h3>3. Contexto de temperatura</h3>
+
+<p>
+La gráfica de una temperatura aumenta continuamente desde las 6:00 a.m.
+hasta las 12:00 m.d.
+</p>
+
+<p>
+¿Tiene inversa en ese intervalo?
+</p>
+
+</div>
+
+<div class="ejercicio">
+
+<h3>4. Contexto de producción</h3>
+
+<p>
+Una fábrica aumenta su producción de enero a junio y disminuye de junio a diciembre.
+</p>
+
+<p>
+¿En cuáles intervalos la función tiene inversa?
+</p>
+
+</div>
+
+<div class="ejercicio">
+
+<h3>5. Función exponencial</h3>
+
+<p>
+Analice:
+</p>
+
+$$
+f(x)=2^x
+$$
+
+<p>
+e indique los intervalos donde tiene inversa.
+</p>
+
+</div>
+
+<h2>Respuestas</h2>
+
+<div class="respuestas">
+
+<h3>1.</h3>
+
+$$
+(-\infty,0]
+$$
+
+y
+
+$$
+[0,+\infty)
+$$
+
+<p>
+La función es monótona en cada uno de esos intervalos.
+</p>
+
+<hr>
+
+<h3>2.</h3>
+
+$$
+(-\infty,+\infty)
+$$
+
+<p>
+La función cúbica es creciente en todo su dominio.
+</p>
+
+<hr>
+
+<h3>3.</h3>
+
+<p>
+✅ Sí tiene inversa entre las 6:00 a.m. y las 12:00 m.d. porque la temperatura aumenta continuamente.
+</p>
+
+<hr>
+
+<h3>4.</h3>
+
+<p>
+✅ Tiene inversa durante el período de crecimiento (enero a junio).
+</p>
+
+<p>
+✅ Tiene inversa durante el período de decrecimiento (junio a diciembre).
+</p>
+
+<p>
+❌ No tiene inversa en todo el año completo.
+</p>
+
+<hr>
+
+<h3>5.</h3>
+
+$$
+(-\infty,+\infty)
+$$
+
+<p>
+La función exponencial es creciente en todo su dominio real.
+</p>
+
+<p>
+Su inversa es:
+</p>
+
+$$
+f^{-1}(x)=\log_2(x)
+$$
+
+</div>
+
+<h2>Videos recomendados (YouTube)</h2>
+
+<div class="video">
+
+<strong>Video 1:</strong>
+
+    <a href="https://www.youtube.com/results?search_query=funcion+inversa+prueba+de+la+recta+horizontal+julioprofe">
+Función inversa y prueba de la recta horizontal - JulioProfe
+</a>
+
+<br><br>
+
+URL para impresión:
+
+<br>
+
+https://www.youtube.com/results?search_query=funcion+inversa+prueba+de+la+recta+horizontal+julioprofe
+
+</div>
+
+<div class="video">
+
+<strong>Video 2:</strong>
+
+<a href="https://www.youtube.com/results?search_query=funcion+inversa+math2me">
+Función inversa y funciones inyectivas - Math2Me
+</a>
+
+<br><br>
+
+URL para impresión:
+
+<br>
+
+https://www.youtube.com/results?search_query=funcion+inversa+math2me
+
+</div>
+
+<h2>Referencias APA (7.ª edición)</h2>
+
+<p>
+Larson, R. (2017). <em>Precalculus</em> (11th ed.). Cengage Learning.
+</p>
+
+<p>
+Stewart, J., Redlin, L., & Watson, S. (2021).
+<em>Precálculo: Matemáticas para el cálculo</em>.
+Cengage Learning.
+</p>
+
+<p>
+OpenStax. (2022).
+<em>College Algebra 2e</em>.
+Rice University.
+https://openstax.org/details/books/college-algebra-2e
+</p>
+
+<p>
+Sullivan, M. (2020).
+<em>Algebra and Trigonometry</em> (11th ed.).
+Pearson.
+</p>
+
+</body>
+</html>

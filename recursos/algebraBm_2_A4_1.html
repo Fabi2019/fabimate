@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Condiciones para que una función tenga inversa</title>
+
+<style>
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    max-width:1100px;
+    margin:auto;
+    padding:20px;
+    line-height:1.6;
+    color:#222;
+}
+
+h1,h2,h3{
+    color:#0b5394;
+}
+
+.seccion{
+    background:#f4f8fc;
+    padding:18px;
+    border-radius:10px;
+    margin-bottom:20px;
+}
+
+.ejercicio{
+    background:#eef7ff;
+    border-left:6px solid #0b5394;
+    padding:15px;
+    margin:15px 0;
+}
+
+.respuestas{
+    background:#fff8dc;
+    padding:20px;
+    border-radius:10px;
+}
+
+button{
+    background:#0b5394;
+    color:white;
+    border:none;
+    padding:12px 20px;
+    border-radius:6px;
+    cursor:pointer;
+    font-size:16px;
+}
+
+button:hover{
+    background:#073763;
+}
+
+svg{
+    max-width:100%;
+    height:auto;
+}
+
+@media print{
+#btnImprimir{
+display:none;
+}
+
+body{
+font-size:12pt;
+}
+}
+</style>
+
+<script>
+function imprimirPDF(){
+window.print();
+}
+</script>
+
+<script>
+window.MathJax = {
+tex: {
+inlineMath: [['\$$','\$$']],
+displayMath: [['\$$','\$$']]
+}
+};
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</head>
+
+<body>
+
+<div style="text-align:center;">
+<button id="btnImprimir" onclick="imprimirPDF()">
+🖨️ Imprimir / Guardar como PDF
+</button>
+</div>
+
+<h1>Identificación de las condiciones para que una función tenga inversa</h1>
+
+<div class="seccion">
+
+<h2>Explicación</h2>
+
+<p>
+Una función tiene inversa cuando cada valor de salida está asociado con un único valor de entrada.
+La función inversa permite recuperar el valor original de la variable independiente.
+</p>
+
+<p>
+Si una función es:
+</p>
+
+$$
+y=f(x)
+$$
+
+<p>
+su inversa se representa como:
+</p>
+
+$$
+y=f^{-1}(x)
+$$
+
+<h3>Condición fundamental</h3>
+
+<p>
+Una función tiene inversa si es <strong>inyectiva</strong>, es decir, si valores distintos de la variable independiente producen valores distintos de la variable dependiente.
+</p>
+
+$$
+f(x_1)=f(x_2)
+$$
+
+$$
+\Rightarrow x_1=x_2
+$$
+
+<h3>Prueba de la recta horizontal</h3>
+
+<p>
+Gráficamente, una función tiene inversa si toda recta horizontal corta la gráfica a lo sumo en un punto.
+</p>
+
+<h3>Función con inversa</h3>
+
+<svg viewBox="0 0 500 250">
+
+<line x1="40" y1="220" x2="470" y2="220" stroke="black" stroke-width="2"/>
+<line x1="40" y1="20" x2="40" y2="220" stroke="black" stroke-width="2"/>
+
+<path d="M60 210 Q150 180 250 120 Q340 70 450 30"
+stroke="#0b5394"
+stroke-width="4"
+fill="none"/>
+
+<line x1="50" y1="100" x2="460" y2="100"
+stroke="red"
+stroke-dasharray="5,5"
+stroke-width="2"/>
+
+</svg>
+
+<p>
+La recta horizontal corta la curva una sola vez, por lo que la función tiene inversa.
+</p>
+
+<h3>Función sin inversa</h3>
+
+<svg viewBox="0 0 500 250">
+
+<line x1="40" y1="220" x2="470" y2="220" stroke="black" stroke-width="2"/>
+<line x1="40" y1="20" x2="40" y2="220" stroke="black" stroke-width="2"/>
+
+<path d="M80 40 Q250 210 420 40"
+stroke="#e69138"
+stroke-width="4"
+fill="none"/>
+
+<line x1="50" y1="120" x2="460" y2="120"
+stroke="red"
+stroke-dasharray="5,5"
+stroke-width="2"/>
+
+</svg>
+
+<p>
+La recta horizontal corta la gráfica en dos puntos, por lo tanto la función no tiene inversa en todo su dominio.
+</p>
+
+<h3>Contextos reales</h3>
+
+<ul>
+<li>Conversión de temperatura entre escalas.</li>
+<li>Conversión entre monedas.</li>
+<li>Cálculo de intereses compuestos.</li>
+<li>Crecimiento exponencial y logaritmos.</li>
+<li>Relaciones entre distancia y tiempo en movimientos uniformes.</li>
+</ul>
+
+</div>
+
+<h2>Ejemplo resuelto</h2>
+
+<div class="ejercicio">
+
+<p>
+Una empresa de transporte cobra según la función:
+</p>
+
+$$
+C(x)=500x+1000
+$$
+
+<p>
+donde $$x$$ representa los kilómetros recorridos y $$C(x)$$ el costo en colones.
+</p>
+
+<p>
+¿Tiene inversa?
+</p>
+
+<p><strong>Análisis:</strong></p>
+
+<p>
+La función es lineal creciente.
+Cada distancia produce un único costo y cada costo corresponde a una única distancia.
+</p>
+
+<p>
+Pasa la prueba de la recta horizontal.
+</p>
+
+<p><strong>Respuesta:</strong></p>
+
+<p>
+Sí tiene función inversa.
+</p>
+
+</div>
+
+<h2>Ejercicios</h2>
+
+<div class="ejercicio">
+
+<h3>1. Función lineal</h3>
+
+<p>
+Determina si la función:
+</p>
+
+$$
+f(x)=4x-3
+$$
+
+<p>
+tiene inversa.
+</p>
+
+</div>
+
+<div class="ejercicio">
+
+<h3>2. Función cuadrática</h3>
+
+<p>
+Determina si:
+</p>
+
+$$
+f(x)=x^2
+$$
+
+<p>
+tiene inversa en todo su dominio real.
+</p>
+
+</div>
+
+<div class="ejercicio">
+
+<h3>3. Contexto de ahorro</h3>
+
+<p>
+El monto acumulado en una cuenta está dado por:
+</p>
+
+$$
+M(t)=1000t+5000
+$$
+
+<p>
+¿La función tiene inversa?
+</p>
+
+</div>
+
+<div class="ejercicio">
+
+<h3>4. Función exponencial</h3>
+
+<p>
+Determina si:
+</p>
+
+$$
+f(x)=2^x
+$$
+
+<p>
+tiene inversa.
+</p>
+
+</div>
+
+<div class="ejercicio">
+
+<h3>5. Área de un cuadrado</h3>
+
+<p>
+La relación entre el lado y el área es:
+</p>
+
+$$
+A(x)=x^2
+$$
+
+<p>
+con $$x\ge0$$.
+¿Tiene inversa en ese dominio?
+</p>
+
+</div>
+
+<h2>Respuestas</h2>
+
+<div class="respuestas">
+
+<h3>1.</h3>
+
+$$
+f(x)=4x-3
+$$
+
+<p>
+✅ Sí tiene inversa porque es una función lineal creciente.
+</p>
+
+<hr>
+
+<h3>2.</h3>
+
+$$
+f(x)=x^2
+$$
+
+<p>
+❌ No tiene inversa en todo $$\mathbb{R}$$.
+</p>
+
+<p>
+Por ejemplo:
+</p>
+
+$$
+f(2)=4
+$$
+
+$$
+f(-2)=4
+$$
+
+<p>
+Dos valores producen la misma imagen.
+</p>
+
+<hr>
+
+<h3>3.</h3>
+
+$$
+M(t)=1000t+5000
+$$
+
+<p>
+✅ Sí tiene inversa porque es una función lineal creciente.
+</p>
+
+<hr>
+
+<h3>4.</h3>
+
+$$
+f(x)=2^x
+$$
+
+<p>
+✅ Sí tiene inversa.
+</p>
+
+<p>
+Su inversa es:
+</p>
+
+$$
+f^{-1}(x)=\log_2(x)
+$$
+
+<hr>
+
+<h3>5.</h3>
+
+$$
+A(x)=x^2,\quad x\ge0
+$$
+
+<p>
+✅ Sí tiene inversa porque al restringir el dominio a valores no negativos la función es creciente.
+</p>
+
+<p>
+La inversa es:
+</p>
+
+$$
+A^{-1}(x)=\sqrt{x}
+$$
+
+</div>
+
+<h2>Videos recomendados (YouTube)</h2>
+
+<p>
+<strong>Video 1:</strong>
+<a href="https://www.youtube.com/results?search_query=funcion+inversa+julioprofe">
+Función inversa - JulioProfe
+</a>
+<br>
+URL para impresión:
+<br>
+https://www.youtube.com/results?search_query=funcion+inversa+julioprofe
+</p>
+
+<p>
+<strong>Video 2:</strong>
+    <a href="https://www.youtube.com/results?search_query=funcion+inversa+math2me">
+Función inversa - Math2Me
+</a>
+<br>
+URL para impresión:
+<br>
+https://www.youtube.com/results?search_query=funcion+inversa+math2me
+</p>
+
+<h2>Referencias APA (7.ª edición)</h2>
+
+<p>
+Larson, R. (2017). <em>Precalculus</em> (11th ed.). Cengage Learning.
+</p>
+
+<p>
+Stewart, J., Redlin, L., & Watson, S. (2021). <em>Precálculo: Matemáticas para el cálculo</em>. Cengage Learning.
+</p>
+
+<p>
+OpenStax. (2022). <em>College Algebra 2e</em>. Rice University. https://openstax.org/details/books/college-algebra-2e
+</p>
+
+<p>
+Sullivan, M. (2020). <em>Algebra and Trigonometry</em> (11th ed.). Pearson.
+</p>
+
+</body>
+</html>

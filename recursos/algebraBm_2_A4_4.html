@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Función inversa de f(x)=mx+b</title>
+
+<style>
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    max-width:1100px;
+    margin:auto;
+    padding:20px;
+    line-height:1.6;
+    color:#222;
+}
+
+h1,h2,h3{
+    color:#0b5394;
+}
+
+.seccion{
+    background:#f4f8fc;
+    padding:18px;
+    border-radius:10px;
+    margin-bottom:20px;
+}
+
+.ejercicio{
+    background:#eef7ff;
+    border-left:6px solid #0b5394;
+    padding:15px;
+    margin:15px 0;
+}
+
+.respuestas{
+    background:#fff8dc;
+    padding:20px;
+    border-radius:10px;
+}
+
+button{
+    background:#0b5394;
+    color:white;
+    border:none;
+    padding:12px 20px;
+    border-radius:6px;
+    cursor:pointer;
+    font-size:16px;
+}
+
+button:hover{
+    background:#073763;
+}
+
+svg{
+    max-width:100%;
+    height:auto;
+}
+
+.video{
+    margin-bottom:15px;
+}
+
+@media print{
+#btnImprimir{
+display:none;
+}
+
+body{
+font-size:12pt;
+}
+}
+</style>
+
+<script>
+function imprimirPDF(){
+window.print();
+}
+</script>
+
+<script>
+window.MathJax = {
+tex: {
+inlineMath: [['\$$','\$$']],
+displayMath: [['\$$','\$$']]
+}
+};
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</head>
+
+<body>
+
+<div style="text-align:center;">
+<button id="btnImprimir" onclick="imprimirPDF()">
+🖨️ Imprimir / Guardar como PDF
+</button>
+</div>
+
+<h1>Determinación de la función inversa de $$f(x)=mx+b$$, con $$m\neq0$$</h1>
+
+<div class="seccion">
+
+<h2>Explicación</h2>
+
+<p>
+Una función lineal de la forma:
+</p>
+
+$$
+f(x)=mx+b
+$$
+
+<p>
+posee función inversa siempre que:
+</p>
+
+$$
+m\neq0
+$$
+
+<p>
+Esto ocurre porque la función es inyectiva y pasa la prueba de la recta horizontal.
+</p>
+
+<h3>Procedimiento para encontrar la inversa</h3>
+
+<ol>
+<li>Escribir la función como $$y=mx+b$$.</li>
+<li>Intercambiar $$x$$ y $$y$$.</li>
+<li>Despejar $$y$$.</li>
+<li>Escribir el resultado como $$f^{-1}(x)$$.</li>
+</ol>
+
+<h3>Demostración general</h3>
+
+Partimos de:
+
+$$
+y=mx+b
+$$
+
+Intercambiamos variables:
+
+$$
+x=my+b
+$$
+
+Despejamos $$y$$:
+
+$$
+x-b=my
+$$
+
+$$
+y=\frac{x-b}{m}
+$$
+
+Por lo tanto:
+
+$$
+f^{-1}(x)=\frac{x-b}{m}
+$$
+
+<h3>Representación gráfica</h3>
+
+<p>
+La función y su inversa son simétricas respecto a la recta:
+</p>
+
+$$
+y=x
+$$
+
+<svg viewBox="0 0 700 330">
+
+<line x1="50" y1="280" x2="650" y2="280" stroke="black" stroke-width="2"/>
+<line x1="50" y1="30" x2="50" y2="300" stroke="black" stroke-width="2"/>
+
+<line x1="50" y1="280" x2="300" y2="30"
+stroke="gray"
+stroke-width="2"
+stroke-dasharray="8,8"/>
+
+<line x1="90" y1="250" x2="520" y2="80"
+stroke="#0b5394"
+stroke-width="4"/>
+
+<line x1="80" y1="120" x2="500" y2="250"
+stroke="#e69138"
+stroke-width="4"/>
+
+<text x="520" y="75" fill="#0b5394">f(x)</text>
+<text x="480" y="240" fill="#e69138">f⁻¹(x)</text>
+<text x="250" y="45">y = x</text>
+
+</svg>
+
+</div>
+
+<h2>Ejemplo resuelto</h2>
+
+<div class="ejercicio">
+
+<p>
+Un servicio de transporte calcula el costo de un viaje mediante:
+</p>
+
+$$
+f(x)=500x+1000
+$$
+
+<p>
+donde $$x$$ es la distancia recorrida en kilómetros y $$f(x)$$ el costo en colones.
+</p>
+
+<p>
+Determine la función inversa.
+</p>
+
+<p><strong>Paso 1</strong></p>
+
+$$
+y=500x+1000
+$$
+
+<p><strong>Paso 2</strong></p>
+
+Intercambiamos $$x$$ y $$y$$:
+
+$$
+x=500y+1000
+$$
+
+<p><strong>Paso 3</strong></p>
+
+Despejamos $$y$$:
+
+$$
+x-1000=500y
+$$
+
+$$
+y=\frac{x-1000}{500}
+$$
+
+<p><strong>Respuesta</strong></p>
+
+$$
+f^{-1}(x)=\frac{x-1000}{500}
+$$
+
+<p>
+Esta función permite determinar la distancia recorrida a partir del costo pagado.
+</p>
+
+</div>
+
+<h2>Ejercicios</h2>
+
+<div class="ejercicio">
+
+<h3>1. Función lineal</h3>
+
+<p>
+Determine la inversa de:
+</p>
+
+$$
+f(x)=3x+6
+$$
+
+</div>
+
+<div class="ejercicio">
+
+<h3>2. Conversión de temperatura</h3>
+
+<p>
+La relación entre grados Celsius y una escala experimental es:
+</p>
+
+$$
+f(x)=2x+10
+$$
+
+<p>
+Determine la función inversa.
+</p>
+
+</div>
+
+<div class="ejercicio">
+
+<h3>3. Salario por horas</h3>
+
+<p>
+El salario de un trabajador se calcula mediante:
+</p>
+
+$$
+f(x)=2500x+12000
+$$
+
+<p>
+Determine la función inversa.
+</p>
+
+</div>
+
+<div class="ejercicio">
+
+<h3>4. Función decreciente</h3>
+
+<p>
+Determine la inversa de:
+</p>
+
+$$
+f(x)=-4x+8
+$$
+
+</div>
+
+<div class="ejercicio">
+
+<h3>5. Servicio de entrega</h3>
+
+<p>
+El costo de entrega se modela mediante:
+</p>
+
+$$
+f(x)=1500x+3000
+$$
+
+<p>
+Determine la función inversa e indique qué representa.
+</p>
+
+</div>
+
+<h2>Respuestas</h2>
+
+<div class="respuestas">
+
+<h3>1.</h3>
+
+$$
+y=3x+6
+$$
+
+$$
+x=3y+6
+$$
+
+$$
+x-6=3y
+$$
+
+$$
+y=\frac{x-6}{3}
+$$
+
+$$
+f^{-1}(x)=\frac{x-6}{3}
+$$
+
+<hr>
+
+<h3>2.</h3>
+
+$$
+f(x)=2x+10
+$$
+
+$$
+f^{-1}(x)=\frac{x-10}{2}
+$$
+
+<hr>
+
+<h3>3.</h3>
+
+$$
+f(x)=2500x+12000
+$$
+
+$$
+f^{-1}(x)=\frac{x-12000}{2500}
+$$
+
+<hr>
+
+<h3>4.</h3>
+
+$$
+f(x)=-4x+8
+$$
+
+$$
+x=-4y+8
+$$
+
+$$
+x-8=-4y
+$$
+
+$$
+y=\frac{8-x}{4}
+$$
+
+$$
+f^{-1}(x)=\frac{8-x}{4}
+$$
+
+<hr>
+
+<h3>5.</h3>
+
+$$
+f(x)=1500x+3000
+$$
+
+$$
+f^{-1}(x)=\frac{x-3000}{1500}
+$$
+
+<p>
+La función inversa permite calcular la distancia recorrida a partir del costo total del servicio.
+</p>
+
+</div>
+
+<h2>Videos recomendados (YouTube)</h2>
+
+<div class="video">
+
+<strong>Video 1:</strong>
+
+    <a href="https://www.youtube.com/results?search_query=funcion+inversa+julioprofe">
+Función inversa paso a paso - JulioProfe
+</a>
+
+<br><br>
+
+URL para impresión:
+
+<br>
+
+https://www.youtube.com/results?search_query=funcion+inversa+julioprofe
+
+</div>
+
+<div class="video">
+
+<strong>Video 2:</strong>
+
+<a href="https://www.youtube.com/results?search_query=funcion+inversa+math2me">
+Función inversa de funciones lineales - Math2Me
+</a>
+
+<br><br>
+
+URL para impresión:
+
+<br>
+
+https://www.youtube.com/results?search_query=funcion+inversa+math2me
+
+</div>
+
+<h2>Referencias APA (7.ª edición)</h2>
+
+<p>
+Larson, R. (2017). <em>Precalculus</em> (11th ed.). Cengage Learning.
+</p>
+
+<p>
+Stewart, J., Redlin, L., & Watson, S. (2021). <em>Precálculo: Matemáticas para el cálculo</em>. Cengage Learning.
+</p>
+
+<p>
+OpenStax. (2022). <em>College Algebra 2e</em>. Rice University.
+https://openstax.org/details/books/college-algebra-2e
+</p>
+
+<p>
+Sullivan, M. (2020). <em>Algebra and Trigonometry</em> (11th ed.). Pearson.
+</p>
+
+</body>
+</html>

@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Representación algebraica y gráfica de funciones raíz cuadrada</title>
+
+<style>
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    max-width: 1100px;
+    margin:auto;
+    padding:20px;
+    line-height:1.6;
+    color:#222;
+}
+
+h1,h2,h3{
+    color:#0b5394;
+}
+
+.seccion{
+    background:#f4f8fc;
+    padding:18px;
+    border-radius:10px;
+    margin-bottom:20px;
+}
+
+.ejercicio{
+    background:#eef7ff;
+    border-left:6px solid #0b5394;
+    padding:15px;
+    margin-top:15px;
+}
+
+.respuestas{
+    background:#fff8dc;
+    padding:15px;
+    border-radius:10px;
+}
+
+button{
+    background:#0b5394;
+    color:white;
+    border:none;
+    padding:12px 20px;
+    border-radius:6px;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#073763;
+}
+
+svg{
+    max-width:100%;
+    height:auto;
+}
+
+@media print{
+    #btnImprimir{
+        display:none;
+    }
+}
+</style>
+
+<script>
+function imprimirPDF(){
+    window.print();
+}
+</script>
+
+<script>
+window.MathJax = {
+  tex: {
+    inlineMath: [['\$$','\$$']],
+    displayMath: [['\$$','\$$']]
+  }
+};
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</head>
+
+<body>
+
+<div style="text-align:center;">
+<button id="btnImprimir" onclick="imprimirPDF()">
+🖨️ Imprimir / Guardar como PDF
+</button>
+</div>
+
+<h1>Reconocimiento de la representación gráfica y algebraica de funciones de la forma $$f(x)=a\sqrt{x+b}+c$$</h1>
+
+<div class="seccion">
+
+<h2>Explicación</h2>
+
+<p>
+La función raíz cuadrada tiene como función base:
+</p>
+
+$$
+f(x)=\sqrt{x}
+$$
+
+<p>
+Su gráfica inicia en un punto extremo y se extiende hacia la derecha.
+La expresión general:
+</p>
+
+$$
+f(x)=a\sqrt{x+b}+c
+$$
+
+<p>
+permite identificar la gráfica observando tres características:
+</p>
+
+<ul>
+<li><strong>$$a$$</strong>: determina estiramiento, compresión o reflexión respecto al eje $$x$$.</li>
+<li><strong>$$b$$</strong>: determina el desplazamiento horizontal.</li>
+<li><strong>$$c$$</strong>: determina el desplazamiento vertical.</li>
+</ul>
+
+<h3>Cómo pasar de la ecuación a la gráfica</h3>
+
+<ol>
+<li>Identificar $$a$$, $$b$$ y $$c$$.</li>
+<li>Localizar el punto inicial de la gráfica $$( -b,\; c )$$.</li>
+<li>Determinar si la curva crece o decrece según el signo de $$a$$.</li>
+<li>Verificar si existe estiramiento o compresión.</li>
+</ol>
+
+<h3>Cómo pasar de la gráfica a la ecuación</h3>
+
+<ol>
+<li>Identificar el punto inicial.</li>
+<li>Determinar si la gráfica está reflejada.</li>
+<li>Estimar el factor de estiramiento o compresión.</li>
+<li>Construir la ecuación usando la forma general.</li>
+</ol>
+
+</div>
+
+<div class="seccion">
+
+<h2>Representación gráfica de referencia</h2>
+
+<svg viewBox="0 0 600 260">
+
+<line x1="40" y1="220" x2="560" y2="220" stroke="black" stroke-width="2"/>
+<line x1="40" y1="20" x2="40" y2="240" stroke="black" stroke-width="2"/>
+
+<path d="M40 220
+Q90 160 130 130
+Q200 90 280 60
+Q390 35 530 20"
+stroke="#0b5394"
+stroke-width="4"
+fill="none"/>
+
+<circle cx="40" cy="220" r="5" fill="red"/>
+
+<text x="545" y="235">x</text>
+<text x="25" y="20">y</text>
+<text x="250" y="50">y = √x</text>
+
+</svg>
+
+<p>
+La función base comienza en $$(0,0)$$. Si el punto inicial cambia, los valores
+de $$b$$ y $$c$$ también cambian.
+</p>
+
+</div>
+
+<h2>Ejemplo resuelto</h2>
+
+<div class="ejercicio">
+
+<p>
+La gráfica de una función raíz cuadrada comienza en el punto $$(3,2)$$ y crece hacia arriba.
+Además, los valores de $$y$$ aumentan el doble de rápido que en la función base.
+</p>
+
+<p><strong>Paso 1.</strong> Identificar el punto inicial:</p>
+
+$$
+(3,2)
+$$
+
+<p>
+Por tanto:
+</p>
+
+$$
+-b=3
+$$
+
+$$
+b=-3
+$$
+
+$$
+c=2
+$$
+
+<p><strong>Paso 2.</strong> Identificar la transformación vertical.</p>
+
+<p>
+Como crece el doble de rápido:
+</p>
+
+$$
+a=2
+$$
+
+<p><strong>Paso 3.</strong> Construir la función.</p>
+
+$$
+f(x)=2\sqrt{x-3}+2
+$$
+
+<p><strong>Respuesta:</strong></p>
+
+$$
+f(x)=2\sqrt{x-3}+2
+$$
+
+</div>
+
+<h2>Ejercicios</h2>
+
+<div class="ejercicio">
+
+<h3>1. De ecuación a gráfica</h3>
+
+<p>
+Determina las características gráficas de:
+</p>
+
+$$
+f(x)=3\sqrt{x-4}+1
+$$
+
+</div>
+
+<div class="ejercicio">
+
+<h3>2. De ecuación a gráfica</h3>
+
+<p>
+Determina las características gráficas de:
+</p>
+
+$$
+f(x)=-\sqrt{x+2}+5
+$$
+
+</div>
+
+<div class="ejercicio">
+
+<h3>3. De gráfica a ecuación</h3>
+
+<p>
+Una gráfica inicia en el punto $$(4,-2)$$ y crece como la función raíz cuadrada básica.
+Determina la ecuación.
+</p>
+
+</div>
+
+<div class="ejercicio">
+
+<h3>4. De gráfica a ecuación</h3>
+
+<p>
+Una gráfica inicia en $$(-3,1)$$ y está reflejada respecto al eje $$x$$.
+Determina la ecuación.
+</p>
+
+</div>
+
+<div class="ejercicio">
+
+<h3>5. Contexto real</h3>
+
+<p>
+La altura de una planta está modelada por una función raíz cuadrada.
+La gráfica inicia en $$(2,10)$$ y presenta un crecimiento vertical de factor 2.
+Encuentra la función que modela la situación.
+</p>
+
+</div>
+
+<h2>Respuestas</h2>
+
+<div class="respuestas">
+
+<h3>1.</h3>
+
+$$
+f(x)=3\sqrt{x-4}+1
+$$
+
+<ul>
+<li>Punto inicial: $$(4,1)$$.</li>
+<li>Traslado 4 unidades a la derecha.</li>
+<li>Traslado 1 unidad hacia arriba.</li>
+<li>Estiramiento vertical de factor 3.</li>
+</ul>
+
+<hr>
+
+<h3>2.</h3>
+
+$$
+f(x)=-\sqrt{x+2}+5
+$$
+
+<ul>
+<li>Punto inicial: $$(-2,5)$$.</li>
+<li>Traslado 2 unidades a la izquierda.</li>
+<li>Traslado 5 unidades hacia arriba.</li>
+<li>Reflexión respecto al eje $$x$$.</li>
+</ul>
+
+<hr>
+
+<h3>3.</h3>
+
+Punto inicial:
+
+$$
+(4,-2)
+$$
+
+Entonces:
+
+$$
+b=-4
+$$
+
+$$
+c=-2
+$$
+
+Como no hay estiramiento:
+
+$$
+a=1
+$$
+
+Función:
+
+$$
+f(x)=\sqrt{x-4}-2
+$$
+
+<hr>
+
+<h3>4.</h3>
+
+Punto inicial:
+
+$$
+(-3,1)
+$$
+
+Entonces:
+
+$$
+b=3
+$$
+
+$$
+c=1
+$$
+
+Como existe reflexión:
+
+$$
+a=-1
+$$
+
+Función:
+
+$$
+f(x)=-\sqrt{x+3}+1
+$$
+
+<hr>
+
+<h3>5.</h3>
+
+Punto inicial:
+
+$$
+(2,10)
+$$
+
+Por tanto:
+
+$$
+b=-2
+$$
+
+$$
+c=10
+$$
+
+Factor vertical:
+
+$$
+a=2
+$$
+
+Función:
+
+$$
+f(x)=2\sqrt{x-2}+10
+$$
+
+</div>
+
+<h2>Videos recomendados (YouTube)</h2>
+
+<p>
+Video 1:
+    <a href="https://www.youtube.com/results?search_query=transformaciones+funcion+raiz+cuadrada+julioprofe">
+Transformaciones de la función raíz cuadrada - JulioProfe
+</a>
+<br>
+URL para impresión:
+<br>
+https://www.youtube.com/results?search_query=transformaciones+funcion+raiz+cuadrada+julioprofe
+</p>
+
+<p>
+Video 2:
+<a href="https://www.youtube.com/results?search_query=funciones+radicales+math2me">
+Funciones radicales y sus gráficas - Math2Me
+</a>
+<br>
+URL para impresión:
+<br>
+https://www.youtube.com/results?search_query=funciones+radicales+math2me
+</p>
+
+<h2>Referencias APA 7.ª edición</h2>
+
+<p>
+Larson, R. (2017). <em>Precalculus</em> (11th ed.). Cengage Learning.
+</p>
+
+<p>
+OpenStax. (2022). <em>College Algebra 2e</em>. Rice University.
+https://openstax.org/details/books/college-algebra-2e
+</p>
+
+<p>
+Stewart, J., Redlin, L., & Watson, S. (2021).
+<em>Precálculo: Matemáticas para el cálculo</em>.
+Cengage Learning.
+</p>
+
+<p>
+Sullivan, M. (2020).
+<em>Algebra and Trigonometry</em> (11th ed.).
+Pearson.
+</p>
+
+</body>
+</html>

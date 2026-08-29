@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Resolución de problemas con sistemas de dos ecuaciones y dos incógnitas</title>
+
+<style>
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    max-width:1100px;
+    margin:auto;
+    padding:20px;
+    line-height:1.6;
+    color:#222;
+}
+
+h1,h2,h3{
+    color:#0b5394;
+}
+
+.seccion{
+    background:#f4f8fc;
+    padding:18px;
+    border-radius:10px;
+    margin-bottom:20px;
+}
+
+.ejercicio{
+    background:#eef7ff;
+    border-left:6px solid #0b5394;
+    padding:15px;
+    margin:15px 0;
+}
+
+.respuestas{
+    background:#fff8dc;
+    padding:20px;
+    border-radius:10px;
+}
+
+button{
+    background:#0b5394;
+    color:white;
+    border:none;
+    padding:12px 20px;
+    border-radius:6px;
+    cursor:pointer;
+    font-size:16px;
+}
+
+button:hover{
+    background:#073763;
+}
+
+svg{
+    max-width:100%;
+    height:auto;
+}
+
+@media print{
+#btnImprimir{
+display:none;
+}
+
+body{
+font-size:12pt;
+}
+}
+</style>
+
+<script>
+function imprimirPDF(){
+window.print();
+}
+</script>
+
+<script>
+window.MathJax = {
+tex: {
+inlineMath: [['\$$','\$$']],
+displayMath: [['\$$','\$$']]
+}
+};
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</head>
+
+<body>
+
+<div style="text-align:center;">
+<button id="btnImprimir" onclick="imprimirPDF()">
+🖨️ Imprimir / Guardar como PDF
+</button>
+</div>
+
+<h1>Resolución de problemas reales mediante sistemas de dos ecuaciones con dos incógnitas</h1>
+
+<div class="seccion">
+
+<h2>Explicación</h2>
+
+<p>
+Los sistemas de dos ecuaciones lineales con dos incógnitas permiten modelar y resolver
+situaciones reales donde intervienen dos cantidades desconocidas relacionadas entre sí.
+</p>
+
+<p>
+La forma general de un sistema es:
+</p>
+
+$$
+ax+by=c
+$$
+
+$$
+dx+ey=f
+$$
+
+<p>
+Las incógnitas generalmente representan cantidades de objetos, personas, precios,
+distancias, edades, entre otras magnitudes.
+</p>
+
+<h3>Pasos para resolver problemas</h3>
+
+<ol>
+<li>Leer cuidadosamente la situación.</li>
+<li>Definir las incógnitas.</li>
+<li>Plantear las ecuaciones.</li>
+<li>Resolver el sistema (sustitución, igualación o reducción).</li>
+<li>Interpretar la solución en el contexto.</li>
+</ol>
+
+</div>
+
+<div class="seccion">
+
+<h2>Ejemplo resuelto</h2>
+
+<div class="ejercicio">
+
+<p>
+En una cafetería se venden cafés y jugos.
+Un café cuesta ₡1500 y un jugo cuesta ₡1000.
+Se vendieron 20 bebidas y se recaudaron ₡25 000.
+¿Cuántos cafés y cuántos jugos se vendieron?
+</p>
+
+<p><strong>Paso 1. Definir variables</strong></p>
+
+$$
+x=\text{cantidad de cafés}
+$$
+
+$$
+y=\text{cantidad de jugos}
+$$
+
+<p><strong>Paso 2. Plantear ecuaciones</strong></p>
+
+Cantidad total de bebidas:
+
+$$
+x+y=20
+$$
+
+Total recaudado:
+
+$$
+1500x+1000y=25000
+$$
+
+<p><strong>Paso 3. Resolver</strong></p>
+
+Multiplicamos la primera ecuación por 1000:
+
+$$
+1000x+1000y=20000
+$$
+
+Restando ambas ecuaciones:
+
+$$
+500x=5000
+$$
+
+$$
+x=10
+$$
+
+Sustituyendo:
+
+$$
+10+y=20
+$$
+
+$$
+y=10
+$$
+
+<p><strong>Respuesta:</strong></p>
+
+<p>
+Se vendieron 10 cafés y 10 jugos.
+</p>
+
+</div>
+
+</div>
+
+<h2>Ejercicios</h2>
+
+<div class="ejercicio">
+
+<h3>1. Venta de entradas</h3>
+
+<p>
+En un cine se vendieron 120 entradas.
+Las entradas de adulto cuestan ₡4000 y las de niño ₡2500.
+La recaudación total fue de ₡390 000.
+¿Cuántas entradas de cada tipo se vendieron?
+</p>
+
+</div>
+
+<div class="ejercicio">
+
+<h3>2. Granja</h3>
+
+<p>
+En una granja hay gallinas y conejos.
+En total hay 30 animales y 84 patas.
+¿Cuántas gallinas y cuántos conejos hay?
+</p>
+
+</div>
+
+<div class="ejercicio">
+
+<h3>3. Librería</h3>
+
+<p>
+Se vendieron cuadernos y libros.
+En total se vendieron 40 artículos.
+Los cuadernos cuestan ₡1200 y los libros ₡3000.
+La venta total fue de ₡84 000.
+¿Cuántos cuadernos y cuántos libros se vendieron?
+</p>
+
+</div>
+
+<div class="ejercicio">
+
+<h3>4. Estacionamiento</h3>
+
+<p>
+En un estacionamiento hay automóviles y motocicletas.
+Hay 25 vehículos en total y 74 llantas.
+¿Cuántos automóviles y cuántas motocicletas hay?
+</p>
+
+</div>
+
+<div class="ejercicio">
+
+<h3>5. Excursión escolar</h3>
+
+<p>
+Para una excursión se alquilaron buses pequeños de 20 pasajeros y buses grandes de 40 pasajeros.
+Se utilizaron 8 buses para transportar a 220 estudiantes.
+¿Cuántos buses de cada tipo se alquilaron?
+</p>
+
+</div>
+
+<h2>Respuestas</h2>
+
+<div class="respuestas">
+
+<h3>1. Venta de entradas</h3>
+
+$$
+x+y=120
+$$
+
+$$
+4000x+2500y=390000
+$$
+
+Resolviendo:
+
+$$
+x=36
+$$
+
+$$
+y=84
+$$
+
+<p><strong>Respuesta:</strong> 36 entradas de adulto y 84 entradas de niño.</p>
+
+<hr>
+
+<h3>2. Granja</h3>
+
+$$
+x+y=30
+$$
+
+$$
+2x+4y=84
+$$
+
+Resolviendo:
+
+$$
+y=12
+$$
+
+$$
+x=18
+$$
+
+<p><strong>Respuesta:</strong> 18 gallinas y 12 conejos.</p>
+
+<hr>
+
+<h3>3. Librería</h3>
+
+$$
+x+y=40
+$$
+
+$$
+1200x+3000y=84000
+$$
+
+Resolviendo:
+
+$$
+y=12
+$$
+
+$$
+x=28
+$$
+
+<p><strong>Respuesta:</strong> 28 cuadernos y 12 libros.</p>
+
+<hr>
+
+<h3>4. Estacionamiento</h3>
+
+$$
+x+y=25
+$$
+
+$$
+4x+2y=74
+$$
+
+Resolviendo:
+
+$$
+x=12
+$$
+
+$$
+y=13
+$$
+
+<p><strong>Respuesta:</strong> 12 automóviles y 13 motocicletas.</p>
+
+<hr>
+
+<h3>5. Excursión escolar</h3>
+
+$$
+x+y=8
+$$
+
+$$
+20x+40y=220
+$$
+
+Dividiendo la segunda ecuación entre 20:
+
+$$
+x+2y=11
+$$
+
+Restando:
+
+$$
+y=3
+$$
+
+$$
+x=5
+$$
+
+<p><strong>Respuesta:</strong> 5 buses pequeños y 3 buses grandes.</p>
+
+</div>
+
+<h2>Videos recomendados (YouTube)</h2>
+
+<p><strong>Video 1:</strong></p>
+
+<p>
+    <a href="https://www.youtube.com/results?search_query=problemas+con+sistemas+de+ecuaciones+julioprofe">
+Problemas con sistemas de ecuaciones lineales - JulioProfe
+</a>
+</p>
+
+<p>
+URL para impresión:
+<br>
+https://www.youtube.com/results?search_query=problemas+con+sistemas+de+ecuaciones+julioprofe
+</p>
+
+<p><strong>Video 2:</strong></p>
+
+<p>
+<a href="https://www.youtube.com/results?search_query=problemas+sistemas+de+ecuaciones+math2me">
+Problemas de sistemas de ecuaciones - Math2Me
+</a>
+</p>
+
+<p>
+URL para impresión:
+<br>
+https://www.youtube.com/results?search_query=problemas+sistemas+de+ecuaciones+math2me
+</p>
+
+<h2>Referencias APA (7.ª edición)</h2>
+
+<p>
+Larson, R. (2017). <em>Precalculus</em> (11th ed.). Cengage Learning.
+</p>
+
+<p>
+OpenStax. (2022). <em>College Algebra 2e</em>. Rice University.
+https://openstax.org/details/books/college-algebra-2e
+</p>
+
+<p>
+Stewart, J., Redlin, L., & Watson, S. (2021). <em>Precálculo: Matemáticas para el cálculo</em>. Cengage Learning.
+</p>
+
+<p>
+Sullivan, M. (2020). <em>Algebra and Trigonometry</em> (11th ed.). Pearson.
+</p>
+
+</body>
+</html>

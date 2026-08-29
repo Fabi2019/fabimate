@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Transformaciones de la función raíz cuadrada</title>
+
+<style>
+body{
+    font-family: Arial, sans-serif;
+    margin:20px;
+    line-height:1.6;
+    color:#222;
+    max-width:1000px;
+    margin:auto;
+}
+
+h1,h2,h3{
+    color:#0b5394;
+}
+
+.contenedor{
+    background:#f8f9fa;
+    padding:20px;
+    border-radius:10px;
+}
+
+.ejercicio{
+    background:#eef7ff;
+    padding:15px;
+    margin:10px 0;
+    border-left:5px solid #0b5394;
+}
+
+.respuestas{
+    background:#fff8dc;
+    padding:15px;
+    border-radius:8px;
+}
+
+.video{
+    margin:10px 0;
+}
+
+button{
+    background:#0b5394;
+    color:white;
+    border:none;
+    padding:12px 20px;
+    border-radius:6px;
+    cursor:pointer;
+    font-size:16px;
+}
+
+button:hover{
+    background:#073763;
+}
+
+@media print{
+    #btnImprimir{
+        display:none;
+    }
+
+    body{
+        font-size:12pt;
+    }
+}
+
+svg{
+    max-width:100%;
+    height:auto;
+}
+</style>
+
+<script>
+function imprimirPDF(){
+    window.print();
+}
+</script>
+
+<script>
+window.MathJax = {
+  tex: {
+    inlineMath: [['\$$','\$$']],
+    displayMath: [['\$$','\$$']]
+  }
+};
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</head>
+
+<body>
+
+<div style="text-align:center;">
+<button id="btnImprimir" onclick="imprimirPDF()">🖨️ Imprimir / Guardar como PDF</button>
+</div>
+
+<h1>Transformaciones de la gráfica de la función $$f(x)=a\sqrt{x+b}+c$$</h1>
+
+<div class="contenedor">
+
+<h2>Explicación</h2>
+
+<p>
+La función base de raíz cuadrada es:
+</p>
+
+$$
+y=\sqrt{x}
+$$
+
+<p>
+Su gráfica comienza en el punto $$(0,0)$$ y crece hacia la derecha.
+A partir de esta función se pueden realizar transformaciones mediante los parámetros
+$$a$$, $$b$$ y $$c$$:
+</p>
+
+<ul>
+<li><strong>Parámetro $$a$$</strong>: produce estiramiento, compresión o reflexión.</li>
+<li>Si $$a>1$$, la gráfica se estira verticalmente.</li>
+<li>Si $$0<a<1$$, se comprime verticalmente.</li>
+<li>Si $$a<0$$, además de lo anterior se refleja respecto al eje $$x$$.</li>
+</ul>
+
+<ul>
+<li><strong>Parámetro $$b$$</strong>: traslado horizontal.</li>
+<li>En $$f(x)=a\sqrt{x+b}+c$$, si $$b>0$$ la gráfica se mueve $$b$$ unidades a la izquierda.</li>
+<li>Si $$b<0$$, se mueve $$|b|$$ unidades a la derecha.</li>
+</ul>
+
+<ul>
+<li><strong>Parámetro $$c$$</strong>: traslado vertical.</li>
+<li>Si $$c>0$$, sube $$c$$ unidades.</li>
+<li>Si $$c<0$$, baja $$|c|$$ unidades.</li>
+</ul>
+
+<h3>Representación de la función base</h3>
+
+<svg viewBox="0 0 500 250">
+<line x1="50" y1="200" x2="450" y2="200" stroke="black" stroke-width="2"/>
+<line x1="50" y1="20" x2="50" y2="220" stroke="black" stroke-width="2"/>
+
+<path d="M50 200
+Q100 140 150 115
+Q220 80 300 55
+Q380 35 450 20"
+stroke="#0b5394"
+stroke-width="4"
+fill="none"/>
+
+<text x="460" y="205">x</text>
+<text x="40" y="15">y</text>
+<text x="315" y="50">y = √x</text>
+</svg>
+
+<h2>Ejemplo resuelto</h2>
+
+<p>
+Determinar las transformaciones de:
+</p>
+
+$$
+f(x)=2\sqrt{x-3}+4
+$$
+
+<p><strong>Paso 1:</strong> Comparar con $$f(x)=a\sqrt{x+b}+c$$.</p>
+
+<ul>
+<li>$$a=2$$</li>
+<li>$$b=-3$$</li>
+<li>$$c=4$$</li>
+</ul>
+
+<p><strong>Paso 2:</strong> Interpretar cada parámetro.</p>
+
+<ul>
+<li>Como $$a=2$$, hay un estiramiento vertical por factor 2.</li>
+<li>Como $$b=-3$$, la gráfica se traslada 3 unidades a la derecha.</li>
+<li>Como $$c=4$$, la gráfica se traslada 4 unidades hacia arriba.</li>
+</ul>
+
+<p><strong>Respuesta:</strong></p>
+
+<p>
+La gráfica se mueve 3 unidades a la derecha, 4 unidades hacia arriba y se estira verticalmente por un factor de 2.
+</p>
+
+<h2>Ejercicios</h2>
+
+<div class="ejercicio">
+<p><strong>1.</strong> Determina las transformaciones de:</p>
+
+$$
+f(x)=3\sqrt{x+2}-1
+$$
+
+</div>
+
+<div class="ejercicio">
+<p><strong>2.</strong> Determina las transformaciones de:</p>
+
+$$
+f(x)=-\sqrt{x-5}+2
+$$
+
+</div>
+
+<div class="ejercicio">
+<p><strong>3.</strong> Determina las transformaciones de:</p>
+
+$$
+f(x)=\frac{1}{2}\sqrt{x+4}-3
+$$
+
+</div>
+
+<div class="ejercicio">
+<p><strong>4.</strong> Determina las transformaciones de:</p>
+
+$$
+f(x)=-2\sqrt{x+1}
+$$
+
+</div>
+
+<div class="ejercicio">
+<p><strong>5.</strong> Determina las transformaciones de:</p>
+
+$$
+f(x)=4\sqrt{x-2}+5
+$$
+
+</div>
+
+<h2>Respuestas</h2>
+
+<div class="respuestas">
+
+<p><strong>1.</strong></p>
+
+$$
+f(x)=3\sqrt{x+2}-1
+$$
+
+<ul>
+<li>2 unidades a la izquierda.</li>
+<li>1 unidad hacia abajo.</li>
+<li>Estiramiento vertical por factor 3.</li>
+</ul>
+
+<p><strong>2.</strong></p>
+
+$$
+f(x)=-\sqrt{x-5}+2
+$$
+
+<ul>
+<li>5 unidades a la derecha.</li>
+<li>2 unidades hacia arriba.</li>
+<li>Reflexión respecto al eje $$x$$.</li>
+</ul>
+
+<p><strong>3.</strong></p>
+
+$$
+f(x)=\frac{1}{2}\sqrt{x+4}-3
+$$
+
+<ul>
+<li>4 unidades a la izquierda.</li>
+<li>3 unidades hacia abajo.</li>
+<li>Compresión vertical por factor $$0.5$$.</li>
+</ul>
+
+<p><strong>4.</strong></p>
+
+$$
+f(x)=-2\sqrt{x+1}
+$$
+
+<ul>
+<li>1 unidad a la izquierda.</li>
+<li>Reflexión respecto al eje $$x$$.</li>
+<li>Estiramiento vertical por factor 2.</li>
+</ul>
+
+<p><strong>5.</strong></p>
+
+$$
+f(x)=4\sqrt{x-2}+5
+$$
+
+<ul>
+<li>2 unidades a la derecha.</li>
+<li>5 unidades hacia arriba.</li>
+<li>Estiramiento vertical por factor 4.</li>
+</ul>
+
+</div>
+
+<h2>Videos recomendados (YouTube)</h2>
+
+<div class="video">
+<strong>Video 1:</strong>
+    <a href="https://www.youtube.com/results?search_query=transformaciones+de+funciones+raiz+cuadrada+julioprofe  ">
+Transformaciones de funciones raíz cuadrada - JulioProfe
+</a>
+<br>
+URL visible para impresión:
+<br>
+https://www.youtube.com/results?search_query=transformaciones+de+funciones+raiz+cuadrada+julioprofe
+</div>
+
+<div class="video">
+<strong>Video 2:</strong>
+ <a href="https://www.youtube.com/results?search_query=funcion+raiz+cuadrada+transformaciones+math2me">
+Transformaciones de la función raíz cuadrada - Math2Me
+</a>
+<br>
+URL visible para impresión:
+<br>
+https://www.youtube.com/results?search_query=funcion+raiz+cuadrada+transformaciones+math2me
+</div>
+
+<h2>Referencias (Formato APA 7)</h2>
+
+<p>
+Stewart, J., Redlin, L., & Watson, S. (2021). <em>Precálculo: Matemáticas para el cálculo</em> (8.ª ed.). Cengage Learning.
+</p>
+
+<p>
+OpenStax. (2022). <em>College Algebra 2e</em>. OpenStax, Rice University. https://openstax.org
+</p>
+
+<p>
+Larson, R. (2017). <em>Precalculus</em> (11th ed.). Cengage Learning.
+</p>
+
+<p>
+Sullivan, M. (2020). <em>Algebra and Trigonometry</em> (11th ed.). Pearson.
+</p>
+
+</div>
+
+</body>
+</html>
