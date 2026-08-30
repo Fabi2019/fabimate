@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ecuaciones Exponenciales de la Forma a^f(x)=b^g(x)</title>
+
+<style>
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    margin:0;
+    background:#f4f6f9;
+    color:#222;
+    line-height:1.7;
+}
+.container{
+    max-width:1000px;
+    margin:auto;
+    background:white;
+    padding:20px;
+}
+h1,h2,h3{
+    color:#0b5394;
+}
+table{
+    width:100%;
+    border-collapse:collapse;
+    margin:15px 0;
+}
+th,td{
+    border:1px solid #999;
+    padding:8px;
+    text-align:center;
+}
+th{
+    background:#d9ead3;
+}
+.print-btn{
+    background:#0b5394;
+    color:white;
+    border:none;
+    padding:12px 20px;
+    border-radius:6px;
+    cursor:pointer;
+    font-size:16px;
+    margin-bottom:20px;
+}
+.print-btn:hover{
+    background:#073763;
+}
+.box{
+    background:#eef6ff;
+    border-left:5px solid #0b5394;
+    padding:15px;
+    margin:15px 0;
+}
+.respuesta{
+    background:#f8f8f8;
+    border-left:4px solid green;
+    padding:12px;
+}
+a{
+    word-break:break-word;
+}
+@media(max-width:768px){
+    .container{
+        padding:12px;
+    }
+}
+@media print{
+    .print-btn{
+        display:none;
+    }
+}
+@page{
+    size:letter;
+    margin:1.5cm;
+}
+</style>
+
+<script>
+function imprimirPDF(){
+    window.print();
+}
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<button class="print-btn" onclick="imprimirPDF()">
+🖨️ Imprimir / Guardar como PDF
+</button>
+
+<h1>Resolución de Ecuaciones Exponenciales de la Forma $$a^{f(x)}=b^{g(x)}$$</h1>
+
+<h2>Explicación</h2>
+
+<p>
+Una ecuación exponencial de la forma:
+</p>
+
+<p style="text-align:center;">
+$$ a^{f(x)}=b^{g(x)} $$
+</p>
+
+<p>
+donde:
+</p>
+
+<ul>
+<li>$$a$$ y $$b$$ son números reales positivos.</li>
+<li>$$a\neq1$$ y $$b\neq1$$.</li>
+<li>$$f(x)$$ y $$g(x)$$ son polinomios de grado menor que 3.</li>
+</ul>
+
+<p>
+puede resolverse utilizando:
+</p>
+
+<ol>
+<li>Propiedades de las potencias.</li>
+<li>Igualación de bases.</li>
+<li>Logaritmos.</li>
+<li>Cambio de base.</li>
+</ol>
+
+<div class="box">
+Si es posible escribir ambos miembros con la misma base, se igualan los exponentes.
+Si no es posible, se aplican logaritmos en ambos lados de la ecuación.
+</div>
+
+<h3>Método 1: Igualación de Bases</h3>
+
+<p>
+Si:
+</p>
+
+<p style="text-align:center;">
+$$2^{x+1}=8^{x-1}$$
+</p>
+
+<p>
+Como:
+</p>
+
+<p style="text-align:center;">
+$$8=2^3$$
+</p>
+
+<p>
+Entonces:
+</p>
+
+<p style="text-align:center;">
+$$2^{x+1}=2^{3(x-1)}$$
+</p>
+
+<p>
+Igualando exponentes:
+</p>
+
+<p style="text-align:center;">
+$$x+1=3x-3$$
+</p>
+
+<p style="text-align:center;">
+$$4=2x$$
+</p>
+
+<p style="text-align:center;">
+$$x=2$$
+</p>
+
+<h3>Método 2: Uso de Logaritmos</h3>
+
+<p>
+Si las bases son diferentes y no pueden convertirse fácilmente:
+</p>
+
+<p style="text-align:center;">
+$$3^x=5$$
+</p>
+
+<p>
+Aplicando logaritmos:
+</p>
+
+<p style="text-align:center;">
+$$\log(3^x)=\log(5)$$
+</p>
+
+<p style="text-align:center;">
+$$x\log(3)=\log(5)$$
+</p>
+
+<p style="text-align:center;">
+$$x=\dfrac{\log(5)}{\log(3)}$$
+</p>
+
+<hr>
+
+<h2>Ejemplo</h2>
+
+<p>
+Resuelva:
+</p>
+
+<p style="text-align:center;">
+$$4^{x+2}=2^{3x}$$
+</p>
+
+<p><strong>Solución:</strong></p>
+
+<p>
+Como:
+</p>
+
+<p style="text-align:center;">
+$$4=2^2$$
+</p>
+
+<p>
+Entonces:
+</p>
+
+<p style="text-align:center;">
+$$(2^2)^{x+2}=2^{3x}$$
+</p>
+
+<p style="text-align:center;">
+$$2^{2(x+2)}=2^{3x}$$
+</p>
+
+<p>
+Igualando exponentes:
+</p>
+
+<p style="text-align:center;">
+$$2x+4=3x$$
+</p>
+
+<p style="text-align:center;">
+$$x=4$$
+</p>
+
+<p>
+<strong>Respuesta:</strong> $$x=4$$
+</p>
+
+<hr>
+
+<h2>Ejercicios</h2>
+
+<ol>
+
+<li>
+Resuelva:
+
+$$2^{x+3}=8^x$$
+</li>
+
+<br>
+
+<li>
+Resuelva:
+
+$$9^{x-1}=3^{2x+2}$$
+</li>
+
+<br>
+
+<li>
+Resuelva:
+
+$$5^{2x}=25^{x+1}$$
+</li>
+
+<br>
+
+<li>
+Resuelva:
+
+$$3^x=20$$
+</li>
+
+<br>
+
+<li>
+Resuelva:
+
+$$2^{2x-1}=4^{x+2}$$
+</li>
+
+</ol>
+
+<hr>
+
+<h2>Respuestas</h2>
+
+<div class="respuesta">
+
+<ol>
+
+<li>
+
+$$2^{x+3}=8^x$$
+
+<br><br>
+
+$$8=2^3$$
+
+<br><br>
+
+$$2^{x+3}=2^{3x}$$
+
+<br><br>
+
+$$x+3=3x$$
+
+<br><br>
+
+$$\boxed{x=\frac{3}{2}}$$
+
+</li>
+
+<br>
+
+<li>
+
+$$9^{x-1}=3^{2x+2}$$
+
+<br><br>
+
+$$9=3^2$$
+
+<br><br>
+
+$$3^{2(x-1)}=3^{2x+2}$$
+
+<br><br>
+
+$$2x-2=2x+2$$
+
+<br><br>
+
+$$\boxed{\text{No tiene solución real}}$$
+
+</li>
+
+<br>
+
+<li>
+
+$$5^{2x}=25^{x+1}$$
+
+<br><br>
+
+$$25=5^2$$
+
+<br><br>
+
+$$5^{2x}=5^{2x+2}$$
+
+<br><br>
+
+$$\boxed{\text{No tiene solución real}}$$
+
+</li>
+
+<br>
+
+<li>
+
+$$3^x=20$$
+
+<br><br>
+
+$$x=\dfrac{\log(20)}{\log(3)}$$
+
+<br><br>
+
+$$\boxed{x\approx2.73}$$
+
+</li>
+
+<br>
+
+<li>
+
+$$2^{2x-1}=4^{x+2}$$
+
+<br><br>
+
+$$4=2^2$$
+
+<br><br>
+
+$$2^{2x-1}=2^{2(x+2)}$$
+
+<br><br>
+
+$$2x-1=2x+4$$
+
+<br><br>
+
+$$\boxed{\text{No tiene solución real}}$$
+
+</li>
+
+</ol>
+
+</div>
+
+<hr>
+
+<h2>Videos de apoyo en YouTube</h2>
+
+<ul>
+
+<li>
+<a href="https://www.youtube.com/playlist?list=PLeySRPnY35dHJJIKyqY0Wg4TTM0NDsS7f" target="_blank">
+Curso Completo de Ecuaciones Exponenciales | Matemáticas Profe Alex
+</a>
+<br>
+URL para impresión:
+https://www.youtube.com/playlist?list=PLeySRPnY35dHJJIKyqY0Wg4TTM0NDsS7f
+</li>
+
+<br>
+
+<li>
+<a href="https://www.youtube.com/playlist?list=PLC6o1uTspYwHM4fJbsnC7zzdnwRjc0ojm" target="_blank">
+Lista de Reproducción: Ecuaciones Exponenciales | Julioprofe
+</a>
+<br>
+URL para impresión:
+https://www.youtube.com/playlist?list=PLC6o1uTspYwHM4fJbsnC7zzdnwRjc0ojm
+</li>
+
+</ul>
+
+<hr>
+
+<h2>Referencias APA</h2>
+
+<p>
+OpenStax. (2022). <em>Precalculus 2e</em>. OpenStax, Rice University.
+</p>
+
+<p>
+Stewart, J., Redlin, L., & Watson, S. (2021).
+<em>Precalculus: Mathematics for Calculus</em> (8th ed.).
+Cengage Learning.
+</p>
+
+<p>
+Matemáticas Profe Alex. (2025).
+<em>Curso completo de ecuaciones exponenciales</em>.
+YouTube.
+</p>
+
+<p>
+Julioprofe. (s.f.).
+<em>Ecuaciones exponenciales</em>.
+YouTube.
+</p>
+
+<p>
+Curso completo de ecuaciones exponenciales de Matemáticas Profe Alex. [1](https://www.youtube.com/playlist?list=PLeySRPnY35dHJJIKyqY0Wg4TTM0NDsS7f)
+</p>
+
+<p>
+Lista de reproducción de ecuaciones exponenciales de Julioprofe. [2](https://www.youtube.com/playlist?list=PLC6o1uTspYwHM4fJbsnC7zzdnwRjc0ojm)
+</p>
+
+</div>
+
+</body>
+</html>

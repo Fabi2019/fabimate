@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Funciones Logarítmicas: Elementos y Propiedades</title>
+
+<style>
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    line-height:1.7;
+    margin:0;
+    background:#f4f6f9;
+    color:#222;
+}
+
+.container{
+    max-width:1000px;
+    margin:auto;
+    background:white;
+    padding:20px;
+}
+
+h1,h2,h3{
+    color:#0b5394;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    margin:15px 0;
+}
+
+th,td{
+    border:1px solid #999;
+    padding:8px;
+    text-align:center;
+}
+
+th{
+    background:#d9ead3;
+}
+
+.print-btn{
+    background:#0b5394;
+    color:white;
+    border:none;
+    padding:12px 20px;
+    border-radius:6px;
+    cursor:pointer;
+    font-size:16px;
+    margin-bottom:20px;
+}
+
+.print-btn:hover{
+    background:#073763;
+}
+
+.box{
+    background:#eef6ff;
+    border-left:5px solid #0b5394;
+    padding:15px;
+    margin:15px 0;
+}
+
+.respuesta{
+    background:#f8f8f8;
+    border-left:4px solid green;
+    padding:12px;
+}
+
+.grafica{
+    font-family:monospace;
+    background:#fafafa;
+    border:1px solid #ccc;
+    padding:10px;
+    overflow:auto;
+    text-align:center;
+}
+
+a{
+    word-break:break-word;
+}
+
+@media(max-width:768px){
+    .container{
+        padding:12px;
+    }
+}
+
+@media print{
+    .print-btn{
+        display:none;
+    }
+}
+
+@page{
+    size:letter;
+    margin:1.5cm;
+}
+</style>
+
+<script>
+function imprimirPDF(){
+    window.print();
+}
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<button class="print-btn" onclick="imprimirPDF()">
+🖨️ Imprimir / Guardar como PDF
+</button>
+
+<h1>Determina Elementos y Propiedades de las Funciones Logarítmicas en su Representación Gráfica o Algebraica en Diversos Contextos</h1>
+
+<h2>Explicación</h2>
+
+<p>
+Una <strong>función logarítmica</strong> es una función de la forma:
+</p>
+
+<p style="text-align:center;">
+$$ f(x)=\log_a(x) $$
+</p>
+
+<p>
+donde:
+</p>
+
+<ul>
+<li>$$a>0$$</li>
+<li>$$a\neq1$$</li>
+<li>$$x>0$$</li>
+</ul>
+
+<p>
+La función logarítmica es la inversa de la función exponencial:
+</p>
+
+<p style="text-align:center;">
+$$ y=a^x $$
+</p>
+
+<h3>Elementos de una Función Logarítmica</h3>
+
+<ul>
+<li><strong>Base:</strong> $$a$$</li>
+<li><strong>Argumento:</strong> $$x$$</li>
+<li><strong>Variable independiente:</strong> $$x$$</li>
+<li><strong>Variable dependiente:</strong> $$f(x)$$</li>
+</ul>
+
+<h3>Propiedades</h3>
+
+<ul>
+<li>Dominio: $$ (0,\infty) $$</li>
+<li>Rango: $$ \mathbb{R} $$</li>
+<li>Corte con el eje $$x$$: $$(1,0)$$</li>
+<li>Asíntota vertical: $$x=0$$</li>
+<li>Si $$a>1$$, la función es creciente.</li>
+<li>Si $$0<a<1$$, la función es decreciente.</li>
+<li>Es continua en todo su dominio.</li>
+<li>Su gráfica es la reflexión de la función exponencial respecto a la recta $$y=x$$.</li>
+</ul>
+
+<h3>Representación Gráfica</h3>
+
+<div class="grafica">
+<pre>
+
+ y
+ ↑
+
+ 3 |                             ●
+ 2 |                     ●
+ 1 |             ●
+ 0 |------●------------------------------→ x
+-1 |   ●
+-2 |
+    0    1    2    4    8
+
+Gráfica aproximada de f(x)=log₂(x)
+
+</pre>
+</div>
+
+<p>
+Observe que la función pasa por el punto $$(1,0)$$ y se aproxima al eje $$y$$,
+pero nunca lo toca debido a la asíntota vertical $$x=0$$.
+</p>
+
+<h3>Representación Tabular</h3>
+
+<table>
+<tr>
+<th>x</th>
+<th>1/8</th>
+<th>1/4</th>
+<th>1</th>
+<th>2</th>
+<th>8</th>
+</tr>
+
+<tr>
+<th>$$\log_2(x)$$</th>
+<td>-3</td>
+<td>-2</td>
+<td>0</td>
+<td>1</td>
+<td>3</td>
+</tr>
+</table>
+
+<div class="box">
+<strong>Aplicaciones:</strong> Las funciones logarítmicas se utilizan para medir la intensidad de los terremotos (escala Richter), el nivel de sonido (decibelios), el crecimiento biológico, la informática y la química (escala de pH).
+</div>
+
+<hr>
+
+<h2>Ejemplo</h2>
+
+<p>
+Determine los elementos y propiedades de:
+</p>
+
+<p style="text-align:center;">
+$$ f(x)=\log_5(x) $$
+</p>
+
+<p><strong>Solución:</strong></p>
+
+<ul>
+<li>Base: $$5$$</li>
+<li>Argumento: $$x$$</li>
+<li>Como $$5>1$$, la función es creciente.</li>
+<li>Dominio: $$ (0,\infty) $$</li>
+<li>Rango: $$ \mathbb{R} $$</li>
+<li>Corte con el eje $$x$$: $$(1,0)$$</li>
+<li>Asíntota vertical: $$x=0$$</li>
+</ul>
+
+<table>
+<tr>
+<th>x</th>
+<th>1/25</th>
+<th>1/5</th>
+<th>1</th>
+<th>5</th>
+<th>25</th>
+</tr>
+
+<tr>
+<th>$$\log_5(x)$$</th>
+<td>-2</td>
+<td>-1</td>
+<td>0</td>
+<td>1</td>
+<td>2</td>
+</tr>
+</table>
+
+<hr>
+
+<h2>Ejercicios</h2>
+
+<ol>
+
+<li>
+Determine si la función
+$$f(x)=\log_7(x)$$
+es creciente o decreciente.
+</li>
+
+<li>
+Determine el dominio de
+
+$$f(x)=\log_2(x-4)$$.
+</li>
+
+<li>
+Calcule:
+
+$$ \log_3(81) $$
+</li>
+
+<li>
+Determine la asíntota vertical de
+
+$$f(x)=\log_{10}(x)$$.
+</li>
+
+<li>
+Complete la tabla para
+
+$$f(x)=\log_2(x)$$
+
+cuando:
+
+$$x=1,\;2,\;4,\;16$$.
+</li>
+
+</ol>
+
+<hr>
+
+<h2>Respuestas</h2>
+
+<div class="respuesta">
+
+<ol>
+
+<li>
+Como $$7>1$$, la función es
+<strong>creciente</strong>.
+</li>
+
+<li>
+
+$$x-4>0$$
+
+<br><br>
+
+$$x>4$$
+
+<br><br>
+
+Dominio:
+
+$$(4,\infty)$$
+
+</li>
+
+<li>
+
+$$ \log_3(81)=4 $$
+
+porque
+
+$$3^4=81$$
+
+</li>
+
+<li>
+
+Asíntota vertical:
+
+$$x=0$$
+
+</li>
+
+<li>
+
+<table>
+<tr>
+<th>x</th>
+<th>1</th>
+<th>2</th>
+<th>4</th>
+<th>16</th>
+</tr>
+
+<tr>
+<th>$$\log_2(x)$$</th>
+<td>0</td>
+<td>1</td>
+<td>2</td>
+<td>4</td>
+</tr>
+</table>
+
+</li>
+
+</ol>
+
+</div>
+
+<hr>
+
+<h2>Videos de apoyo en YouTube</h2>
+
+<ul>
+
+<li>
+<a href="https://www.youtube.com/watch?v=C0vUje9Uduc" target="_blank">
+Función Logarítmica: Gráfica, Dominio y Rango | Matemáticas Profe Alex
+</a>
+<br>
+URL para impresión:
+https://www.youtube.com/watch?v=C0vUje9Uduc
+</li>
+
+<br>
+
+<li>
+<a href="https://www.youtube.com/watch?v=cFrgQXppN6g" target="_blank">
+Análisis de una Función Logarítmica | Julioprofe
+</a>
+<br>
+URL para impresión:
+https://www.youtube.com/watch?v=cFrgQXppN6g
+</li>
+
+</ul>
+
+<hr>
+
+<h2>Referencias APA</h2>
+
+<p>
+OpenStax. (2022). <em>Precalculus 2e</em>. OpenStax, Rice University.
+</p>
+
+<p>
+Stewart, J., Redlin, L., & Watson, S. (2021).
+<em>Precalculus: Mathematics for Calculus</em> (8th ed.).
+Cengage Learning.
+</p>
+
+<p>
+Matemáticas Profe Alex. (s.f.).
+<em>Función logarítmica: gráfica, dominio y rango</em>.
+YouTube.
+https://www.youtube.com/watch?v=C0vUje9Uduc
+</p>
+
+<p>
+Julioprofe. (s.f.).
+<em>Análisis de una función logarítmica</em>.
+YouTube.
+https://www.youtube.com/watch?v=cFrgQXppN6g
+</p>
+
+<p>
+Material sobre dominio, rango y representación gráfica de funciones logarítmicas. [1](https://www.funciones.xyz/funciones-logaritmicas/)
+</p>
+
+</div>
+
+</body>
+</html>

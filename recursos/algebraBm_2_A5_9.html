@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aplicación de Funciones Raíz Cuadrada, Exponenciales, Logarítmicas e Inversas</title>
+
+<style>
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    margin:0;
+    background:#f4f6f9;
+    color:#222;
+    line-height:1.7;
+}
+.container{
+    max-width:1000px;
+    margin:auto;
+    background:white;
+    padding:20px;
+}
+h1,h2,h3{
+    color:#0b5394;
+}
+table{
+    width:100%;
+    border-collapse:collapse;
+    margin:15px 0;
+}
+th,td{
+    border:1px solid #999;
+    padding:8px;
+    text-align:center;
+}
+th{
+    background:#d9ead3;
+}
+.print-btn{
+    background:#0b5394;
+    color:white;
+    border:none;
+    padding:12px 20px;
+    border-radius:6px;
+    cursor:pointer;
+    font-size:16px;
+    margin-bottom:20px;
+}
+.print-btn:hover{
+    background:#073763;
+}
+.box{
+    background:#eef6ff;
+    border-left:5px solid #0b5394;
+    padding:15px;
+    margin:15px 0;
+}
+.respuesta{
+    background:#f8f8f8;
+    border-left:4px solid green;
+    padding:12px;
+}
+a{
+    word-break:break-word;
+}
+@media(max-width:768px){
+    .container{
+        padding:12px;
+    }
+}
+@media print{
+    .print-btn{
+        display:none;
+    }
+}
+@page{
+    size:letter;
+    margin:1.5cm;
+}
+</style>
+
+<script>
+function imprimirPDF(){
+    window.print();
+}
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</head>
+<body>
+
+<div class="container">
+
+<button class="print-btn" onclick="imprimirPDF()">
+🖨️ Imprimir / Guardar como PDF
+</button>
+
+<h1>Aplicación de las Funciones Raíz Cuadrada, Exponenciales, Logarítmicas y sus Inversas en la Resolución de Problemas</h1>
+
+<h2>Explicación</h2>
+
+<p>
+Las funciones matemáticas permiten modelar y resolver situaciones reales.
+Entre las más utilizadas están las funciones de raíz cuadrada,
+exponenciales, logarítmicas y sus funciones inversas.
+</p>
+
+<h3>1. Función Raíz Cuadrada</h3>
+
+<p style="text-align:center;">
+$$ f(x)=\sqrt{x} $$
+</p>
+
+<p>
+Se utiliza para calcular distancias, velocidades, áreas y fenómenos físicos.
+</p>
+
+<h3>2. Función Exponencial</h3>
+
+<p style="text-align:center;">
+$$ f(x)=a^x $$
+</p>
+
+<p>
+Modela procesos de crecimiento o decrecimiento, como poblaciones,
+inversiones y desintegración radiactiva.
+</p>
+
+<h3>3. Función Logarítmica</h3>
+
+<p style="text-align:center;">
+$$ f(x)=\log_a(x) $$
+</p>
+
+<p>
+Se utiliza en escalas científicas como pH, Richter y decibelios.
+</p>
+
+<h3>4. Funciones Inversas</h3>
+
+<ul>
+<li>La inversa de $$y=x^2$$ es $$y=\sqrt{x}$$.</li>
+<li>La inversa de $$y=a^x$$ es $$y=\log_a(x)$$.</li>
+</ul>
+
+<div class="box">
+La elección de la función adecuada depende de la situación que se desea modelar:
+crecimiento, medición, cálculo geométrico o interpretación de datos científicos.
+</div>
+
+<hr>
+
+<h2>Ejemplo</h2>
+
+<h3>Interés compuesto</h3>
+
+<p>
+Una inversión de ₡100 000 crece al 10% anual.
+</p>
+
+<p>
+Modelo:
+</p>
+
+<p style="text-align:center;">
+$$ A=100000(1.10)^t $$
+</p>
+
+<p>
+¿Cuánto dinero habrá después de 3 años?
+</p>
+
+<p>
+Sustituyendo:
+</p>
+
+<p style="text-align:center;">
+$$ A=100000(1.10)^3 $$
+</p>
+
+<p style="text-align:center;">
+$$ A=133100 $$
+</p>
+
+<p>
+<strong>Respuesta:</strong> Después de 3 años habrá aproximadamente ₡133 100.
+</p>
+
+<hr>
+
+<h2>Ejercicios</h2>
+
+<ol>
+
+<li>
+Una piscina cuadrada tiene un área de
+$$144\;m^2$$.
+
+Determine la longitud de cada lado utilizando una función raíz cuadrada.
+</li>
+
+<br>
+
+<li>
+Una inversión de ₡200 000 crece según
+
+$$A=200000(1.05)^t$$.
+
+Determine el monto cuando $$t=4$$.
+</li>
+
+<br>
+
+<li>
+Determine el pH de una solución si
+
+$$H=10^{-6}$$,
+
+utilizando
+
+$$pH=-\log(H)$$.
+</li>
+
+<br>
+
+<li>
+La población de una bacteria se modela mediante
+
+$$P=300\cdot2^t$$.
+
+Determine la población cuando $$t=5$$.
+</li>
+
+<br>
+
+<li>
+Resuelva mediante la función inversa logarítmica:
+
+$$2^x=64$$.
+</li>
+
+</ol>
+
+<hr>
+
+<h2>Respuestas</h2>
+
+<div class="respuesta">
+
+<ol>
+
+<li>
+
+$$L=\sqrt{144}$$
+
+<br><br>
+
+$$\boxed{L=12\;m}$$
+
+</li>
+
+<br>
+
+<li>
+
+$$A=200000(1.05)^4$$
+
+<br><br>
+
+$$A\approx243101$$
+
+<br><br>
+
+$$\boxed{\text{₡243 101}}
+$$
+
+</li>
+
+<br>
+
+<li>
+
+$$pH=-\log(10^{-6})$$
+
+<br><br>
+
+$$pH=6$$
+
+<br><br>
+
+$$\boxed{6}$$
+
+</li>
+
+<br>
+
+<li>
+
+$$P=300\cdot2^5$$
+
+<br><br>
+
+$$P=300\cdot32$$
+
+<br><br>
+
+$$\boxed{9600}$$
+
+</li>
+
+<br>
+
+<li>
+
+$$2^x=64$$
+
+<br><br>
+
+$$x=\log_2(64)$$
+
+<br><br>
+
+$$x=6$$
+
+<br><br>
+
+$$\boxed{x=6}$$
+
+</li>
+
+</ol>
+
+</div>
+
+<hr>
+
+<h2>Videos de apoyo en YouTube</h2>
+
+<ul>
+
+<li>
+<a href="https://www.youtube.com/watch?v=IhsZKreUPE0" target="_blank">
+Función Exponencial | Características | Matemáticas Profe Alex
+</a>
+<br>
+URL para impresión:
+https://www.youtube.com/watch?v=IhsZKreUPE0
+</li>
+
+<br>
+
+<li>
+<a href="https://www.youtube.com/watch?v=C0vUje9Uduc" target="_blank">
+Función Logarítmica: Gráfica, Dominio y Rango | Matemáticas Profe Alex
+</a>
+<br>
+URL para impresión:
+https://www.youtube.com/watch?v=C0vUje9Uduc
+</li>
+
+</ul>
+
+<hr>
+
+<h2>Referencias APA</h2>
+
+<p>
+OpenStax. (2022). <em>Precalculus 2e</em>. OpenStax, Rice University.
+</p>
+
+<p>
+Stewart, J., Redlin, L., & Watson, S. (2021).
+<em>Precalculus: Mathematics for Calculus</em> (8th ed.).
+Cengage Learning.
+</p>
+
+<p>
+Larson, R. (2019).
+<em>Precalculus</em> (11th ed.).
+Cengage Learning.
+</p>
+
+<p>
+Matemáticas Profe Alex. (YouTube).
+<em>Función Exponencial: Características</em>.
+https://www.youtube.com/watch?v=IhsZKreUPE0
+</p>
+
+<p>
+Matemáticas Profe Alex. (YouTube).
+<em>Función Logarítmica: Gráfica, Dominio y Rango</em>.
+https://www.youtube.com/watch?v=C0vUje9Uduc
+</p>
+
+</div>
+
+</body>
+</html>

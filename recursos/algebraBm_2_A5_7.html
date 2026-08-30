@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Problemas en Contextos Reales Utilizando Ecuaciones Logarítmicas</title>
+
+<style>
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    margin:0;
+    background:#f4f6f9;
+    color:#222;
+    line-height:1.7;
+}
+
+.container{
+    max-width:1000px;
+    margin:auto;
+    background:white;
+    padding:20px;
+}
+
+h1,h2,h3{
+    color:#0b5394;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    margin:15px 0;
+}
+
+th,td{
+    border:1px solid #999;
+    padding:8px;
+    text-align:center;
+}
+
+th{
+    background:#d9ead3;
+}
+
+.print-btn{
+    background:#0b5394;
+    color:white;
+    border:none;
+    padding:12px 20px;
+    border-radius:6px;
+    cursor:pointer;
+    font-size:16px;
+    margin-bottom:20px;
+}
+
+.print-btn:hover{
+    background:#073763;
+}
+
+.box{
+    background:#eef6ff;
+    border-left:5px solid #0b5394;
+    padding:15px;
+    margin:15px 0;
+}
+
+.respuesta{
+    background:#f7f7f7;
+    border-left:4px solid green;
+    padding:12px;
+}
+
+a{
+    word-break:break-word;
+}
+
+@media(max-width:768px){
+    .container{
+        padding:12px;
+    }
+}
+
+@media print{
+    .print-btn{
+        display:none;
+    }
+}
+
+@page{
+    size:letter;
+    margin:1.5cm;
+}
+</style>
+
+<script>
+function imprimirPDF(){
+    window.print();
+}
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<button class="print-btn" onclick="imprimirPDF()">
+🖨️ Imprimir / Guardar como PDF
+</button>
+
+<h1>Resolución de Problemas en Contextos Reales Utilizando Ecuaciones Logarítmicas</h1>
+
+<h2>Explicación</h2>
+
+<p>
+Una <strong>ecuación logarítmica</strong> es una ecuación en la que la incógnita aparece
+dentro de uno o varios logaritmos.
+</p>
+
+<p style="text-align:center;">
+$$ \log_a(x)=b $$
+</p>
+
+<p>
+Para resolver ecuaciones logarítmicas se utilizan:
+</p>
+
+<ul>
+<li>La definición de logaritmo.</li>
+<li>Las propiedades de los logaritmos.</li>
+<li>La conversión entre forma logarítmica y exponencial.</li>
+<li>La verificación de que las soluciones pertenezcan al dominio.</li>
+</ul>
+
+<div class="box">
+Las ecuaciones logarítmicas aparecen en contextos reales como:
+<ul>
+<li>Escala Richter para terremotos.</li>
+<li>Medición de sonido en decibelios.</li>
+<li>Escala de pH en química.</li>
+<li>Crecimiento poblacional.</li>
+<li>Informática y teoría de la información.</li>
+</ul>
+</div>
+
+<hr>
+
+<h2>Ejemplo</h2>
+
+<h3>Escala Richter</h3>
+
+<p>
+La magnitud de un terremoto se calcula mediante:
+</p>
+
+<p style="text-align:center;">
+$$ M=\log_{10}(I) $$
+</p>
+
+<p>
+Si un terremoto tiene intensidad:
+</p>
+
+<p style="text-align:center;">
+$$ I=100000 $$
+</p>
+
+<p>
+Determine su magnitud.
+</p>
+
+<p><strong>Solución:</strong></p>
+
+<p style="text-align:center;">
+$$ M=\log_{10}(100000) $$
+</p>
+
+<p style="text-align:center;">
+$$ M=5 $$
+</p>
+
+<p>
+<strong>Respuesta:</strong> La magnitud del terremoto es 5.
+</p>
+
+<hr>
+
+<h2>Ejercicios</h2>
+
+<ol>
+
+<li>
+La intensidad de un sonido se modela mediante:
+
+$$ D=10\log_{10}(I) $$
+
+Si $$I=1000$$, determine $$D$$.
+</li>
+
+<br>
+
+<li>
+El pH de una solución se calcula con:
+
+$$ pH=-\log_{10}(H) $$
+
+Si $$H=10^{-4}$$, determine el pH.
+</li>
+
+<br>
+
+<li>
+Resuelva la ecuación:
+
+$$ \log_{10}(x)=3 $$
+</li>
+
+<br>
+
+<li>
+Resuelva la ecuación:
+
+$$ \log_2(x)=5 $$
+</li>
+
+<br>
+
+<li>
+Una bacteria alcanza una población dada cuando se cumple:
+
+$$ \log_{10}(t)=2 $$
+
+Determine el tiempo $$t$$.
+</li>
+
+</ol>
+
+<hr>
+
+<h2>Respuestas</h2>
+
+<div class="respuesta">
+
+<ol>
+
+<li>
+
+$$D=10\log_{10}(1000)$$
+
+<br><br>
+
+$$D=10(3)$$
+
+<br><br>
+
+$$\boxed{D=30}$$
+
+</li>
+
+<br>
+
+<li>
+
+$$pH=-\log_{10}(10^{-4})$$
+
+<br><br>
+
+$$pH=-(-4)$$
+
+<br><br>
+
+$$\boxed{pH=4}$$
+
+</li>
+
+<br>
+
+<li>
+
+$$\log_{10}(x)=3$$
+
+<br><br>
+
+Forma exponencial:
+
+<br><br>
+
+$$x=10^3$$
+
+<br><br>
+
+$$\boxed{x=1000}$$
+
+</li>
+
+<br>
+
+<li>
+
+$$\log_2(x)=5$$
+
+<br><br>
+
+$$x=2^5$$
+
+<br><br>
+
+$$\boxed{x=32}$$
+
+</li>
+
+<br>
+
+<li>
+
+$$\log_{10}(t)=2$$
+
+<br><br>
+
+$$t=10^2$$
+
+<br><br>
+
+$$\boxed{t=100}$$
+
+</li>
+
+</ol>
+
+</div>
+
+<hr>
+
+<h2>Videos de Apoyo en YouTube</h2>
+
+<ul>
+
+<li>
+<a href="https://www.youtube.com/watch?v=z5WDNFfSifo" target="_blank">
+Ecuaciones con Logaritmos | Ejemplo 1 | Matemáticas Profe Alex
+</a>
+<br>
+URL para impresión:
+https://www.youtube.com/watch?v=z5WDNFfSifo
+</li>
+
+<br>
+
+<li>
+<a href="https://www.youtube.com/watch?v=H4KDTmInn3A" target="_blank">
+Ecuaciones Logarítmicas | Ej. 28 | Julioprofe
+</a>
+<br>
+URL para impresión:
+https://www.youtube.com/watch?v=H4KDTmInn3A
+</li>
+
+</ul>
+
+<hr>
+
+<h2>Referencias APA</h2>
+
+<p>
+OpenStax. (2022). <em>Precalculus 2e</em>. OpenStax, Rice University.
+</p>
+
+<p>
+Stewart, J., Redlin, L., & Watson, S. (2021).
+<em>Precalculus: Mathematics for Calculus</em> (8th ed.).
+Cengage Learning.
+</p>
+
+<p>
+Matemáticas Profe Alex. (YouTube).
+<em>Logaritmos: Solución de ecuaciones, ejemplo 1</em>.
+https://www.youtube.com/watch?v=z5WDNFfSifo
+</p>
+
+<p>
+Julioprofe. (YouTube).
+<em>Ecuaciones logarítmicas: Ejercicio 28</em>.
+https://www.youtube.com/watch?v=H4KDTmInn3A
+</p>
+
+<p>
+Lista de reproducción de ecuaciones logarítmicas de Julioprofe. [1](https://www.youtube.com/playlist?list=PLC6o1uTspYwGy9_WwQrZrw9iTXiKDua5T)
+</p>
+
+<p>
+Curso de logaritmos y ecuaciones de Matemáticas Profe Alex. [2](https://www.youtube.com/playlist?list=PLeySRPnY35dHyUzy-YVDD9ZllhtXfcQ4_)
+</p>
+
+</div>
+
+</body>
+</html>

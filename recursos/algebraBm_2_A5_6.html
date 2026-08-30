@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Propiedades de los Logaritmos y Simplificación de Expresiones</title>
+
+<style>
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    margin:0;
+    background:#f4f6f9;
+    color:#222;
+    line-height:1.7;
+}
+.container{
+    max-width:1000px;
+    margin:auto;
+    background:white;
+    padding:20px;
+}
+h1,h2,h3{
+    color:#0b5394;
+}
+table{
+    width:100%;
+    border-collapse:collapse;
+    margin:15px 0;
+}
+th,td{
+    border:1px solid #999;
+    padding:8px;
+    text-align:center;
+}
+th{
+    background:#d9ead3;
+}
+.print-btn{
+    background:#0b5394;
+    color:white;
+    border:none;
+    padding:12px 20px;
+    border-radius:6px;
+    cursor:pointer;
+    font-size:16px;
+    margin-bottom:20px;
+}
+.print-btn:hover{
+    background:#073763;
+}
+.box{
+    background:#eef6ff;
+    padding:15px;
+    border-left:5px solid #0b5394;
+    margin:15px 0;
+}
+.respuesta{
+    background:#f7f7f7;
+    padding:12px;
+    border-left:4px solid green;
+}
+a{
+    word-break:break-word;
+}
+
+@media(max-width:768px){
+    .container{
+        padding:12px;
+    }
+}
+
+@media print{
+    .print-btn{
+        display:none;
+    }
+}
+
+@page{
+    size:letter;
+    margin:1.5cm;
+}
+</style>
+
+<script>
+function imprimirPDF(){
+    window.print();
+}
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<button class="print-btn" onclick="imprimirPDF()">
+🖨️ Imprimir / Guardar como PDF
+</button>
+
+<h1>Simplificación de Expresiones Mediante la Utilización de Propiedades de los Logaritmos</h1>
+
+<h2>Explicación</h2>
+
+<p>
+Los logaritmos poseen propiedades que permiten simplificar expresiones algebraicas,
+resolver ecuaciones y modelar situaciones en ciencias, economía, ingeniería e informática.
+</p>
+
+<p>
+Si $$M>0$$, $$N>0$$, $$a>0$$ y $$a\neq1$$, las propiedades más importantes son:
+</p>
+
+<table>
+<tr>
+<th>Propiedad</th>
+<th>Expresión</th>
+</tr>
+
+<tr>
+<td>Producto</td>
+<td>$$\log_a(M\cdot N)=\log_a(M)+\log_a(N)$$</td>
+</tr>
+
+<tr>
+<td>Cociente</td>
+<td>$$\log_a\left(\frac{M}{N}\right)=\log_a(M)-\log_a(N)$$</td>
+</tr>
+
+<tr>
+<td>Potencia</td>
+<td>$$\log_a(M^n)=n\cdot\log_a(M)$$</td>
+</tr>
+
+<tr>
+<td>Raíz</td>
+<td>$$\log_a(\sqrt[n]{M})=\frac{1}{n}\log_a(M)$$</td>
+</tr>
+
+<tr>
+<td>Cambio de base</td>
+<td>$$\log_a(M)=\frac{\log(M)}{\log(a)}$$</td>
+</tr>
+
+</table>
+
+<div class="box">
+Las propiedades de los logaritmos permiten convertir multiplicaciones en sumas,
+divisiones en restas y potencias en productos, facilitando los cálculos matemáticos.
+</div>
+
+<hr>
+
+<h2>Ejemplo</h2>
+
+<p>
+Simplifique:
+</p>
+
+<p style="text-align:center;">
+\(
+\log(x^3y)-\log(y)
+\)
+</p>
+
+<p><strong>Solución:</strong></p>
+
+<p>
+Aplicando la propiedad del producto:
+</p>
+
+<p style="text-align:center;">
+\(
+\log(x^3y)=\log(x^3)+\log(y)
+\)
+</p>
+
+<p>
+Sustituyendo:
+</p>
+
+<p style="text-align:center;">
+\(
+\log(x^3)+\log(y)-\log(y)
+\)
+</p>
+
+<p>
+Los términos $$\log(y)$$ se eliminan:
+</p>
+
+<p style="text-align:center;">
+\(
+\log(x^3)
+\)
+</p>
+
+<p>
+Aplicando la propiedad de la potencia:
+</p>
+
+<p style="text-align:center;">
+\(
+3\log(x)
+\)
+</p>
+
+<p>
+<strong>Resultado:</strong>
+</p>
+
+<p style="text-align:center;">
+\(
+3\log(x)
+\)
+</p>
+
+<hr>
+
+<h2>Ejercicios</h2>
+
+<ol>
+
+<li>
+Simplifique:
+
+\(
+\log(5)+\log(2)
+\)
+</li>
+
+<br>
+
+<li>
+Simplifique:
+
+\(
+\log(36)-\log(6)
+\)
+</li>
+
+<br>
+
+<li>
+Simplifique:
+
+\(
+2\log(x)
+\)
+</li>
+
+<br>
+
+<li>
+Simplifique:
+
+\(
+\log(a^4b)
+\)
+</li>
+
+<br>
+
+<li>
+Simplifique:
+
+\(
+\log\left(\frac{x^2y}{z}\right)
+\)
+</li>
+
+</ol>
+
+<hr>
+
+<h2>Respuestas</h2>
+
+<div class="respuesta">
+
+<ol>
+
+<li>
+
+\(
+\log(5)+\log(2)
+\)
+
+<br><br>
+
+Aplicando producto:
+
+<br><br>
+
+\(
+\log(5\cdot2)
+\)
+
+<br><br>
+
+\(
+\boxed{\log(10)}
+\)
+
+</li>
+
+<br>
+
+<li>
+
+\(
+\log(36)-\log(6)
+\)
+
+<br><br>
+
+Aplicando cociente:
+
+<br><br>
+
+\(
+\log\left(\frac{36}{6}\right)
+\)
+
+<br><br>
+
+\(
+\boxed{\log(6)}
+\)
+
+</li>
+
+<br>
+
+<li>
+
+\(
+2\log(x)
+\)
+
+<br><br>
+
+Aplicando potencia:
+
+<br><br>
+
+\(
+\boxed{\log(x^2)}
+\)
+
+</li>
+
+<br>
+
+<li>
+
+\(
+\log(a^4b)
+\)
+
+<br><br>
+
+\(
+\log(a^4)+\log(b)
+\)
+
+<br><br>
+
+\(
+\boxed{4\log(a)+\log(b)}
+\)
+
+</li>
+
+<br>
+
+<li>
+
+\(
+\log\left(\frac{x^2y}{z}\right)
+\)
+
+<br><br>
+
+\(
+\log(x^2y)-\log(z)
+\)
+
+<br><br>
+
+\(
+\log(x^2)+\log(y)-\log(z)
+\)
+
+<br><br>
+
+\(
+\boxed{2\log(x)+\log(y)-\log(z)}
+\)
+
+</li>
+
+</ol>
+
+</div>
+
+<hr>
+
+<h2>Videos de apoyo en YouTube</h2>
+
+<ul>
+
+<li>
+https://www.youtube.com/watch?v=8w6dL7K4C0Y
+Propiedades de los Logaritmos | Julioprofe
+</a>
+<br>
+URL para impresión:
+https://www.youtube.com/watch?v=8w6dL7K4C0Y
+</li>
+
+<br>
+
+<li>
+https://www.youtube.com/watch?v=2xAKR0gE0hA
+Propiedades de los Logaritmos | Matemáticas Profe Alex
+</a>
+<br>
+URL para impresión:
+https://www.youtube.com/watch?v=2xAKR0gE0hA
+</li>
+
+</ul>
+
+<hr>
+
+<h2>Referencias APA</h2>
+
+<p>
+OpenStax. (2022).
+<em>Precalculus 2e</em>.
+OpenStax, Rice University.
+</p>
+
+<p>
+Stewart, J., Redlin, L., & Watson, S. (2021).
+<em>Precalculus: Mathematics for Calculus</em> (8th ed.).
+Cengage Learning.
+</p>
+
+<p>
+Larson, R. (2019).
+<em>Precalculus</em> (11th ed.).
+Cengage Learning.
+</p>
+
+<p>
+Julioprofe. (YouTube).
+<em>Propiedades de los logaritmos</em>.
+https://www.youtube.com
+</p>
+
+<p>
+Matemáticas Profe Alex. (YouTube).
+<em>Propiedades de los logaritmos</em>.
+https://www.youtube.com
+</p>
+
+</div>
+
+</body>
+</html>

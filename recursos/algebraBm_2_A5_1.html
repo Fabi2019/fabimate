@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>La función logarítmica como inversa de la función exponencial</title>
+
+<style>
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    max-width:1100px;
+    margin:auto;
+    padding:20px;
+    line-height:1.6;
+    color:#222;
+}
+
+h1,h2,h3{
+    color:#0b5394;
+}
+
+.seccion{
+    background:#f4f8fc;
+    padding:18px;
+    border-radius:10px;
+    margin-bottom:20px;
+}
+
+.ejercicio{
+    background:#eef7ff;
+    border-left:6px solid #0b5394;
+    padding:15px;
+    margin:15px 0;
+}
+
+.respuestas{
+    background:#fff8dc;
+    padding:20px;
+    border-radius:10px;
+}
+
+button{
+    background:#0b5394;
+    color:white;
+    border:none;
+    padding:12px 20px;
+    border-radius:6px;
+    cursor:pointer;
+    font-size:16px;
+}
+
+button:hover{
+    background:#073763;
+}
+
+svg{
+    max-width:100%;
+    height:auto;
+}
+
+.video{
+    margin-bottom:15px;
+}
+
+@media print{
+    #btnImprimir{
+        display:none;
+    }
+
+    body{
+        font-size:12pt;
+    }
+}
+</style>
+
+<script>
+function imprimirPDF(){
+    window.print();
+}
+</script>
+
+<script>
+window.MathJax = {
+  tex: {
+    inlineMath: [['\$$','\$$']],
+    displayMath: [['\$$','\$$']]
+  }
+};
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</head>
+
+<body>
+
+<div style="text-align:center;">
+<button id="btnImprimir" onclick="imprimirPDF()">
+🖨️ Imprimir / Guardar como PDF
+</button>
+</div>
+
+<h1>Identificación de la función logarítmica como la inversa de la función exponencial en diversos contextos</h1>
+
+<div class="seccion">
+
+<h2>Explicación</h2>
+
+<p>
+La función logarítmica es la función inversa de la función exponencial.
+Esto significa que una función deshace el efecto de la otra.
+</p>
+
+<p>
+Si:
+</p>
+
+$$
+y=b^x
+$$
+
+<p>
+entonces la función inversa es:
+</p>
+
+$$
+y=\log_b(x)
+$$
+
+<p>
+donde:
+</p>
+
+<ul>
+<li>$$b>0$$</li>
+<li>$$b\neq1$$</li>
+</ul>
+
+<h3>Relación entre la función exponencial y logarítmica</h3>
+
+<p>
+Las siguientes expresiones son equivalentes:
+</p>
+
+$$
+b^x=y
+$$
+
+$$
+\log_b(y)=x
+$$
+
+<p>
+Por ejemplo:
+</p>
+
+$$
+2^5=32
+$$
+
+<p>
+Entonces:
+</p>
+
+$$
+\log_2(32)=5
+$$
+
+<p>
+La función exponencial responde a preguntas sobre crecimiento o decrecimiento,
+mientras que la función logarítmica permite encontrar el exponente necesario para obtener un valor dado.
+</p>
+
+<h3>Representación gráfica</h3>
+
+<p>
+La función exponencial y la logarítmica son simétricas respecto a la recta:
+</p>
+
+$$
+y=x
+$$
+
+<svg viewBox="0 0 700 350">
+
+<line x1="50" y1="300" x2="650" y2="300" stroke="black" stroke-width="2"/>
+<line x1="50" y1="30" x2="50" y2="320" stroke="black" stroke-width="2"/>
+
+<line x1="50" y1="300" x2="320" y2="30"
+stroke="gray"
+stroke-width="2"
+stroke-dasharray="8,8"/>
+
+<path d="M70 290
+Q130 285 200 250
+Q300 180 420 90
+Q500 45 620 30"
+stroke="#0b5394"
+stroke-width="4"
+fill="none"/>
+
+<path d="M70 50
+Q120 120 180 180
+Q270 240 420 270
+Q560 285 620 290"
+stroke="#e69138"
+stroke-width="4"
+fill="none"/>
+
+<text x="480" y="55" fill="#0b5394">y = 2<tspan baseline-shift="super">x</tspan></text>
+
+<text x="420" y="255" fill="#e69138">y = log₂(x)</text>
+
+<text x="250" y="50">y = x</text>
+
+</svg>
+
+<p>
+La gráfica azul corresponde a la función exponencial y la naranja a su función inversa logarítmica.
+</p>
+
+<h3>Aplicaciones en contextos reales</h3>
+
+<ul>
+<li>Crecimiento de poblaciones.</li>
+<li>Interés compuesto en finanzas.</li>
+<li>Escala de Richter para terremotos.</li>
+<li>Escala de pH en química.</li>
+<li>Procesamiento de señales y tecnología.</li>
+</ul>
+
+</div>
+
+<h2>Ejemplo resuelto</h2>
+
+<div class="ejercicio">
+
+<p>
+Una población de bacterias crece según el modelo:
+</p>
+
+$$
+N=2^t
+$$
+
+<p>
+donde $$N$$ es la cantidad de bacterias y $$t$$ el tiempo en horas.
+</p>
+
+<p>
+¿Cuántas horas necesitan transcurrir para alcanzar 64 bacterias?
+</p>
+
+<p><strong>Solución</strong></p>
+
+$$
+64=2^t
+$$
+
+<p>
+Aplicamos logaritmo en base 2:
+</p>
+
+$$
+t=\log_2(64)
+$$
+
+$$
+t=6
+$$
+
+<p><strong>Respuesta:</strong></p>
+
+<p>
+Se necesitan 6 horas para alcanzar 64 bacterias.
+</p>
+
+</div>
+
+<h2>Ejercicios</h2>
+
+<div class="ejercicio">
+
+<h3>1. Crecimiento de usuarios</h3>
+
+<p>
+Una aplicación registra un crecimiento dado por:
+</p>
+
+$$
+U=3^t
+$$
+
+<p>
+Determine el tiempo necesario para alcanzar 81 usuarios.
+</p>
+
+</div>
+
+<div class="ejercicio">
+
+<h3>2. Escala de potencia</h3>
+
+<p>
+Una máquina genera una potencia descrita por:
+</p>
+
+$$
+P=10^t
+$$
+
+<p>
+Determine el valor de $$t$$ cuando $$P=1000$$.
+</p>
+
+</div>
+
+<div class="ejercicio">
+
+<h3>3. Inversa de una función exponencial</h3>
+
+<p>
+Determine la función inversa de:
+</p>
+
+$$
+f(x)=5^x
+$$
+
+</div>
+
+<div class="ejercicio">
+
+<h3>4. Contexto financiero</h3>
+
+<p>
+Una inversión se modela mediante:
+</p>
+
+$$
+M=2^t
+$$
+
+<p>
+¿Después de cuánto tiempo el capital será 128 veces el capital inicial?
+</p>
+
+</div>
+
+<div class="ejercicio">
+
+<h3>5. Escala de pH</h3>
+
+<p>
+La concentración de iones hidrógeno se relaciona mediante:
+</p>
+
+$$
+[H^+]=10^{-pH}
+$$
+
+<p>
+Explique por qué intervienen funciones logarítmicas para calcular el pH.
+</p>
+
+</div>
+
+<h2>Respuestas</h2>
+
+<div class="respuestas">
+
+<h3>1.</h3>
+
+$$
+81=3^t
+$$
+
+$$
+t=\log_3(81)
+$$
+
+$$
+t=4
+$$
+
+<p><strong>Respuesta:</strong> 4 unidades de tiempo.</p>
+
+<hr>
+
+<h3>2.</h3>
+
+$$
+1000=10^t
+$$
+
+$$
+t=\log_{10}(1000)
+$$
+
+$$
+t=3
+$$
+
+<p><strong>Respuesta:</strong> $$t=3$$.</p>
+
+<hr>
+
+<h3>3.</h3>
+
+La función inversa es:
+
+$$
+f^{-1}(x)=\log_5(x)
+$$
+
+<hr>
+
+<h3>4.</h3>
+
+$$
+128=2^t
+$$
+
+$$
+t=\log_2(128)
+$$
+
+$$
+t=7
+$$
+
+<p><strong>Respuesta:</strong> 7 unidades de tiempo.</p>
+
+<hr>
+
+<h3>5.</h3>
+
+<p>
+Porque para encontrar el valor del pH se necesita despejar el exponente de una expresión exponencial, y los logaritmos son las funciones inversas que permiten realizar ese proceso.
+</p>
+
+</div>
+
+<h2>Videos recomendados (YouTube)</h2>
+
+<div class="video">
+
+<strong>Video 1:</strong>
+
+    <a href="https://www.youtube.com/results?search_query=funcion+logaritmica+inversa+de+la+exponencial+julioprofe">
+Función logarítmica como inversa de la función exponencial - JulioProfe
+</a>
+
+<br><br>
+
+URL para impresión:
+
+<br>
+
+https://www.youtube.com/results?search_query=funcion+logaritmica+inversa+de+la+exponencial+julioprofe
+
+</div>
+
+<div class="video">
+
+<strong>Video 2:</strong>
+
+  <a href="https://www.youtube.com/results?search_query=logaritmos+y+funciones+exponenciales+math2me">
+Logaritmos y funciones exponenciales - Math2Me
+</a>
+
+<br><br>
+
+URL para impresión:
+
+<br>
+
+https://www.youtube.com/results?search_query=logaritmos+y+funciones+exponenciales+math2me
+
+</div>
+
+<h2>Referencias APA (7.ª edición)</h2>
+
+<p>
+OpenStax. (2022). <em>College Algebra 2e</em>. Rice University. https://openstax.org/details/books/college-algebra-2e
+</p>
+
+<p>
+Larson, R. (2017). <em>Precalculus</em> (11th ed.). Cengage Learning.
+</p>
+
+<p>
+Stewart, J., Redlin, L., & Watson, S. (2021). <em>Precálculo: Matemáticas para el cálculo</em>. Cengage Learning.
+</p>
+
+<p>
+Sullivan, M. (2020). <em>Algebra and Trigonometry</em> (11th ed.). Pearson.
+</p>
+
+</body>
+</html>

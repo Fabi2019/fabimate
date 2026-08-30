@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Resolución de Problemas con Ecuaciones Exponenciales</title>
+
+<style>
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:#f4f6f9;
+    margin:0;
+    color:#222;
+    line-height:1.7;
+}
+
+.container{
+    max-width:1000px;
+    margin:auto;
+    background:white;
+    padding:20px;
+}
+
+h1,h2,h3{
+    color:#0b5394;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    margin:15px 0;
+}
+
+th,td{
+    border:1px solid #999;
+    padding:8px;
+    text-align:center;
+}
+
+th{
+    background:#d9ead3;
+}
+
+.print-btn{
+    background:#0b5394;
+    color:white;
+    border:none;
+    padding:12px 20px;
+    border-radius:6px;
+    cursor:pointer;
+    font-size:16px;
+    margin-bottom:20px;
+}
+
+.print-btn:hover{
+    background:#073763;
+}
+
+.box{
+    background:#eef6ff;
+    border-left:5px solid #0b5394;
+    padding:15px;
+    margin:15px 0;
+}
+
+.respuesta{
+    background:#f7f7f7;
+    border-left:4px solid green;
+    padding:12px;
+}
+
+a{
+    word-break:break-word;
+}
+
+@media(max-width:768px){
+    .container{
+        padding:12px;
+    }
+}
+
+@media print{
+    .print-btn{
+        display:none;
+    }
+}
+
+@page{
+    size:letter;
+    margin:1.5cm;
+}
+</style>
+
+<script>
+function imprimirPDF(){
+    window.print();
+}
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<button class="print-btn" onclick="imprimirPDF()">
+🖨️ Imprimir / Guardar como PDF
+</button>
+
+<h1>Resolución de Problemas en Contextos Reales Utilizando Ecuaciones Exponenciales</h1>
+
+<h2>Explicación</h2>
+
+<p>
+Una <strong>ecuación exponencial</strong> es aquella en la que la incógnita aparece en el exponente.
+</p>
+
+<p style="text-align:center;">
+$$ a^x=b $$
+</p>
+
+<p>
+Las ecuaciones exponenciales permiten modelar fenómenos reales relacionados con:
+</p>
+
+<ul>
+<li>Crecimiento poblacional.</li>
+<li>Interés compuesto.</li>
+<li>Propagación de virus.</li>
+<li>Desintegración radiactiva.</li>
+<li>Depreciación de vehículos y equipos.</li>
+</ul>
+
+<div class="box">
+Para resolver problemas reales se sigue el siguiente procedimiento:
+<ol>
+<li>Identificar la ecuación exponencial del problema.</li>
+<li>Sustituir los datos conocidos.</li>
+<li>Despejar la variable.</li>
+<li>Interpretar la respuesta en el contexto.</li>
+</ol>
+</div>
+
+<hr>
+
+<h2>Ejemplo Resuelto</h2>
+
+<h3>Crecimiento de una población</h3>
+
+<p>
+Una colonia de bacterias se duplica cada hora.
+Si inicialmente hay 500 bacterias, ¿cuántas horas tardará en alcanzar 4000 bacterias?
+</p>
+
+<p><strong>Modelo:</strong></p>
+
+<p style="text-align:center;">
+$$ 500\cdot2^t=4000 $$
+</p>
+
+<p>
+Dividiendo entre 500:
+</p>
+
+<p style="text-align:center;">
+$$ 2^t=8 $$
+</p>
+
+<p>
+Como:
+</p>
+
+<p style="text-align:center;">
+$$ 8=2^3 $$
+</p>
+
+<p>
+Entonces:
+</p>
+
+<p style="text-align:center;">
+$$ t=3 $$
+</p>
+
+<p>
+<strong>Respuesta:</strong> La población alcanzará 4000 bacterias después de <strong>3 horas</strong>.
+</p>
+
+<hr>
+
+<h2>Ejercicios</h2>
+
+<ol>
+
+<li>
+Una inversión de ₡100 000 crece según el modelo
+
+$$100000\cdot(1.05)^t=127628$$.
+
+Determine el valor de $$t$$.
+</li>
+
+<br>
+
+<li>
+Una población de 200 aves se triplica cada año.
+
+¿Cuántos años tardará en alcanzar 5400 aves?
+</li>
+
+<br>
+
+<li>
+La cantidad de un medicamento en la sangre sigue el modelo
+
+$$100\cdot(0.5)^t=12.5$$.
+
+Determine el valor de $$t$$.
+</li>
+
+<br>
+
+<li>
+Un automóvil pierde el 20% de su valor cada año.
+
+Si vale ₡20 000 000 inicialmente, ¿cuántos años pasarán para que su valor sea ₡10 240 000?
+</li>
+
+<br>
+
+<li>
+Una población de microorganismos se modela mediante
+
+$$50\cdot2^t=1600$$.
+
+Determine el tiempo $$t$$.
+</li>
+
+</ol>
+
+<hr>
+
+<h2>Respuestas</h2>
+
+<div class="respuesta">
+
+<ol>
+
+<li>
+
+$$100000\cdot(1.05)^t=127628$$
+
+<br>
+
+$$1.05^t=1.27628$$
+
+<br>
+
+$$t\approx5$$
+
+<br>
+
+<strong>Respuesta:</strong> 5 años.
+
+</li>
+
+<br>
+
+<li>
+
+$$200\cdot3^t=5400$$
+
+<br>
+
+$$3^t=27$$
+
+<br>
+
+$$27=3^3$$
+
+<br>
+
+$$t=3$$
+
+<br>
+
+<strong>Respuesta:</strong> 3 años.
+
+</li>
+
+<br>
+
+<li>
+
+$$100\cdot(0.5)^t=12.5$$
+
+<br>
+
+$$(0.5)^t=0.125$$
+
+<br>
+
+$$0.125=(0.5)^3$$
+
+<br>
+
+$$t=3$$
+
+<br>
+
+<strong>Respuesta:</strong> 3 horas o unidades de tiempo.
+
+</li>
+
+<br>
+
+<li>
+
+$$20000000\cdot(0.8)^t=10240000$$
+
+<br>
+
+$$(0.8)^t=0.512$$
+
+<br>
+
+$$0.512=(0.8)^3$$
+
+<br>
+
+$$t=3$$
+
+<br>
+
+<strong>Respuesta:</strong> 3 años.
+
+</li>
+
+<br>
+
+<li>
+
+$$50\cdot2^t=1600$$
+
+<br>
+
+$$2^t=32$$
+
+<br>
+
+$$32=2^5$$
+
+<br>
+
+$$t=5$$
+
+<br>
+
+<strong>Respuesta:</strong> 5 unidades de tiempo.
+
+</li>
+
+</ol>
+
+</div>
+
+<hr>
+
+<h2>Videos de apoyo en YouTube</h2>
+
+<ul>
+
+<li>
+<a href="https://www.youtube.com/watch?v=Fl1PvjOh9Us" target="_blank">
+Ecuaciones Exponenciales - Ejercicios 1 y 2 | Julioprofe
+</a>
+<br>
+URL para impresión:
+https://www.youtube.com/watch?v=Fl1PvjOh9Us
+</li>
+
+<br>
+
+<li>
+<a href="https://www.youtube.com/watch?v=XdaB464Gt4M" target="_blank">
+Ecuaciones Exponenciales | Introducción - Matemáticas Profe Alex
+</a>
+<br>
+URL para impresión:
+https://www.youtube.com/watch?v=XdaB464Gt4M
+</li>
+
+</ul>
+
+<hr>
+
+<h2>Referencias APA</h2>
+
+<p>
+OpenStax. (2022). <em>Precalculus 2e</em>. Rice University.
+</p>
+
+<p>
+Stewart, J., Redlin, L., & Watson, S. (2021).
+<em>Precalculus: Mathematics for Calculus</em> (8th ed.).
+Cengage Learning.
+</p>
+
+<p>
+Matemáticas Profe Alex. (YouTube).
+<em>Ecuaciones exponenciales: introducción</em>.
+https://www.youtube.com/watch?v=XdaB464Gt4M
+</p>
+
+<p>
+Julioprofe. (YouTube).
+<em>Ecuaciones exponenciales: ejercicios 1 y 2</em>.
+https://www.youtube.com/watch?v=Fl1PvjOh9Us
+</p>
+
+<p>
+Curso de ecuaciones exponenciales de Matemáticas Profe Alex.
+[1](https://www.youtube.com/playlist?list=PLeySRPnY35dHJJIKyqY0Wg4TTM0NDsS7f)
+</p>
+
+<p>
+Lista de reproducción de ecuaciones exponenciales de Julioprofe.
+[2](https://www.youtube.com/playlist?list=PLC6o1uTspYwHM4fJbsnC7zzdnwRjc0ojm)
+</p>
+
+</div>
+
+</body>
+</html>

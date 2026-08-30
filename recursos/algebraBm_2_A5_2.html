@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Función Exponencial: Elementos y Propiedades</title>
+
+<style>
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    line-height:1.7;
+    margin:0;
+    background:#f4f6f9;
+    color:#222;
+}
+.container{
+    max-width:1000px;
+    margin:auto;
+    background:white;
+    padding:20px;
+}
+h1,h2,h3{
+    color:#0b5394;
+}
+table{
+    width:100%;
+    border-collapse:collapse;
+    margin:15px 0;
+    overflow-x:auto;
+}
+th,td{
+    border:1px solid #999;
+    padding:8px;
+    text-align:center;
+}
+th{
+    background:#d9ead3;
+}
+.print-btn{
+    background:#0b5394;
+    color:white;
+    border:none;
+    padding:12px 20px;
+    border-radius:6px;
+    cursor:pointer;
+    margin-bottom:20px;
+    font-size:16px;
+}
+.print-btn:hover{
+    background:#073763;
+}
+.box{
+    background:#eef6ff;
+    padding:15px;
+    border-left:5px solid #0b5394;
+    margin:15px 0;
+}
+.respuesta{
+    background:#f9f9f9;
+    padding:10px;
+    border-left:4px solid green;
+}
+a{
+    word-break:break-word;
+}
+
+@media (max-width:768px){
+    body{
+        font-size:16px;
+    }
+    .container{
+        padding:12px;
+    }
+}
+
+@media print{
+    .print-btn{
+        display:none;
+    }
+    body{
+        background:white;
+    }
+    .container{
+        max-width:100%;
+    }
+}
+
+@page{
+    size: letter;
+    margin: 1.5cm;
+}
+</style>
+
+<script>
+function imprimirPDF(){
+    window.print();
+}
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</head>
+<body>
+
+<div class="container">
+
+<button class="print-btn" onclick="imprimirPDF()">🖨️ Imprimir / Guardar como PDF</button>
+
+<h1>Función Exponencial: Elementos y Propiedades</h1>
+
+<h2>Explicación</h2>
+
+<p>
+Una <strong>función exponencial</strong> es una función de la forma:
+</p>
+
+<p style="text-align:center;">
+$$ f(x)=a^x $$
+</p>
+
+<p>
+donde:
+</p>
+
+<ul>
+<li>$$a>0$$</li>
+<li>$$a\neq1$$</li>
+<li>$$x$$ es una variable real.</li>
+</ul>
+
+<h3>Elementos de la función exponencial</h3>
+
+<ul>
+<li><strong>Base:</strong> $$a$$</li>
+<li><strong>Exponente:</strong> $$x$$</li>
+<li><strong>Variable independiente:</strong> $$x$$</li>
+<li><strong>Variable dependiente:</strong> $$f(x)$$</li>
+</ul>
+
+<h3>Propiedades principales</h3>
+
+<ol>
+<li>Dominio: $$ \mathbb{R} $$ (todos los números reales).</li>
+<li>Rango: $$ (0,\infty) $$.</li>
+<li>Pasa por el punto $$ (0,1) $$.</li>
+<li>Tiene asíntota horizontal en $$ y=0 $$.</li>
+<li>Si $$ a>1 $$, la función es creciente.</li>
+<li>Si $$ 0<a<1 $$, la función es decreciente.</li>
+</ol>
+
+<h3>Representación tabular</h3>
+
+<p>Para la función $$f(x)=2^x$$:</p>
+
+<table>
+<tr>
+<th>x</th>
+<th>-2</th>
+<th>-1</th>
+<th>0</th>
+<th>1</th>
+<th>2</th>
+</tr>
+<tr>
+<th>f(x)</th>
+<td>$$\frac{1}{4}$$</td>
+<td>$$\frac{1}{2}$$</td>
+<td>1</td>
+<td>2</td>
+<td>4</td>
+</tr>
+</table>
+
+<div class="box">
+<strong>Interpretación:</strong> cada vez que $$x$$ aumenta una unidad, el valor de la función se multiplica por 2.
+</div>
+
+<hr>
+
+<h2>Ejemplo Resuelto</h2>
+
+<p>
+Analice la función:
+</p>
+
+<p style="text-align:center;">
+$$ f(x)=3^x $$
+</p>
+
+<p><strong>Solución:</strong></p>
+
+<ul>
+<li>Base: $$3$$</li>
+<li>Como $$3>1$$, la función es creciente.</li>
+<li>Dominio: $$ \mathbb{R} $$</li>
+<li>Rango: $$ (0,\infty) $$</li>
+<li>Intersección con el eje $$y$$: $$f(0)=3^0=1$$</li>
+<li>Asíntota horizontal: $$y=0$$</li>
+</ul>
+
+<table>
+<tr>
+<th>x</th>
+<th>-1</th>
+<th>0</th>
+<th>1</th>
+<th>2</th>
+</tr>
+<tr>
+<th>f(x)</th>
+<td>$$\frac{1}{3}$$</td>
+<td>1</td>
+<td>3</td>
+<td>9</td>
+</tr>
+</table>
+
+<hr>
+
+<h2>Ejercicios</h2>
+
+<ol>
+<li>Determine si la función $$ f(x)=5^x $$ es creciente o decreciente.</li>
+
+<li>Calcule $$ f(2) $$ para $$ f(x)=2^x $$.</li>
+
+<li>Encuentre $$ f(0) $$ para $$ f(x)=7^x $$.</li>
+
+<li>Determine el dominio y rango de $$ f(x)=4^x $$.</li>
+
+<li>Construya una tabla para $$ f(x)=3^x $$ usando $$x=-1,0,1,2$$.</li>
+</ol>
+
+<hr>
+
+<h2>Respuestas</h2>
+
+<div class="respuesta">
+<ol>
+<li>$$5>1$$, por lo tanto la función es <strong>creciente</strong>.</li>
+
+<li>
+$$f(2)=2^2=4$$.
+</li>
+
+<li>
+$$f(0)=7^0=1$$.
+</li>
+
+<li>
+Dominio: $$ \mathbb{R} $$. <br>
+Rango: $$ (0,\infty) $$.
+</li>
+
+<li>
+
+<table>
+<tr>
+<th>x</th>
+<th>-1</th>
+<th>0</th>
+<th>1</th>
+<th>2</th>
+</tr>
+<tr>
+<th>f(x)=3^x</th>
+<td>$$\frac{1}{3}$$</td>
+<td>1</td>
+<td>3</td>
+<td>9</td>
+</tr>
+</table>
+
+</li>
+</ol>
+</div>
+
+<hr>
+
+<h2>Videos de apoyo en YouTube</h2>
+
+<ul>
+<li>
+<a href="https://www.youtube.com/watch?v=IhsZKreUPE0" target="_blank">
+Función Exponencial | Características - Matemáticas Profe Alex
+</a>
+<br>
+URL para impresión:
+https://www.youtube.com/watch?v=IhsZKreUPE0
+</li>
+
+<br>
+
+<li>
+<a href="https://www.youtube.com/watch?v=8eBeaiEuzx8" target="_blank">
+Análisis de una Función Exponencial - Julioprofe
+</a>
+<br>
+URL para impresión:
+https://www.youtube.com/watch?v=8eBeaiEuzx8
+</li>
+</ul>
+
+<hr>
+
+<h2>Referencias (Formato APA)</h2>
+
+<p>
+OpenStax. (2022). <em>Precalculus 2e</em>. OpenStax, Rice University.
+</p>
+
+<p>
+Stewart, J., Redlin, L., & Watson, S. (2021). <em>Precalculus: Mathematics for Calculus</em> (8th ed.). Cengage Learning.
+</p>
+
+<p>
+Khan Academy. (2026). <em>Introducción a las funciones exponenciales</em>. https://es.khanacademy.org/ [1](https://es.khanacademy.org/math/algebra/x2f8bb11595b61c86:exponential-growth-decay/x2f8bb11595b61c86:exponential-vs-linear-growth/v/exponential-growth-functions)
+</p>
+
+<p>
+Matemáticas Profe Alex. (YouTube). <em>Función exponencial: características</em>. https://www.youtube.com/watch?v=IhsZKreUPE0 [2](https://www.youtube.com/watch?v=IhsZKreUPE0)
+</p>
+
+<p>
+Julioprofe. (YouTube). <em>Análisis de una función exponencial</em>. https://www.youtube.com/watch?v=8eBeaiEuzx8 [3](https://www.youtube.com/watch?v=8eBeaiEuzx8)
+</p>
+
+</div>
+
+</body>
+</html>

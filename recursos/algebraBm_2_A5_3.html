@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Funciones Logarítmicas: Elementos y Propiedades</title>
+
+<style>
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    margin:0;
+    background:#f4f6f9;
+    color:#222;
+    line-height:1.7;
+}
+
+.container{
+    max-width:1000px;
+    margin:auto;
+    background:white;
+    padding:20px;
+}
+
+h1,h2,h3{
+    color:#0b5394;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    margin:15px 0;
+}
+
+th,td{
+    border:1px solid #999;
+    padding:8px;
+    text-align:center;
+}
+
+th{
+    background:#d9ead3;
+}
+
+.print-btn{
+    background:#0b5394;
+    color:white;
+    border:none;
+    padding:12px 20px;
+    border-radius:6px;
+    font-size:16px;
+    cursor:pointer;
+    margin-bottom:20px;
+}
+
+.print-btn:hover{
+    background:#073763;
+}
+
+.box{
+    background:#eef6ff;
+    border-left:5px solid #0b5394;
+    padding:15px;
+    margin:15px 0;
+}
+
+.respuesta{
+    background:#f8f8f8;
+    border-left:4px solid green;
+    padding:12px;
+}
+
+a{
+    word-break:break-word;
+}
+
+@media(max-width:768px){
+    .container{
+        padding:12px;
+    }
+}
+
+@media print{
+    .print-btn{
+        display:none;
+    }
+}
+
+@page{
+    size:letter;
+    margin:1.5cm;
+}
+</style>
+
+<script>
+function imprimirPDF(){
+    window.print();
+}
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<button class="print-btn" onclick="imprimirPDF()">🖨️ Imprimir / Guardar como PDF</button>
+
+<h1>Funciones Logarítmicas: Elementos y Propiedades</h1>
+
+<h2>Explicación</h2>
+
+<p>
+Una <strong>función logarítmica</strong> es la función inversa de una función exponencial.
+Su forma general es:
+</p>
+
+<p style="text-align:center;">
+$$ f(x)=\log_a(x) $$
+</p>
+
+<p>
+donde:
+</p>
+
+<ul>
+<li>$$a>0$$</li>
+<li>$$a\neq1$$</li>
+<li>$$x>0$$</li>
+</ul>
+
+<h3>Elementos de la función logarítmica</h3>
+
+<ul>
+<li><strong>Base:</strong> $$a$$</li>
+<li><strong>Argumento:</strong> $$x$$</li>
+<li><strong>Variable independiente:</strong> $$x$$</li>
+<li><strong>Variable dependiente:</strong> $$f(x)$$</li>
+</ul>
+
+<h3>Propiedades principales</h3>
+
+<ol>
+<li>Dominio: $$ (0,\infty) $$.</li>
+<li>Rango: $$ \mathbb{R} $$.</li>
+<li>Corta el eje $$x$$ en el punto $$(1,0)$$.</li>
+<li>Tiene asíntota vertical en $$x=0$$.</li>
+<li>Si $$a>1$$, la función es creciente.</li>
+<li>Si $$0<a<1$$, la función es decreciente.</li>
+<li>Es la función inversa de $$y=a^x$$.</li>
+</ol>
+
+<h3>Representación tabular</h3>
+
+<p>Para $$f(x)=\log_2(x)$$:</p>
+
+<table>
+<tr>
+<th>x</th>
+<th>1/4</th>
+<th>1/2</th>
+<th>1</th>
+<th>2</th>
+<th>4</th>
+</tr>
+
+<tr>
+<th>f(x)</th>
+<td>-2</td>
+<td>-1</td>
+<td>0</td>
+<td>1</td>
+<td>2</td>
+</tr>
+</table>
+
+<div class="box">
+La función logarítmica transforma multiplicaciones en sumas y potencias en productos.
+Por esta razón tiene gran aplicación en ciencias, economía e informática.
+</div>
+
+<hr>
+
+<h2>Ejemplo Resuelto</h2>
+
+<p>
+Analice la función:
+</p>
+
+<p style="text-align:center;">
+$$ f(x)=\log_3(x) $$
+</p>
+
+<p><strong>Solución:</strong></p>
+
+<ul>
+<li>Base: $$3$$</li>
+<li>Como $$3>1$$, la función es creciente.</li>
+<li>Dominio: $$ (0,\infty) $$</li>
+<li>Rango: $$ \mathbb{R} $$</li>
+<li>Corte con el eje $$x$$: $$(1,0)$$</li>
+<li>Asíntota vertical: $$x=0$$</li>
+</ul>
+
+<table>
+<tr>
+<th>x</th>
+<th>1/3</th>
+<th>1</th>
+<th>3</th>
+<th>9</th>
+</tr>
+
+<tr>
+<th>f(x)</th>
+<td>-1</td>
+<td>0</td>
+<td>1</td>
+<td>2</td>
+</tr>
+
+</table>
+
+<hr>
+
+<h2>Ejercicios</h2>
+
+<ol>
+<li>Determine si $$f(x)=\log_5(x)$$ es creciente o decreciente.</li>
+
+<li>Calcule:
+$$ \log_2(8) $$
+</li>
+
+<li>Calcule:
+$$ \log_{10}(1000) $$
+</li>
+
+<li>Determine el dominio de:
+$$ f(x)=\log_4(x-2) $$
+</li>
+
+<li>Construya una tabla para
+$$ f(x)=\log_2(x) $$
+utilizando $$x=1/2,\;1,\;2,\;4$$.
+</li>
+</ol>
+
+<hr>
+
+<h2>Respuestas</h2>
+
+<div class="respuesta">
+
+<ol>
+
+<li>
+Como $$5>1$$, la función es <strong>creciente</strong>.
+</li>
+
+<li>
+$$ \log_2(8)=3 $$
+porque
+$$2^3=8$$.
+</li>
+
+<li>
+$$ \log_{10}(1000)=3 $$
+porque
+$$10^3=1000$$.
+</li>
+
+<li>
+Se requiere:
+$$x-2>0$$
+
+<br><br>
+
+Por tanto:
+
+$$x>2$$
+
+<br><br>
+
+Dominio:
+$$(2,\infty)$$
+</li>
+
+<li>
+
+<table>
+<tr>
+<th>x</th>
+<th>1/2</th>
+<th>1</th>
+<th>2</th>
+<th>4</th>
+</tr>
+
+<tr>
+<th>$$\log_2(x)$$</th>
+<td>-1</td>
+<td>0</td>
+<td>1</td>
+<td>2</td>
+</tr>
+
+</table>
+
+</li>
+
+</ol>
+
+</div>
+
+<hr>
+
+<h2>Videos de apoyo en YouTube</h2>
+
+<ul>
+
+<li>
+<a href="https://www.youtube.com/watch?v=C0vUje9Uduc" target="_blank">
+Función Logarítmica: Gráfica, Dominio y Rango | Matemáticas Profe Alex
+</a>
+<br>
+URL para impresión:
+https://www.youtube.com/watch?v=C0vUje9Uduc
+</li>
+
+<br>
+
+<li>
+<a href="https://www.youtube.com/watch?v=cFrgQXppN6g" target="_blank">
+Análisis de una Función Logarítmica | Julioprofe
+</a>
+<br>
+URL para impresión:
+https://www.youtube.com/watch?v=cFrgQXppN6g
+</li>
+
+</ul>
+
+<hr>
+
+<h2>Referencias APA</h2>
+
+<p>
+OpenStax. (2022). <em>Precalculus 2e</em>. OpenStax, Rice University.
+</p>
+
+<p>
+Stewart, J., Redlin, L., & Watson, S. (2021).
+<em>Precalculus: Mathematics for Calculus</em> (8th ed.).
+Cengage Learning.
+</p>
+
+<p>
+Matemáticas Profe Alex. (YouTube).
+<em>Función logarítmica: gráfica, dominio y rango</em>.
+https://www.youtube.com/watch?v=C0vUje9Uduc
+[1](https://www.youtube.com/watch?v=C0vUje9Uduc)
+</p>
+
+<p>
+Julioprofe. (YouTube).
+<em>Análisis de una función logarítmica</em>.
+https://www.youtube.com/watch?v=cFrgQXppN6g
+[2](https://www.youtube.com/watch?v=cFrgQXppN6g)
+</p>
+
+<p>
+Funciones.xyz. (2026).
+<em>Funciones logarítmicas: características y representación gráfica</em>.
+[3](https://www.funciones.xyz/funciones-logaritmicas/)
+</p>
+
+</div>
+
+</body>
+</html>
