@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>3.A3.3 Estandarización y Coeficiente de Variación</title>
+
+<style>
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    margin:0;
+    padding:20px;
+    background:#f4f6f9;
+    color:#222;
+    line-height:1.6;
+}
+
+.container{
+    max-width:950px;
+    margin:auto;
+    background:white;
+    padding:25px;
+    border-radius:10px;
+    box-shadow:0 0 8px rgba(0,0,0,0.15);
+}
+
+h1,h2,h3{
+    color:#0b3d91;
+}
+
+.btn-print{
+    background:#0b3d91;
+    color:white;
+    border:none;
+    padding:12px 20px;
+    border-radius:6px;
+    cursor:pointer;
+    font-size:16px;
+    margin-bottom:20px;
+}
+
+.btn-print:hover{
+    background:#082c69;
+}
+
+.ejemplo,.ejercicio,.respuesta{
+    border-left:5px solid #0b3d91;
+    padding-left:12px;
+    margin-top:15px;
+}
+
+.tabla{
+    width:100%;
+    border-collapse:collapse;
+    margin-top:15px;
+}
+
+.tabla th,.tabla td{
+    border:1px solid #ccc;
+    padding:8px;
+    text-align:center;
+}
+
+.tabla th{
+    background:#eaf1ff;
+}
+
+.destacado{
+    background:#fff8dc;
+    border-left:5px solid #f4b400;
+    padding:10px;
+    margin:15px 0;
+}
+
+.video-box{
+    background:#eef4ff;
+    padding:12px;
+    border-radius:8px;
+    margin-top:10px;
+    word-break:break-word;
+}
+
+@media(max-width:600px){
+    .container{
+        padding:15px;
+    }
+
+    .tabla{
+        font-size:13px;
+    }
+}
+
+@media print{
+    .btn-print{
+        display:none;
+    }
+
+    .container{
+        box-shadow:none;
+    }
+
+    @page{
+        size:letter;
+        margin:1.5cm;
+    }
+}
+</style>
+
+<script>
+function imprimirPDF(){
+    window.print();
+}
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</head>
+<body>
+
+<div class="container">
+
+<button class="btn-print" onclick="imprimirPDF()">
+🖨 Imprimir / Guardar como PDF
+</button>
+
+<h1>3.A3.3. Aplica estandarización y el coeficiente de variación para la comparación de la posición o variabilidad de dos o más grupos de datos, en diversos contextos</h1>
+
+<h2>Explicación</h2>
+
+<p>
+Cuando los datos pertenecen a grupos diferentes, es frecuente que tengan escalas distintas. Para compararlos correctamente se utilizan la <strong>estandarización</strong> y el <strong>coeficiente de variación</strong>.
+</p>
+
+<h3>Estandarización (Puntuación Z)</h3>
+
+<p>
+La estandarización permite determinar qué tan lejos se encuentra un dato respecto a la media del grupo.
+</p>
+
+$$
+Z=\frac{x-\bar{x}}{\sigma}
+$$
+
+<p>donde:</p>
+
+<ul>
+<li>$$x$$: valor observado.</li>
+<li>$$\bar{x}$$: media.</li>
+<li>$$\sigma$$: desviación estándar.</li>
+</ul>
+
+<div class="destacado">
+
+<p><strong>Interpretación:</strong></p>
+
+<ul>
+<li>$$Z=0$$: el dato coincide con la media.</li>
+<li>$$Z>0$$: el dato está por encima de la media.</li>
+<li>$$Z<0$$: el dato está por debajo de la media.</li>
+</ul>
+
+</div>
+
+<h3>Coeficiente de Variación (CV)</h3>
+
+<p>
+Permite comparar la dispersión de conjuntos que poseen unidades o medias diferentes.
+</p>
+
+$$
+CV=\frac{\sigma}{\bar{x}}\cdot100
+$$
+
+<p>
+El resultado se expresa como porcentaje.
+</p>
+
+<div class="destacado">
+
+<p><strong>Interpretación:</strong></p>
+
+<ul>
+<li>Menor CV → datos más homogéneos.</li>
+<li>Mayor CV → datos más variables.</li>
+<li>Permite comparar grupos con medias diferentes.</li>
+</ul>
+
+</div>
+
+<table class="tabla">
+
+<tr>
+<th>Coeficiente de Variación</th>
+<th>Interpretación</th>
+</tr>
+
+<tr>
+<td>Menor al 10%</td>
+<td>Variabilidad baja</td>
+</tr>
+
+<tr>
+<td>Entre 10% y 30%</td>
+<td>Variabilidad moderada</td>
+</tr>
+
+<tr>
+<td>Mayor al 30%</td>
+<td>Variabilidad alta</td>
+</tr>
+
+</table>
+
+<hr>
+
+<h2>Ejemplo resuelto</h2>
+
+<div class="ejemplo">
+
+<p>
+Una estudiante obtuvo 85 puntos en un examen.
+</p>
+
+<p>
+La media del grupo fue 70 y la desviación estándar fue 10.
+</p>
+
+<p>
+Calcule la puntuación estandarizada.
+</p>
+
+$$
+Z=\frac{85-70}{10}
+$$
+
+$$
+Z=\frac{15}{10}
+$$
+
+$$
+Z=1.5
+$$
+
+<p>
+<strong>Interpretación:</strong>
+La estudiante obtuvo una calificación 1.5 desviaciones estándar por encima de la media.
+</p>
+
+</div>
+
+<hr>
+
+<h2>Ejercicios</h2>
+
+<div class="ejercicio">
+
+<p><strong>1.</strong></p>
+
+<p>
+Calcule la puntuación Z para:
+</p>
+
+$$
+x=90
+$$
+
+$$
+\bar{x}=80
+$$
+
+$$
+\sigma=5
+$$
+
+</div>
+
+<div class="ejercicio">
+
+<p><strong>2.</strong></p>
+
+<p>
+Determine el coeficiente de variación si:
+</p>
+
+$$
+\bar{x}=50
+$$
+
+$$
+\sigma=5
+$$
+
+</div>
+
+<div class="ejercicio">
+
+<p><strong>3.</strong></p>
+
+<p>
+Grupo A:
+</p>
+
+$$
+CV=8\%
+$$
+
+<p>
+Grupo B:
+</p>
+
+$$
+CV=18\%
+$$
+
+<p>
+¿Cuál grupo es más homogéneo?
+</p>
+
+</div>
+
+<div class="ejercicio">
+
+<p><strong>4.</strong></p>
+
+<p>
+Calcule:
+</p>
+
+$$
+Z=\frac{x-\bar{x}}{\sigma}
+$$
+
+<p>
+si:</p>
+
+$$
+x=60
+$$
+
+$$
+\bar{x}=70
+$$
+
+$$
+\sigma=5
+$$
+
+</div>
+
+<div class="ejercicio">
+
+<p><strong>5.</strong></p>
+
+<p>
+Grupo A:
+</p>
+
+$$
+\bar{x}=100,\;\sigma=20
+$$
+
+<p>
+Grupo B:
+</p>
+
+$$
+\bar{x}=200,\;\sigma=30
+$$
+
+<p>
+Determine cuál grupo tiene mayor variabilidad relativa.
+</p>
+
+</div>
+
+<hr>
+
+<h2>Respuestas</h2>
+
+<div class="respuesta">
+
+<p><strong>1.</strong></p>
+
+$$
+Z=\frac{90-80}{5}
+$$
+
+$$
+Z=2
+$$
+
+<hr>
+
+<p><strong>2.</strong></p>
+
+$$
+CV=\frac{5}{50}\cdot100
+$$
+
+$$
+CV=10\%
+$$
+
+<hr>
+
+<p><strong>3.</strong></p>
+
+<p>
+El Grupo A es más homogéneo porque posee menor coeficiente de variación.
+</p>
+
+<hr>
+
+<p><strong>4.</strong></p>
+
+$$
+Z=\frac{60-70}{5}
+$$
+
+$$
+Z=-2
+$$
+
+<hr>
+
+<p><strong>5.</strong></p>
+
+<p>
+Grupo A:
+</p>
+
+$$
+CV_A=\frac{20}{100}\cdot100=20\%
+$$
+
+<p>
+Grupo B:
+</p>
+
+$$
+CV_B=\frac{30}{200}\cdot100=15\%
+$$
+
+<p>
+<strong>Respuesta:</strong>
+El Grupo A presenta mayor variabilidad relativa.
+</p>
+
+</div>
+
+<hr>
+
+<h2>Videos recomendados (YouTube)</h2>
+
+<div class="video-box">
+
+<p>
+<strong>Video 1:</strong>
+https://www.youtube.com/watch?v=2Wj8fM4V9jM
+Puntuación Z o Estandarización - Estadística
+</a>
+</p>
+
+<p>
+URL para impresión:<br>
+https://www.youtube.com/watch?v=2Wj8fM4V9jM
+</p>
+
+</div>
+
+<div class="video-box">
+
+<p>
+<strong>Video 2:</strong>
+https://www.youtube.com/watch?v=IZ0dJ2E9A0w
+Coeficiente de Variación - Estadística Descriptiva
+</a>
+</p>
+
+<p>
+URL para impresión:<br>
+https://www.youtube.com/watch?v=IZ0dJ2E9A0w
+</p>
+
+</div>
+
+<hr>
+
+<h2>Referencias APA</h2>
+
+<p>
+Triola, M. F. (2018). <em>Estadística</em> (12.ª ed.). Pearson.
+</p>
+
+<p>
+Walpole, R. E., Myers, R. H., Myers, S. L., & Ye, K. (2017). <em>Probabilidad y Estadística para Ingeniería y Ciencias</em>. Pearson.
+</p>
+
+<p>
+Moore, D. S., McCabe, G. P., & Craig, B. A. (2017). <em>Introduction to the Practice of Statistics</em>. W. H. Freeman.
+</p>
+
+<p>
+OpenStax. (2021). <em>Introductory Statistics</em>. Rice University.
+</p>
+
+<p>
+Khan Academy. (2026). <em>Estandarización y medidas de dispersión</em>. Recuperado de https://es.khanacademy.org
+</p>
+
+</div>
+
+</body>
+</html>

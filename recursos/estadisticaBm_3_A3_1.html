@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>3.A3.1 Medidas de Variabilidad de un Conjunto de Datos</title>
+
+<style>
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    margin:0;
+    padding:20px;
+    background:#f4f6f9;
+    color:#222;
+    line-height:1.6;
+}
+
+.container{
+    max-width:950px;
+    margin:auto;
+    background:white;
+    padding:25px;
+    border-radius:10px;
+    box-shadow:0 0 8px rgba(0,0,0,0.15);
+}
+
+h1,h2,h3{
+    color:#0b3d91;
+}
+
+.btn-print{
+    background:#0b3d91;
+    color:white;
+    border:none;
+    padding:12px 20px;
+    border-radius:6px;
+    cursor:pointer;
+    font-size:16px;
+    margin-bottom:20px;
+}
+
+.btn-print:hover{
+    background:#082c69;
+}
+
+.ejemplo,.ejercicio,.respuesta{
+    border-left:5px solid #0b3d91;
+    padding-left:12px;
+    margin-top:15px;
+}
+
+.tabla{
+    width:100%;
+    border-collapse:collapse;
+    margin-top:15px;
+}
+
+.tabla th,.tabla td{
+    border:1px solid #ccc;
+    padding:8px;
+    text-align:center;
+}
+
+.tabla th{
+    background:#eaf1ff;
+}
+
+.video-box{
+    background:#eef4ff;
+    padding:12px;
+    border-radius:8px;
+    margin-top:10px;
+    word-break:break-word;
+}
+
+.destacado{
+    background:#fff8dc;
+    border-left:5px solid #f4b400;
+    padding:10px;
+    margin:15px 0;
+}
+
+@media(max-width:600px){
+    .container{
+        padding:15px;
+    }
+}
+
+@media print{
+    .btn-print{
+        display:none;
+    }
+
+    .container{
+        box-shadow:none;
+    }
+
+    @page{
+        size:letter;
+        margin:1.5cm;
+    }
+}
+</style>
+
+<script>
+function imprimirPDF(){
+    window.print();
+}
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</head>
+<body>
+
+<div class="container">
+
+<button class="btn-print" onclick="imprimirPDF()">
+🖨 Imprimir / Guardar como PDF
+</button>
+
+<h1>3.A3.1. Resuelve problemas de diversos contextos relacionados con la variabilidad de un grupo de datos a partir de la información que proporcionan algunas medidas (recorrido, recorrido intercuartílico, variancia o desviación estándar)</h1>
+
+<h2>Explicación</h2>
+
+<p>
+Las <strong>medidas de variabilidad</strong> permiten conocer qué tan dispersos o separados se encuentran los datos respecto a otros valores del conjunto.
+</p>
+
+<div class="destacado">
+
+<p><strong>Interpretación general:</strong></p>
+
+<ul>
+<li>Variabilidad pequeña → datos más homogéneos.</li>
+<li>Variabilidad grande → datos más dispersos.</li>
+<li>Permite comparar grupos y tomar decisiones basadas en datos.</li>
+</ul>
+
+</div>
+
+<h3>1. Recorrido (Rango)</h3>
+
+<p>
+Es la diferencia entre el valor máximo y el valor mínimo.
+</p>
+
+$$
+R = \text{Máximo} - \text{Mínimo}
+$$
+
+<h3>2. Recorrido Intercuartílico (RIC)</h3>
+
+<p>
+Mide la dispersión del 50% central de los datos.
+</p>
+
+$$
+RIC = Q_3 - Q_1
+$$
+
+<p>
+donde:
+</p>
+
+<ul>
+<li>$$Q_1$$: primer cuartil.</li>
+<li>$$Q_3$$: tercer cuartil.</li>
+</ul>
+
+<h3>3. Variancia</h3>
+
+<p>
+Mide el promedio de los cuadrados de las desviaciones respecto a la media.
+</p>
+
+$$
+\sigma^2=\frac{\sum (x-\bar{x})^2}{n}
+$$
+
+<h3>4. Desviación Estándar</h3>
+
+<p>
+Es la raíz cuadrada de la variancia.
+</p>
+
+$$
+\sigma=\sqrt{\sigma^2}
+$$
+
+<p>
+Representa la distancia típica de los datos respecto a la media.
+</p>
+
+<hr>
+
+<h2>Ejemplo resuelto</h2>
+
+<div class="ejemplo">
+
+<p>
+Las calificaciones de cinco estudiantes son:
+</p>
+
+$$
+70,\;75,\;80,\;90,\;95
+$$
+
+<p>
+Determine el recorrido.
+</p>
+
+$$
+R=95-70
+$$
+
+$$
+R=25
+$$
+
+<p>
+<strong>Respuesta:</strong>
+El recorrido es 25 puntos. Esto indica que la diferencia entre la nota mayor y la menor es de 25 puntos.
+</p>
+
+</div>
+
+<hr>
+
+<h2>Ejercicios</h2>
+
+<div class="ejercicio">
+
+<p><strong>1.</strong> Determine el recorrido de los datos:</p>
+
+$$
+10,\;15,\;18,\;25,\;30
+$$
+
+</div>
+
+<div class="ejercicio">
+
+<p><strong>2.</strong> En un grupo de estudiantes:</p>
+
+$$
+Q_1=20
+$$
+
+$$
+Q_3=45
+$$
+
+<p>
+Determine el recorrido intercuartílico.
+</p>
+
+</div>
+
+<div class="ejercicio">
+
+<p><strong>3.</strong> Si la variancia de un conjunto de datos es:</p>
+
+$$
+49
+$$
+
+<p>
+Determine la desviación estándar.
+</p>
+
+</div>
+
+<div class="ejercicio">
+
+<p><strong>4.</strong> Los salarios de una empresa presentan:</p>
+
+$$
+Q_1=500000
+$$
+
+$$
+Q_3=900000
+$$
+
+<p>
+Determine el recorrido intercuartílico.
+</p>
+
+</div>
+
+<div class="ejercicio">
+
+<p><strong>5.</strong> Si el valor mínimo de un conjunto es 12 y el máximo es 58, determine el recorrido.</p>
+
+</div>
+
+<hr>
+
+<h2>Respuestas</h2>
+
+<div class="respuesta">
+
+<p><strong>1.</strong></p>
+
+$$
+R=30-10
+$$
+
+$$
+R=20
+$$
+
+<hr>
+
+<p><strong>2.</strong></p>
+
+$$
+RIC=45-20
+$$
+
+$$
+RIC=25
+$$
+
+<hr>
+
+<p><strong>3.</strong></p>
+
+$$
+\sigma=\sqrt{49}
+$$
+
+$$
+\sigma=7
+$$
+
+<hr>
+
+<p><strong>4.</strong></p>
+
+$$
+RIC=900000-500000
+$$
+
+$$
+RIC=400000
+$$
+
+<hr>
+
+<p><strong>5.</strong></p>
+
+$$
+R=58-12
+$$
+
+$$
+R=46
+$$
+
+</div>
+
+<hr>
+
+<h2>Videos recomendados (YouTube)</h2>
+
+<div class="video-box">
+
+<p>
+<strong>Video 1:</strong>
+    <a href="https://www.youtube.com/watch?v=rAi4gM6hQ7M">
+Desviación estándar y varianza - math2me
+</a>
+</p>
+
+<p>
+URL para impresión:<br>
+https://www.youtube.com/watch?v=rAi4gM6hQ7M
+</p>
+
+</div>
+
+<div class="video-box">
+
+<p>
+<strong>Video 2:</strong>
+<a href="https://www.youtube.com/watch?v=HhH5tJzK4jM">
+Rango, varianza y desviación estándar - unProfesor
+</a>
+</p>
+
+<p>
+URL para impresión:<br>
+https://www.youtube.com/watch?v=HhH5tJzK4jM
+</p>
+
+</div>
+
+<hr>
+
+<h2>Referencias APA</h2>
+
+<p>
+Triola, M. F. (2018). <em>Estadística</em> (12.ª ed.). Pearson.
+</p>
+
+<p>
+Walpole, R. E., Myers, R. H., Myers, S. L., & Ye, K. (2017). <em>Probabilidad y Estadística para Ingeniería y Ciencias</em>. Pearson.
+</p>
+
+<p>
+Mendenhall, W., Beaver, R., & Beaver, B. (2019). <em>Introduction to Probability and Statistics</em>. Cengage Learning.
+</p>
+
+<p>
+OpenStax. (2021). <em>Introductory Statistics</em>. Rice University.
+</p>
+
+<p>
+Khan Academy. (2026). <em>Medidas de dispersión y variabilidad</em>. Recuperado de https://es.khanacademy.org
+</p>
+
+</div>
+
+</body>
+</html>

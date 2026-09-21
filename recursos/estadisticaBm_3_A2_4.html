@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>3.A2.4 Probabilidades mediante axiomas y propiedades básicas</title>
+
+<style>
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    margin:0;
+    padding:20px;
+    background:#f4f6f9;
+    color:#222;
+    line-height:1.6;
+}
+
+.container{
+    max-width:950px;
+    margin:auto;
+    background:white;
+    padding:25px;
+    border-radius:10px;
+    box-shadow:0 0 8px rgba(0,0,0,0.15);
+}
+
+h1,h2,h3{
+    color:#0b3d91;
+}
+
+.btn-print{
+    background:#0b3d91;
+    color:white;
+    border:none;
+    padding:12px 20px;
+    border-radius:6px;
+    cursor:pointer;
+    font-size:16px;
+    margin-bottom:20px;
+}
+
+.btn-print:hover{
+    background:#082c69;
+}
+
+.ejemplo,.ejercicio,.respuesta{
+    border-left:5px solid #0b3d91;
+    padding-left:12px;
+    margin-top:15px;
+}
+
+.tabla{
+    width:100%;
+    border-collapse:collapse;
+    margin-top:15px;
+}
+
+.tabla th,.tabla td{
+    border:1px solid #ccc;
+    padding:8px;
+    text-align:center;
+}
+
+.tabla th{
+    background:#eaf1ff;
+}
+
+.video-box{
+    background:#eef4ff;
+    padding:12px;
+    border-radius:8px;
+    margin-top:10px;
+    word-break:break-word;
+}
+
+@media(max-width:600px){
+    .container{
+        padding:15px;
+    }
+}
+
+@media print{
+    .btn-print{
+        display:none;
+    }
+
+    .container{
+        box-shadow:none;
+    }
+
+    @page{
+        size:letter;
+        margin:1.5cm;
+    }
+}
+</style>
+
+<script>
+function imprimirPDF(){
+    window.print();
+}
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</head>
+<body>
+
+<div class="container">
+
+<button class="btn-print" onclick="imprimirPDF()">
+🖨 Imprimir / Guardar como PDF
+</button>
+
+<h1>3.A2.4. Resuelve problemas de diversos contextos relacionados con probabilidades obtenidas mediante axiomas o propiedades básicas</h1>
+
+<h2>Explicación</h2>
+
+<p>
+La probabilidad es una medida numérica que expresa la posibilidad de que ocurra un evento aleatorio.
+</p>
+
+<p>
+Se representa mediante:
+</p>
+
+$$
+P(A)
+$$
+
+<p>
+donde $$A$$ es un evento.
+</p>
+
+<h3>Axiomas básicos de la probabilidad</h3>
+
+<table class="tabla">
+
+<tr>
+<th>Axioma</th>
+<th>Expresión</th>
+</tr>
+
+<tr>
+<td>La probabilidad siempre es no negativa.</td>
+<td>$$P(A)\ge 0$$</td>
+</tr>
+
+<tr>
+<td>La probabilidad del espacio muestral es 1.</td>
+<td>$$P(S)=1$$</td>
+</tr>
+
+<tr>
+<td>Si A y B son mutuamente excluyentes:</td>
+<td>$$P(A\cup B)=P(A)+P(B)$$</td>
+</tr>
+
+</table>
+
+<h3>Propiedades básicas</h3>
+
+<p><strong>Complemento</strong></p>
+
+$$
+P(A^c)=1-P(A)
+$$
+
+<p><strong>Unión de eventos</strong></p>
+
+$$
+P(A\cup B)=P(A)+P(B)-P(A\cap B)
+$$
+
+<p><strong>Evento imposible</strong></p>
+
+$$
+P(\varnothing)=0
+$$
+
+<p><strong>Evento seguro</strong></p>
+
+$$
+P(S)=1
+$$
+
+<hr>
+
+<h2>Ejemplo resuelto</h2>
+
+<div class="ejemplo">
+
+<p>
+En una clase, la probabilidad de que un estudiante practique fútbol es:
+</p>
+
+$$
+P(F)=0.40
+$$
+
+<p>
+Determine la probabilidad de que no practique fútbol.
+</p>
+
+<p>
+Usamos la propiedad del complemento:
+</p>
+
+$$
+P(F^c)=1-P(F)
+$$
+
+$$
+P(F^c)=1-0.40
+$$
+
+$$
+P(F^c)=0.60
+$$
+
+<p>
+<strong>Respuesta:</strong>
+La probabilidad de que no practique fútbol es 0.60 o 60%.
+</p>
+
+</div>
+
+<hr>
+
+<h2>Ejercicios</h2>
+
+<div class="ejercicio">
+
+<p><strong>1.</strong></p>
+
+<p>
+La probabilidad de aprobar Matemática es:
+</p>
+
+$$
+P(A)=0.75
+$$
+
+<p>
+Determine $$P(A^c)$$.
+</p>
+
+</div>
+
+<div class="ejercicio">
+
+<p><strong>2.</strong></p>
+
+<p>
+Si:
+</p>
+
+$$
+P(A)=0.30
+$$
+
+$$
+P(B)=0.20
+$$
+
+<p>
+y los eventos son mutuamente excluyentes, determine:
+</p>
+
+$$
+P(A\cup B)
+$$
+
+</div>
+
+<div class="ejercicio">
+
+<p><strong>3.</strong></p>
+
+<p>
+Si:
+</p>
+
+$$
+P(A)=0.60
+$$
+
+$$
+P(B)=0.50
+$$
+
+$$
+P(A\cap B)=0.20
+$$
+
+<p>
+Determine:
+</p>
+
+$$
+P(A\cup B)
+$$
+
+</div>
+
+<div class="ejercicio">
+
+<p><strong>4.</strong></p>
+
+<p>
+La probabilidad de lluvia es:
+</p>
+
+$$
+P(L)=0.35
+$$
+
+<p>
+Determine la probabilidad de que no llueva.
+</p>
+
+</div>
+
+<div class="ejercicio">
+
+<p><strong>5.</strong></p>
+
+<p>
+Si:
+</p>
+
+$$
+P(A)=0.25
+$$
+
+$$
+P(B)=0.45
+$$
+
+<p>
+y son mutuamente excluyentes, determine:
+</p>
+
+$$
+P(A\cup B)
+$$
+
+</div>
+
+<hr>
+
+<h2>Respuestas</h2>
+
+<div class="respuesta">
+
+<p><strong>1.</strong></p>
+
+$$
+P(A^c)=1-0.75
+$$
+
+$$
+P(A^c)=0.25
+$$
+
+<hr>
+
+<p><strong>2.</strong></p>
+
+$$
+P(A\cup B)=0.30+0.20
+$$
+
+$$
+P(A\cup B)=0.50
+$$
+
+<hr>
+
+<p><strong>3.</strong></p>
+
+$$
+P(A\cup B)=0.60+0.50-0.20
+$$
+
+$$
+P(A\cup B)=0.90
+$$
+
+<hr>
+
+<p><strong>4.</strong></p>
+
+$$
+P(L^c)=1-0.35
+$$
+
+$$
+P(L^c)=0.65
+$$
+
+<hr>
+
+<p><strong>5.</strong></p>
+
+$$
+P(A\cup B)=0.25+0.45
+$$
+
+$$
+P(A\cup B)=0.70
+$$
+
+</div>
+
+<hr>
+
+<h2>Videos recomendados (YouTube)</h2>
+
+<div class="video-box">
+
+<p>
+<strong>Video 1:</strong>
+https://www.youtube.com/watch?v=6YF4QxG7n7M
+Probabilidad y sus propiedades - julioprofe
+</a>
+</p>
+
+<p>
+URL para impresión:<br>
+https://www.youtube.com/watch?v=6YF4QxG7n7M
+</p>
+
+</div>
+
+<div class="video-box">
+
+<p>
+<strong>Video 2:</strong>
+https://www.youtube.com/watch?v=YcoPDA8q8XQ
+Probabilidad Básica y Eventos - math2me
+</a>
+</p>
+
+<p>
+URL para impresión:<br>
+https://www.youtube.com/watch?v=YcoPDA8q8XQ
+</p>
+
+</div>
+
+<hr>
+
+<h2>Referencias APA</h2>
+
+<p>
+Ross, S. M. (2019). <em>A First Course in Probability</em> (10th ed.). Pearson.
+</p>
+
+<p>
+Walpole, R. E., Myers, R. H., Myers, S. L., & Ye, K. (2017). <em>Probability and Statistics for Engineers and Scientists</em> (9th ed.). Pearson.
+</p>
+
+<p>
+Mendenhall, W., Beaver, R., & Beaver, B. (2019). <em>Introduction to Probability and Statistics</em>. Cengage Learning.
+</p>
+
+<p>
+OpenStax. (2021). <em>Introductory Statistics</em>. Rice University.
+</p>
+
+<p>
+Khan Academy. (2026). <em>Probabilidad y propiedades básicas</em>. Recuperado de https://es.khanacademy.org
+</p>
+
+</div>
+
+</body>
+</html>

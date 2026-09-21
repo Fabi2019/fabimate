@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>3.A2.1 Operaciones con Eventos Aleatorios: Unión, Intersección y Complemento</title>
+
+<style>
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    margin:0;
+    padding:20px;
+    background:#f4f6f9;
+    color:#222;
+    line-height:1.6;
+}
+
+.container{
+    max-width:950px;
+    margin:auto;
+    background:white;
+    padding:25px;
+    border-radius:10px;
+    box-shadow:0 0 8px rgba(0,0,0,0.15);
+}
+
+h1,h2,h3{
+    color:#0b3d91;
+}
+
+.btn-print{
+    background:#0b3d91;
+    color:white;
+    border:none;
+    padding:12px 20px;
+    border-radius:6px;
+    cursor:pointer;
+    font-size:16px;
+    margin-bottom:20px;
+}
+
+.btn-print:hover{
+    background:#082c69;
+}
+
+.ejemplo,.ejercicio,.respuesta{
+    border-left:5px solid #0b3d91;
+    padding-left:12px;
+    margin-top:15px;
+}
+
+.tabla{
+    width:100%;
+    border-collapse:collapse;
+    margin-top:15px;
+}
+
+.tabla th,.tabla td{
+    border:1px solid #ccc;
+    padding:8px;
+    text-align:center;
+}
+
+.tabla th{
+    background:#eaf1ff;
+}
+
+.video-box{
+    background:#eef4ff;
+    padding:12px;
+    border-radius:8px;
+    margin-top:10px;
+    word-break:break-word;
+}
+
+@media(max-width:600px){
+    .container{
+        padding:15px;
+    }
+}
+
+@media print{
+    .btn-print{
+        display:none;
+    }
+
+    .container{
+        box-shadow:none;
+        max-width:100%;
+    }
+
+    @page{
+        size:letter;
+        margin:1.5cm;
+    }
+}
+</style>
+
+<script>
+function imprimirPDF(){
+    window.print();
+}
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</head>
+<body>
+
+<div class="container">
+
+<button class="btn-print" onclick="imprimirPDF()">
+🖨 Imprimir / Guardar como PDF
+</button>
+
+<h1>3.A2.1. Determina los puntos muestrales del evento aleatorio obtenido mediante las operaciones: unión “∪”, intersección “∩” o complemento de dos o más eventos aleatorios en diversos contextos</h1>
+
+<h2>Explicación</h2>
+
+<p>
+En probabilidad, un <strong>espacio muestral</strong> es el conjunto de todos los resultados posibles de un experimento aleatorio.
+</p>
+
+<p>
+Se representa mediante:
+</p>
+
+$$
+S
+$$
+
+<p>
+Un <strong>evento</strong> es cualquier subconjunto del espacio muestral.
+</p>
+
+<h3>1. Unión de eventos</h3>
+
+<p>
+La unión de dos eventos se representa por:
+</p>
+
+$$
+A \cup B
+$$
+
+<p>
+Incluye todos los resultados que pertenecen a $$A$$, a $$B$$ o a ambos.
+</p>
+
+<h3>2. Intersección de eventos</h3>
+
+<p>
+La intersección se representa por:
+</p>
+
+$$
+A \cap B
+$$
+
+<p>
+Incluye solamente los resultados comunes a ambos eventos.
+</p>
+
+<h3>3. Complemento de un evento</h3>
+
+<p>
+El complemento de un evento $$A$$ se representa por:
+</p>
+
+$$
+A^c
+$$
+
+<p>
+Contiene todos los resultados del espacio muestral que no pertenecen al evento $$A$$.
+</p>
+
+<table class="tabla">
+
+<tr>
+<th>Operación</th>
+<th>Significado</th>
+</tr>
+
+<tr>
+<td>$$A \cup B$$</td>
+<td>Elementos que están en A o en B o en ambos</td>
+</tr>
+
+<tr>
+<td>$$A \cap B$$</td>
+<td>Elementos comunes a A y B</td>
+</tr>
+
+<tr>
+<td>$$A^c$$</td>
+<td>Elementos que no pertenecen a A</td>
+</tr>
+
+</table>
+
+<hr>
+
+<h2>Ejemplo resuelto</h2>
+
+<div class="ejemplo">
+
+<p>
+Se lanza un dado.
+</p>
+
+$$
+S=\{1,2,3,4,5,6\}
+$$
+
+<p>
+Sea:
+</p>
+
+$$
+A=\{2,4,6\}
+$$
+
+<p>
+(Números pares)
+</p>
+
+$$
+B=\{4,5,6\}
+$$
+
+<p>
+(Números mayores o iguales que 4)
+</p>
+
+<p><strong>Unión:</strong></p>
+
+$$
+A\cup B=\{2,4,5,6\}
+$$
+
+<p><strong>Intersección:</strong></p>
+
+$$
+A\cap B=\{4,6\}
+$$
+
+<p><strong>Complemento de A:</strong></p>
+
+$$
+A^c=\{1,3,5\}
+$$
+
+<p>
+<strong>Respuesta:</strong>
+Los puntos muestrales de la unión son $$\{2,4,5,6\}$$, los de la intersección son $$\{4,6\}$$ y los del complemento son $$\{1,3,5\}$$.
+</p>
+
+</div>
+
+<hr>
+
+<h2>Ejercicios</h2>
+
+<div class="ejercicio">
+
+<p><strong>1.</strong></p>
+
+$$
+S=\{1,2,3,4,5,6\}
+$$
+
+$$
+A=\{1,2,3\}
+$$
+
+$$
+B=\{3,4,5\}
+$$
+
+<p>Determine $$A\cup B$$.</p>
+
+</div>
+
+<div class="ejercicio">
+
+<p><strong>2.</strong></p>
+
+$$
+S=\{1,2,3,4,5,6,7,8\}
+$$
+
+$$
+A=\{2,4,6,8\}
+$$
+
+$$
+B=\{4,6,7\}
+$$
+
+<p>Determine $$A\cap B$$.</p>
+
+</div>
+
+<div class="ejercicio">
+
+<p><strong>3.</strong></p>
+
+$$
+S=\{a,b,c,d,e,f\}
+$$
+
+$$
+A=\{a,c,e\}
+$$
+
+<p>Determine $$A^c$$.</p>
+
+</div>
+
+<div class="ejercicio">
+
+<p><strong>4.</strong></p>
+
+$$
+S=\{1,2,3,4,5,6,7\}
+$$
+
+$$
+A=\{1,3,5,7\}
+$$
+
+$$
+B=\{5,6,7\}
+$$
+
+<p>Determine $$A\cap B$$.</p>
+
+</div>
+
+<div class="ejercicio">
+
+<p><strong>5.</strong></p>
+
+$$
+S=\{1,2,3,4,5,6,7,8,9,10\}
+$$
+
+$$
+A=\{2,4,6,8,10\}
+$$
+
+<p>Determine $$A^c$$.</p>
+
+</div>
+
+<hr>
+
+<h2>Respuestas</h2>
+
+<div class="respuesta">
+
+<p><strong>1.</strong></p>
+
+$$
+A\cup B=\{1,2,3,4,5\}
+$$
+
+<hr>
+
+<p><strong>2.</strong></p>
+
+$$
+A\cap B=\{4,6\}
+$$
+
+<hr>
+
+<p><strong>3.</strong></p>
+
+$$
+A^c=\{b,d,f\}
+$$
+
+<hr>
+
+<p><strong>4.</strong></p>
+
+$$
+A\cap B=\{5,7\}
+$$
+
+<hr>
+
+<p><strong>5.</strong></p>
+
+$$
+A^c=\{1,3,5,7,9\}
+$$
+
+</div>
+
+<hr>
+
+<h2>Videos recomendados (YouTube)</h2>
+
+<div class="video-box">
+
+<p>
+<strong>Video 1:</strong>
+    <a href="https://www.youtube.com/watch?v=NW0Y5vJkR4Q">
+Unión, Intersección y Complemento de Conjuntos - math2me
+</a>
+</p>
+
+<p>
+URL para impresión:<br>
+https://www.youtube.com/watch?v=NW0Y5vJkR4Q
+</p>
+
+</div>
+
+<div class="video-box">
+
+<p>
+<strong>Video 2:</strong>
+<a href="https://www.youtube.com/watch?v=5Y7Rm2P4qKQ">
+Probabilidad: Eventos y Operaciones entre Eventos - unProfesor
+</a>
+</p>
+
+<p>
+URL para impresión:<br>
+https://www.youtube.com/watch?v=5Y7Rm2P4qKQ
+</p>
+
+</div>
+
+<hr>
+
+<h2>Referencias APA</h2>
+
+<p>
+Ross, S. M. (2019). <em>A First Course in Probability</em> (10th ed.). Pearson.
+</p>
+
+<p>
+Walpole, R. E., Myers, R. H., Myers, S. L., & Ye, K. (2017). <em>Probability and Statistics for Engineers and Scientists</em> (9th ed.). Pearson.
+</p>
+
+<p>
+Mendenhall, W., Beaver, R., & Beaver, B. (2019). <em>Introduction to Probability and Statistics</em>. Cengage Learning.
+</p>
+
+<p>
+OpenStax. (2021). <em>Introductory Statistics</em>. Rice University.
+</p>
+
+<p>
+Khan Academy. (2026). <em>Probabilidad, eventos y espacio muestral</em>. Recuperado de https://es.khanacademy.org
+</p>
+
+</div>
+
+</body>
+</html>

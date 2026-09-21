@@ -1,13 +1,395 @@
 <!DOCTYPE html>
-
-<html>
+<html lang="es">
 <head>
-  <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
-  <title>Hello, World!</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2.A6.1 Modelos Matemáticos con Funciones Exponenciales</title>
+
+<style>
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background:#f4f6f9;
+    margin:0;
+    padding:20px;
+    line-height:1.6;
+}
+
+.container{
+    max-width:900px;
+    margin:auto;
+    background:white;
+    padding:25px;
+    border-radius:10px;
+    box-shadow:0 0 8px rgba(0,0,0,0.15);
+}
+
+h1,h2,h3{
+    color:#0b3d91;
+}
+
+.btn-print{
+    background:#0b3d91;
+    color:white;
+    border:none;
+    padding:12px 20px;
+    border-radius:6px;
+    cursor:pointer;
+    font-size:16px;
+    margin-bottom:20px;
+}
+
+.btn-print:hover{
+    background:#082c69;
+}
+
+.ejemplo,.ejercicio,.respuesta{
+    border-left:5px solid #0b3d91;
+    padding-left:12px;
+    margin-top:15px;
+}
+
+.video-box{
+    background:#eef4ff;
+    padding:12px;
+    border-radius:8px;
+    margin-top:10px;
+}
+
+@media(max-width:600px){
+    .container{
+        padding:15px;
+    }
+}
+
+@media print{
+    .btn-print{
+        display:none;
+    }
+
+    .container{
+        box-shadow:none;
+        max-width:100%;
+    }
+
+    @page{
+        size:letter;
+        margin:1.5cm;
+    }
+}
+</style>
+
+<script>
+function imprimirPDF(){
+    window.print();
+}
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
 </head>
 <body>
-  <h1>
-    Hello, World!
-  </h1>
+
+<div class="container">
+
+<button class="btn-print" onclick="imprimirPDF()">
+🖨 Imprimir / Guardar como PDF
+</button>
+
+<h1>2.A6.1. Identifica modelos matemáticos que involucran las funciones exponenciales en diversos contextos</h1>
+
+<h2>Explicación</h2>
+
+<p>
+Una <strong>función exponencial</strong> es una función en la cual la variable aparece en el exponente.
+</p>
+
+<p>
+Su forma básica es:
+</p>
+
+$$
+f(x)=a^x
+$$
+
+<p>donde:</p>
+
+<ul>
+<li>$$a>0$$</li>
+<li>$$a\neq1$$</li>
+<li>$$x$$ es la variable independiente.</li>
+</ul>
+
+<p>
+Los modelos exponenciales se utilizan cuando una cantidad aumenta o disminuye mediante multiplicaciones repetidas.
+</p>
+
+<h3>Modelo exponencial general</h3>
+
+$$
+P(t)=P_0\cdot a^t
+$$
+
+<p>donde:</p>
+
+<ul>
+<li>$$P_0$$: valor inicial.</li>
+<li>$$a$$: factor de crecimiento o decrecimiento.</li>
+<li>$$t$$: tiempo.</li>
+</ul>
+
+<h3>Contextos donde aparecen las funciones exponenciales</h3>
+
+<ul>
+<li>Crecimiento de poblaciones.</li>
+<li>Reproducción de bacterias.</li>
+<li>Interés compuesto en finanzas.</li>
+<li>Crecimiento de inversiones.</li>
+<li>Desintegración radiactiva.</li>
+<li>Propagación de enfermedades.</li>
+</ul>
+
+<h3>Características importantes</h3>
+
+<ul>
+<li>Si $$a>1$$, existe crecimiento exponencial.</li>
+<li>Si $$0<a<1$$, existe decrecimiento exponencial.</li>
+<li>Dominio: $$\mathbb{R}$$.</li>
+<li>Rango: $$(0,\infty)$$.</li>
+<li>Pasa por el punto $$(0,1)$$.</li>
+<li>Tiene una asíntota horizontal en $$y=0$$.</li>
+</ul>
+
+<hr>
+
+<h2>Ejemplo resuelto</h2>
+
+<div class="ejemplo">
+
+<p>
+Una inversión de ₡50000 gana un 10% anual compuesto.
+</p>
+
+<p>Modelo:</p>
+
+$$
+M(t)=50000\cdot(1.10)^t
+$$
+
+<p>
+Determine el monto después de 3 años.
+</p>
+
+$$
+M(3)=50000\cdot(1.10)^3
+$$
+
+$$
+M(3)=50000\cdot1.331
+$$
+
+$$
+M(3)=66550
+$$
+
+<p>
+<strong>Respuesta:</strong> Después de 3 años el monto será aproximadamente ₡66550.
+</p>
+
+</div>
+
+<hr>
+
+<h2>Ejercicios</h2>
+
+<div class="ejercicio">
+
+<p><strong>1.</strong> Una población de 800 personas crece un 15% anual.</p>
+
+$$
+P(t)=800\cdot(1.15)^t
+$$
+
+<p>Determine la población después de 2 años.</p>
+
+</div>
+
+<div class="ejercicio">
+
+<p><strong>2.</strong> Una colonia de bacterias inicia con 100 organismos y se duplica cada hora.</p>
+
+<p>Escriba el modelo exponencial.</p>
+
+</div>
+
+<div class="ejercicio">
+
+<p><strong>3.</strong> Una sustancia radiactiva tiene:</p>
+
+$$
+A(t)=1000\cdot(0.8)^t
+$$
+
+<p>Calcule la cantidad luego de 3 periodos.</p>
+
+</div>
+
+<div class="ejercicio">
+
+<p><strong>4.</strong> Evalúe:</p>
+
+$$
+f(x)=2^x
+$$
+
+<p>cuando $$x=5$$.</p>
+
+</div>
+
+<div class="ejercicio">
+
+<p><strong>5.</strong> Una inversión de ₡200000 crece al 8% anual.</p>
+
+<p>Escriba el modelo exponencial correspondiente.</p>
+
+</div>
+
+<hr>
+
+<h2>Respuestas</h2>
+
+<div class="respuesta">
+
+<p><strong>1.</strong></p>
+
+$$
+P(2)=800\cdot(1.15)^2
+$$
+
+$$
+P(2)=800\cdot1.3225
+$$
+
+$$
+P(2)=1058
+$$
+
+<p><strong>Respuesta:</strong> Aproximadamente 1058 personas.</p>
+
+<hr>
+
+<p><strong>2.</strong></p>
+
+$$
+P(t)=100\cdot2^t
+$$
+
+<p><strong>Respuesta:</strong> Ese es el modelo exponencial.</p>
+
+<hr>
+
+<p><strong>3.</strong></p>
+
+$$
+A(3)=1000\cdot(0.8)^3
+$$
+
+$$
+A(3)=1000\cdot0.512
+$$
+
+$$
+A(3)=512
+$$
+
+<p><strong>Respuesta:</strong> 512 unidades.</p>
+
+<hr>
+
+<p><strong>4.</strong></p>
+
+$$
+f(5)=2^5
+$$
+
+$$
+f(5)=32
+$$
+
+<p><strong>Respuesta:</strong> 32.</p>
+
+<hr>
+
+<p><strong>5.</strong></p>
+
+$$
+M(t)=200000\cdot(1.08)^t
+$$
+
+<p><strong>Respuesta:</strong> Ese es el modelo exponencial.</p>
+
+</div>
+
+<hr>
+
+<h2>Videos recomendados (YouTube)</h2>
+
+<div class="video-box">
+
+<p>
+<strong>Video 1:</strong>
+<a href="https://www.youtube.com/watch?v=IhsZKreUPE0" target="_blank">
+Función Exponencial | Características - Matemáticas Profe Alex
+</a>
+</p>
+
+<p>
+URL para impresión:<br>
+https://www.youtube.com/watch?v=IhsZKreUPE0
+</p>
+
+</div>
+
+<div class="video-box">
+
+<p>
+<strong>Video 2:</strong>
+<a href="https://www.youtube.com/watch?v=8eBeaiEuzx8" target="_blank">
+Análisis de una Función Exponencial - julioprofe
+</a>
+</p>
+
+<p>
+URL para impresión:<br>
+https://www.youtube.com/watch?v=8eBeaiEuzx8
+</p>
+
+</div>
+
+<hr>
+
+<h2>Referencias APA</h2>
+
+<p>
+OpenStax. (2021). <em>Precalculus 2e</em>. Rice University.
+</p>
+
+<p>
+Stewart, J., Redlin, L., & Watson, S. (2021). <em>Precalculus: Mathematics for Calculus</em> (7.ª ed.). Cengage Learning.
+</p>
+
+<p>
+Khan Academy. (2026). <em>Funciones exponenciales y aplicaciones</em>. Recuperado de https://es.khanacademy.org
+</p>
+
+<p>
+Matemáticas Profe Alex. (s.f.). <em>Función exponencial | Características</em>. YouTube.
+</p>
+
+<p>
+julioprofe. (s.f.). <em>Análisis de una función exponencial</em>. YouTube.
+</p>
+
+</div>
+
 </body>
 </html>

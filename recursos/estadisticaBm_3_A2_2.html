@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>3.A2.2 Diagramas de Venn y Operaciones entre Eventos</title>
+
+<style>
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    margin:0;
+    padding:20px;
+    background:#f4f6f9;
+    color:#222;
+    line-height:1.6;
+}
+
+.container{
+    max-width:950px;
+    margin:auto;
+    background:white;
+    padding:25px;
+    border-radius:10px;
+    box-shadow:0 0 8px rgba(0,0,0,0.15);
+}
+
+h1,h2,h3{
+    color:#0b3d91;
+}
+
+.btn-print{
+    background:#0b3d91;
+    color:white;
+    border:none;
+    padding:12px 20px;
+    border-radius:6px;
+    cursor:pointer;
+    font-size:16px;
+    margin-bottom:20px;
+}
+
+.btn-print:hover{
+    background:#082c69;
+}
+
+.ejemplo,.ejercicio,.respuesta{
+    border-left:5px solid #0b3d91;
+    padding-left:12px;
+    margin-top:15px;
+}
+
+.dibujo{
+    text-align:center;
+    margin:20px 0;
+    overflow-x:auto;
+}
+
+.video-box{
+    background:#eef4ff;
+    padding:12px;
+    border-radius:8px;
+    margin-top:10px;
+    word-break:break-word;
+}
+
+svg{
+    max-width:100%;
+    height:auto;
+}
+
+@media(max-width:600px){
+    .container{
+        padding:15px;
+    }
+}
+
+@media print{
+    .btn-print{
+        display:none;
+    }
+
+    .container{
+        box-shadow:none;
+    }
+
+    @page{
+        size:letter;
+        margin:1.5cm;
+    }
+}
+</style>
+
+<script>
+function imprimirPDF(){
+    window.print();
+}
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</head>
+<body>
+
+<div class="container">
+
+<button class="btn-print" onclick="imprimirPDF()">
+🖨 Imprimir / Guardar como PDF
+</button>
+
+<h1>3.A2.2. Identifica diagramas de Venn correspondientes a operaciones (unión “∪”, intersección “∩” o “complemento”) entre eventos aleatorios en diversos contextos</h1>
+
+<h2>Explicación</h2>
+
+<p>
+Los <strong>diagramas de Venn</strong> son representaciones gráficas que permiten visualizar relaciones entre conjuntos o eventos aleatorios dentro de un espacio muestral.
+</p>
+
+<p>
+El rectángulo representa el espacio muestral $$S$$ y los círculos representan los eventos.
+</p>
+
+<h3>1. Unión de eventos</h3>
+
+<p>
+La unión se representa mediante:
+</p>
+
+$$
+A \cup B
+$$
+
+<p>
+Corresponde a todos los elementos que pertenecen a $$A$$, a $$B$$ o a ambos eventos.
+</p>
+
+<div class="dibujo">
+
+<svg width="400" height="220">
+<rect x="20" y="20" width="360" height="180" fill="none" stroke="black"/>
+<circle cx="160" cy="110" r="60" fill="#87CEFA"/>
+<circle cx="240" cy="110" r="60" fill="#87CEFA"/>
+<text x="150" y="110">A</text>
+<text x="250" y="110">B</text>
+<text x="30" y="40">S</text>
+</svg>
+
+</div>
+
+<p>
+La región coloreada representa $$A \cup B$$.
+</p>
+
+<h3>2. Intersección de eventos</h3>
+
+<p>
+La intersección se representa mediante:
+</p>
+
+$$
+A \cap B
+$$
+
+<p>
+Corresponde únicamente a los elementos comunes entre ambos eventos.
+</p>
+
+<div class="dibujo">
+
+<svg width="400" height="220">
+<rect x="20" y="20" width="360" height="180" fill="none" stroke="black"/>
+<circle cx="160" cy="110" r="60" fill="none" stroke="black"/>
+<circle cx="240" cy="110" r="60" fill="none" stroke="black"/>
+<path d="M200,51 A60,60 0 0 0 200,169 A60,60 0 0 0 200,51"
+fill="#FFB347"/>
+<text x="150" y="110">A</text>
+<text x="250" y="110">B</text>
+<text x="30" y="40">S</text>
+</svg>
+
+</div>
+
+<p>
+La región coloreada representa $$A \cap B$$.
+</p>
+
+<h3>3. Complemento de un evento</h3>
+
+<p>
+El complemento se representa mediante:
+</p>
+
+$$
+A^c
+$$
+
+<p>
+Corresponde a todos los elementos del espacio muestral que no pertenecen al evento $$A$$.
+</p>
+
+<div class="dibujo">
+
+<svg width="400" height="220">
+<rect x="20" y="20" width="360" height="180" fill="#BFEFFF" stroke="black"/>
+<circle cx="200" cy="110" r="60" fill="white" stroke="black"/>
+<text x="195" y="115">A</text>
+<text x="30" y="40">S</text>
+</svg>
+
+</div>
+
+<p>
+La región coloreada representa $$A^c$$.
+</p>
+
+<hr>
+
+<h2>Ejemplo resuelto</h2>
+
+<div class="ejemplo">
+
+<p>
+Al lanzar un dado:
+</p>
+
+$$
+S=\{1,2,3,4,5,6\}
+$$
+
+<p>
+Sea:
+</p>
+
+$$
+A=\{2,4,6\}
+$$
+
+$$
+B=\{4,5,6\}
+$$
+
+<p>
+Identifique la operación correspondiente a cada región:
+</p>
+
+<ul>
+<li>Todo A y B juntos → $$A\cup B$$.</li>
+<li>Solo la parte común → $$A\cap B$$.</li>
+<li>Lo que está fuera de A → $$A^c$$.</li>
+</ul>
+
+<p>
+<strong>Respuesta:</strong> Cada región del diagrama permite visualizar rápidamente los elementos que pertenecen a una operación específica entre eventos.
+</p>
+
+</div>
+
+<hr>
+
+<h2>Ejercicios</h2>
+
+<div class="ejercicio">
+<p><strong>1.</strong> ¿Qué operación representa toda la región ocupada por los eventos A y B juntos?</p>
+</div>
+
+<div class="ejercicio">
+<p><strong>2.</strong> ¿Qué operación representa únicamente la zona común entre A y B?</p>
+</div>
+
+<div class="ejercicio">
+<p><strong>3.</strong> ¿Qué operación representa la región exterior al conjunto A dentro del espacio muestral?</p>
+</div>
+
+<div class="ejercicio">
+<p><strong>4.</strong> En un diagrama de Venn, ¿qué operación se observa cuando se colorean los dos círculos completos?</p>
+</div>
+
+<div class="ejercicio">
+<p><strong>5.</strong> En un diagrama de Venn, ¿qué operación se representa al colorear solamente la zona de superposición?</p>
+</div>
+
+<hr>
+
+<h2>Respuestas</h2>
+
+<div class="respuesta">
+
+<p><strong>1.</strong></p>
+
+$$
+A\cup B
+$$
+
+<hr>
+
+<p><strong>2.</strong></p>
+
+$$
+A\cap B
+$$
+
+<hr>
+
+<p><strong>3.</strong></p>
+
+$$
+A^c
+$$
+
+<hr>
+
+<p><strong>4.</strong></p>
+
+$$
+A\cup B
+$$
+
+<hr>
+
+<p><strong>5.</strong></p>
+
+$$
+A\cap B
+$$
+
+</div>
+
+<hr>
+
+<h2>Videos recomendados (YouTube)</h2>
+
+<div class="video-box">
+
+<p>
+<strong>Video 1:</strong>
+    <a href="https://www.youtube.com/watch?v=NW0Y5vJkR4Q">
+Diagramas de Venn: Unión, Intersección y Complemento
+</a>
+</p>
+
+<p>
+URL para impresión:<br>
+https://www.youtube.com/watch?v=NW0Y5vJkR4Q
+</p>
+
+</div>
+
+<div class="video-box">
+
+<p>
+<strong>Video 2:</strong>
+<a href="https://www.youtube.com/watch?v=5Y7Rm2P4qKQ">
+Eventos y Operaciones entre Eventos
+</a>
+</p>
+
+<p>
+URL para impresión:<br>
+https://www.youtube.com/watch?v=5Y7Rm2P4qKQ
+</p>
+
+</div>
+
+<hr>
+
+<h2>Referencias APA</h2>
+
+<p>
+Ross, S. M. (2019). <em>A First Course in Probability</em> (10th ed.). Pearson.
+</p>
+
+<p>
+Walpole, R. E., Myers, R. H., Myers, S. L., & Ye, K. (2017). <em>Probability and Statistics for Engineers and Scientists</em> (9th ed.). Pearson.
+</p>
+
+<p>
+Mendenhall, W., Beaver, R., & Beaver, B. (2019). <em>Introduction to Probability and Statistics</em>. Cengage Learning.
+</p>
+
+<p>
+OpenStax. (2021). <em>Introductory Statistics</em>. Rice University.
+</p>
+
+<p>
+Khan Academy. (2026). <em>Eventos y diagramas de Venn</em>. Recuperado de https://es.khanacademy.org
+</p>
+
+</div>
+
+</body>
+</html>

@@ -1,13 +1,411 @@
 <!DOCTYPE html>
-
-<html>
+<html lang="es">
 <head>
-  <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
-  <title>Hello, World!</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2.A6.2 Funciones Exponenciales en Diversos Contextos</title>
+
+<style>
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    margin:0;
+    padding:20px;
+    line-height:1.6;
+    color:#222;
+    background:#f5f7fa;
+}
+
+.container{
+    max-width:900px;
+    margin:auto;
+    background:white;
+    padding:25px;
+    border-radius:10px;
+    box-shadow:0 0 8px rgba(0,0,0,0.15);
+}
+
+h1,h2,h3{
+    color:#0b3d91;
+}
+
+.ejemplo, .ejercicio, .respuesta{
+    border-left:5px solid #0b3d91;
+    padding-left:12px;
+    margin-top:15px;
+}
+
+.btn-print{
+    background:#0b3d91;
+    color:white;
+    border:none;
+    padding:12px 20px;
+    border-radius:6px;
+    cursor:pointer;
+    font-size:16px;
+    margin-bottom:20px;
+}
+
+.btn-print:hover{
+    background:#072b66;
+}
+
+.video-box{
+    background:#eef4ff;
+    padding:10px;
+    margin-top:10px;
+    border-radius:8px;
+    word-break:break-word;
+}
+
+code{
+    background:#f0f0f0;
+    padding:2px 4px;
+}
+
+@media(max-width:600px){
+    body{
+        padding:10px;
+    }
+    .container{
+        padding:15px;
+    }
+}
+
+@media print{
+    .btn-print{
+        display:none;
+    }
+
+    body{
+        background:white;
+    }
+
+    .container{
+        box-shadow:none;
+        max-width:100%;
+    }
+
+    @page{
+        size: letter;
+        margin: 1.5cm;
+    }
+}
+</style>
+
+<script>
+function imprimirPDF(){
+    window.print();
+}
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
 </head>
 <body>
-  <h1>
-    Hello, World!
-  </h1>
+
+<div class="container">
+
+<button class="btn-print" onclick="imprimirPDF()">
+🖨 Imprimir / Guardar como PDF
+</button>
+
+<h1>2.A6.2. Determina elementos en modelos matemáticos que involucran funciones exponenciales en diversos contextos</h1>
+
+<h2>Explicación</h2>
+
+<p>
+Una <strong>función exponencial</strong> es una función de la forma:
+</p>
+
+<p>
+$$
+f(x)=a^x
+$$
+</p>
+
+<p>
+donde:
+</p>
+
+<ul>
+<li>$$a>0$$</li>
+<li>$$a\neq 1$$</li>
+<li>$$x$$ es la variable independiente.</li>
+</ul>
+
+<p>
+Las funciones exponenciales permiten modelar fenómenos cuyo cambio ocurre mediante multiplicaciones sucesivas y no mediante sumas constantes.
+</p>
+
+<h3>Contextos donde aparecen</h3>
+
+<ul>
+<li>Crecimiento de poblaciones.</li>
+<li>Interés compuesto en finanzas.</li>
+<li>Propagación de bacterias.</li>
+<li>Desintegración radiactiva.</li>
+<li>Crecimiento de inversiones.</li>
+</ul>
+
+<h3>Características importantes</h3>
+
+<ul>
+<li>Si $$a>1$$, la función es creciente.</li>
+<li>Si $$0<a<1$$, la función es decreciente.</li>
+<li>Su dominio es $$\mathbb{R}$$.</li>
+<li>Su rango es $$(0,\infty)$$.</li>
+<li>Pasa por el punto $$(0,1)$$.</li>
+<li>El eje $$x$$ es una asíntota horizontal.</li>
+</ul>
+
+<p>
+Modelo exponencial general:
+</p>
+
+$$
+P(t)=P_0\cdot a^t
+$$
+
+<p>
+donde:
+</p>
+
+<ul>
+<li>$$P_0$$: valor inicial.</li>
+<li>$$a$$: factor de crecimiento o decrecimiento.</li>
+<li>$$t$$: tiempo.</li>
+</ul>
+
+<hr>
+
+<h2>Ejemplo resuelto</h2>
+
+<div class="ejemplo">
+
+<p>
+Una colonia de bacterias inicia con 200 bacterias y se duplica cada hora.
+</p>
+
+<p>
+Modelo:
+</p>
+
+$$
+P(t)=200\cdot2^t
+$$
+
+<p>
+¿Cuántas bacterias habrá después de 4 horas?
+</p>
+
+$$
+P(4)=200\cdot2^4
+$$
+
+$$
+P(4)=200\cdot16
+$$
+
+$$
+P(4)=3200
+$$
+
+<p>
+<strong>Respuesta:</strong> Después de 4 horas habrá 3200 bacterias.
+</p>
+
+</div>
+
+<hr>
+
+<h2>Ejercicios</h2>
+
+<div class="ejercicio">
+<p><strong>1.</strong> Una inversión de ₡100000 crece según:</p>
+
+$$
+M(t)=100000\cdot(1.05)^t
+$$
+
+<p>Calcule el monto después de 3 años.</p>
+</div>
+
+<div class="ejercicio">
+<p><strong>2.</strong> Una población de 500 individuos crece según:</p>
+
+$$
+P(t)=500\cdot(1.2)^t
+$$
+
+<p>Determine la población después de 2 años.</p>
+</div>
+
+<div class="ejercicio">
+<p><strong>3.</strong> Una sustancia radiactiva sigue el modelo:</p>
+
+$$
+A(t)=800\cdot(0.5)^t
+$$
+
+<p>¿Cuánta sustancia queda después de 3 periodos?</p>
+</div>
+
+<div class="ejercicio">
+<p><strong>4.</strong> Evalúe la función:</p>
+
+$$
+f(x)=3^x
+$$
+
+<p>cuando $$x=2$$.</p>
+</div>
+
+<div class="ejercicio">
+<p><strong>5.</strong> Una población inicial de 1000 bacterias se triplica cada hora.</p>
+
+<p>Escriba el modelo exponencial correspondiente.</p>
+</div>
+
+<hr>
+
+<h2>Respuestas</h2>
+
+<div class="respuesta">
+
+<p><strong>1.</strong></p>
+
+$$
+M(3)=100000\cdot(1.05)^3
+$$
+
+$$
+M(3)=115762.50
+$$
+
+<p><strong>Respuesta:</strong> ₡115762.50 aproximadamente.</p>
+
+<hr>
+
+<p><strong>2.</strong></p>
+
+$$
+P(2)=500\cdot(1.2)^2
+$$
+
+$$
+P(2)=500\cdot1.44
+$$
+
+$$
+P(2)=720
+$$
+
+<p><strong>Respuesta:</strong> 720 individuos.</p>
+
+<hr>
+
+<p><strong>3.</strong></p>
+
+$$
+A(3)=800\cdot(0.5)^3
+$$
+
+$$
+A(3)=800\cdot0.125
+$$
+
+$$
+A(3)=100
+$$
+
+<p><strong>Respuesta:</strong> Quedan 100 unidades.</p>
+
+<hr>
+
+<p><strong>4.</strong></p>
+
+$$
+f(2)=3^2=9
+$$
+
+<p><strong>Respuesta:</strong> 9.</p>
+
+<hr>
+
+<p><strong>5.</strong></p>
+
+$$
+P(t)=1000\cdot3^t
+$$
+
+<p><strong>Respuesta:</strong> Ese es el modelo exponencial.</p>
+
+</div>
+
+<hr>
+
+<h2>Videos recomendados (YouTube)</h2>
+
+<div class="video-box">
+
+<p>
+<strong>Video 1:</strong>
+<a href="https://www.youtube.com/watch?v=IhsZKreUPE0" target="_blank">
+Función Exponencial | Características - Matemáticas Profe Alex
+</a>
+</p>
+
+<p>
+URL para impresión:<br>
+https://www.youtube.com/watch?v=IhsZKreUPE0
+</p>
+
+</div>
+
+<div class="video-box">
+
+<p>
+<strong>Video 2:</strong>
+<a href="https://www.youtube.com/watch?v=8eBeaiEuzx8" target="_blank">
+Análisis de una Función Exponencial - julioprofe
+</a>
+</p>
+
+<p>
+URL para impresión:<br>
+https://www.youtube.com/watch?v=8eBeaiEuzx8
+</p>
+
+</div>
+
+<hr>
+
+<h2>Referencias APA</h2>
+
+<p>
+OpenStax. (2021). <em>Precalculus 2e</em>. OpenStax, Rice University.
+</p>
+
+<p>
+Stewart, J., Redlin, L., & Watson, S. (2021). <em>Precalculus: Mathematics for Calculus</em> (7th ed.). Cengage Learning.
+</p>
+
+<p>
+Khan Academy. (2026). <em>Introducción a las funciones exponenciales</em>.
+Disponible en: https://es.khanacademy.org
+</p>
+
+<p>
+Matemáticas Profe Alex. Función exponencial | Características.
+YouTube. https://www.youtube.com/watch?v=IhsZKreUPE0
+</p>
+
+<p>
+julioprofe. Análisis de una función exponencial.
+YouTube. https://www.youtube.com/watch?v=8eBeaiEuzx8
+</p>
+
+</div>
+
 </body>
 </html>

@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>3.A2.5 Probabilidades para la toma de decisiones</title>
+
+<style>
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    margin:0;
+    padding:20px;
+    background:#f4f6f9;
+    color:#222;
+    line-height:1.6;
+}
+
+.container{
+    max-width:950px;
+    margin:auto;
+    background:white;
+    padding:25px;
+    border-radius:10px;
+    box-shadow:0 0 8px rgba(0,0,0,0.15);
+}
+
+h1,h2,h3{
+    color:#0b3d91;
+}
+
+.btn-print{
+    background:#0b3d91;
+    color:white;
+    border:none;
+    padding:12px 20px;
+    border-radius:6px;
+    cursor:pointer;
+    font-size:16px;
+    margin-bottom:20px;
+}
+
+.btn-print:hover{
+    background:#082c69;
+}
+
+.ejemplo,.ejercicio,.respuesta{
+    border-left:5px solid #0b3d91;
+    padding-left:12px;
+    margin-top:15px;
+}
+
+.tabla{
+    width:100%;
+    border-collapse:collapse;
+    margin-top:15px;
+}
+
+.tabla th,.tabla td{
+    border:1px solid #ccc;
+    padding:8px;
+    text-align:center;
+}
+
+.tabla th{
+    background:#eaf1ff;
+}
+
+.video-box{
+    background:#eef4ff;
+    padding:12px;
+    border-radius:8px;
+    margin-top:10px;
+    word-break:break-word;
+}
+
+.destacado{
+    background:#fff8dc;
+    border-left:5px solid #f4b400;
+    padding:10px;
+    margin:15px 0;
+}
+
+@media(max-width:600px){
+    .container{
+        padding:15px;
+    }
+}
+
+@media print{
+    .btn-print{
+        display:none;
+    }
+
+    .container{
+        box-shadow:none;
+    }
+
+    @page{
+        size:letter;
+        margin:1.5cm;
+    }
+}
+</style>
+
+<script>
+function imprimirPDF(){
+    window.print();
+}
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</head>
+<body>
+
+<div class="container">
+
+<button class="btn-print" onclick="imprimirPDF()">
+🖨 Imprimir / Guardar como PDF
+</button>
+
+<h1>3.A2.5. Resuelve problemas de diversos contextos relacionados con probabilidades para la toma de decisiones en fenómenos aleatorios</h1>
+
+<h2>Explicación</h2>
+
+<p>
+La probabilidad permite analizar fenómenos aleatorios y tomar decisiones fundamentadas cuando existe incertidumbre.
+</p>
+
+<p>
+Una probabilidad se calcula mediante:
+</p>
+
+$$
+P(A)=\frac{\text{Casos favorables}}{\text{Casos posibles}}
+$$
+
+<p>
+Su valor siempre se encuentra entre 0 y 1:
+</p>
+
+$$
+0\le P(A)\le 1
+$$
+
+<div class="destacado">
+
+<strong>Toma de decisiones:</strong>
+
+<ul>
+<li>Si la probabilidad es cercana a 1, el evento es muy probable.</li>
+<li>Si la probabilidad es cercana a 0, el evento es poco probable.</li>
+<li>Las probabilidades ayudan a elegir la alternativa con mayor posibilidad de éxito.</li>
+</ul>
+
+</div>
+
+<h3>Aplicaciones en diversos contextos</h3>
+
+<table class="tabla">
+
+<tr>
+<th>Contexto</th>
+<th>Uso de la probabilidad</th>
+</tr>
+
+<tr>
+<td>Salud</td>
+<td>Evaluar riesgos de enfermedades.</td>
+</tr>
+
+<tr>
+<td>Negocios</td>
+<td>Tomar decisiones de inversión.</td>
+</tr>
+
+<tr>
+<td>Meteorología</td>
+<td>Predecir lluvia o fenómenos climáticos.</td>
+</tr>
+
+<tr>
+<td>Educación</td>
+<td>Analizar resultados de evaluaciones.</td>
+</tr>
+
+<tr>
+<td>Deportes</td>
+<td>Estimar posibilidades de ganar.</td>
+</tr>
+
+</table>
+
+<hr>
+
+<h2>Ejemplo resuelto</h2>
+
+<div class="ejemplo">
+
+<p>
+Una empresa debe decidir si organiza una actividad al aire libre.
+</p>
+
+<p>
+La probabilidad de lluvia para ese día es:
+</p>
+
+$$
+P(L)=0.80
+$$
+
+<p>
+La probabilidad de que no llueva es:
+</p>
+
+$$
+P(L^c)=1-0.80
+$$
+
+$$
+P(L^c)=0.20
+$$
+
+<p>
+Como existe un 80% de probabilidad de lluvia, la mejor decisión es realizar la actividad en un lugar cerrado.
+</p>
+
+<p>
+<strong>Respuesta:</strong> Se recomienda un lugar cerrado porque el riesgo de lluvia es alto.
+</p>
+
+</div>
+
+<hr>
+
+<h2>Ejercicios</h2>
+
+<div class="ejercicio">
+
+<p><strong>1.</strong></p>
+
+<p>
+En una rifa existen 200 boletos y una persona posee 20 boletos.
+</p>
+
+<p>
+Determine la probabilidad de ganar y explique si tiene una alta o baja posibilidad de éxito.
+</p>
+
+</div>
+
+<div class="ejercicio">
+
+<p><strong>2.</strong></p>
+
+<p>
+Un estudiante responde una pregunta de opción múltiple con 4 alternativas.
+</p>
+
+<p>
+Si responde al azar, determine la probabilidad de acertar.
+</p>
+
+</div>
+
+<div class="ejercicio">
+
+<p><strong>3.</strong></p>
+
+<p>
+La probabilidad de que un equipo gane un partido es:
+</p>
+
+$$
+0.75
+$$
+
+<p>
+¿Es una probabilidad alta o baja? ¿Qué decisión tomaría un aficionado al realizar una predicción?
+</p>
+
+</div>
+
+<div class="ejercicio">
+
+<p><strong>4.</strong></p>
+
+<p>
+En una bolsa hay 5 bolas rojas y 15 bolas azules.
+</p>
+
+<p>
+Determine la probabilidad de extraer una bola roja.
+</p>
+
+</div>
+
+<div class="ejercicio">
+
+<p><strong>5.</strong></p>
+
+<p>
+Una aplicación reporta una probabilidad de lluvia del 90%.
+</p>
+
+<p>
+¿Qué decisión sería más razonable: llevar paraguas o no llevar paraguas?
+</p>
+
+</div>
+
+<hr>
+
+<h2>Respuestas</h2>
+
+<div class="respuesta">
+
+<p><strong>1.</strong></p>
+
+$$
+P=\frac{20}{200}
+$$
+
+$$
+P=0.10
+$$
+
+<p>
+Probabilidad del 10%. La posibilidad de ganar es baja.
+</p>
+
+<hr>
+
+<p><strong>2.</strong></p>
+
+$$
+P=\frac{1}{4}
+$$
+
+$$
+P=0.25
+$$
+
+<p>
+La probabilidad de acertar es 25%.
+</p>
+
+<hr>
+
+<p><strong>3.</strong></p>
+
+$$
+P=0.75
+$$
+
+<p>
+Es una probabilidad alta. Sería razonable predecir que el equipo ganará.
+</p>
+
+<hr>
+
+<p><strong>4.</strong></p>
+
+$$
+P(R)=\frac{5}{20}
+$$
+
+$$
+P(R)=0.25
+$$
+
+<p>
+La probabilidad de obtener una bola roja es 25%.
+</p>
+
+<hr>
+
+<p><strong>5.</strong></p>
+
+<p>
+La decisión más razonable es llevar paraguas porque la probabilidad de lluvia es muy alta (90%).
+</p>
+
+</div>
+
+<hr>
+
+<h2>Videos recomendados (YouTube)</h2>
+
+<div class="video-box">
+
+<p>
+<strong>Video 1:</strong>
+    <a href="https://www.youtube.com/watch?v=YcoPDA8q8XQ">
+Probabilidad Básica y Eventos - math2me
+</a>
+</p>
+
+<p>
+URL para impresión:<br>
+https://www.youtube.com/watch?v=YcoPDA8q8XQ
+</p>
+
+</div>
+
+<div class="video-box">
+
+<p>
+<strong>Video 2:</strong>
+<a href="https://www.youtube.com/watch?v=6YF4QxG7n7M">
+Probabilidad y sus aplicaciones - julioprofe
+</a>
+</p>
+
+<p>
+URL para impresión:<br>
+https://www.youtube.com/watch?v=6YF4QxG7n7M
+</p>
+
+</div>
+
+<hr>
+
+<h2>Referencias APA</h2>
+
+<p>
+Ross, S. M. (2019). <em>A First Course in Probability</em> (10th ed.). Pearson.
+</p>
+
+<p>
+Walpole, R. E., Myers, R. H., Myers, S. L., & Ye, K. (2017). <em>Probability and Statistics for Engineers and Scientists</em> (9th ed.). Pearson.
+</p>
+
+<p>
+Mendenhall, W., Beaver, R., & Beaver, B. (2019). <em>Introduction to Probability and Statistics</em>. Cengage Learning.
+</p>
+
+<p>
+OpenStax. (2021). <em>Introductory Statistics</em>. Rice University.
+</p>
+
+<p>
+Khan Academy. (2026). <em>Probabilidad y toma de decisiones</em>. Recuperado de https://es.khanacademy.org
+</p>
+
+</div>
+
+</body>
+</html>

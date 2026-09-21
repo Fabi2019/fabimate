@@ -1,13 +1,425 @@
 <!DOCTYPE html>
-
-<html>
+<html lang="es">
 <head>
-  <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
-  <title>Hello, World!</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2.A6.4 Determina elementos en modelos matemáticos con funciones logarítmicas</title>
+
+<style>
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    margin:0;
+    padding:20px;
+    background:#f4f6f9;
+    color:#222;
+    line-height:1.6;
+}
+
+.container{
+    max-width:900px;
+    margin:auto;
+    background:white;
+    padding:25px;
+    border-radius:10px;
+    box-shadow:0 0 8px rgba(0,0,0,0.15);
+}
+
+h1,h2,h3{
+    color:#0b3d91;
+}
+
+.btn-print{
+    background:#0b3d91;
+    color:white;
+    border:none;
+    padding:12px 20px;
+    border-radius:6px;
+    cursor:pointer;
+    font-size:16px;
+    margin-bottom:20px;
+}
+
+.btn-print:hover{
+    background:#082c69;
+}
+
+.ejemplo,.ejercicio,.respuesta{
+    border-left:5px solid #0b3d91;
+    padding-left:12px;
+    margin-top:15px;
+}
+
+.video-box{
+    background:#eef4ff;
+    padding:12px;
+    border-radius:8px;
+    margin-top:10px;
+    word-break:break-word;
+}
+
+@media(max-width:600px){
+    .container{
+        padding:15px;
+    }
+}
+
+@media print{
+    .btn-print{
+        display:none;
+    }
+
+    .container{
+        box-shadow:none;
+        max-width:100%;
+    }
+
+    @page{
+        size:letter;
+        margin:1.5cm;
+    }
+}
+</style>
+
+<script>
+function imprimirPDF(){
+    window.print();
+}
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
 </head>
 <body>
-  <h1>
-    Hello, World!
-  </h1>
+
+<div class="container">
+
+<button class="btn-print" onclick="imprimirPDF()">
+🖨 Imprimir / Guardar como PDF
+</button>
+
+<h1>2.A6.4. Determina elementos en modelos matemáticos que involucran las funciones logarítmicas, en diversos contextos</h1>
+
+<h2>Explicación</h2>
+
+<p>
+Las funciones logarítmicas permiten determinar valores desconocidos en modelos donde intervienen escalas no lineales, crecimiento exponencial, niveles de acidez, intensidad sonora y magnitud de terremotos.
+</p>
+
+<p>
+La forma general de una función logarítmica es:
+</p>
+
+$$
+f(x)=\log_a(x)
+$$
+
+<p>donde:</p>
+
+<ul>
+<li>$$a>0$$</li>
+<li>$$a\neq1$$</li>
+<li>$$x>0$$</li>
+</ul>
+
+<p>
+El logaritmo responde a la siguiente pregunta:
+</p>
+
+$$
+\log_a(x)=y
+$$
+
+<p>si y solamente si:</p>
+
+$$
+a^y=x
+$$
+
+<h3>Elementos de un modelo logarítmico</h3>
+
+<ul>
+<li>Base del logaritmo.</li>
+<li>Variable independiente.</li>
+<li>Variable dependiente.</li>
+<li>Cantidad de referencia.</li>
+<li>Interpretación del resultado en el contexto.</li>
+</ul>
+
+<h3>Modelos logarítmicos en diversos contextos</h3>
+
+<p><strong>Química (pH)</strong></p>
+
+$$
+pH=-\log([H^+])
+$$
+
+<p>
+Permite determinar el nivel de acidez de una sustancia.
+</p>
+
+<p><strong>Sismología (Escala Richter)</strong></p>
+
+$$
+M=\log\left(\frac{I}{I_0}\right)
+$$
+
+<p>
+Permite determinar la magnitud de un terremoto.
+</p>
+
+<p><strong>Acústica (Decibeles)</strong></p>
+
+$$
+dB=10\log\left(\frac{I}{I_0}\right)
+$$
+
+<p>
+Permite medir la intensidad relativa de un sonido.
+</p>
+
+<h3>Características importantes</h3>
+
+<ul>
+<li>Dominio: $$(0,\infty)$$.</li>
+<li>Rango: $$\mathbb{R}$$.</li>
+<li>Pasa por el punto $$(1,0)$$.</li>
+<li>Tiene una asíntota vertical en $$x=0$$.</li>
+<li>Es creciente cuando la base es mayor que 1.</li>
+</ul>
+
+<hr>
+
+<h2>Ejemplo resuelto</h2>
+
+<div class="ejemplo">
+
+<p>
+En una solución química se tiene:
+</p>
+
+$$
+[H^+]=0.00001
+$$
+
+<p>
+Determine el valor del pH.
+</p>
+
+$$
+pH=-\log(0.00001)
+$$
+
+$$
+pH=-(-5)
+$$
+
+$$
+pH=5
+$$
+
+<p>
+<strong>Respuesta:</strong> El pH de la solución es 5.
+</p>
+
+<p>
+Elemento identificado:
+</p>
+
+<ul>
+<li>Modelo utilizado: función logarítmica.</li>
+<li>Variable conocida: $$[H^+]$$.</li>
+<li>Variable calculada: $$pH$$.</li>
+</ul>
+
+</div>
+
+<hr>
+
+<h2>Ejercicios</h2>
+
+<div class="ejercicio">
+
+<p><strong>1.</strong> Determine:</p>
+
+$$
+\log_{10}(10000)
+$$
+
+</div>
+
+<div class="ejercicio">
+
+<p><strong>2.</strong> Determine:</p>
+
+$$
+\log_3(81)
+$$
+
+</div>
+
+<div class="ejercicio">
+
+<p><strong>3.</strong> Una solución tiene:</p>
+
+$$
+[H^+]=0.01
+$$
+
+<p>Calcule el pH.</p>
+
+</div>
+
+<div class="ejercicio">
+
+<p><strong>4.</strong> Si</p>
+
+$$
+\log(x)=3
+$$
+
+<p>encuentre el valor de $$x$$.</p>
+
+</div>
+
+<div class="ejercicio">
+
+<p><strong>5.</strong> Determine:</p>
+
+$$
+\log_5(625)
+$$
+
+</div>
+
+<hr>
+
+<h2>Respuestas</h2>
+
+<div class="respuesta">
+
+<p><strong>1.</strong></p>
+
+$$
+\log_{10}(10000)=4
+$$
+
+<p><strong>Respuesta:</strong> 4</p>
+
+<hr>
+
+<p><strong>2.</strong></p>
+
+$$
+\log_3(81)=4
+$$
+
+<p><strong>Respuesta:</strong> 4</p>
+
+<hr>
+
+<p><strong>3.</strong></p>
+
+$$
+pH=-\log(0.01)
+$$
+
+$$
+pH=2
+$$
+
+<p><strong>Respuesta:</strong> pH = 2</p>
+
+<hr>
+
+<p><strong>4.</strong></p>
+
+$$
+x=10^3
+$$
+
+$$
+x=1000
+$$
+
+<p><strong>Respuesta:</strong> 1000</p>
+
+<hr>
+
+<p><strong>5.</strong></p>
+
+$$
+\log_5(625)=4
+$$
+
+<p><strong>Respuesta:</strong> 4</p>
+
+</div>
+
+<hr>
+
+<h2>Videos recomendados (YouTube)</h2>
+
+<div class="video-box">
+
+<p>
+<strong>Video 1:</strong>
+    <a href="https://www.youtube.com/watch?v=9qL3RvoNbW4">
+Logaritmos desde cero - julioprofe
+</a>
+</p>
+
+<p>
+URL para impresión:<br>
+https://www.youtube.com/watch?v=9qL3RvoNbW4
+</p>
+
+</div>
+
+<div class="video-box">
+
+<p>
+<strong>Video 2:</strong>
+    <a href="https://www.youtube.com/watch?v=0QKJHmH0A6E">
+Función Logarítmica - Matemáticas Profe Alex
+</a>
+</p>
+
+<p>
+URL para impresión:<br>
+https://www.youtube.com/watch?v=0QKJHmH0A6E
+</p>
+
+</div>
+
+<hr>
+
+<h2>Referencias APA</h2>
+
+<p>
+OpenStax. (2021). <em>Precalculus 2e</em>. Rice University.
+</p>
+
+<p>
+Stewart, J., Redlin, L., & Watson, S. (2021). <em>Precalculus: Mathematics for Calculus</em> (7.ª ed.). Cengage Learning.
+</p>
+
+<p>
+Larson, R. (2018). <em>Precalculus with Limits</em> (4th ed.). Cengage Learning.
+</p>
+
+<p>
+Khan Academy. (2026). <em>Logaritmos y funciones logarítmicas</em>. Recuperado de https://es.khanacademy.org
+</p>
+
+<p>
+julioprofe. (s.f.). <em>Logaritmos desde cero</em>. YouTube.
+</p>
+
+<p>
+Matemáticas Profe Alex. (s.f.). <em>Función logarítmica</em>. YouTube.
+</p>
+
+</div>
+
 </body>
 </html>

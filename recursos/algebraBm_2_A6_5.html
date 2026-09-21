@@ -1,13 +1,350 @@
 <!DOCTYPE html>
-
-<html>
+<html lang="es">
 <head>
-  <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
-  <title>Hello, World!</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2.A6.5 Determina la función que sirve de modelo en diversos contextos</title>
+
+<style>
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    margin:0;
+    padding:20px;
+    background:#f4f6f9;
+    color:#222;
+    line-height:1.6;
+}
+
+.container{
+    max-width:950px;
+    margin:auto;
+    background:white;
+    padding:25px;
+    border-radius:10px;
+    box-shadow:0 0 8px rgba(0,0,0,0.15);
+}
+
+h1,h2,h3{
+    color:#0b3d91;
+}
+
+.btn-print{
+    background:#0b3d91;
+    color:white;
+    border:none;
+    padding:12px 20px;
+    border-radius:6px;
+    cursor:pointer;
+    font-size:16px;
+    margin-bottom:20px;
+}
+
+.btn-print:hover{
+    background:#082c69;
+}
+
+.ejemplo,.ejercicio,.respuesta{
+    border-left:5px solid #0b3d91;
+    padding-left:12px;
+    margin-top:15px;
+}
+
+.tabla{
+    width:100%;
+    border-collapse:collapse;
+    margin-top:15px;
+}
+
+.tabla th,.tabla td{
+    border:1px solid #ccc;
+    padding:8px;
+    text-align:left;
+}
+
+.tabla th{
+    background:#eaf1ff;
+}
+
+.video-box{
+    background:#eef4ff;
+    padding:12px;
+    border-radius:8px;
+    margin-top:10px;
+    word-break:break-word;
+}
+
+@media(max-width:600px){
+    .container{
+        padding:15px;
+    }
+
+    .tabla{
+        font-size:13px;
+    }
+}
+
+@media print{
+    .btn-print{
+        display:none;
+    }
+
+    .container{
+        box-shadow:none;
+        max-width:100%;
+    }
+
+    @page{
+        size:letter;
+        margin:1.5cm;
+    }
+}
+</style>
+
+<script>
+function imprimirPDF(){
+    window.print();
+}
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
 </head>
 <body>
-  <h1>
-    Hello, World!
-  </h1>
+
+<div class="container">
+
+<button class="btn-print" onclick="imprimirPDF()">
+🖨 Imprimir / Guardar como PDF
+</button>
+
+<h1>2.A6.5. Determina la función lineal, cuadrática, raíz cuadrada, exponencial o logarítmica que sirva de modelo en diversos contextos</h1>
+
+<h2>Explicación</h2>
+
+<p>
+En la modelación matemática es importante identificar el tipo de función que mejor describe un fenómeno real. Cada tipo de función presenta características particulares que permiten representar situaciones específicas.
+</p>
+
+<table class="tabla">
+<tr>
+<th>Función</th>
+<th>Modelo General</th>
+<th>Contexto Típico</th>
+</tr>
+
+<tr>
+<td>Lineal</td>
+<td>$$y=mx+b$$</td>
+<td>Costos, salarios, distancia a velocidad constante.</td>
+</tr>
+
+<tr>
+<td>Cuadrática</td>
+<td>$$y=ax^2+bx+c$$</td>
+<td>Trayectorias de objetos, áreas y máximos o mínimos.</td>
+</tr>
+
+<tr>
+<td>Raíz cuadrada</td>
+<td>$$y=\sqrt{x}$$</td>
+<td>Crecimientos que disminuyen progresivamente.</td>
+</tr>
+
+<tr>
+<td>Exponencial</td>
+<td>$$y=a\cdot b^x$$</td>
+<td>Crecimiento poblacional, inversiones y bacterias.</td>
+</tr>
+
+<tr>
+<td>Logarítmica</td>
+<td>$$y=\log(x)$$</td>
+<td>pH, decibelios y escala Richter.</td>
+</tr>
+
+</table>
+
+<h3>¿Cómo identificar el modelo?</h3>
+
+<ul>
+<li>Si la variación es constante → función lineal.</li>
+<li>Si la gráfica forma una parábola → función cuadrática.</li>
+<li>Si el crecimiento es cada vez más lento → función raíz cuadrada.</li>
+<li>Si el crecimiento ocurre por multiplicaciones repetidas → función exponencial.</li>
+<li>Si aparecen escalas como pH, Richter o decibelios → función logarítmica.</li>
+</ul>
+
+<hr>
+
+<h2>Ejemplo resuelto</h2>
+
+<div class="ejemplo">
+
+<p>
+Una inversión de ₡100000 aumenta un 5% cada año.
+</p>
+
+<p>
+Modelo:
+</p>
+
+$$
+M(t)=100000\cdot(1.05)^t
+$$
+
+<p>
+Como el crecimiento se produce multiplicando por el mismo factor cada año, corresponde a una:
+</p>
+
+<p>
+<strong>Función exponencial.</strong>
+</p>
+
+<p>
+<strong>Respuesta:</strong> El modelo adecuado es una función exponencial.
+</p>
+
+</div>
+
+<hr>
+
+<h2>Ejercicios</h2>
+
+<div class="ejercicio">
+
+<p><strong>1.</strong> El costo de un taxi se calcula mediante una tarifa fija de ₡800 más ₡500 por kilómetro recorrido.</p>
+
+<p>¿Qué tipo de función modela la situación?</p>
+
+</div>
+
+<div class="ejercicio">
+
+<p><strong>2.</strong> La trayectoria de una pelota lanzada al aire se representa mediante una parábola.</p>
+
+<p>¿Qué tipo de función modela la situación?</p>
+
+</div>
+
+<div class="ejercicio">
+
+<p><strong>3.</strong> Una colonia de bacterias se duplica cada hora.</p>
+
+<p>¿Qué tipo de función modela la situación?</p>
+
+</div>
+
+<div class="ejercicio">
+
+<p><strong>4.</strong> El pH de una sustancia se calcula mediante:</p>
+
+$$
+pH=-\log([H^+])
+$$
+
+<p>¿Qué tipo de función modela la situación?</p>
+
+</div>
+
+<div class="ejercicio">
+
+<p><strong>5.</strong> La distancia recorrida por una persona aumenta cada vez más lentamente siguiendo un comportamiento semejante a:</p>
+
+$$
+y=\sqrt{x}
+$$
+
+<p>¿Qué tipo de función modela la situación?</p>
+
+</div>
+
+<hr>
+
+<h2>Respuestas</h2>
+
+<div class="respuesta">
+
+<p><strong>1.</strong> Función lineal.</p>
+
+<hr>
+
+<p><strong>2.</strong> Función cuadrática.</p>
+
+<hr>
+
+<p><strong>3.</strong> Función exponencial.</p>
+
+<hr>
+
+<p><strong>4.</strong> Función logarítmica.</p>
+
+<hr>
+
+<p><strong>5.</strong> Función raíz cuadrada.</p>
+
+</div>
+
+<hr>
+
+<h2>Videos recomendados (YouTube)</h2>
+
+<div class="video-box">
+
+<p>
+<strong>Video 1:</strong>
+<a href="https://www.youtube.com/watch?v=IhsZKreUPE0" target="_blank">
+Función Exponencial | Características - Matemáticas Profe Alex
+</a>
+</p>
+
+<p>
+URL para impresión:<br>
+https://www.youtube.com/watch?v=IhsZKreUPE0
+</p>
+
+</div>
+
+<div class="video-box">
+
+<p>
+<strong>Video 2:</strong>
+<a href="https://www.youtube.com/watch?v=8eBeaiEuzx8" target="_blank">
+Análisis de una Función Exponencial - julioprofe
+</a>
+</p>
+
+<p>
+URL para impresión:<br>
+https://www.youtube.com/watch?v=8eBeaiEuzx8
+</p>
+
+</div>
+
+<hr>
+
+<h2>Referencias APA</h2>
+
+<p>
+OpenStax. (2021). <em>Precalculus 2e</em>. Rice University.
+</p>
+
+<p>
+Stewart, J., Redlin, L., & Watson, S. (2021). <em>Precalculus: Mathematics for Calculus</em> (7.ª ed.). Cengage Learning.
+</p>
+
+<p>
+Larson, R. (2018). <em>Precalculus with Limits</em> (4th ed.). Cengage Learning.
+</p>
+
+<p>
+Khan Academy. (2026). <em>Funciones lineales, cuadráticas, exponenciales y logarítmicas</em>. Recuperado de https://es.khanacademy.org
+</p>
+
+<p>
+OpenStax. (2021). <em>College Algebra 2e</em>. OpenStax.
+</p>
+
+</div>
+
 </body>
 </html>
